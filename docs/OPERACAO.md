@@ -1,4 +1,4 @@
-# Operação RODAVOLT · v4
+# Operação RODAVOLT · v5 local
 
 ## O dia em andamento
 
@@ -7,28 +7,31 @@
 3. Em Meu advogado, escolhe modelo, preenche a minuta, confere versão e registra revisão. A fila de envio é distinta da assinatura.
 4. No app, o motorista acompanha a contratação e lê somente seus documentos. As duas partes precisam registrar a simulação para concluir o contrato do exemplo.
 5. O motorista realiza vistoria de entrega: hodômetro, combustível, itens, avarias e vistas. Envio cria pendência para a gestão. Correção devolve ao perfil; aprovação libera só o gate da vistoria.
-6. O kanban só entrega o veículo se documentos, contrato vigente do mesmo carro, vistoria nova e disponibilidade estiverem conferidos. Outro motorista não ocupa o mesmo veículo.
+6. A gestão configura e confere a agenda de aluguel da versão assinada. O pagamento é pela semana já utilizada, conforme escolha do proprietário; vencimento e regras parciais ficam explícitos. O kanban só entrega se documentos, caução, contrato, agenda, vistoria nova e disponibilidade estiverem conferidos. Outro motorista não ocupa o mesmo veículo.
 7. Cobrança, comprovante, baixa e conciliação são etapas separadas. Solicitações, revisões, contas e contratos geram agenda.
 8. Painel ativo reúne posição demonstrativa, idade do dado, carro, motorista, aluguel, dívida, documentos e vistoria. Histórico mantém horário da amostra.
-9. A devolução é uma vistoria própria. Encerrar não quita dinheiro nem autoriza reaproveitar a entrega antiga no próximo ciclo.
+9. A devolução exige agendamento, vistoria própria, recebimento do carro/chaves, contagem do kit e demonstrativo. Só depois o vínculo é encerrado. Dinheiro não é quitado nem compensado automaticamente; manutenção pode manter o carro indisponível.
 
 ## O que funciona na prévia
 
 | Área | Ações locais disponíveis |
 |---|---|
-| Financeiro | Criar pagar/receber, vencimento/centro/favorecido, liquidar por conta, cancelar aberto, consultar livro e origem dos saldos |
+| Financeiro | Cobranças por contrato, pagar/receber, baixar por conta, estornar última baixa elegível com origem, consultar livro e saldos, repassar crédito e devolver aluguel/caução com conferência |
 | Conciliação | Extrato fictício, criar movimento de exemplo, sugerir equivalentes, confirmar vínculo 1:1, desfazer, baixar título pelo extrato ou lançar movimento não registrado |
 | Agenda | Semana/mês, compromisso com responsável e lembrete, editar/concluir manual, pendências derivadas com atalho à origem |
 | Meu advogado | Cinco modelos, nova versão de modelo/documento, prévia completa, placeholders, revisão, fila, envio e partes simulados, recusa/cancelamento, vigência e histórico |
-| Motorista | Perfil demonstrativo, contratação, documentos, compromissos, jornada/metas/corrida, carteira e comprovante, pedidos, vistoria e kit do RV-001 |
-| Vistoria | Rascunho, oito itens, avarias, combustível/km, cinco vistas, imagens de exemplo ou prévias locais temporárias, envio, parecer/correção/aprovação |
+| Motorista | Contratação, documentos, agenda, registros/metas/corrida pessoais, aluguel, comprovante, ajuda, vistoria, combo/estoque e vendas do próprio vínculo |
+| Vistoria | Rascunho, oito itens, avarias, combustível/km, cinco vistas, envio e parecer; imagens temporárias na prévia e arquivos privados no serviço local |
+| Devolução | Agenda, vistoria de retorno, carro/chaves, kit bom/avariado, acerto final e caução separados |
+| Ocorrências | Multa, sinistro e avaria, prazo, manifestação do motorista, análise e título somente após decisão humana |
+| Loja | Combo, divergência, reserva/expiração, conferência, entrega, pagamento tardio e devolução/reembolso com origem |
 | Painel ativo | Mapa OSM, marcador/lista, contexto por carro/vínculo, relógio/percurso fictícios, alerta de velocidade, perda de sinal e histórico |
 
 ## O que depende de implantação
 
-Banco real e conciliação com conexão autorizada; conta/carteiras e extrato efetivos; assinatura eletrônica com provedores e trilha de evidências; revisão profissional das minutas; rastreador/telemetria real; fotos privadas persistentes; autenticação e autorização por motorista; notificações em segundo plano; operação offline, estornos e fechamento contábil/fiscal homologados.
+Banco real e conciliação com conexão autorizada; Pix/carteiras e extrato efetivos; assinatura eletrônica; revisão profissional das minutas; rastreador/telemetria real; notificações em segundo plano; operação offline e fechamento contábil/fiscal homologados. Login e arquivos privados já têm implementação local, mas publicação, infraestrutura remota, retenção, monitoramento e segurança de produção dependem de ciclo próprio.
 
-Nenhum fornecedor foi escolhido pelo proprietário. Não pedir chave ou credencial para avaliar o desenho. O protótipo não movimenta dinheiro, não assina contratos nem acompanha pessoas reais. Os perfis são uma ferramenta de demonstração, não login.
+Nenhum fornecedor foi escolhido pelo proprietário. Não pedir chave ou credencial para avaliar o desenho. Nenhum botão desta homologação envia dinheiro ao banco, assina contrato real ou rastreia pessoas. Na prévia 4173, os perfis demonstram navegação; no serviço 4174, cada conta entra com seu próprio acesso.
 
 ## Contratos e modelos
 
@@ -58,8 +61,31 @@ Benefícios de outros apps e parcerias possuem estágio visível, sem ativação
 
 A gestão monta um envio com várias SKUs e um motorista/carro ativo. As unidades ficam em trânsito até a conferência. “Recebi tudo” libera o combo; uma diferença libera somente as quantidades confirmadas e mantém o restante pendente. Envio ainda não recebido pode ser cancelado, retornando à central; a gestão confere entregas restantes ou retornos com motivo.
 
-A lojinha mostra cada produto e suas unidades disponíveis. Uma venda cria pedido e reserva; Pix fictício conferido pela gestão baixa as unidades, registra o bruto, CMV e obrigação/crédito do motorista juntos. Apenas esse pedido é acertado, sem puxar vendas manuais ou de outro perfil. “Entreguei o produto” encerra a entrega sem nova baixa. Cancelar pedido sem pagamento libera a reserva; venda paga exige futura jornada de devolução.
+A lojinha mostra cada produto e suas unidades disponíveis. Uma venda cria pedido e reserva; Pix fictício conferido pela gestão baixa as unidades, registra o bruto, CMV e obrigação/crédito do motorista juntos. Apenas esse pedido é acertado, sem puxar vendas manuais ou de outro perfil. “Entreguei o produto” encerra a entrega sem nova baixa. Cancelar pedido sem pagamento libera a reserva; a reserva também expira. Venda paga tem jornada própria de devolução e reembolso, preservando recebimento, CMV e crédito. Lucro já usado ou pago precisa ser estornado/recuperado de forma explícita antes do reembolso correspondente.
 
 O fluxo recomendado de produção é Pix por pedido na conta da RODAVOLT, com confirmação autenticada do banco/PSP. Cliente usa seu banco, sem conta de loja obrigatória. A prévia não emite QR real, não cobra nem recebe avisos bancários. QR/link do catálogo é etapa opcional posterior. O acerto manual anterior continua disponível para dinheiro recebido pelo motorista, com destino do lucro explícito.
 
 A [auditoria de todos os fluxos](AUDITORIA-DE-FLUXOS.md) distingue funcionamento local de integração e homologação pendentes.
+
+
+## Homologação com acesso individual
+
+Execute `npm run build` e `npm run operate`; abra `http://127.0.0.1:4174/operacao`. O proprietário cria seu próprio acesso e, na gestão, cadastra uma conta para cada motorista do exemplo. Não há senha compartilhada pronta. A gestão abre o painel completo, cujas gravações passam pelo serviço. O motorista usa quatro abas e comandos específicos do seu vínculo.
+
+O serviço conserva os dados em `.local/rodavolt`, ignorada pelo Git. Sessão HttpOnly, CSRF, senhas scrypt, gravação atômica, revisão e idempotência fazem parte da implementação local. Um conflito 409 exige atualizar a visão antes de continuar; não ignorar o aviso nem sobrescrever uma mudança alheia. Encerrar o processo revoga sessões em memória, mas não apaga os registros.
+
+A base inicia com pessoas/valores fictícios, calendário nov/2026 e data de referência 25/01/2027. O serviço usa `America/Sao_Paulo` como fuso demonstrativo da operação; escolha efetiva e notificações ainda precisam ser conferidas para o primeiro carro. O processo escuta só nesta máquina (`127.0.0.1`, HTTP); isso não publica um aplicativo para o celular do motorista.
+
+Finanças pessoais são da conta do motorista: jornadas, metas e decisões não são retornadas à gestão nem incluídas em seu backup. O acesso a arquivos operacionais é filtrado pelo vínculo; use arquivos de teste na homologação. A prévia 4173 continua separada, com localStorage e fotos temporárias; não inserir documentos pessoais nela.
+
+## Cópia de segurança e recuperação
+
+A gestão exporta o backup da operação e arquivos. A cópia contém dados operacionais e deve ser guardada em local controlado; senhas e finanças pessoais não são incluídas. Restaurar exige conferir a cópia e a revisão atual, encerra sessões e revoga os acessos de motorista. O proprietário entra novamente e recria os vínculos de acesso após conferir os cadastros restaurados. Arquivos originais são preservados, evitando apagar evidências por uma tentativa de recuperação.
+
+A restauração local e os cenários de concorrência são verificados em testes; recuperação fora desta máquina, proteção do dispositivo, retenção, monitoramento e continuidade precisam de homologação própria antes de depender dessa base na operação.
+
+## Fechamento dos novos fluxos
+
+Cobrança posterior e parcialidades: [COBRANCAS.md](COBRANCAS.md). Devolução física e acerto: [DEVOLUCAO.md](DEVOLUCAO.md). Multas/sinistros com manifestação e decisão: [OCORRENCIAS.md](OCORRENCIAS.md). Os testes e a evidência de navegador de cada rodada ficam em [VALIDACAO.md](VALIDACAO.md); esses registros não substituem conferência jurídica, contábil ou uso com o motorista real.
+
+A vistoria do acesso individual também usa quatro passos: painel, itens, fotos privadas e revisão/envio. O motorista pode salvar para continuar depois; a gestão confere os arquivos pelo painel protegido.

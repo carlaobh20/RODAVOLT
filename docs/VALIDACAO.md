@@ -76,3 +76,30 @@ O uso explícito dos R$57 no aluguel de R$1.050 resultou em R$993 tanto no app q
 Regressões provam que caução futura não libera entrega anterior; devolução não usa recebimento posterior ou obrigação já reservada; meses vazios preservam lucro/depreciação; calendários incompatíveis são rejeitados; cuidados do carro atual entram na agenda correta; ex-motorista não vistoria carro de outro; parecer antigo não muda km/liberação do novo ciclo. Painel ativo usa aluguel líquido e rótulo de contrato cancelado foi corrigido.
 
 Lembretes locais passaram a ter consumidor periódico com filtro por perfil e deduplicação por sessão; isso não homologa avisos em segundo plano ou no celular. Não foram homologados banco, Pix, assinatura, GPS, autenticação, concorrência entre dispositivos ou recuperação. A auditoria não encerra as pendências de emissão recorrente de aluguel, devolução final ou reembolso de venda paga.
+
+## Implementação v5 local · fechamento de 18/10/2026
+
+Esta seção atualiza o estado da entrega; as rodadas acima preservam a evidência histórica de quando ainda havia pendências.
+
+**368 testes aprovados em `npm run check`**, build dos dois HTMLs e sintaxe do controlador completo. São 145 regressões novas sobre os 223 anteriores: 21 de cobranças, 17 de encerramento, 18 de ocorrências, 17 de manutenção, 25 de devoluções da loja, 13 de créditos/acertos, 12 de estorno de baixa, 8 de serviço/persistência, 3 de segurança, 5 de portal do motorista, 1 de restauração das fotos, 3 de fuso e 2 de formulários do portal. Os testes HTTP usam diretórios temporários, contas fictícias e portas locais; não utilizam banco ou serviços externos.
+
+Implementado e exercitado:
+
+- Cobrança semanal pelo contrato, pagamento vencido confirmado pelo proprietário, regras explícitas de primeira/última semana, previsão antes de salvar, geração sem duplicação e acerto final sem apagar originais.
+- Devolução com vistoria do ciclo, recebimento físico, retorno do kit/quarentena e encerramento; dívida, crédito, excesso de aluguel pago e caução continuam separados. Avaria de segurança exige manutenção.
+- Reembolsos parciais, Pix tardio, expiração de reserva, recuperação de lucro pago e estorno explícito de crédito. Caixa, resultado e patrimônio não recebem o mesmo efeito duas vezes.
+- Estorno de baixa com origem, reabertura do compromisso, recebimentos acumulados e conciliação original preservada.
+- Multas/sinistros/avarias com prazo, manifestação e decisão humana antes de criar título. Planos de manutenção por km/data com custo efetivo lançado somente na conclusão da OS.
+- Serviço local com login individual, senha com scrypt, sessão HttpOnly, CSRF, comandos autorizados por motorista, arquivos privados, finanças pessoais separadas por usuário e gravação atômica com revisão/idempotência.
+- Conflito entre dois acessos, reenvio, falha antes do commit, reinício do serviço, backup com checksum e restauração. Restaurar revoga os acessos de motorista para evitar reutilizar IDs de outra pessoa; as cinco fotos preservam bytes/vínculos com os novos identificadores. Backup da gestão não contém senhas nem finanças pessoais.
+- Horários da operação com fuso explícito, independentes do fuso do dispositivo. Motorista encerrado consulta saldos/documentos/ajuda sem voltar à jornada de contratação.
+
+Percursos de navegador executados em ambientes isolados:
+
+1. Em `4173/?qa=1`, configurar continuidade de Marcos a partir de 25/01, preservar abertura até 24/01 e conferir primeiro período 25–31/01, vencimento 01/02 e R$1.050. Ativar e emitir até 08/02 criou duas cobranças; a receber passou de R$1.050 para R$3.150 e caixa permaneceu R$57.100,32.
+2. Na mesma sessão, agendar devolução, preencher quatro passos da vistoria com cinco ilustrações identificadas, enviar, conferir na gestão, receber carro/chaves e retornar 4 perfumes/5 carregadores/6 cabos. Encerrar só ficou disponível depois das conferências; acerto mostrou R$1.200 em aluguéis (abertura e um dia proporcional), preservados depois do encerramento. Sem caução ou recebimento inventados.
+3. Em serviço temporário `4175`, login de conta fictícia, acesso ao painel completo, criação de um interessado e recarga. Cadastro permaneceu após resposta de gravação e nova leitura do servidor. Também foi testado o acesso do motorista: criação de vistoria, avanço painel → checklist → fotos, orientação ao faltar foto e salvamento para continuar depois. A revisão final mantém quatro passos também no portal autenticado; formulários com campo chamado `id` têm regressões para impedir envio silenciosamente ignorado. Esse serviço e seus dados de teste são descartados ao terminar a verificação.
+
+O serviço permanente de homologação local usa `4174/operacao`, sem conta/senha padrão; o proprietário cria o primeiro acesso pela tela. A prévia em 4173 preserva a sessão `rodavolt-v3` e seus cenários. Movimentos de teste não foram gravados nessa sessão.
+
+Limites: armazenamento local em arquivo transacional serializado, um processo por diretório e conexões apenas em 127.0.0.1. Não é banco relacional distribuído nem implantação de produção. Contratos/assinaturas e confirmações financeiras continuam demonstrativos; datas da operação são as do exemplo. Não foram homologados fornecedores de banco/Pix, assinatura, telemetria, push, uso entre dispositivos reais, infraestrutura pública, recuperação em desastre nem uma semana com o primeiro carro/motorista. Lotes são anotações do SKU e snapshots, sem compras por múltiplos lotes. Benefícios em outros aplicativos e parcerias continuam dependendo de provisionamento próprio. Não houve deploy, migração remota ou alteração no sistema antigo.

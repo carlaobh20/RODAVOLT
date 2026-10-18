@@ -1,32 +1,38 @@
-# Caminho para uma operação real
+# Plano de execução · v5 local
 
-18/10/2026. A interface anterior foi substituída. Esta versão serve para validar tarefas concretas com o proprietário, preservando a matemática auditada.
+18/10/2026. A autorização para implementar após a auditoria foi aplicada aos fluxos e à base de homologação local. Não há autorização implícita para publicar, promover produção ou usar o banco antigo.
 
-| Etapa | Entrega | Critério para avançar |
+## Implementado para validar nesta máquina
+
+| Entrega | Conteúdo | Critério e limite |
 |---|---|---|
-| 1 · Experiência local | Rotina, kanban, simulador contínuo, loja correta e app com análise de corrida | Percorrer os cenários da validação e aprovar estrutura e nomenclatura |
-| 2 · Primeiro carro | Modelo efetivo, condições comerciais, financiamento, contrato/termo do kit e responsabilidades | Premissas conferidas, reserva suportada e contrato revisado |
-| 3 · Base operacional | Banco, identidades individuais, permissões, arquivos privados, transações e backups | Motorista não acessa outro vínculo; operações concorrentes não duplicam dinheiro/estoque |
-| 4 · Homologação de uma semana | Um carro/um motorista com cobranças, vistoria, manutenção, kit e repasse | Conferir livro e extrato, contagem física, parcelas, comissão e um fechamento completo |
-| 5 · Integrações | Cobrança/Pix, assinatura, notificações e importações, cada uma homologada | Idempotência e reconciliação em cenários de erro/reenvio |
-| 6 · App nativo/assistente de corrida | Captura autorizada de oferta/overlay quando tecnicamente permitido, consentimento e testes por dispositivo | Valores lidos conferem com a oferta; motorista controla o recurso e a decisão; não prometer automação que o protótipo web não possui |
-| 7 · Crescer com evidência | Comparar plano com fechamentos e revisar expansão | Compra adicional sustentada por caixa, reserva e resultado observados |
+| Rotina e planejamento | Gestão, kanban, app simples, simulador contínuo, plano × realizado | Mesmos motores financeiros; pessoas/valores/datas de exemplo |
+| Cobrança contratual | Semana utilizada, regras explícitas, emissão por vínculo/versão, ajustes finais | Duas semanas/dois motoristas, reenvio sem duplicar; condições comerciais efetivas ainda a conferir |
+| Devolução | Agenda, vistoria, carro/chaves, kit, demonstrativo e encerramento | Carro não é liberado por atalho; saldos não são compensados silenciosamente |
+| Loja e exceções | Combo individual, divergência, reserva/expiração, entrega, tardio, devolução/reembolso e quarentena | Preserva produto/preço/custo/margem; fornecedor Pix ainda não homologado |
+| Financeiro | Pagar/receber, baixa/conciliação, estorno, crédito/repasse, devoluções | Caixa, resultado e patrimônio separados; contabilidade/fiscal dependem de revisão |
+| Multas/sinistros | Registro, prazo, manifestação, decisão humana e título vinculado | Proposta não é dívida; sem retenção automática de caução |
+| Acesso e base local | Contas individuais, arquivos privados, gravação atômica, revisão, idempotência e backup | Serviço 4174 em loopback/HTTP; não é publicação ou banco remoto |
+| Privacidade pessoal | Área financeira por conta do motorista | Fora da visão e do backup da gestão |
 
-Não realizar deploy, migração do banco antigo ou contratação de serviços por consequência implícita desta reconstrução. Continuar edição local e sincronização da branch dev após validação.
+A manutenção por carro, km e data foi integrada, com agenda, prazo da oficina e conclusão vinculada à OS. O status final e os testes executados devem ser conferidos em [VALIDACAO.md](VALIDACAO.md), junto da evidência de interface. Não concluir uma área somente pela existência de um botão.
 
-## Ampliação v4 já disponível para avaliação local
+## Próximos passos para o primeiro carro
 
-Financeiro com pagar/receber e conciliação, agenda derivada da operação, Meu advogado, contratação por perfil, vistoria revisável e painel geográfico demonstrativo. Isso amplia a etapa 1; não antecipa banco, autenticação, assinatura nem GPS reais das etapas seguintes. O proprietário decidiu escolher fornecedores somente depois de validar o sistema.
+1. **Homologar a versão local.** Percorrer contratação, entrega, duas semanas, estoque/venda, exceção e devolução. Exercitar dois acessos, conflito de revisão, reenvio e restauração. Usar dados e arquivos de teste.
+2. **Definir a operação efetiva.** Cidade/fuso, carro, financiamento, capital/reserva, seguro/franquia, caução, manutenção, dia de vencimento, parcialidades, atraso e encerramento. Conferir plano de manutenção aplicável ao veículo.
+3. **Revisar contratos e registros.** Advogado revisa minutas, responsabilidades, privacidade e evidências; contabilidade confere reconhecimento, regime, notas/tributos e fechamentos. O sistema organiza o processo, sem substituir essas decisões.
+4. **Preparar infraestrutura adequada.** Definir hospedagem, TLS, banco transacional, arquivos/retenção, monitoramento, recuperação externa, gestão de acessos e proteção do dispositivo. Não expor o serviço HTTP de homologação diretamente na rede.
+5. **Escolher provedores e homologar um por vez.** Banco/Pix, assinatura, telemetria e notificações ainda estão em aberto. Testar confirmação autenticada, eventos fora de ordem, duplicados, falhas de rede, estorno/reembolso e conciliação.
+6. **Executar piloto acompanhado.** Um carro/um motorista e kit pequeno. Conferir extrato, livro, inventário, obrigações e manutenção diariamente. Medir entendimento e tempo para conferir combo, vender, vistoriar, pagar e pedir ajuda.
+7. **Crescer com evidência.** Bater plano com realizado e revisar expansão somente com caixa/reserva/resultado observados. Ganho da lojinha e benefícios não garantem permanência do motorista.
 
-## Ordem revista após auditoria de fluxos
+## Evoluções que continuam separadas
 
-A [auditoria de 18/10](AUDITORIA-DE-FLUXOS.md) é a referência de pendências e evidências desta etapa. Não considerar a operação completa apenas pela quantidade de telas.
+- Múltiplos lotes simultâneos por SKU, compras/entrada fiscal e regras comerciais efetivas de garantia, taxa, avaria e perdas.
+- Provisionamento do benefício de Finanças Pessoais e novos apps; parcerias depois do piloto.
+- Catálogo opcional por QR impresso; caminho principal continua venda assistida sem cadastro do passageiro.
+- App nativo com leitura autorizada de oferta/overlay, se tecnicamente permitido, consentido e homologado por dispositivo. A análise web atual é manual e não aceita corridas em Uber/99.
+- Notificações em segundo plano, recuperação fora desta máquina e rotina offline.
 
-1. Aprovar a rotina simples do motorista e o combo com estoque individual, já demonstráveis.
-2. Definir e implementar a geração de aluguel semanal por contrato, incluindo primeira/última semana e reenvio idempotente.
-3. Conduzir devolução física do carro/kit e acerto final, separando disponibilidade de dívida e caução.
-4. Construir base persistente com acessos individuais, transações, arquivos e recuperação. Não reutilizar o banco antigo por inferência.
-5. Selecionar banco/Pix, assinatura e rastreador; homologar recebimento, conciliação, reembolso, rede indisponível e eventos repetidos.
-6. Validar uma semana com o primeiro carro e motorista; medir entendimento e tempo de cada tarefa antes de automatizar crescimento ou ampliar a frota.
-
-O fluxo principal de venda usa seleção no app do motorista e Pix por pedido na conta da RODAVOLT. Catálogo por QR impresso é uma evolução opcional. O pagamento demonstrativo atual não está conectado a um banco.
+O detalhamento do fechamento da auditoria está em [AUDITORIA-DE-FLUXOS.md](AUDITORIA-DE-FLUXOS.md). As decisões confirmadas ficam em [DECISOES.md](DECISOES.md); condições de exemplo não se tornam fatos comerciais por estarem preenchidas na interface.

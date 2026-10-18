@@ -57,4 +57,21 @@ O proprietário confirmou entrega de combo multproduto, saldo por produto no app
 
 Recomendação desenhada no protótipo: motorista escolhe produto/quantidade e apresenta Pix específico; passageiro paga pelo banco sem cadastro de loja; confirmação vai para a RODAVOLT. A prévia usa pagamento fictício conferido pela gestão, sem QR pagável. Crédito só surge após a conferência; entrega não repete estoque/caixa. O fornecedor não foi selecionado.
 
-O pedido de auditoria abrangeu todos os módulos e encontrou falhas corrigidas de datas/saldos/calendários/vínculos. Cobrança recorrente por novo contrato e encerramento completo ficaram registrados como pendências prioritárias, sem inventar regras de primeira/última semana ou retenção de caução. Ver a matriz, achados, evidências e critérios em AUDITORIA-DE-FLUXOS.md.
+O pedido de auditoria abrangeu todos os módulos e encontrou falhas corrigidas de datas/saldos/calendários/vínculos. Na rodada inicial da auditoria, cobrança recorrente por novo contrato e encerramento completo ficaram registrados como pendências prioritárias. A implementação v5 abaixo fecha esses fluxos localmente, mantendo regras explícitas e sem retenção automática de caução. Ver a matriz, achados, evidências e critérios em AUDITORIA-DE-FLUXOS.md.
+
+
+## V5 · implementação autorizada após a auditoria
+
+O proprietário autorizou seguir e implementar os fluxos apontados. O escopo entregue continua local: código, testes, protótipo com acesso individual e sincronização de `dev`. Essa autorização não implica deploy, promoção para produção, migrations remotas ou conexão ao banco antigo.
+
+Pagamento **vencido**, pela semana já utilizada, foi confirmado pelo proprietário. Dia de vencimento, primeira/última semana e data de entrega são conferidos por contrato. A possibilidade antecipada é uma alternativa explícita; não é o padrão confirmado. Preço/versão/ciclo são preservados e a primeira cobrança é mostrada antes de salvar. Nenhuma regra de juros, multa ou retenção foi inventada.
+
+A devolução reúne vistoria, recebimento físico, chaves, kit e demonstrativo; a mudança de etapa não pode liberar o carro antes dessas conferências. Dívida, crédito, caução e eventual restituição de aluguel permanecem separados. Reembolso de venda, pagamento tardio, quarentena e estornos têm origem/histórico. Crédito disponível pode ser repassado; isso baixa obrigação e não repete a despesa.
+
+Multas/sinistros/avarias têm fluxo próprio com prazo e manifestação. A proposta de valor não se transforma em débito. Atribuição de responsabilidade é humana; título de ressarcimento fica separado de aluguel, e caução não é retida automaticamente.
+
+Foi criada uma base de homologação local em Node 22 sem dependências: `npm run operate`, porta 4174, acesso inicial criado pelo proprietário e contas de motorista vinculadas pela gestão. O serviço usa sessões HttpOnly, CSRF, scrypt, gravação atômica, revisão e idempotência. A prévia estática 4173 continua separada; não se importa ou apaga sua sessão silenciosamente.
+
+A área pessoal do motorista é separada por conta, sem leitura nem backup pela gestão. O backup operacional inclui arquivos, exclui senhas/personal e restauração revoga os acessos de motorista. O proprietário entra novamente e recria os vínculos após conferir os cadastros; arquivos originais são preservados.
+
+O serviço em HTTP/127.0.0.1 não está publicado para celular ou internet. Fixtures e datas operacionais continuam demonstrativas. Banco/Pix, assinatura, telemetria e push permanecem sem fornecedores escolhidos; uso com o primeiro carro, revisão jurídica/contábil, recuperação externa e facilidade para motoristas reais ainda dependem de homologação.

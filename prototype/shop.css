@@ -24,3 +24,6 @@
 #rodavolt.is-driver .shop-flow-steps li{padding:8px 0}
 #rodavolt.is-driver .driver-home-actions:empty{display:none}
 @media(max-width:360px){#rodavolt.is-driver .driver-combo-card,#rodavolt.is-driver .driver-payment-card{padding:20px}#rodavolt.is-driver .shop-payment-value{font-size:32px}}
+
+#rodavolt .shop-return-item{border:1px solid var(--line);border-radius:12px;margin:20px 0;padding:16px}
+#rodavolt .shop-return-item legend{padding:0 8px;font-size:13px;font-weight:600}

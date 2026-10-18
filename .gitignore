@@ -7,3 +7,4 @@ node_modules/
 coverage/
 artifacts/
 *.log
+.local/

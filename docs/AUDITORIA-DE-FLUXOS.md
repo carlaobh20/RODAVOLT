@@ -1,8 +1,8 @@
 # Auditoria dos fluxos da RODAVOLT
 
-18/10/2026 · nova plataforma RODAVOLT, branch `dev` · planejamento e protótipo local.
+18/10/2026 · nova plataforma RODAVOLT, branch `dev` · v5, implementação e homologação local.
 
-A plataforma já permite avaliar as principais rotinas do proprietário e do motorista. A auditoria encontrou e corrigiu falhas de datas, saldos, vínculos e estoque. A operação real ainda precisa de cobrança recorrente por contrato, encerramento completo, persistência com acesso individual e integrações homologadas. Aprovação dos testes locais não significa autorização para usar dinheiro, documentos ou motoristas reais nesta versão.
+A rodada inicial encontrou e corrigiu falhas de datas, saldos, vínculos e estoque. Após autorização para implementar, a v5 acrescentou cobrança por contrato, devolução guiada, exceções da loja, ocorrências e base persistente com acessos individuais para homologação local. Este relatório preserva os achados históricos e registra seu novo fechamento. Integrações reais, condições do primeiro carro, revisão profissional e piloto com motorista continuam pendentes; testes locais não declaram produção pronta.
 
 ## Percurso da operação
 
@@ -23,27 +23,27 @@ flowchart TD
  L --> M[Acerto final e caução]
 ```
 
-A geração recorrente dos aluguéis após E e a condução integrada de L/M são pendências. Hoje existem os componentes de vistoria, contas, crédito, estoque e caução, mas a mudança de etapa no kanban não executa esse ciclo completo.
+Na v5, E ativa uma agenda contratual previamente conferida. L/M agora têm jornada de agendamento, vistoria de retorno, carro/chaves, kit e demonstrativo; o kanban não contorna a conferência física. Valores ainda são de exemplo e dinheiro não é transferido por esta aplicação.
 
 ## Cobertura por área
 
 | Área | O que foi conferido | Situação e limite |
 |---|---|---|
-| Entrada do motorista | Documentação, avaliação manual, contrato vigente do carro, caução por data, vistoria do ciclo e disponibilidade | Gates locais testados; login/documentos reais pendentes |
+| Entrada do motorista | Documentação, avaliação manual, contrato vigente do carro, caução por data, vistoria do ciclo e disponibilidade | Gates locais e acesso individual no serviço; documentação real e uso do primeiro carro não homologados |
 | Contratos | Modelos e versões, revisão, fila, assinatura de ambas as partes, recusa/cancelamento, leitura por perfil | Simulação; rótulos de cancelado/recusado/vencido corrigidos |
-| Entrega do carro | Bloqueio de carro ocupado, vistoria aprovada e novo ciclo | Falta gerar a agenda de cobranças a partir do contrato |
-| Vistoria | Quatro passos, itens de segurança, fotos de exemplo, correção e aprovação | Vínculo encerrado não cria nova vistoria; aprovação histórica não altera carro atual; fotos continuam temporárias |
+| Entrega do carro | Bloqueio de carro ocupado, vistoria aprovada e novo ciclo | Agenda da versão/carro/ciclo confere o início e acompanha a entrega; cobrança vencida confirmada pelo proprietário |
+| Vistoria | Quatro passos, itens de segurança, fotos de exemplo, correção e aprovação | Vínculo encerrado não cria nova vistoria; aprovação histórica não altera carro atual; fotos temporárias na prévia; privadas e filtradas no serviço local |
 | Rotina do motorista | Metas/custos, análise manual de corrida, ganho por km/hora, registro do dia, pedidos e respostas | Sem captura automática de Uber/99; sem homologação com motoristas reais |
-| Manutenção | Solicitação, resposta, OS, indisponibilidade e custo lançado uma vez | Cuidados do carro atual entram na agenda do motorista; definir recorrência/intervalos e prazos de serviço |
-| Agenda | Eventos manuais e derivados, conclusão na origem, filtro por vínculo | Consumidor de lembretes locais incluído; depende do app aberto e do relógio do dispositivo; push externo pendente |
+| Manutenção | Solicitação, resposta, OS, indisponibilidade e custo lançado uma vez | Planos explícitos por km/data, prazo da oficina, agenda por vínculo e conclusão idempotente; estimativa não vira despesa |
+| Agenda | Eventos manuais e derivados, conclusão na origem, filtro por vínculo | Consumidor de lembretes locais incluído; depende do app aberto; serviço identifica fuso demonstrativo America/Sao_Paulo; push externo pendente |
 | Painel ativo | Contexto carro/motorista, idade da amostra, perda de sinal, histórico e aluguel após crédito | Posições fictícias; nenhum rastreador conectado |
-| Financeiro | Pagar/receber, baixa, caução, crédito, caixa/resultado/patrimônio e referência dos lançamentos | Datas de caução corrigidas; estorno operacional completo e fechamento homologado pendentes |
+| Financeiro | Pagar/receber, baixa, caução, crédito, caixa/resultado/patrimônio e referência dos lançamentos | Datas corrigidas; estorno com origem, recebimentos acumulados, repasse e devolução locais; fechamento fiscal e banco real pendentes |
 | Conciliação | Correspondência por conta/sentido/centavos, uma evidência por movimento, desfazer e baixa pela origem | Extrato demonstrativo/manual; banco não escolhido |
-| Lojinha | Combo multproduto, trânsito, recebimento/divergência, estoque por motorista, reserva/cancelamento, pagamento e entrega | Fluxo local implementado; Pix real, expiração e devolução de venda paga pendentes |
+| Lojinha | Combo multproduto, trânsito, recebimento/divergência, estoque por motorista, reserva/cancelamento, pagamento e entrega | Expiração, tardio, devolução/reembolso e quarentena implementados localmente; Pix real e múltiplos lotes por SKU pendentes |
 | Estratégia | Premissas, financiamento, fluxo completo, cenários, plano preservado e reestimativa pelo fechamento | Calendários incompatíveis bloqueados; meses sem registros preservam evolução contábil sem inventar realizado |
 | Benefícios | Ganho da loja, saldo/crédito e indicação de benefícios previstos | Acesso ao app de finanças pessoais e parcerias ainda não ativados |
-| Multas e sinistros | Campos/condições em minutas e despesas manuais | Falta uma jornada própria de notificação, prazo, responsável, contestação/seguro e acerto por vínculo |
-| Encerramento | Manutenção das dívidas, créditos e caução no livro | Falta condução integrada de devolução física, kit, acerto e liberação do carro |
+| Multas e sinistros | Registro por vínculo/ciclo, prazo, manifestação, responsabilidade humana e título | Jornada local implementada; consulta de multas e processos externos/seguro não conectados |
+| Encerramento | Devolução física, kit, acerto, liberação do vínculo e saldos separados | Jornada local implementada; acordo efetivo e experiência real ainda a homologar |
 
 ## Falhas encontradas e correções
 
@@ -60,38 +60,40 @@ A geração recorrente dos aluguéis após E e a condução integrada de L/M sã
 | A09 | P1 | Kit global, venda sem titular e baixa por declaração não representavam entrega de combo nem espera do Pix | Novo motor `src/shop.js`: custódia individual, reserva, confirmação da gestão em cópia transacional, acerto só das vendas do pedido e entrega idempotente. 28 testes específicos |
 | A10 | P1 | Reposição podia ser associada a combo de outro motorista; envio parcial podia parecer pedido atendido | Vínculo no motor com validação de titular/produto/estado antes de mutação; saldo recebido e faltante calculado por todos os combos ligados. Cancelar/repetir não duplica contagem. Seis testes novos |
 
-P1: pode comprometer entrega, dinheiro ou estoque. P2: informação incorreta ou quebra de continuidade da rotina. Todas as correções acima permanecem limitadas ao demonstrador local.
+P1: pode comprometer entrega, dinheiro ou estoque. P2: informação incorreta ou quebra de continuidade da rotina. Os achados A01–A10 são o histórico da rodada inicial. Sua evidência não representa integração bancária ou produção; a base local foi ampliada na rodada seguinte.
 
-## Pendências para o primeiro carro
+## Fechamento das pendências da rodada inicial
 
-### 1. Cobrança semanal por contrato
+| Pendência anterior | Implementação v5 | Evidência e limite |
+|---|---|---|
+| Aluguel só existia na abertura fictícia | `src/rental.js`: configuração explícita, preço/versão/ciclo preservados, vencimento e emissão idempotente; primeira/última semana e ajuste final | `tests/rental.test.mjs`; pagamento posterior confirmado; juros/reajuste/atraso não são inventados |
+| Kanban podia liberar sem devolução física | `src/closure.js`: agendamento, retorno aprovado, carro/chaves, kit e demonstrativo; gate no fluxo de saída | `tests/closure.test.mjs`; dívidas/créditos/caução preservados, manutenção mantém indisponibilidade |
+| Venda paga não tinha devolução | `src/shop.js`: retorno parcial, reembolso com origem, crédito/CMV, quarentena e avaliação; reserva expira e tardio vira obrigação | `tests/shop-refunds.test.mjs`; ganho usado/pago exige estorno ou recuperação explícitos; Pix real não conectado |
+| Base só possuía seletor visual | Serviço 4174: sessões, titulares, comandos permitidos, arquivos privados, gravação atômica/revisão/idempotência e backup | Testes do serviço local cobrem acessos concorrentes e revisão 409; prévia 4173 permanece sem autenticação |
+| Multas e sinistros não tinham jornada | `src/incidents.js`: fato, proposta, prazo, manifestação, análise humana, título vinculado e resolução | `tests/incidents.test.mjs`; não atribui culpa nem retém caução automaticamente |
+| Baixa/crédito só avançavam | Estorno vinculado da última baixa, estorno de abatimento, recuperação de lucro pago, repasse de saldo e devolução de aluguel | `tests/finance-reversals.test.mjs` e `tests/settlement-reversals.test.mjs`; acerto encerrado bloqueia reabertura sem revisão |
 
-Ativar outro motorista ainda não cria suas cobranças: os quatro aluguéis iniciais são a abertura fictícia de Marcos. Não há rotina de emissão semanal. Antes do piloto, definir pagamento antecipado ou posterior, dia de vencimento, primeira semana parcial, encerramento parcial, reajuste e atraso. Implementar uma agenda idempotente por vínculo/competência, preservando o preço do contrato. Critério: duas semanas, dois motoristas e reenvio sem cobrança duplicada; o app e a gestão veem o mesmo saldo.
+A base local utiliza os mesmos motores e mantém as contas pessoais separadas por `user.id`. A gestão não recebe essas jornadas/decisões, e seu backup exclui personal/senhas. Restaurar revoga acessos de motorista e sessões; o proprietário entra novamente e recria o vínculo após conferir os cadastros. Arquivos originais são preservados. Essas proteções são verificações da implementação local, sem declaração de segurança de publicação.
 
-### 2. Devolução e encerramento
+## O que ainda precisa ser homologado para o primeiro carro
 
-Hoje o kanban pode encerrar e soltar o carro sem conduzir a vistoria de retorno e a contagem do kit. Dívidas permanecem no livro, mas isso não prova que o carro voltou fisicamente. Criar uma jornada com devolução agendada, vistoria/km/combustível, estoque retornado/avariado, acerto final e caução. Disponibilidade física e pendência financeira precisam ser tratadas separadamente: dívida não desaparece e não se deve inventar retenção automática de caução. Critério: carro só volta a disponível depois da conferência física; cada saldo final mantém sua origem.
+1. **Condições efetivas e revisão profissional:** carro/cidade/fuso, financiamento, seguro/franquia, caução, contrato/termo do kit, manutenção, vencimento e parcialidades, atraso, tributos e notas. A aplicação não aprova cláusulas ou escolhe essas condições como fato.
+2. **Serviços reais:** banco/Pix, assinatura, rastreador e notificações ainda sem fornecedor. Homologar mensagens autenticadas, duplicação, fora de ordem, expiração/pagamento tardio, estorno, rede indisponível e conciliação.
+3. **Infraestrutura e recuperação:** serviço usa HTTP apenas em loopback. Publicação, TLS, banco/arquivos remotos, retenção, monitoramento e restauração fora desta máquina exigem implantação própria. Não houve deploy ou migration remota.
+4. **Estoque comercial:** catálogo guarda um lote/validade/garantia por SKU e snapshots da venda, mas não controla múltiplos lotes simultâneos de um mesmo produto. Validar compras/entrada fiscal, taxas, garantia, perdas e fornecedor.
+5. **Uso e piloto reais:** testar botões e entendimento com a pessoa que vai dirigir; conferir diariamente livro/extrato/inventário/caução/créditos e acompanhar um ciclo completo do interessado à devolução. Facilidade e retenção não são garantidas por teste técnico.
+6. **Benefícios e automação externa:** acesso ao Finanças Pessoais, novos apps/parcerias e captura nativa de ofertas não foram provisionados. A análise de corrida continua manual e a escolha pertence ao motorista.
 
-### 3. Exceções da lojinha
-
-Combo parcial e cancelamento antes do recebimento já têm caminho. Pedido sem pagamento pode ser cancelado, liberando reserva. Venda paga não pode ser apagada: ainda falta a jornada de devolução/reembolso, retorno físico e reversão correspondente do crédito/CMV/recebimento. Faltam expiração de cobrança, tratamento de pagamento tardio, referência bancária real, catálogo com fotos/lote/validade/garantia e regras de taxas/perdas. Não descontar perdas do motorista automaticamente.
-
-### 4. Base operacional e integrações
-
-Autenticação e permissões por motorista, banco transacional, arquivos privados, auditoria e recuperação são bloqueios de produção. A troca de perfil atual é apenas demonstração. Homologar dois acessos concorrentes, transação interrompida, evento repetido, rede indisponível e restauração do backup. Definir também o fuso dos compromissos da operação: o aviso local atual segue o relógio do dispositivo, que pode estar em outro fuso. Depois integrar banco/Pix, assinatura, rastreador e notificações com fornecedores escolhidos. Nenhuma credencial, migration remota ou publicação de produção faz parte desta entrega.
-
-### 5. Semana real de homologação
-
-Usar valores/condições aprovados para o carro efetivo e revisar minutas com profissional. Percorrer do interessado ao encerramento; conferir extrato, livro, inventário e obrigações diariamente. Medir se o motorista entende os botões e consegue receber combo, vender, fazer vistoria e pedir ajuda. A auditoria técnica não substitui esse teste com a pessoa que vai dirigir.
+Os planos de manutenção por carro, km e data estão integrados à Frota, à agenda e ao app. Concluir a OS valida data e hodômetro antes do custo e reinicia somente o plano vinculado; consultar o fechamento em `VALIDACAO.md`. Não confundir disponibilidade de telas, aprovação dos testes locais e homologação do veículo efetivo.
 
 ## Validação realizada
 
-- `npm run check`: 223 testes aprovados, build e sintaxe do controlador completo; número final registrado também em `docs/VALIDACAO.md`.
+- Rodada inicial da auditoria: `npm run check` aprovou 223 testes, build e sintaxe. A contagem e evidência final da v5 ficam em [VALIDACAO.md](VALIDACAO.md), sem congelar aqui um número enquanto a implementação evolui.
 - 28 testes da lojinha, seis de acerto por pedido, dez de datas/contabilidade/calendário e sete de operação adicionados nesta etapa, além dos 172 anteriores.
 - Navegador em `?qa=1`: envio de 2 unidades de cada SKU não alterou o disponível; recebimento mudou 4/5/6 para 6/7/8; pedido de um perfume reservou uma unidade; pagamento fictício gerou crédito de R$57 e saldo 5/7/8; entrega não baixou outra unidade.
 - Aplicar os R$57 no aluguel de R$1.050 mostrou R$993 no app e no painel ativo da gestão; o crédito disponível passou a zero. Sessão de teste isolada, sem gravar esses movimentos na sessão principal.
-- Caminhos de divergência/cancelamento, isolamento de estoque, preço preservado, reenvio e rollback de erro estão cobertos nos testes do motor. Integrações e concorrência entre dispositivos não foram homologadas.
-- Leitura das telas e testes dos demais módulos; este registro não afirma que cada combinação de telas passou por uma sessão manual de navegador nesta rodada.
+- Caminhos de divergência/cancelamento, isolamento de estoque, preço preservado, reenvio e rollback de erro estão cobertos nos testes do motor. A v5 acrescenta testes de concorrência no serviço local; integrações e uso remoto entre dispositivos ainda não foram homologados.
+- Os percursos de navegador acima pertencem à rodada inicial; a evidência final de interface e do serviço desta implementação está em VALIDACAO.md. Não se afirma que todas as combinações de telas ou condições comerciais passaram por teste humano.
 
 ## Fluxo de compra recomendado
 

@@ -1,4 +1,4 @@
-# RODAVOLT · PRD v4
+# RODAVOLT · PRD v5 local
 
 18/10/2026. Substitui o desenho v2. Direção do proprietário: começar novamente, reduzir confusão, recuperar a experiência completa do simulador antigo, incluir kanban, ajustar a loja para perfumes/acessórios e ampliar o app do motorista com decisão de corrida por objetivos.
 
@@ -18,7 +18,7 @@ Kanban: Interessados → Documentação → Contrato e entrega → Rodando → E
 
 Frota: aquisição com desembolso/dívida rastreáveis, valor estimado, vínculo, hodômetro, manutenção e checklist. Ordem aberta bloqueia nova entrega; conclusão registra custo uma única vez e libera conforme vínculo. Hodômetro não retrocede. Carros adicionais podem ser vinculados a motoristas distintos.
 
-Financeiro: cobranças semanais separadas de recebimentos; comprovante é pendência, não baixa. Conferência repetida não duplica receita. Despesa tem fonte, mês, centro e natureza. Principal reduz dívida, não lucro. Aporte não é faturamento. Correções em produção exigirão estorno/histórico e conciliação.
+Financeiro: cobranças semanais separadas de recebimentos; comprovante é pendência, não baixa. Conferência repetida não duplica receita. Despesa tem fonte, mês, centro e natureza. Principal reduz dívida, não lucro. Aporte não é faturamento. Correções locais usam estorno vinculado e histórico, preservando conciliação. Regras fiscais e operação real ainda exigem homologação.
 
 ## Loja no carro
 
@@ -26,7 +26,7 @@ Catálogo confirmado: perfumaria e acessórios, com perfumes de bolso, carregado
 
 Cada SKU tem preço, custo, estoque central e kit. Transferência conserva quantidade. Venda baixa o kit e preserva preço, custo, comissão e quem recebeu. Dinheiro com motorista gera repasse líquido; recebido pela empresa pode gerar comissão a pagar. Acerto explícito gera lançamentos idempotentes. Não descontar comissão no aluguel sem registros correspondentes.
 
-Na implantação real: fornecedores, compras, entrada fiscal, lote/validade de perfume, garantia de acessórios, devolução, avaria, inventário, termo de custódia e acerto por vínculo/período. Esses controles precisam de movimentos transacionais no servidor.
+Lote, validade e garantia têm campos/snapshots no catálogo e nas vendas; devolução, avaria, inventário e retorno do kit têm controle local. Na implantação real, validar fornecedores, compras/entrada fiscal, tributação e custódia de múltiplos lotes simultâneos do mesmo SKU. O registro atual de lote por SKU não equivale a rastreabilidade completa por unidade.
 
 ## Simulador empresarial
 
@@ -60,7 +60,7 @@ Jornada pessoal não é receita da locadora. Salvar a mesma data corrige o dia; 
 
 ## Limite desta entrega
 
-Protótipo funcional, estático, persistência no navegador e dados fictícios. Banco, autenticação/autorização, arquivos privados, cobrança/Pix, assinatura, conciliação real e app nativo automático serão implementações próprias, com homologação. O seletor Gestão/Motorista é demonstração de interface, não barreira de segurança.
+Plataforma para homologação local, com dados fictícios e duas entradas separadas. A prévia estática 4173 persiste no navegador e seu seletor Gestão/Motorista demonstra interface. O serviço local 4174 aplica login individual, projeções/comandos por titular, arquivos privados e persistência. Não está publicado para a internet. Banco/Pix, assinatura, conciliação real, telemetria, notificações externas e app nativo automático dependem de fornecedores e homologação própria.
 
 ## Ampliação confirmada pelo proprietário · v4
 
@@ -96,7 +96,7 @@ Quatro abas: Início, Aluguel, Lojinha e Mais. No início ativo, mostrar saldo a
 
 Aparência: branco, cartões cinza com cantos de 24px e sem sombra, títulos arredondados, ações pretas em pílula, ícones de linha e navegação inferior fixa com indicador discreto. Tema claro/escuro segue a paleta do Finanças Pessoais; trocar tema não descarta formulário em preenchimento. Manter controles legíveis em vez dos rótulos pequenos da referência.
 
-Vistoria em quatro passos: painel, itens, fotos e resumo/envio. Guardar campos válidos entre etapas e permitir sair sem prender o usuário em um campo inválido; orientar que o último rascunho válido foi preservado. O envio continua aguardando conferência. Fotos são temporárias no protótipo.
+Vistoria em quatro passos: painel, itens, fotos e resumo/envio. Guardar campos válidos entre etapas e permitir sair sem prender o usuário em um campo inválido; orientar que o último rascunho válido foi preservado. O envio continua aguardando conferência. Na prévia estática, fotos são temporárias; o serviço local permite arquivos privados vinculados à vistoria.
 
 Uma ação para usar os créditos disponíveis, com prévia do desconto e do saldo antes de confirmar. Reutilizar o motor contábil: respeitar titularidade, centavos, limite da cobrança, sobra para outra semana e reenvio idempotente. Explicar em linguagem simples venda bruta, custo e lucro; venda pendente não é desconto liberado, e lucro já pago não pode ser usado de novo.
 
@@ -110,6 +110,44 @@ Fluxo de pagamento proposto: venda assistida pelo motorista, Pix específico por
 
 Pedido reserva estoque; cancelar antes de pagar libera a reserva. Pagamento fictício conferido pela gestão registra caixa, CMV e crédito de margem apenas das vendas daquele pedido, sem acertar vendas manuais pendentes. Entrega é outra confirmação, que não movimenta dinheiro ou estoque outra vez. Preço/custo e motorista/carro da venda são preservados. O lucro registrado não significa que ainda está disponível se já foi usado no aluguel.
 
-Venda paga não pode ser apagada ou cancelada por botão: devolução física/reembolso/estorno do crédito ainda precisam de jornada própria. Expiração e pagamento tardio serão homologados com o fornecedor. Custódia por motorista e filtros locais não substituem transações nem permissões no servidor.
+Venda paga não pode ser apagada ou cancelada por botão. Devolução/reembolso preserva recebimento, CMV e margem. Crédito já usado ou lucro já pago exige estorno/recuperação explícita antes do reembolso correspondente. Expiração libera reserva; pagamento tardio vira obrigação até devolução conferida. Esses caminhos já existem localmente; com o fornecedor escolhido, expiração bancária, pagamento tardio e reembolso precisam de homologação real. O serviço local aplica titularidade e gravação serializada; a prévia estática continua sem autenticação.
 
 A auditoria completa e os próximos critérios de aceite estão em [AUDITORIA-DE-FLUXOS.md](AUDITORIA-DE-FLUXOS.md).
+
+
+## Cobrança contratual e devolução v5
+
+Escolha confirmada pelo proprietário: o motorista paga a semana já utilizada (vencido). Na configuração por contrato revisado/assinado, a gestão confere data de entrega, dia de vencimento, primeira/última semana proporcional ou inteira e referência das condições. A alternativa antecipada permanece uma configuração explícita, sem alterar silenciosamente o documento. A interface apresenta a primeira cobrança antes de salvar.
+
+A entrega exige agenda válida da mesma versão, carro e ciclo. Emissão até uma data é idempotente e não recebe dinheiro. Preço é preservado; calendário incompatível e contrato alterado impedem emissão incoerente. As quatro cobranças de abertura não são duplicadas: continuidade exige cobertura histórica conferida e primeiro vencimento posterior.
+
+Devolução segue agendamento → vistoria de retorno aprovada → recebimento físico de carro/chaves/km/combustível → retorno do kit bom/avariado → demonstrativo → encerramento. O kanban não contorna esses passos. Devolução não quita dívidas, não compensa caução/crédito e não encerra manutenção. Um carro recebido pode continuar indisponível por manutenção.
+
+A última cobrança é ajustada conforme a regra conferida. Cobranças originais e pagamentos permanecem no histórico. Valor recebido a maior vira obrigação separada; sua devolução baixa caixa e passivo sem nova despesa. O pagamento da última parcial mantém o dia semanal combinado. Reajuste, multa, juros e cobrança após vigência não são inventados pelo sistema.
+
+## Exceções financeiras e de estoque
+
+A gestão pode estornar a última baixa elegível preservando lançamento original, evidência de conciliação e motivo. Recebimentos parciais/reabertos acumulam `paidAmount`; uma nova baixa não apaga a anterior. Abatimento de crédito tem estorno próprio; lucro pago exige recuperação confirmada para voltar a ficar disponível. Repasse de crédito disponível baixa obrigação sem despesa repetida. Aluguel já incluído em acerto encerrado exige revisão do acerto antes de reabrir crédito ou pagamento.
+
+Venda paga admite retorno parcial por produto. Produto bom volta à central; avariado vai para quarentena até decisão humana de reposição ou baixa do custo, sem cobrança automática ao motorista. Pagamento fora do prazo não revive reserva nem cria ganho; é obrigação de devolver. No encerramento, conferir inclusive kit vazio e resolver pedidos/combos/acertos pendentes.
+
+Multas, sinistros e avarias têm motorista/carro/ciclo, data, prazo, proposta de valor, manifestação e análise. Valor proposto não é dívida. Somente decisão manual fundamentada cria título vinculado; responsabilidade do motorista exige oportunidade de manifestação e seguradora exige aceite conferido. Ressarcimento usa natureza própria, separada de aluguel. Resolver uma ocorrência não paga título nem libera manutenção.
+
+## Acesso, persistência e privacidade locais
+
+O proprietário cria sua conta no primeiro acesso do serviço e cadastra os acessos dos motoristas. O servidor deriva a identidade do motorista da sessão, filtra visão/arquivos e permite comandos específicos; não aceita edição integral do livro por motorista. A gestão salva a operação completa com revisão esperada. Concorrência desatualizada devolve 409; idempotência impede repetir a mesma mutação.
+
+Senhas são protegidas por scrypt; sessões HttpOnly e CSRF protegem o uso local. Gravação em `.local/rodavolt` é atômica e serializada. Não há banco remoto nem uso do projeto antigo. HTTP em loopback é homologação na máquina, sem promessa de segurança de publicação ou acesso do celular pela rede.
+
+Jornadas, metas e decisões pessoais no serviço pertencem à conta `user.id`; a gestão não as recebe nem as inclui em backup. A cópia operacional inclui arquivos e trilha, exclui senhas e personal. Restaurar revoga sessões/acessos de motorista e exige reautenticação do proprietário e novo vínculo consciente. Arquivos originais são preservados. A política de retenção e recuperação externa ainda precisa de definição.
+
+## Aceites complementares de homologação
+
+- Duas semanas e dois motoristas produzem cobranças corretas; repetir não duplica cobrança nem caixa.
+- Devolver no meio da semana preserva original, proporcionalidade e saldo. Retorno físico é obrigatório para liberar vínculo; dívida permanece rastreável.
+- Reembolso não remove crédito já usado/pago sem estorno ou recuperação; quarentena não gera débito de motorista automaticamente.
+- Estorno de baixa preserva original/conciliação e reabre somente o saldo correto; nova baixa acumula recebimentos.
+- Acesso de motorista não lê outro vínculo, arquivos de terceiros ou finanças pessoais alheias. A gestão não recebe a área pessoal.
+- Dois logins concorrentes não sobrescrevem revisão antiga; reenvio idempotente não repete efeito.
+- Backup/restauração é verificado sem senhas/personal e exige recriar acessos de motorista; a restauração não apaga arquivos originais.
+- Testes locais, build e sintaxe passam; evidências e contagem final constam em `VALIDACAO.md`. Aprovação local não declara produção, integrações ou piloto real homologados.

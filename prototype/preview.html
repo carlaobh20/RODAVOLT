@@ -1,0 +1,515 @@
+<style>
+#rodavolt-app {
+  color-scheme: light dark;
+  --rv-bg: light-dark(#f4f6f3,#111a16); --rv-panel: light-dark(#ffffff,#19251e);
+  --rv-ink: light-dark(#172e22,#edf3ed); --rv-muted: light-dark(#617468,#a3b4a7);
+  --rv-line: light-dark(#dce4db,#33483a); --rv-soft: light-dark(#eaf0e7,#25372a);
+  --rv-green: light-dark(#235e3c,#a1d7ac); --rv-lime: light-dark(#d6ed83,#d6ed83);
+  --rv-on-lime: #1b3522; --rv-dark: light-dark(#183c2a,#213f2c);
+  --rv-on-dark: #f3f8e9; --rv-warn: light-dark(#965329,#f7bc81);
+  --rv-red: light-dark(#a23838,#f0a8a8); --rv-radius: 14px; --rv-gap: 24px;
+  font: 14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color: var(--rv-ink); background: var(--rv-bg); display:grid;grid-template-columns:220px minmax(0,1fr);min-height:820px;
+  width:100%; overflow:clip;border:1px solid var(--rv-line);border-radius:18px;
+}
+#rodavolt-app *{box-sizing:border-box}
+#rodavolt-app [hidden]{display:none!important}
+#rodavolt-app button,#rodavolt-app input,#rodavolt-app select{font:inherit}
+#rodavolt-app button{cursor:pointer}
+#rodavolt-app button:focus-visible,#rodavolt-app input:focus-visible,#rodavolt-app select:focus-visible{outline:3px solid var(--rv-green);outline-offset:3px}
+#rodavolt-app button:disabled{opacity:.45;cursor:default}
+#rodavolt-app h1,#rodavolt-app h2,#rodavolt-app h3,#rodavolt-app p{margin:0}
+#rodavolt-app h1{font-size:clamp(26px,3.6vw,38px);letter-spacing:-1.4px;font-weight:600;line-height:1.13;max-width:580px}
+#rodavolt-app h2{font-size:17px;font-weight:600;letter-spacing:-.35px}
+#rodavolt-app h3{font-size:14px;font-weight:600}
+#rodavolt-app small{font-size:11px}
+#rodavolt-app .rv-sidebar{background:var(--rv-panel);border-right:1px solid var(--rv-line);padding:28px 16px 18px;display:flex;flex-direction:column;gap:26px}
+#rodavolt-app .rv-brand{display:flex;gap:10px;align-items:center;font-size:18px;font-weight:750;letter-spacing:1.2px;padding:0 6px}
+#rodavolt-app .rv-brand small{display:block;color:var(--rv-muted);font-weight:400;letter-spacing:0;margin-top:3px}
+#rodavolt-app .rv-mark{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:11px;background:var(--rv-dark);color:var(--rv-lime);font-weight:600;letter-spacing:-4px;font-size:27px;padding-right:6px}
+#rodavolt-app .rv-mark span{font-size:20px;transform:translate(-1px,-7px)}
+#rodavolt-app .rv-workspace{padding:12px 8px;border-top:1px solid var(--rv-line);border-bottom:1px solid var(--rv-line);font-size:12px}
+#rodavolt-app .rv-workspace small{display:block;color:var(--rv-muted);font-size:10px;letter-spacing:1.5px;margin:5px 0 0 14px}
+#rodavolt-app .rv-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--rv-green);margin-right:6px}
+#rodavolt-app .rv-nav-label,#rodavolt-app .rv-eyebrow{font-size:10px;letter-spacing:1.7px;font-weight:600;color:var(--rv-muted)}
+#rodavolt-app .rv-nav-label{padding-left:10px;margin-bottom:-18px}
+#rodavolt-app nav{display:flex;flex-direction:column;gap:5px}
+#rodavolt-app nav button{border:0;background:transparent;text-align:left;padding:11px 10px;border-radius:8px;color:var(--rv-muted);font-size:12px;display:flex;align-items:center;gap:9px;position:relative;min-height:42px}
+#rodavolt-app nav button span{font-size:10px;opacity:.6;font-variant-numeric:tabular-nums}
+#rodavolt-app nav button b{font-size:7px;letter-spacing:.3px;position:absolute;right:8px;top:4px;font-weight:600}
+#rodavolt-app nav button[aria-current="page"]{background:var(--rv-soft);color:var(--rv-green);font-weight:600}
+#rodavolt-app nav button:hover{background:var(--rv-soft)}
+#rodavolt-app .rv-sidebar-note{margin-top:auto;padding:17px 12px;background:var(--rv-soft);border-radius:12px}
+#rodavolt-app .rv-sidebar-note strong{display:block;font-size:19px;letter-spacing:-.5px;margin:9px 0 6px}
+#rodavolt-app .rv-sidebar-note small{display:block;color:var(--rv-muted)}
+#rodavolt-app .rv-sidebar-note button{margin-top:16px;border:0;background:none;color:var(--rv-green);font-size:11px;padding:0;text-align:left}
+#rodavolt-app .rv-user{display:flex;gap:9px;align-items:center;font-size:12px;border-top:1px solid var(--rv-line);padding:18px 4px 0}
+#rodavolt-app .rv-user>span{background:var(--rv-soft);border-radius:50%;width:32px;height:32px;display:grid;place-items:center;font-size:10px}
+#rodavolt-app .rv-user small{display:block;color:var(--rv-muted);font-size:10px}
+#rodavolt-app .rv-workarea{min-width:0;display:flex;flex-direction:column}
+#rodavolt-app .rv-topbar{padding:18px 28px;border-bottom:1px solid var(--rv-line);display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--rv-panel);font-size:11px;flex-wrap:wrap}
+#rodavolt-app .rv-topbar>div:first-child{color:var(--rv-muted)}
+#rodavolt-app .rv-topbar strong{font-weight:500;color:var(--rv-ink)}
+#rodavolt-app .rv-topbar span{padding:0 8px}
+#rodavolt-app .rv-switch{display:flex;gap:3px;padding:3px;border:1px solid var(--rv-line);border-radius:7px}
+#rodavolt-app .rv-switch button{font-size:10px;border:0;background:transparent;color:var(--rv-muted);padding:5px 8px;border-radius:4px}
+#rodavolt-app .rv-switch button[aria-pressed="true"]{background:var(--rv-soft);color:var(--rv-ink)}
+#rodavolt-app main{padding:30px 28px;flex:1;min-width:0}
+#rodavolt-app .rv-heading{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:24px}
+#rodavolt-app .rv-heading .rv-eyebrow{margin-bottom:10px;display:block}
+#rodavolt-app .rv-subtitle{font-size:12px;line-height:1.65;color:var(--rv-muted);margin-top:12px;max-width:540px}
+#rodavolt-app .rv-actions{display:flex;gap:8px;flex-wrap:wrap}
+#rodavolt-app .rv-button{border:1px solid var(--rv-line);border-radius:7px;background:var(--rv-panel);color:var(--rv-ink);padding:9px 12px;font-size:11px;min-height:36px;white-space:normal}
+#rodavolt-app .rv-button.rv-primary{background:var(--rv-lime);border-color:transparent;color:var(--rv-on-lime);font-weight:600}
+#rodavolt-app .rv-button.rv-dark-button{background:var(--rv-dark);color:var(--rv-on-dark);border-color:transparent}
+#rodavolt-app .rv-text-button{border:0;background:none;color:var(--rv-green);font-size:11px;padding:5px 0;text-align:left}
+#rodavolt-app .rv-panel{background:var(--rv-panel);border:1px solid var(--rv-line);border-radius:var(--rv-radius);padding:20px;min-width:0}
+#rodavolt-app .rv-panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+#rodavolt-app .rv-panel-header small{color:var(--rv-muted)}
+#rodavolt-app .rv-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0}
+#rodavolt-app .rv-tabs button{border:1px solid var(--rv-line);border-radius:6px;background:var(--rv-panel);padding:7px 12px;font-size:11px;color:var(--rv-muted);min-height:34px}
+#rodavolt-app .rv-tabs button[aria-pressed="true"]{background:var(--rv-dark);color:var(--rv-on-dark);border-color:var(--rv-dark)}
+#rodavolt-app .rv-sim-grid{display:grid;grid-template-columns:minmax(240px,.95fr) minmax(250px,1fr);gap:18px;align-items:start}
+#rodavolt-app .rv-field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 12px}
+#rodavolt-app .rv-field{display:block;font-size:11px;color:var(--rv-muted);min-width:0}
+#rodavolt-app .rv-field input,#rodavolt-app .rv-field select{margin-top:5px;width:100%;background:var(--rv-bg);border:1px solid var(--rv-line);border-radius:6px;padding:9px 8px;font-size:13px;font-weight:500;color:var(--rv-ink);min-height:38px;font-variant-numeric:tabular-nums}
+#rodavolt-app .rv-field small{display:block;margin-top:4px;font-size:10px}
+#rodavolt-app details{border-top:1px solid var(--rv-line);margin-top:18px;padding-top:14px}
+#rodavolt-app summary{font-size:11px;font-weight:600;cursor:pointer;margin-bottom:12px;min-height:22px}
+#rodavolt-app .rv-result-hero{padding:22px;border-radius:var(--rv-radius);background:var(--rv-dark);color:var(--rv-on-dark);position:relative;overflow:hidden}
+#rodavolt-app .rv-result-hero .rv-eyebrow{color:var(--rv-on-dark);opacity:.75}
+#rodavolt-app .rv-result-hero .rv-big-number{font-size:34px;font-weight:500;letter-spacing:-1.4px;font-variant-numeric:tabular-nums;line-height:1.4;margin-top:10px}
+#rodavolt-app .rv-result-hero .rv-big-number small{font-size:13px;letter-spacing:0;opacity:.7}
+#rodavolt-app .rv-result-hero .rv-caption{font-size:11px;opacity:.78}
+#rodavolt-app .rv-result-duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;border-top:1px solid color-mix(in srgb,var(--rv-on-dark) 20%,transparent);padding-top:16px;margin-top:18px}
+#rodavolt-app .rv-result-duo small{display:block;font-size:10px;opacity:.8}
+#rodavolt-app .rv-result-duo strong{display:block;font-size:17px;font-weight:500;margin-top:4px;font-variant-numeric:tabular-nums}
+#rodavolt-app .rv-mini-note{font-size:10px;color:var(--rv-muted);margin-top:12px;line-height:1.6}
+#rodavolt-app .rv-flow{margin-top:16px}
+#rodavolt-app .rv-flow-line{display:flex;justify-content:space-between;gap:12px;font-size:11px;padding:8px 0;border-bottom:1px solid var(--rv-line);font-variant-numeric:tabular-nums}
+#rodavolt-app .rv-flow-line strong{font-weight:500}
+#rodavolt-app .rv-flow-line.rv-total{border-bottom:0;font-weight:600;color:var(--rv-green)}
+#rodavolt-app .rv-health{display:flex;align-items:center;gap:8px;font-size:10px;padding:8px 10px;border-radius:6px;background:var(--rv-soft);color:var(--rv-green);margin-top:16px}
+#rodavolt-app .rv-health.rv-negative{color:var(--rv-red)}
+#rodavolt-app .rv-warning{font-size:11px;color:var(--rv-warn);margin-top:12px}
+#rodavolt-app .rv-chart{width:100%;height:175px;display:block;margin-top:12px}
+#rodavolt-app .rv-chart text{font:11px system-ui;fill:var(--rv-muted)}
+#rodavolt-app .rv-chart-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--rv-muted);margin-top:3px}
+#rodavolt-app .rv-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:20px}
+#rodavolt-app .rv-kpi{padding:18px;background:var(--rv-panel);border:1px solid var(--rv-line);border-radius:var(--rv-radius)}
+#rodavolt-app .rv-kpi small{display:block;color:var(--rv-muted);font-size:10px}
+#rodavolt-app .rv-kpi strong{display:block;font-size:25px;letter-spacing:-.8px;font-weight:500;margin:8px 0;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+#rodavolt-app .rv-kpi span{font-size:10px;color:var(--rv-muted)}
+#rodavolt-app .rv-two{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;align-items:start}
+#rodavolt-app .rv-stack{display:grid;gap:16px}
+#rodavolt-app .rv-badge{display:inline-block;font-size:10px;border-radius:4px;padding:3px 6px;background:var(--rv-soft);color:var(--rv-green);white-space:normal}
+#rodavolt-app .rv-badge.rv-amber{color:var(--rv-warn)}
+#rodavolt-app .rv-table-wrap{overflow-x:auto;max-width:100%}
+#rodavolt-app table{width:100%;border-collapse:collapse;font-size:11px}
+#rodavolt-app th{font-weight:400;color:var(--rv-muted);text-align:left;font-size:10px;padding:10px 8px;background:var(--rv-bg)}
+#rodavolt-app td{padding:13px 8px;border-bottom:1px solid var(--rv-line);font-variant-numeric:tabular-nums;vertical-align:middle}
+#rodavolt-app td small{display:block;color:var(--rv-muted);font-size:10px}
+#rodavolt-app td strong{font-weight:500}
+#rodavolt-app .rv-list-row{padding:14px 0;border-bottom:1px solid var(--rv-line);display:flex;gap:14px;justify-content:space-between;align-items:center;font-size:12px}
+#rodavolt-app .rv-list-row:last-child{border-bottom:0}
+#rodavolt-app .rv-list-row small{display:block;color:var(--rv-muted);font-size:10px;margin-top:4px}
+#rodavolt-app .rv-license{background:var(--rv-soft);padding:6px 9px;border-radius:5px;font-size:11px;font-family:monospace;letter-spacing:1px;display:inline-block}
+#rodavolt-app .rv-vehicle{padding:25px;border-radius:12px;background:var(--rv-soft);margin-bottom:18px;display:flex;align-items:end;justify-content:space-between;gap:16px}
+#rodavolt-app .rv-vehicle strong{font-size:25px;letter-spacing:-.6px;font-weight:500;display:block}
+#rodavolt-app .rv-vehicle small{font-size:11px;color:var(--rv-muted)}
+#rodavolt-app .rv-avatar{display:inline-grid;place-items:center;width:32px;height:32px;background:var(--rv-soft);color:var(--rv-green);border-radius:50%;font-size:11px;margin-right:8px}
+#rodavolt-app .rv-empty{padding:36px 20px;text-align:center;background:var(--rv-panel);border:1px solid var(--rv-line);border-radius:var(--rv-radius)}
+#rodavolt-app .rv-empty h2{font-size:22px;margin-bottom:8px}
+#rodavolt-app .rv-empty p{font-size:12px;color:var(--rv-muted);max-width:400px;margin:0 auto 18px}
+#rodavolt-app .rv-checklist{padding:0;list-style:none;margin:8px 0 0}
+#rodavolt-app .rv-checklist li{display:flex;gap:12px;align-items:center;font-size:12px;padding:12px 0;border-bottom:1px solid var(--rv-line)}
+#rodavolt-app .rv-checklist input{accent-color:var(--rv-green);width:16px;height:16px}
+#rodavolt-app .rv-checklist label{display:flex;align-items:center;gap:12px}
+#rodavolt-app .rv-phone-stage{display:grid;grid-template-columns:minmax(260px,350px) minmax(150px,1fr);gap:26px;align-items:start}
+#rodavolt-app .rv-phone{max-width:350px;width:100%;border:6px solid var(--rv-ink);border-radius:36px;background:var(--rv-bg);padding:14px;min-height:640px;display:flex;flex-direction:column;box-shadow:0 12px 30px color-mix(in srgb,var(--rv-ink) 7%,transparent)}
+#rodavolt-app .rv-phone-status{display:flex;justify-content:space-between;align-items:center;font-size:10px;padding:2px 8px 18px}
+#rodavolt-app .rv-phone-status span{width:80px;height:16px;border-radius:10px;background:var(--rv-ink)}
+#rodavolt-app .rv-phone-header{display:flex;justify-content:space-between;align-items:center;padding:8px 3px 20px}
+#rodavolt-app .rv-phone-header h2{font-size:24px;letter-spacing:-.8px;margin-top:4px}
+#rodavolt-app .rv-phone .rv-panel{padding:15px;margin-bottom:12px}
+#rodavolt-app .rv-phone .rv-result-hero{padding:20px;margin-bottom:14px}
+#rodavolt-app .rv-phone .rv-big-number{font-size:30px}
+#rodavolt-app .rv-phone .rv-button{min-height:42px}
+#rodavolt-app .rv-phone .rv-primary{width:100%;margin-top:12px}
+#rodavolt-app .rv-phone-content{flex:1}
+#rodavolt-app .rv-phone-nav{display:flex;justify-content:space-between;gap:3px;padding:14px 0 8px;border-top:1px solid var(--rv-line);margin-top:16px}
+#rodavolt-app .rv-phone-nav button{border:0;border-radius:6px;background:transparent;color:var(--rv-muted);font-size:10px;padding:10px 5px;min-height:40px}
+#rodavolt-app .rv-phone-nav button[aria-pressed="true"]{background:var(--rv-soft);color:var(--rv-green);font-weight:600}
+#rodavolt-app .rv-mobile-context{padding:18px 0}
+#rodavolt-app .rv-mobile-context h2{font-size:22px;line-height:1.25;margin:10px 0 18px;letter-spacing:-.5px}
+#rodavolt-app .rv-mobile-context p{font-size:12px;color:var(--rv-muted);line-height:1.8}
+#rodavolt-app .rv-step{border-left:2px solid var(--rv-line);padding:0 0 22px 18px;position:relative}
+#rodavolt-app .rv-step:before{content:'';position:absolute;width:8px;height:8px;background:var(--rv-green);border-radius:50%;top:6px;left:-5px}
+#rodavolt-app .rv-step small{color:var(--rv-muted);font-size:10px}
+#rodavolt-app .rv-step h3{margin:4px 0 7px;font-size:16px}
+#rodavolt-app .rv-step p{font-size:12px;color:var(--rv-muted)}
+#rodavolt-app .rv-footer{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:0 28px;padding:16px 0;border-top:1px solid var(--rv-line);font-size:9px;color:var(--rv-muted);letter-spacing:.3px}
+#rodavolt-app #rv-toast{grid-column:1/-1;background:var(--rv-dark);color:var(--rv-on-dark);padding:12px 24px;font-size:12px;border-top:1px solid var(--rv-line)}
+#rodavolt-app .rv-sale-grid{display:grid;gap:8px}
+#rodavolt-app .rv-product{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 0;border-bottom:1px solid var(--rv-line);font-size:12px}
+#rodavolt-app .rv-product small{display:block;font-size:10px;color:var(--rv-muted);margin-top:3px}
+#rodavolt-app .rv-negative-value{color:var(--rv-red)}
+#rodavolt-app input[aria-invalid="true"]{border-color:var(--rv-red)}
+@media(min-width:1400px){#rodavolt-app main{padding:36px 44px}#rodavolt-app .rv-sim-grid{grid-template-columns:minmax(300px,1fr) minmax(280px,1fr)}}
+@media(max-width:900px){#rodavolt-app{grid-template-columns:180px minmax(0,1fr)}#rodavolt-app .rv-sidebar{padding:24px 10px}#rodavolt-app .rv-brand{font-size:15px}#rodavolt-app .rv-sim-grid,#rodavolt-app .rv-two{grid-template-columns:1fr}#rodavolt-app .rv-heading{align-items:start;flex-direction:column}#rodavolt-app .rv-sidebar-note strong{font-size:17px}#rodavolt-app .rv-phone-stage{grid-template-columns:1fr}#rodavolt-app .rv-mobile-context{display:none}#rodavolt-app .rv-phone{margin:auto}#rodavolt-app main{padding:24px 20px}}
+@media(max-width:600px){#rodavolt-app{display:block;border-radius:12px;min-height:0}#rodavolt-app .rv-sidebar{display:block;border-right:0;padding:18px 14px 12px;border-bottom:1px solid var(--rv-line)}#rodavolt-app .rv-brand{font-size:17px}#rodavolt-app .rv-brand small{display:none}#rodavolt-app .rv-mark{width:30px;height:30px;font-size:22px;border-radius:8px}#rodavolt-app .rv-mark span{font-size:15px}#rodavolt-app .rv-workspace,#rodavolt-app .rv-nav-label,#rodavolt-app .rv-sidebar-note,#rodavolt-app .rv-user{display:none}#rodavolt-app nav{display:flex;flex-direction:row;flex-wrap:wrap;margin-top:14px;gap:3px}#rodavolt-app nav button{padding:8px;font-size:11px;min-height:40px}#rodavolt-app nav button span,#rodavolt-app nav button b{display:none}#rodavolt-app .rv-topbar{padding:12px 16px}#rodavolt-app main{padding:22px 16px}#rodavolt-app h1{font-size:29px}#rodavolt-app .rv-panel{padding:16px}#rodavolt-app .rv-kpis{grid-template-columns:1fr;gap:8px}#rodavolt-app .rv-kpi{display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:13px 15px}#rodavolt-app .rv-kpi strong{font-size:22px;margin:0;text-align:right}#rodavolt-app .rv-kpi span{grid-column:1/-1;margin-top:5px}#rodavolt-app .rv-result-hero .rv-big-number{font-size:30px}#rodavolt-app .rv-field-grid{gap:12px 8px}#rodavolt-app .rv-field input,#rodavolt-app .rv-field select{font-size:16px}#rodavolt-app .rv-heading{margin-bottom:20px}#rodavolt-app .rv-footer{margin:0 16px}#rodavolt-app .rv-footer>span:last-child{display:none}#rodavolt-app .rv-sim-grid{display:flex;flex-direction:column}#rodavolt-app .rv-sim-grid>section{width:100%}#rodavolt-app .rv-phone{border-width:4px;padding:12px;min-height:620px;border-radius:30px}#rodavolt-app .rv-vehicle{padding:18px;align-items:start;flex-direction:column}#rodavolt-app .rv-list-row{gap:9px;flex-wrap:wrap}#rodavolt-app .rv-phone-nav button{font-size:10px;padding:9px 3px}}
+@media(prefers-reduced-motion:no-preference){#rodavolt-app button{transition:background .15s ease}}
+
+</style>
+<div id="rodavolt-app" aria-label="Protótipo RODAVOLT">
+  <aside class="rv-sidebar">
+    <div class="rv-brand"><span class="rv-mark">R<span>↗</span></span><div>RODAVOLT<small>Planejar para rodar.</small></div></div>
+    <div class="rv-workspace"><span class="rv-dot"></span> Operação Brasil <small>PRÉ-OPERAÇÃO</small></div>
+    <div class="rv-nav-label">SEU NEGÓCIO</div>
+    <nav aria-label="Gestão da RODAVOLT">
+      <button type="button" data-page="today"><span>01</span> Visão geral</button>
+      <button type="button" data-page="simulator"><span>02</span> Simulador <b>COMECE AQUI</b></button>
+      <button type="button" data-page="fleet"><span>03</span> Frota & manutenção</button>
+      <button type="button" data-page="drivers"><span>04</span> Motoristas</button>
+      <button type="button" data-page="contracts"><span>05</span> Contratos</button>
+      <button type="button" data-page="finance"><span>06</span> Financeiro</button>
+      <button type="button" data-page="shop"><span>07</span> Lojinha</button>
+    </nav>
+    <div class="rv-sidebar-note"><span class="rv-eyebrow">PRÓXIMO MARCO</span><strong>O primeiro carro.</strong><small>Compra planejada para novembro de 2026.</small><button type="button" data-page="plan">Ver plano de lançamento ↗</button></div>
+    <div class="rv-user"><span>CF</span><div>Carlos Ferro<small>Proprietário · demonstração</small></div></div>
+  </aside>
+  <div class="rv-workarea">
+    <header class="rv-topbar"><div>Workspace <span>/</span> <strong id="rv-breadcrumb">Simulador</strong></div><div class="rv-switch" aria-label="Área de acesso"><button type="button" data-area="admin" aria-pressed="true">Gestão</button><button type="button" data-area="driver" aria-pressed="false">App do motorista ↗</button></div></header>
+    <main id="rv-content"></main>
+    <footer class="rv-footer"><span><span class="rv-dot"></span> Protótipo navegável · dados fictícios</span><span>RODAVOLT / VISÃO DE PRODUTO · OUT 2026</span></footer>
+  </div>
+  <div id="rv-toast" role="status" aria-live="polite" hidden></div>
+</div>
+
+<script>
+/* Deterministic planning model. Amounts in BRL; no market data or tax advice. */
+(function (scope) {
+  'use strict';
+  const defaults = Object.freeze({
+    fleet: 1, price: 75000, financed: false, downPct: 35, monthlyRate: 1.6,
+    term: 48, financingFees: 1200, setup: 1500, reserve: 6000, stockCapital: 300,
+    weekly: 750, occupancy: 92, stoppedDays: 2, lossPct: 3,
+    kmPerDay: 180, maintenanceKm: 0.10, tiresKm: 0.035,
+    insurance: 350, annualTax: 3000, annualLicense: 250, tracker: 80,
+    admin: 350, other: 80, taxPct: 6, storeDaily: 25, cogsPct: 50,
+    commissionPct: 20, paymentFeePct: 2, storeLossPct: 2,
+    horizon: 36, residualPct: 65, saleFeePct: 3, discountAnnual: 12,
+    startYear: 2026, startMonth: 11
+  });
+  const ranges = {
+    fleet:[1,1000,true], price:[1,10000000], downPct:[0,100], monthlyRate:[0,20],
+    term:[1,360,true], financingFees:[0,1000000], setup:[0,1000000],
+    reserve:[0,10000000], stockCapital:[0,1000000], weekly:[0,100000],
+    occupancy:[0,100], stoppedDays:[0,28], lossPct:[0,100], kmPerDay:[0,2000],
+    maintenanceKm:[0,100], tiresKm:[0,100], insurance:[0,100000],
+    annualTax:[0,1000000], annualLicense:[0,1000000], tracker:[0,100000],
+    admin:[0,1000000], other:[0,100000], taxPct:[0,100], storeDaily:[0,100000],
+    cogsPct:[0,100], commissionPct:[0,100], paymentFeePct:[0,100],
+    storeLossPct:[0,100], horizon:[1,120,true], residualPct:[0,100],
+    saleFeePct:[0,100], discountAnnual:[0,100], startYear:[2020,2100,true],
+    startMonth:[1,12,true]
+  };
+  function validate(input = {}) {
+    const p = { ...defaults, ...input };
+    for (const [key,[min,max,integer]] of Object.entries(ranges)) {
+      if (typeof p[key] !== 'number' || !Number.isFinite(p[key]) || p[key] < min || p[key] > max || (integer && !Number.isInteger(p[key]))) {
+        throw new RangeError(`Valor inválido: ${key} (${min} a ${max}${integer ? ', inteiro' : ''}).`);
+      }
+    }
+    if (typeof p.financed !== 'boolean') throw new TypeError('financed deve ser booleano.');
+    return p;
+  }
+  function payment(principal, rate, months) {
+    if (principal === 0) return 0;
+    if (rate === 0) return principal / months;
+    return principal * rate / (1 - Math.pow(1 + rate, -months));
+  }
+  function simulate(input = {}) {
+    const p = validate(input);
+    const n = p.fleet;
+    const principal = p.financed ? p.price * (1-p.downPct/100) * n : 0;
+    const paidForCars = p.price*n-principal;
+    // Financing fees are paid upfront; do not also finance or amortize them here.
+    const financingFees = principal > 0 ? p.financingFees*n : 0;
+    const initial = paidForCars + (p.setup+p.reserve+p.stockCapital)*n + financingFees;
+    const installment = payment(principal,p.monthlyRate/100,p.term);
+    const depreciation = p.price*n*(1-p.residualPct/100)/p.horizon;
+    const monthlyDiscount = Math.pow(1+p.discountAnnual/100,1/12)-1;
+    let debt = principal, accumulated = -initial, payback = null;
+    const months = [];
+    for (let i=0;i<p.horizon;i++) {
+      const date = new Date(Date.UTC(p.startYear,p.startMonth-1+i,1));
+      const days = new Date(Date.UTC(date.getUTCFullYear(),date.getUTCMonth()+1,0)).getUTCDate();
+      const rentedDays = Math.max(0,days-p.stoppedDays)*p.occupancy/100;
+      const rentalBilled = p.weekly/7*rentedDays*n;
+      const rentalLost = rentalBilled*p.lossPct/100;
+      const rentalReceived = rentalBilled-rentalLost;
+      const km = rentedDays*p.kmPerDay*n;
+      const maintenance = km*p.maintenanceKm, tires = km*p.tiresKm;
+      const fixed = (p.insurance+p.annualTax/12+p.annualLicense/12+p.tracker+p.other)*n+p.admin;
+      const storeGross = rentedDays*p.storeDaily*n;
+      const cogs=storeGross*p.cogsPct/100, commission=storeGross*p.commissionPct/100;
+      const storeFees=storeGross*p.paymentFeePct/100, storeLoss=storeGross*p.storeLossPct/100;
+      // Simplified turnover tax: gross billed rent + gross shop sales, not net shop margin.
+      const tax=(rentalBilled+storeGross)*p.taxPct/100;
+      const storeContribution=storeGross-cogs-commission-storeFees-storeLoss;
+      const operatingCash=rentalReceived+storeContribution-fixed-maintenance-tires-tax;
+      const interest = debt>1e-7 ? debt*p.monthlyRate/100 : 0;
+      const debtPayment = debt>1e-7 && i<p.term ? Math.min(installment,debt+interest) : 0;
+      const amortization = Math.max(0,debtPayment-interest);
+      debt=Math.max(0,debt-amortization);
+      const cash=operatingCash-debtPayment;
+      const accountingResult=operatingCash-interest-depreciation;
+      accumulated+=cash;
+      if (payback===null && accumulated>=0) payback=i+1;
+      months.push({month:i+1,label:`${String(date.getUTCMonth()+1).padStart(2,'0')}/${date.getUTCFullYear()}`,
+        days,rentedDays,rentalBilled,rentalLost,rentalReceived,km,maintenance,tires,fixed,
+        storeGross,cogs,commission,storeFees,storeLoss,storeContribution,tax,operatingCash,
+        interest,amortization,debtPayment,debt,cash,accountingResult,accumulated});
+    }
+    const mean = key => months.reduce((sum,m)=>sum+m[key],0)/months.length;
+    const saleGross=p.price*n*p.residualPct/100;
+    // A model assumption: all cash reserve and opening shop stock recover at book value.
+    const terminal=saleGross*(1-p.saleFeePct/100)-debt+(p.reserve+p.stockCapital)*n;
+    const finalWealth=months.at(-1).accumulated+terminal;
+    const npv=-initial+months.reduce((sum,m)=>sum+m.cash/Math.pow(1+monthlyDiscount,m.month),0)+terminal/Math.pow(1+monthlyDiscount,p.horizon);
+    const first=months[0];
+    const rentalCoefficient=first.rentedDays/7*n*(1-p.lossPct/100-p.taxPct/100);
+    const storeAfterTax=first.storeContribution-first.storeGross*p.taxPct/100;
+    const fixedAndVariable=first.fixed+first.maintenance+first.tires+first.debtPayment;
+    const breakEvenWeekly=rentalCoefficient>0 ? Math.max(0,(fixedAndVariable-storeAfterTax)/rentalCoefficient) : null;
+    const warnings=[];
+    if(p.occupancy===0) warnings.push('Sem dias alugados: não há receita operacional.');
+    if(mean('cash')<0) warnings.push('O cenário consome caixa, em média, após a dívida.');
+    if(mean('accountingResult')<0) warnings.push('O resultado estimado é negativo após depreciação e juros.');
+    if(npv<0) warnings.push('O VPL fica abaixo de zero para a taxa de desconto informada.');
+    if(p.cogsPct+p.commissionPct+p.paymentFeePct+p.storeLossPct+p.taxPct>=100 && p.storeDaily>0) warnings.push('A lojinha não tem margem positiva nas premissas informadas.');
+    return {p,initial,principal,installment,financingFees,depreciation,months,
+      avgCash:mean('cash'),avgResult:mean('accountingResult'),avgRental:mean('rentalReceived'),
+      avgStore:mean('storeContribution'),avgTax:mean('tax'),avgOperating:mean('operatingCash'),
+      avgDebt:mean('debtPayment'),payback,terminal,finalWealth,npv,breakEvenWeekly,
+      minAccumulated:Math.min(-initial,...months.map(m=>m.accumulated)),
+      additionalFunding:Math.max(0,-Math.min(0,...months.reduce((a,m)=>[...a,(a.at(-1)||0)+m.cash],[]))-p.reserve*n),
+      roiPct:initial>0?finalWealth/initial*100:null,warnings};
+  }
+  const api={ defaults,validate,payment,simulate };
+  scope.RodavoltSimulator=api;
+})(globalThis);
+
+(function () {
+  'use strict';
+  const root=document.getElementById('rodavolt-app');
+  const content=root.querySelector('#rv-content');
+  const engine=globalThis.RodavoltSimulator;
+  const currency=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0}).format(n);
+  const money=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:2}).format(n);
+  const num=n=>new Intl.NumberFormat('pt-BR',{maximumFractionDigits:1}).format(n);
+  const names={today:'Visão geral',simulator:'Simulador',fleet:'Frota & manutenção',drivers:'Motoristas',contracts:'Contratos',finance:'Financeiro',shop:'Lojinha',plan:'Plano de lançamento',driver:'App do motorista'};
+  let page='simulator',driverTab='Início',params={...engine.defaults},saved=null;
+  let saleCount=0,transfers=0,incident=false,paymentSubmitted=false;
+  let toastTimer;
+  const products=[{name:'Água mineral 500 ml',price:4,cost:1.6,qty:12,central:48},{name:'Barra de cereal',price:5,cost:2.5,qty:8,central:32},{name:'Bala de menta',price:3,cost:1.2,qty:10,central:50}];
+  function loadState(state) {
+    try{
+      if(state?.modelContent?.params) params=engine.validate(state.modelContent.params);
+      if(state?.privateContent?.page && names[state.privateContent.page])page=state.privateContent.page;
+      if(state?.privateContent?.driverTab && ['Início','Carro','Pagar','Loja','Docs'].includes(state.privateContent.driverTab))driverTab=state.privateContent.driverTab;
+      if(state?.modelContent?.saved) saved=engine.validate(state.modelContent.saved);
+    }catch{params={...engine.defaults};}
+  }
+  if(window.openai?.widgetState)loadState(window.openai.widgetState);
+  else try{loadState(JSON.parse(localStorage.getItem('rodavolt-planning-v1')||'null'));}catch{}
+  function persist(){
+    const state={modelContent:{params,saved},privateContent:{page,driverTab}};
+    if(window.openai?.setWidgetState)Promise.resolve(window.openai.setWidgetState(state)).catch(()=>{});
+    else try{localStorage.setItem('rodavolt-planning-v1',JSON.stringify(state));}catch{}
+  }
+  window.addEventListener('openai:set_globals',event=>{if(event.detail?.globals?.widgetState){loadState(event.detail.globals.widgetState);render();}});
+  function toast(text){const el=root.querySelector('#rv-toast');el.textContent=text;el.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>{el.hidden=true;},5500);}
+  const heading=(eyebrow,title,subtitle,actions='')=>`<div class="rv-heading"><div><span class="rv-eyebrow">${eyebrow}</span><h1>${title}</h1><p class="rv-subtitle">${subtitle}</p></div>${actions?`<div class="rv-actions">${actions}</div>`:''}</div>`;
+  const button=(text,action,primary=false)=>`<button type="button" class="rv-button ${primary?'rv-primary':''}" data-action="${action}">${text}</button>`;
+  const badge=(text,amber=false)=>`<span class="rv-badge ${amber?'rv-amber':''}">${text}</span>`;
+  const kpi=(label,value,detail)=>`<div class="rv-kpi"><small>${label}</small><strong>${value}</strong><span>${detail}</span></div>`;
+  const row=(name,value,total=false)=>`<div class="rv-flow-line ${total?'rv-total':''}"><span>${name}</span><strong>${value}</strong></div>`;
+  function field(key,label,step=1,help=''){
+    const limits={fleet:[1,1000],price:[1,10000000],downPct:[0,100],term:[1,360],horizon:[1,120],occupancy:[0,100],stoppedDays:[0,28],lossPct:[0,100],monthlyRate:[0,20],taxPct:[0,100],cogsPct:[0,100],commissionPct:[0,100],paymentFeePct:[0,100],storeLossPct:[0,100],residualPct:[0,100],saleFeePct:[0,100],discountAnnual:[0,100]};
+    const [min,max]=limits[key]||[0,1000000];
+    const increment=['fleet','term','horizon'].includes(key)?1:'any';
+    return `<label class="rv-field">${label}<input type="number" data-param="${key}" value="${params[key]}" min="${min}" max="${max}" step="${increment}">${help?`<small>${help}</small>`:''}</label>`;
+  }
+  function simulator(){
+    return heading('LABORATÓRIO DO NEGÓCIO','Antes de comprar,<br>encontre o seu número.','Um carro, todos os custos e uma decisão com contexto. Premissas demonstrativas, em reais.',button('Salvar cenário','save',true))+
+    `<div class="rv-tabs" aria-label="Cenários de simulação"><button type="button" data-preset="base" aria-pressed="true">Base</button><button type="button" data-preset="stress" aria-pressed="false">Estresse</button><button type="button" data-preset="optimistic" aria-pressed="false">Otimista</button><button type="button" data-action="compare">Comparar os três ↗</button>${saved?'<button type="button" data-action="restore">Abrir cenário salvo</button>':''}</div>
+    <div id="rv-compare" hidden></div>
+    <div class="rv-sim-grid">
+      <section class="rv-panel" aria-label="Premissas da simulação">
+        <div class="rv-panel-header"><h2>Monte sua operação</h2><small>Início · nov/2026</small></div><p id="rv-input-error" class="rv-warning" role="alert" hidden>Confira o campo destacado. Os resultados mantêm os últimos valores válidos.</p>
+        <div class="rv-field-grid">${field('price','Valor do carro · R$',500)}${field('weekly','Aluguel semanal · R$',10)}
+        <label class="rv-field">Forma de compra<select data-param="financed"><option value="false" ${params.financed?'':'selected'}>À vista</option><option value="true" ${params.financed?'selected':''}>Financiado · Price</option></select></label>${field('fleet','Quantidade de carros',1)}
+        ${field('occupancy','Ocupação disponível · %',1,'Aplicada aos dias sem parada.')}${field('stoppedDays','Dias parados por mês',1)}
+        </div>
+        <div id="rv-loan-fields" ${params.financed?'':'hidden'}><details open><summary>Financiamento</summary><div class="rv-field-grid">${field('downPct','Entrada · %',1)}${field('monthlyRate','Juros efetivos · % a.m.',.05)}${field('term','Parcelas · meses',1)}${field('financingFees','Tarifas à vista · R$',50)}</div><p class="rv-mini-note">Use os juros e as tarifas da proposta. O cálculo não substitui o CET informado pelo banco.</p></details></div>
+        <details open><summary>Rodagem & custos do carro</summary><div class="rv-field-grid">${field('kmPerDay','Km por dia alugado',10)}${field('maintenanceKm','Manutenção · R$/km',.01)}${field('tiresKm','Pneus · R$/km',.005)}${field('insurance','Seguro mensal · R$',10)}${field('annualTax','IPVA anual · R$',100)}${field('annualLicense','Licenciamento anual · R$',10)}${field('tracker','Rastreador mensal · R$',10)}${field('other','Outros por carro/mês · R$',10)}</div></details>
+        <details><summary>Empresa, recebimento & capital</summary><div class="rv-field-grid">${field('lossPct','Receita não recebida · %',.5)}${field('taxPct','Tributos estimados · %',.5,'Sobre aluguel faturado + vendas.')}${field('admin','Administração/mês · R$',50,'Custo da empresa, sem multiplicar.')}${field('setup','Preparação por carro · R$',100)}${field('reserve','Reserva própria por carro · R$',500)}${field('stockCapital','Estoque inicial por carro · R$',50)}</div></details>
+        <details><summary>Lojinha dentro do carro</summary><div class="rv-field-grid">${field('storeDaily','Vendas/dia alugado · R$',5)}${field('cogsPct','Custo mercadoria · %',1)}${field('commissionPct','Comissão motorista · %',1,'Percentual da venda bruta.')}${field('paymentFeePct','Taxas de pagamento · %',.5)}${field('storeLossPct','Perdas de mercadoria · %',.5)}</div></details>
+        <details><summary>Horizonte & saída do investimento</summary><div class="rv-field-grid">${field('horizon','Horizonte · meses',1)}${field('residualPct','Revenda ao final · %',1,'Percentual do valor de compra.')}${field('saleFeePct','Despesa de revenda · %',.5)}${field('discountAnnual','Desconto anual para VPL · %',.5)}</div></details>
+        <p class="rv-mini-note">Custos por carro, exceto administração. Combustível/recarga por conta do motorista nesta hipótese. Anuais e manutenção são normalizados mensalmente; a operação real terá datas de pagamento.</p>
+      </section>
+      <section aria-label="Resultado da simulação"><div id="rv-results" aria-live="polite"></div></section>
+    </div>`;
+  }
+  function updateResults(){
+    const target=root.querySelector('#rv-results');if(!target)return;
+    try{
+      const r=engine.simulate(params),m=r.months[0];
+      const avg=key=>r.months.reduce((s,x)=>s+x[key],0)/r.months.length;
+      target.innerHTML=`<div class="rv-result-hero"><span class="rv-eyebrow">CAIXA LIVRE MÉDIO ESTIMADO</span><div class="rv-big-number">${currency(r.avgCash)}<small> / mês</small></div><div class="rv-caption">Após custos, tributos estimados e parcelas.</div><div class="rv-result-duo"><div><small>Capital próprio inicial</small><strong>${currency(r.initial)}</strong></div><div><small>Resultado após depreciação</small><strong>${currency(r.avgResult)}<small>/ mês · estimado</small></strong></div></div></div>
+      <div class="rv-panel rv-flow"><div class="rv-panel-header"><h2>Por onde o dinheiro passa</h2><small>Média mensal</small></div>
+      ${row('Aluguel recebido',currency(r.avgRental))}${row('Margem da lojinha¹',currency(r.avgStore))}${row('Fixos + manutenção + pneus','− '+currency(avg('fixed')+avg('maintenance')+avg('tires')))}${row('Tributos estimados','− '+currency(r.avgTax))}${row('Parcelas do financiamento','− '+currency(r.avgDebt))}${row('Caixa livre',currency(r.avgCash),true)}
+      <div class="rv-health ${r.avgCash<0?'rv-negative':''}">${r.avgCash>=0?'↗ Caixa médio positivo nas premissas atuais':'↘ Necessidade de aporte nas premissas atuais'}</div>
+      <p class="rv-mini-note">¹ Após mercadoria, comissão, taxas e perdas; tributos na linha abaixo. Receita prevista não é recebimento confirmado.</p>
+      </div>
+      <div class="rv-panel rv-flow"><div class="rv-panel-header"><h2>Capital ao longo do tempo</h2><small>${r.p.horizon} meses</small></div><svg class="rv-chart" role="img" aria-label="Fluxo acumulado do investimento, sem revenda, em reais" id="rv-cash-chart"></svg><div class="rv-chart-labels"><span>Sem revenda · capital inicial incluído</span></div>
+      ${row('Aluguel semanal de equilíbrio²',r.breakEvenWeekly===null?'Não calculável':currency(r.breakEvenWeekly))}${row('Payback operacional sem revenda',r.payback?`${r.payback} meses`:`Não alcançado em ${r.p.horizon} meses`)}${row('VPL com revenda e quitação da dívida',currency(r.npv))}
+      <details><summary>Premissas e detalhes do retorno</summary>${row('Parcela contratada',currency(r.installment))}${row('Revenda líquida + reservas − dívida',currency(r.terminal))}${row('Saldo final após recuperar capital',currency(r.finalWealth))}${row('ROI total no horizonte',num(r.roiPct)+'%')}${row('Km previstos no primeiro mês',num(m.km)+' km')}${row('Aportes extras se faltar caixa',currency(r.additionalFunding))}<p class="rv-mini-note">² Equilíbrio de caixa no primeiro mês. Revenda ao final, sem imposto sobre ganho de capital; reserva e estoque iniciais recuperados integralmente. VPL e ROI não são garantia de retorno. Depreciação linear estimada; tributos simplificados.</p></details>
+      ${r.warnings.map(w=>`<p class="rv-warning">${w}</p>`).join('')}
+      </div>`;
+      drawChart(r);
+    }catch(error){target.innerHTML='<div class="rv-panel" role="alert"></div>';target.firstChild.textContent=error.message;}
+  }
+  function drawChart(r){
+    const svg=root.querySelector('#rv-cash-chart');if(!svg)return;
+    const width=Math.max(230,Math.round(svg.getBoundingClientRect().width)||300),height=175;
+    const l=57,rr=12,t=20,b=32,w=width-l-rr,h=height-t-b;
+    const values=[-r.initial,...r.months.map(m=>m.accumulated)],min=Math.min(0,...values),max=Math.max(0,...values);
+    const span=Math.max(max-min,1),lo=min-span*.09,hi=max+span*.09;
+    const x=i=>l+i/(values.length-1)*w,y=v=>t+(hi-v)/(hi-lo)*h;
+    const compact=n=>`${n<0?'−':''}${num(Math.abs(n)/1000)}k`;
+    svg.setAttribute('viewBox',`0 0 ${width} ${height}`);
+    const path=values.map((v,i)=>`${i?'L':'M'}${x(i).toFixed(2)},${y(v).toFixed(2)}`).join(' ');
+    const ticks=[min,(min+max)/2,max];
+    svg.innerHTML=`<title>Caixa acumulado sem revenda</title><desc>Começa em ${currency(-r.initial)} e termina em ${currency(values.at(-1))} antes da revenda.</desc>
+    <text x="0" y="10">R$</text><text x="${width-4}" y="${height-1}" text-anchor="end">Mês</text>
+    ${ticks.map(v=>`<line x1="${l}" x2="${width-rr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--rv-line)"/><text x="${l-8}" y="${y(v)+4}" text-anchor="end">${compact(v)}</text>`).join('')}
+    <line x1="${l}" x2="${width-rr}" y1="${y(0)}" y2="${y(0)}" stroke="var(--rv-muted)" stroke-dasharray="3 3"/>
+    <path d="${path}" fill="none" stroke="var(--rv-green)" stroke-width="2.5"/>
+    <circle cx="${x(values.length-1)}" cy="${y(values.at(-1))}" r="3" fill="var(--rv-green)"/>
+    <text x="${l}" y="${height-13}">0</text><text x="${x(Math.floor(r.p.horizon/2))}" y="${height-13}" text-anchor="middle">${Math.floor(r.p.horizon/2)}</text><text x="${width-rr}" y="${height-13}" text-anchor="end">${r.p.horizon}</text>`;
+  }
+  function compare(){
+    const variations=[['Estresse',{occupancy:78,stoppedDays:6,lossPct:8}],['Base',{occupancy:92,stoppedDays:2,lossPct:3}],['Otimista',{occupancy:97,stoppedDays:1,lossPct:1}]];
+    const el=root.querySelector('#rv-compare');el.hidden=false;
+    el.innerHTML=`<div class="rv-panel" style="margin-bottom:18px"><h2>Mesmo carro, três condições de operação</h2><div class="rv-table-wrap"><table><thead><tr><th>Cenário</th><th>Ocupação / parada / perda</th><th>Caixa livre/mês</th><th>VPL</th></tr></thead><tbody>${variations.map(([label,changes])=>{const r=engine.simulate({...params,...changes});return `<tr><td>${label}</td><td>${changes.occupancy}% / ${changes.stoppedDays}d / ${changes.lossPct}%</td><td>${currency(r.avgCash)}</td><td>${currency(r.npv)}</td></tr>`;}).join('')}</tbody></table></div><p class="rv-mini-note">Outros custos e preço semanal mantidos. São hipóteses demonstrativas, sem probabilidade atribuída.</p></div>`;
+  }
+  function today(){return heading('O ESSENCIAL, EM UM LUGAR','Seu negócio começa<br>com uma boa decisão.','A operação ainda não começou. Estes são os passos para preparar o primeiro carro.',button('Abrir simulador','go-simulator',true))+
+    `<div class="rv-kpis">${kpi('Veículos em operação','0','Modo pré-operação')}${kpi('Capital definido','A definir','Preencher com cotações reais')}${kpi('Primeira compra','Nov/26','Mês planejado pelo proprietário')}</div>
+    <div class="rv-two"><section class="rv-panel"><div class="rv-panel-header"><h2>Antes da primeira entrega</h2>${badge('Planejamento')}</div><ul class="rv-checklist">${['Comparar 3 carros com cotações reais','Cotar seguro para uso em locação/app','Definir reserva de caixa e manutenção','Validar contrato e regras da lojinha','Selecionar motorista e conferir documentos'].map((t,i)=>`<li><label><input type="checkbox" data-check="${i}">${t}</label></li>`).join('')}</ul></section><section class="rv-panel"><h2>O que acompanhar depois</h2><div class="rv-list-row"><div>Caixa dos próximos 30 dias<small>Recebimentos, contas e reserva</small></div></div><div class="rv-list-row"><div>Carro parado ou revisão próxima<small>Prioridades que afetam receita</small></div></div><div class="rv-list-row"><div>Contrato e estoque do motorista<small>Um histórico por relacionamento</small></div></div></section></div>`;}
+  function fleet(){return heading('FROTA & MANUTENÇÃO','Cada carro tem<br>a sua própria conta.','Exemplo da ficha do primeiro veículo. Compra, disponibilidade, custos e histórico juntos.')+
+    `<section class="rv-panel"><div class="rv-vehicle"><div><span class="rv-eyebrow">VEÍCULO DEMONSTRATIVO / RV-001</span><strong>Hatch compacto · 2023</strong><small>Flex · exemplo sem modelo de compra escolhido</small></div><span class="rv-license">ABC1D23</span></div>
+    <div class="rv-kpis">${kpi('Custo de aquisição',currency(params.price),'Premissa do simulador')}${kpi('Quilometragem','42.380 km','Dado fictício para desenho da ficha')}${kpi('Próxima revisão','45.000 km','Ou data limite, o que chegar primeiro')}</div>
+    <div class="rv-tabs" aria-label="Detalhes do carro"><button type="button" data-fleet="overview" aria-pressed="true">Visão do carro</button><button type="button" data-fleet="maintenance" aria-pressed="false">Manutenção</button><button type="button" data-fleet="inspection" aria-pressed="false">Vistorias</button></div><div id="rv-fleet-detail">${fleetDetail('overview')}</div></section>`;}
+  function fleetDetail(tab){
+    if(tab==='maintenance')return `<div class="rv-list-row"><div>Troca de óleo + filtros<small>Exemplo · revisão preventiva a cada 10.000 km</small></div>${badge('Em planejamento',true)}</div><div class="rv-list-row"><div>Pneus e alinhamento<small>Inspeção de desgaste na entrega e na devolução</small></div>${button('Registrar ocorrência','incident')}</div><p class="rv-mini-note">Na versão operacional: orçamento → aprovação → serviço → comprovante → lançamento financeiro. Uma ocorrência crítica tira o carro da disponibilidade.</p>`;
+    if(tab==='inspection')return `<div class="rv-list-row"><div>Vistoria de entrega<small>Fotos de todos os lados, hodômetro, combustível e acessórios</small></div>${badge('Modelo do checklist')}</div><div class="rv-list-row"><div>Vistoria de devolução<small>Comparação com a entrega e concordância das partes</small></div>${badge('Modelo do checklist')}</div>${button('Ver no app do motorista','go-driver')}`;
+    return `<div class="rv-two"><div>${row('Status de demonstração','Alugado')}${row('Motorista vinculado','Marcos Oliveira')}${row('Contrato','RV-2026-001')}${row('Aluguel semanal',currency(params.weekly))}</div><div>${row('Documentos','CRLV · seguro · compra')}${row('Centro de resultado','Veículo RV-001')}${row('Cobertura do seguro','A confirmar por cotação')}${row('Linha do tempo','Compra → entrega → revisão')}</div></div>`;
+  }
+  function drivers(){return heading('MOTORISTAS','Uma parceria.<br>Um histórico completo.','Cadastro, documentos e vínculo com o carro, com acesso ao que importa para cada pessoa.')+
+    `<div class="rv-two"><section class="rv-panel"><div class="rv-panel-header"><h2><span class="rv-avatar">MO</span>Marcos Oliveira</h2>${badge('Exemplo')}</div>${row('Etapa','Em análise documental')}${row('CNH / EAR','Conferência pendente')}${row('Contato','Cadastrado no convite')}${row('Veículo de exemplo','RV-001 · ABC1D23')}${row('Contrato','RV-2026-001')}${row('Comissão lojinha',`${params.commissionPct}% da venda bruta`)}<p class="rv-mini-note">Nome fictício. A liberação real depende da revisão dos documentos, do contrato e da vistoria.</p></section><section class="rv-panel"><h2>Jornada de entrada</h2><div class="rv-list-row">1. Cadastro e documentos</div><div class="rv-list-row">2. Análise e condições combinadas</div><div class="rv-list-row">3. Contrato e caução registrados</div><div class="rv-list-row">4. Vistoria e entrega do kit</div><div class="rv-list-row">5. Acesso ao app do motorista</div>${button('Explorar app do motorista','go-driver',true)}</section></div>`;}
+  function contracts(){return heading('CONTRATOS','O combinado,<br>bem documentado.','Uma ficha para condições comerciais, documentos, assinaturas e encerramento.')+
+    `<div class="rv-two"><section class="rv-panel"><div class="rv-panel-header"><h2>RV-2026-001</h2>${badge('Rascunho demonstrativo',true)}</div>${row('Locatário','Marcos Oliveira')}${row('Veículo','RV-001 · ABC1D23')}${row('Cobrança','Semanal · dia fixo acordado')}${row('Aluguel',currency(params.weekly))}${row('Caução','Valor e regras a definir')}${row('Franquia de km','A definir no contrato')}${row('Seguro, multas e avarias','Responsabilidades explícitas')}${row('Lojinha','Termo do kit + comissão + acertos')}<p class="rv-mini-note">Na operação, o contrato será um documento versionado, revisado juridicamente e ligado às cobranças. Aqui não há minuta jurídica nem assinatura real.</p></section><section class="rv-panel"><h2>Da assinatura à devolução</h2><div class="rv-list-row"><div>Versões e aceite<small>Documento final, evidências e signatários</small></div></div><div class="rv-list-row"><div>Vistorias anexadas<small>Entrega, revisão e devolução</small></div></div><div class="rv-list-row"><div>Acerto final<small>Aluguel proporcional, caução e divergências</small></div></div><div class="rv-list-row"><div>Histórico preservado<small>Aditivos sem sobrescrever o acordo anterior</small></div></div>${button('Ver documentos no app','driver-docs')}</section></div>`;}
+  function finance(){return heading('FINANCEIRO','Entrou. Saiu.<br>Quanto ficou?','Visão ilustrativa de cobrança semanal. Valores operacionais são fictícios; as projeções ficam no simulador.')+
+    `<div class="rv-kpis">${kpi('Aluguel da semana',currency(params.weekly),'Uma cobrança demonstrativa')}${kpi('Caução','Separada','Obrigação a devolver, conforme contrato')}${kpi('Comissão da lojinha',money(saleCount*products[0].price*.2),'Exemplo de comissão de 20%')}</div>
+    <section class="rv-panel"><div class="rv-panel-header"><h2>Contas a receber e pagar</h2>${badge('Amostra de funcionamento')}</div><div class="rv-table-wrap"><table><thead><tr><th>Movimento</th><th>Vencimento</th><th>Centro</th><th>Valor</th><th>Estado</th></tr></thead><tbody><tr><td>Aluguel · Marcos<small>RV-2026-001 / semanal</small></td><td>09/11/2026</td><td>RV-001</td><td>${currency(params.weekly)}</td><td>${badge(paymentSubmitted?'Em conferência':'Aberto',true)}</td></tr><tr><td>Seguro<small>Exemplo mensal por veículo</small></td><td>10/11/2026</td><td>RV-001</td><td>− ${currency(params.insurance)}</td><td>${badge('A pagar',true)}</td></tr><tr><td>Administração<small>Compartilhada pela empresa</small></td><td>15/11/2026</td><td>Empresa</td><td>− ${currency(params.admin)}</td><td>${badge('A pagar',true)}</td></tr></tbody></table></div><p class="rv-mini-note">Pagamento informado pelo motorista exige confirmação. O sistema real terá baixas parciais, estornos, conciliação e extrato de caução. Parcelas de principal alteram dívida; juros afetam resultado.</p></section>`;}
+  function shop(){return heading('LOJINHA NO CARRO','O estoque viaja.<br>O controle fica com você.','Modelo proposto: mercadoria consignada, venda registrada pelo motorista e comissão no acerto semanal.',button('Transferir 6 águas ao carro','transfer',true))+
+    `<div class="rv-kpis">${kpi('Vendas nesta demonstração',money(saleCount*4),`${saleCount} ${saleCount===1?'unidade':'unidades'} de água`)}${kpi('Comissão a pagar',money(saleCount*.8),'20% da venda bruta neste exemplo')}${kpi('Águas no carro',String(products[0].qty+transfers*6-saleCount),'Saldo por movimentações')}</div><section class="rv-panel"><div class="rv-panel-header"><h2>Central → kit do RV-001</h2>${badge('Custódia de Marcos')}</div><div class="rv-table-wrap"><table><thead><tr><th>Produto</th><th>Na central</th><th>No carro</th><th>Preço de venda</th><th>Custo unitário</th></tr></thead><tbody>${products.map((p,i)=>`<tr><td>${p.name}</td><td>${p.central-(i===0?transfers*6:0)}</td><td>${p.qty+(i===0?transfers*6-saleCount:0)}</td><td>${money(p.price)}</td><td>${money(p.cost)}</td></tr>`).join('')}</tbody></table></div><div class="rv-actions" style="margin-top:18px">${button('Registrar venda no app','driver-shop')}${button('Simular margem da loja','go-simulator')}</div><p class="rv-mini-note">Transferência muda a localização da mercadoria; não gera receita. Venda gera baixa, comissão e valor a acertar. Contagem física, validade, perdas e devoluções terão histórico próprio.</p></section>`;}
+  function driver(){
+    const labels={Início:['Sua operação, no bolso.','A próxima cobrança, o carro e as pendências aparecem primeiro. O motorista vê apenas seus próprios dados.'],Carro:['Cuidar antes de parar.','Hodômetro, documentos do carro, vistorias e solicitação de manutenção em uma tela.'],Pagar:['Cobrança sem dúvida.','Valor, período, vencimento e comprovante juntos. Enviar um comprovante não confirma a baixa.'],Loja:['Vendeu, registrou.','O motorista registra a venda, acompanha o kit e vê a comissão acumulada.'],Docs:['O acordo sempre à mão.','Contrato, aditivos e documentos disponíveis em uma área organizada.']};
+    return heading('RODAVOLT · MOTORISTA','Tudo para rodar<br>com tranquilidade.','Prévia do app no celular · Marcos Oliveira · dados de demonstração')+
+    `<div class="rv-phone-stage"><section class="rv-phone" aria-label="App do motorista RODAVOLT"><div class="rv-phone-status">9:41 <span aria-hidden="true"></span> 100%</div><div class="rv-phone-header"><div><small class="rv-eyebrow">RODAVOLT / MOTORISTA</small><h2>${driverTab==='Início'?'Olá, Marcos.':({Pagar:'Pagamentos',Docs:'Documentos',Carro:'Meu carro',Loja:'Minha lojinha'})[driverTab]}</h2></div><span class="rv-avatar">MO</span></div><div class="rv-phone-content">${driverContent()}</div><div class="rv-phone-nav" aria-label="Navegação do motorista">${['Início','Carro','Pagar','Loja','Docs'].map(t=>`<button type="button" data-driver-tab="${t}" aria-pressed="${t===driverTab}">${t}</button>`).join('')}</div></section><aside class="rv-mobile-context"><span class="rv-eyebrow">${driverTab.toUpperCase()}</span><h2>${labels[driverTab][0]}</h2><p>${labels[driverTab][1]}</p><div class="rv-list-row"><div>Instalável pelo navegador<small>Proposta PWA para começar</small></div></div><div class="rv-list-row"><div>Mesmo dado da gestão<small>Permissões próprias por motorista</small></div></div><div class="rv-list-row"><div>Ações curtas e claras<small>Sem painel complexo no celular</small></div></div></aside></div>`;
+  }
+  function driverContent(){
+    if(driverTab==='Início')return `<div class="rv-result-hero"><span class="rv-eyebrow">SEU PRÓXIMO ALUGUEL</span><div class="rv-big-number">${currency(params.weekly)}</div><div class="rv-caption">09 nov · período 02 a 08/11/2026</div>${button('Ver cobrança','driver-pay',true)}</div><div class="rv-panel"><h3>Seu carro está com você.</h3><div class="rv-list-row"><div>Hatch compacto · 2023<small>ABC1D23 · revisão aos 45.000 km</small></div></div>${button('Ver meu carro','driver-car')}</div><div class="rv-panel"><h3>Seu kit da lojinha</h3><p class="rv-mini-note">Águas, barras e balas. Registre as vendas para acompanhar sua comissão.</p>${button('Abrir lojinha','driver-shop')}</div>`;
+    if(driverTab==='Pagar')return `<div class="rv-panel"><span class="rv-eyebrow">ALUGUEL SEMANAL</span><h2 style="font-size:29px;margin:12px 0">${currency(params.weekly)}</h2>${row('Vencimento','09/11/2026')}${row('Período','02 a 08/11/2026')}${row('Situação',paymentSubmitted?'Em conferência':'Em aberto')}<p class="rv-mini-note">No app real: Pix com identificador e confirmação pelo provedor. Este exemplo não gera cobrança.</p>${button('Simular envio de comprovante','submit-payment',true)}</div><div class="rv-panel"><h3>Caução e histórico</h3><p class="rv-mini-note">Extrato separado do aluguel, com saldo e condições de devolução.</p></div>`;
+    if(driverTab==='Carro')return `<div class="rv-panel"><span class="rv-license">ABC1D23</span><h2 style="margin-top:14px">Hatch compacto · 2023</h2>${row('Último hodômetro','42.380 km')}${row('Próxima revisão','45.000 km')}${row('CRLV e seguro','Documentos do veículo')}${button(incident?'Ocorrência registrada no exemplo':'Solicitar manutenção','incident',true)}<p class="rv-mini-note">${incident?'Solicitação demonstrativa aberta. A equipe precisa analisar o relato.':'No fluxo real: descrição, fotos, prioridade e acompanhamento.'}</p></div><div class="rv-panel"><h3>Vistoria</h3><p class="rv-mini-note">Checklist com fotos, km, combustível e avarias. Na entrega e na devolução.</p></div>`;
+    if(driverTab==='Docs')return `<div class="rv-panel"><h3>Meu contrato</h3><div class="rv-list-row"><div>RV-2026-001<small>Modelo de navegação · rascunho</small></div></div>${row('Aluguel semanal',currency(params.weekly))}${row('Anexos','Vistoria + termo da lojinha')}<p class="rv-mini-note">O documento assinado ficará disponível para consulta e download na versão operacional.</p></div><div class="rv-panel"><h3>Meus documentos</h3><div class="rv-list-row">CNH com EAR ${badge('A conferir',true)}</div><div class="rv-list-row">Cadastro e contatos</div></div>`;
+    return `<div class="rv-panel"><h3>Comissão acumulada</h3><h2 style="font-size:29px;margin-top:10px">${money(saleCount*.8)}</h2><p class="rv-mini-note">20% da venda bruta · acerto semanal de exemplo.</p></div><div class="rv-panel"><h3>Registrar venda</h3><div class="rv-product"><div>Água mineral 500 ml<small>${products[0].qty+transfers*6-saleCount} no kit · ${money(products[0].price)}/un.</small></div>${button('+ Vender 1','sell',true)}</div><p class="rv-mini-note">Venda demonstrativa em dinheiro. Comissão ${money(.8)}; valor a repassar ${money(3.2)} por unidade.</p></div><div class="rv-panel"><h3>Reposição & acerto</h3><p class="rv-mini-note">Solicitar kit, confirmar recebimento e conferir vendas, perdas e repasses da semana.</p></div>`;
+  }
+  function plan(){return heading('DO PLANO À PRIMEIRA ENTREGA','Começar pequeno.<br>Nascer bem estruturado.','Sequência proposta a partir de 17/10/2026. O prazo depende dos fornecedores, documentos e validação de cada etapa.')+
+    `<div class="rv-two"><section class="rv-panel"><div class="rv-step"><small>19–25 OUT · DECISÃO</small><h3>Simular antes de comprar</h3><p>Cotações de carros e seguro, financiamento, custo por km e margem da lojinha. Comparação base e estresse.</p></div><div class="rv-step"><small>26 OUT–01 NOV · FUNDAÇÃO</small><h3>Construir o fluxo principal</h3><p>Acesso, cadastro de carro e motorista, contrato, cobrança e vistoria de entrega.</p></div><div class="rv-step"><small>02–08 NOV · PILOTO</small><h3>Preparar uma operação real</h3><p>Caixa, contas, caução, histórico e manutenção. Validar a jornada com um único carro.</p></div><div class="rv-step"><small>09–15 NOV · MOTORISTA & LOJA</small><h3>Rodar com controle</h3><p>Portal mobile, kit consignado, vendas, comissão, reposição e acerto. Sem cobrança ou assinatura automáticas até homologação.</p></div><div class="rv-step"><small>16–30 NOV · ESTABILIZAÇÃO</small><h3>Conferir planejado × realizado</h3><p>Conciliação, alertas, despesas reais e correções. A primeira entrega depende dos critérios de aceite.</p></div></section><section class="rv-panel"><h2>Critérios para liberar o piloto</h2><ul class="rv-checklist">${['Custos reais e reserva definidos','Contrato validado e assinado','Seguro adequado ao uso confirmado','Pagamento e caução conferidos','Vistoria e documentos disponíveis','Acesso isolado do motorista testado','Kit contado e termo de entrega pronto'].map(x=>`<li>${x}</li>`).join('')}</ul><p class="rv-mini-note">Mapa de produto e plano proposto; não é um sistema operacional pronto.</p></section></div>`;}
+  function render(){
+    root.querySelector('#rv-breadcrumb').textContent=names[page];
+    root.querySelectorAll('[data-page]').forEach(b=>b.setAttribute('aria-current',b.dataset.page===page?'page':'false'));
+    root.querySelectorAll('[data-area]').forEach(b=>b.setAttribute('aria-pressed',String((b.dataset.area==='driver')===(page==='driver'))));
+    const views={today,simulator,fleet,drivers,contracts,finance,shop,plan,driver};
+    content.innerHTML=views[page]();
+    if(page==='simulator'){
+      updateResults();
+      root.querySelectorAll('[data-preset]').forEach(b=>{
+        const values={base:[92,2,3],stress:[78,6,8],optimistic:[97,1,1]}[b.dataset.preset];
+        b.setAttribute('aria-pressed',String(params.occupancy===values[0]&&params.stoppedDays===values[1]&&params.lossPct===values[2]));
+      });
+    }
+  }
+  root.addEventListener('input',event=>{
+    const input=event.target;if(!input.dataset.param)return;
+    const key=input.dataset.param;
+    if(key==='financed')return;
+    if(!input.validity.valid||input.value===''){
+      input.setAttribute('aria-invalid','true');root.querySelector('#rv-input-error').hidden=false;root.querySelector('[data-action="save"]').disabled=true;return;
+    }
+    input.removeAttribute('aria-invalid');params[key]=Number(input.value);
+    const invalid=root.querySelector('[data-param][aria-invalid="true"]');
+    root.querySelector('#rv-input-error').hidden=!invalid;root.querySelector('[data-action="save"]').disabled=!!invalid;
+    updateResults();persist();
+  });
+  root.addEventListener('change',event=>{
+    const input=event.target;
+    if(input.dataset.param==='financed'){params.financed=input.value==='true';root.querySelector('#rv-loan-fields').hidden=!params.financed;updateResults();persist();}
+  });
+  root.addEventListener('click',event=>{
+    const el=event.target.closest('button');if(!el)return;
+    if(el.dataset.page){page=el.dataset.page;render();persist();return;}
+    if(el.dataset.area){page=el.dataset.area==='driver'?'driver':'simulator';render();persist();return;}
+    if(el.dataset.driverTab){driverTab=el.dataset.driverTab;render();persist();return;}
+    if(el.dataset.fleet){root.querySelector('#rv-fleet-detail').innerHTML=fleetDetail(el.dataset.fleet);root.querySelectorAll('[data-fleet]').forEach(b=>b.setAttribute('aria-pressed',String(b===el)));return;}
+    if(el.dataset.preset){
+      const presets={base:{occupancy:92,stoppedDays:2,lossPct:3},stress:{occupancy:78,stoppedDays:6,lossPct:8},optimistic:{occupancy:97,stoppedDays:1,lossPct:1}};
+      Object.assign(params,presets[el.dataset.preset]);
+      root.querySelectorAll('[data-param]').forEach(input=>{if(input.dataset.param!=='financed')input.value=params[input.dataset.param];});
+      root.querySelectorAll('[data-preset]').forEach(b=>b.setAttribute('aria-pressed',String(b===el)));
+      updateResults();persist();return;
+    }
+    const action=el.dataset.action;if(!action)return;
+    if(action==='save'){saved={...params};persist();render();toast('Cenário salvo neste ambiente de demonstração.');return;}
+    if(action==='restore'){params={...saved};render();persist();toast('Cenário salvo reaberto.');return;}
+    if(action==='compare'){compare();return;}
+    if(action==='sell'){
+      if(products[0].qty+transfers*6-saleCount<=0){toast('Sem água no kit. Registre uma reposição na gestão.');return;}
+      saleCount++;render();toast('Venda de exemplo registrada: R$ 4,00. Comissão: R$ 0,80.');return;
+    }
+    if(action==='transfer'){
+      if(products[0].central-transfers*6<6){toast('Estoque central insuficiente para esta transferência.');return;}
+      transfers++;render();toast('6 águas transferidas da central para o kit do carro, nesta demonstração.');return;
+    }
+    if(action==='incident'){incident=true;if(page==='driver')render();toast('Solicitação de manutenção registrada apenas nesta demonstração.');return;}
+    if(action==='submit-payment'){paymentSubmitted=true;render();toast('Comprovante simulado enviado para conferência. A cobrança continua sem baixa.');return;}
+    const destinations={'go-simulator':['simulator',null],'go-driver':['driver','Início'],'driver-pay':['driver','Pagar'],'driver-car':['driver','Carro'],'driver-shop':['driver','Loja'],'driver-docs':['driver','Docs']};
+    if(destinations[action]){[page,driverTab]=[destinations[action][0],destinations[action][1]||driverTab];render();persist();}
+  });
+  let resizeTimer;
+  if(globalThis.ResizeObserver)new ResizeObserver(()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(page==='simulator')drawChart(engine.simulate(params));},80);}).observe(content);
+  render();
+  if(globalThis.Tweak){
+    const design={radius:14,density:'Confortável'};
+    const tweak=new Tweak({container:root,onChange:()=>{root.style.setProperty('--rv-radius',`${design.radius}px`);content.style.padding=design.density==='Compacta'?'22px 20px':'';}});
+    tweak.addSlider(design,'radius',{min:4,max:22,step:2,unit:'px',label:'Cantos dos painéis'});
+    tweak.addSelect(design,'density',{options:['Confortável','Compacta'],label:'Densidade da gestão'});
+  }
+})();
+
+</script>

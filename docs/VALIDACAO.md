@@ -31,3 +31,7 @@ O protótipo usa dados fictícios e persistência local. Não foram homologados 
 Cinco áreas conferidas no navegador: decisão, mestre, alocação, expansão/renovação e políticas. Foram exercitados missão/visão, criação de marco por frota, salvamento de política, recálculo SAC com frota do fechamento, preservação/carregamento de cenário de expansão, candidato a venda e cenário empresarial nomeado. As alterações de teste usaram sessão isolada `?qa=1`, sem gravar esses exemplos na sessão do proprietário. A navegação e o layout também foram inspecionados em moldura de 320 px. Nenhum erro no console da sessão de teste final.
 
 O build valida o script completo montado, além da sintaxe das fontes. Novos testes verificam SAC/DSCR, patrimônio e caixa dos cenários compostos, ausência de receita no mês zero, venda deficitária, cronograma contratado, reciclagem potencial, políticas sem base e limites de execução. Fontes e diferenças dos modelos em [CENTRO-DE-ESTRATEGIA.md](CENTRO-DE-ESTRATEGIA.md).
+
+### Acesso visível ao centro
+
+Verificada a página “Tudo do centro”, seus botões e as entradas diretas de simulador, planejamento, alocação, expansão, renovação e políticas. Cada destino foi aberto no navegador. `npm run check` continua com 56 testes aprovados. Nenhuma fórmula financeira foi alterada nesta revisão de navegação.

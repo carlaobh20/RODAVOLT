@@ -21,3 +21,12 @@
 @media(max-width:560px){#rodavolt-v2 .r-mobile-menu{display:block;background:#243755;color:#e8edf9;border:1px solid #3b5075;border-radius:5px;padding:8px;font-size:10px;min-height:36px}#rodavolt-v2 nav{display:none}#rodavolt-v2.r-menu-open nav{display:flex}#rodavolt-v2 .r-demo-strip{gap:5px}#rodavolt-v2 .r-demo-strip>span:nth-child(2){flex:1}#rodavolt-v2 .r-demo-strip button{margin-left:10px}#rodavolt-v2.r-driver-mode .r-heading{margin-bottom:12px}#rodavolt-v2.r-driver-mode .r-heading h1{font-size:22px}}
 
 #rodavolt-v2 .r-strategy-bars{display:grid;gap:10px}#rodavolt-v2 .r-bar-row{display:grid;grid-template-columns:48px minmax(25px,1fr) 82px;align-items:center;gap:10px;font-size:10px}#rodavolt-v2 .r-bar-row strong{text-align:right;font-variant-numeric:tabular-nums}#rodavolt-v2 .r-bar-track{height:12px;background:var(--r-soft);position:relative}#rodavolt-v2 .r-bar-track i{position:absolute;top:0;height:100%;background:var(--r-blue)}
+
+#rodavolt-v2 .r-strategy-nav{display:grid;gap:2px;margin:-1px 0 5px 16px;padding-left:9px;border-left:1px solid #3b4c6a}
+#rodavolt-v2 .r-strategy-nav button{padding:7px 8px;min-height:31px;font-size:10px}
+#rodavolt-v2 .r-center-intro{margin:6px 0 20px}#rodavolt-v2 .r-center-intro p{font-size:12px;color:var(--r-muted);line-height:1.7;max-width:760px;margin-top:8px}
+#rodavolt-v2 .r-strategy-directory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#rodavolt-v2 .r-directory-item{display:flex;flex-direction:column;align-items:start}#rodavolt-v2 .r-directory-item h2{font-size:17px}#rodavolt-v2 .r-directory-item ul{padding-left:17px;margin:15px 0 20px;font-size:11px;line-height:1.75;color:var(--r-muted)}#rodavolt-v2 .r-directory-item li+li{margin-top:5px}#rodavolt-v2 .r-directory-item .r-button{margin-top:auto}
+@media(max-width:1100px){#rodavolt-v2 .r-strategy-directory{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){#rodavolt-v2 .r-strategy-directory{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:560px){#rodavolt-v2 .r-strategy-nav{flex-basis:100%;grid-template-columns:repeat(2,minmax(0,1fr));margin:4px 0 0;padding:5px 0 0;border-left:0;border-top:1px solid #3b4c6a}#rodavolt-v2 .r-strategy-nav button{min-height:44px}}

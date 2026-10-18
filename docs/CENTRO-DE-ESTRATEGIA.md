@@ -56,3 +56,9 @@ Marketing, tecnologia e políticas livres ficam sem avaliação automática por 
 ## Verificação
 
 `npm run check`: testes dos motores e adaptadores, build e sintaxe das fontes. O build também verifica a sintaxe do JavaScript completo gerado, evitando que a composição de arquivos produza uma página vazia. Testes cobrem Price/SAC, trava DSCR, identidades de caixa/patrimônio, mês zero, venda abaixo da dívida, frota existente, política sem base, marcos, alocação, reserva, déficit e limites de execução.
+
+## Acesso às áreas
+
+Após o proprietário relatar que não encontrava a integração, a entrada do Centro passou a abrir “Tudo do centro”: seis áreas com lista de recursos e botões de acesso. Simulador, planejamento mestre, alocação, expansão, renovação e políticas também têm acessos diretos no menu. Renovação permanece parte do motor de expansão, mas possui entrada própria. Os indicadores do cabeçalho de renovação agora pertencem à alternativa de renovação apresentada, em vez de mostrar o cenário composto.
+
+Essa mudança de navegação não representa migração integral do banco ou da plataforma antiga. O alcance continua sendo o planejamento interativo descrito acima, com registros demonstrativos.

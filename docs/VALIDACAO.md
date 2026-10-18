@@ -1,37 +1,31 @@
-# Validação da reconstrução v2
+# Validação da reconstrução v3
 
-**17/10/2026 · escopo de planejamento e protótipo local.** A v1 foi substituída e permanece no histórico Git.
+18/10/2026 · planejamento e protótipo local. Interface v2 substituída; histórico preservado no Git.
 
 ## Automatizado
 
-`npm run check`: **56 testes aprovados**, geração dos arquivos e verificação de sintaxe. A suíte cobre calendário/mês zero; início da operação; identidades de caixa e patrimônio; reserva e compra bloqueada; reinvestimento; Price e quitação; amortização e juros; aportes/retiradas; equipe por escala; plano preservado; dados ausentes/base zero; revisão por snapshot; taxa contratada preservada; visão anual; realizado e aquisição; avaliação independente; estoque e comissão. `git diff --check` sem erro.
+`npm run check`: **92 testes aprovados**, build dos dois HTMLs, verificação de sintaxe das fontes e do script completo montado. Cobertura: mês zero, calendário, capital/reserva, crescimento, financiamento Price/SAC, juros/principal, amortização, caixa/resultado/patrimônio, projeção por fechamento, agregação anual e CSV; kanban com condições de entrega, disponibilidade por carro, cobrança e comprovante, manutenção, vistoria, estoque e acerto idempotentes; cálculo pessoal de corrida com trajeto completo, tempo, custos e metas.
 
-## Jornadas verificadas no navegador
+O teste de estoque verifica uma venda de R$ 89: caixa +R$ 71,20, estoque −R$ 32 e resultado/patrimônio +R$ 39,20, sem pagar CMV duas vezes. Outra verificação preserva o estoque consumido ao reestimar o futuro. O capital inicial financia a central e o kit. `git diff --check` sem erro.
 
-Testes de interação em uma sessão QA isolada, sem alterar o estado salvo da prévia principal:
+## Jornadas conferidas no navegador
 
-- Projeção inicial com 60 meses, crescimento por carro, caixa/dívida, patrimônio/capital e marcos.
-- Aporte mensal de R$ 1.500 recalcula o rascunho de 8 para 10 carros finais nas premissas do exemplo; a referência BASE-001 permanece independente.
-- Despesa demonstrativa de R$ 250 reduz o caixa de janeiro de aproximadamente R$ 58.718 para R$ 58.468; a revisão começa nesse saldo.
-- Registrar uma aquisição de exemplo reduz o caixa em R$ 31.300 e aumenta a frota observada de 1 para 2, com dívida correspondente.
-- Plano mensal e visão anual renderizam; salvar outra versão mantém BASE-001 e BASE-002 acessíveis na auditoria.
-- Jornada pessoal registra ganhos de R$ 320, combustível de R$ 85 e outras despesas de R$ 20, resultando em R$ 215 antes do aluguel; não lança receita da locadora.
-- Venda de duas águas à empresa baixa o kit de 12 para 10 e calcula R$ 1,60 de comissão; acerto registra receita, custo e comissão, sem compensar aluguel.
-- Comprovante fica em conferência; a gestão confirma e o aluguel recebido de janeiro passa de R$ 3.150 para R$ 4.200 no exemplo.
-- Solicitação de manutenção aparece na central e pode passar para atendimento.
-- Checklist de vistoria e protocolo de suporte são registrados, com retorno na interface.
-- Inspeção visual de composição no desktop e em moldura de 320px.
+Sessão `?qa=1` isolada para movimentos demonstrativos, sem gravar os testes operacionais na sessão principal:
 
-## Limites da verificação
+- Novo painel e seus destinos; saldo de abertura com estoque central financiado.
+- Simulador: recálculo automático ao alterar aluguel semanal; fluxo mensal com Hoje + 60 meses, além de visão anual e memória de cálculo.
+- Kanban: arrastar interessado para documentação; bloqueio ao avançar sem conferência; edição válida avança candidato para contrato/entrega. Erros aparecem dentro do formulário aberto.
+- Motorista: oferta de R$ 32 fica abaixo da meta diária convertida por km; R$ 45 atende às metas; registro pessoal da decisão.
+- Venda de perfume baixa kit de 4 para 3; comissão de R$ 17,80 e acerto único no livro. Caixa sobe R$ 71,20, com CMV sem nova saída de caixa.
+- Comprovante aparece em conferência na gestão, sem tratar envio como dinheiro recebido.
+- Pedido de manutenção do motorista aparece na gestão; resposta registrada no histórico local.
+- Comparação preserva PLANO-001 e reestima o futuro a partir de janeiro/2027, mantendo os registros passados.
+- Cenário “Plano inicial · primeiro carro” preservado após recarregar a sessão principal.
+- Inspeção visual em desktop e molduras de 390 e 320 px, incluindo análise de corrida. Tabelas extensas e kanban têm rolagem horizontal deliberada.
+- Nenhum erro de console na sessão final examinada.
 
-O protótipo usa dados fictícios e persistência local. Não foram homologados banco, autenticação/autorização, arquivo/foto, assinatura, Pix, emissão fiscal, telemetria, acessibilidade integral, operação offline ou desempenho sob carga. Não é uma auditoria completa do legado. A matemática normalizada não substitui cotações, contrato, seguro e orientação contábil reais.
+## Limites
 
-## Centro de Estratégia integrado
+Valores, datas, nomes, carros e lançamentos são fictícios. Persistência no navegador e exportação local; sem segurança multiusuário. Não homologados autenticação, banco, permissões por motorista, anexos reais, assinatura, Pix/conciliação bancária, emissão fiscal, telemetria, operação offline ou desempenho sob carga. A análise de corrida é manual: não lê nem aceita/recusa ofertas no Uber/99. Produção depende dessas etapas e de validação das regras e custos reais.
 
-Cinco áreas conferidas no navegador: decisão, mestre, alocação, expansão/renovação e políticas. Foram exercitados missão/visão, criação de marco por frota, salvamento de política, recálculo SAC com frota do fechamento, preservação/carregamento de cenário de expansão, candidato a venda e cenário empresarial nomeado. As alterações de teste usaram sessão isolada `?qa=1`, sem gravar esses exemplos na sessão do proprietário. A navegação e o layout também foram inspecionados em moldura de 320 px. Nenhum erro no console da sessão de teste final.
-
-O build valida o script completo montado, além da sintaxe das fontes. Novos testes verificam SAC/DSCR, patrimônio e caixa dos cenários compostos, ausência de receita no mês zero, venda deficitária, cronograma contratado, reciclagem potencial, políticas sem base e limites de execução. Fontes e diferenças dos modelos em [CENTRO-DE-ESTRATEGIA.md](CENTRO-DE-ESTRATEGIA.md).
-
-### Acesso visível ao centro
-
-Verificada a página “Tudo do centro”, seus botões e as entradas diretas de simulador, planejamento, alocação, expansão, renovação e políticas. Cada destino foi aberto no navegador. `npm run check` continua com 56 testes aprovados. Nenhuma fórmula financeira foi alterada nesta revisão de navegação.
+O PRD, o plano de execução e a matriz do legado descrevem o que existe e o que continua proposto. Nenhuma conexão ao banco antigo, migration remota ou publicação de produção foi feita nesta entrega.

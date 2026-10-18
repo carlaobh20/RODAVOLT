@@ -1,50 +1,45 @@
-# RODAVOLT · Gestão & Crescimento
+# RODAVOLT · Sua operação em ordem
 
-Plataforma de locação semanal a motoristas de aplicativo com operação, financeiro rastreável, plano de crescimento, comparação projetado × realizado e app completo do motorista.
+**Versão 3 · reconstrução de 18/10/2026.** Uma nova experiência para administrar locação semanal de carros no Brasil, organizar motoristas e simular o crescimento antes de investir.
 
-## Esta versão
+O layout e o controlador anteriores foram substituídos. A versão 2 permanece no histórico Git. A matemática financeira validada foi preservada e ampliada com relatórios novos; não foi feita cópia da interface rejeitada.
 
-**v2 · planejamento e protótipo reconstruídos, com o Centro de Estratégia integrado.** O simulador recupera os conceitos de crescimento do sistema anterior: capital, aquisições por veículo, reinvestimento, reserva, aportes, amortização, caixa, dívida e patrimônio. Acrescenta versões preservadas do plano, livro demonstrativo, desvios com origens e revisão a partir de fechamento observado.
+## O que explorar
 
-O app do motorista possui Início, Jornada, Carteira, Loja e Mais, com carro, manutenção, checklist de vistoria, documentos e suporte. Vendas, reposição, comprovante, atendimento e acerto percorrem os respectivos fluxos da gestão.
+- **Visão do dia:** cobranças, caixa, fila de atenção, carro e próximos cuidados.
+- **Motoristas:** kanban arrastável e lista, cadastro, busca, próxima ação, conferências de entrega e bloqueio de vínculo sobreposto.
+- **Frota e cuidados:** aquisições demonstrativas, dívida por carro, manutenção, custo do serviço e vistorias.
+- **Financeiro:** cobranças semanais, comprovantes em conferência, confirmação idempotente e livro por origem.
+- **Loja no carro:** perfumes, carregadores veiculares e cabos; central/kit, venda, comissão, recebimento e acerto.
+- **Simulador:** página contínua próxima ao sistema antigo, premissas com recálculo automático, linha Hoje, fluxo anual/mensal antes dos gráficos, juros/principal/extra, dinheiro do bolso, patrimônio, compra agora/3/6 meses e todos os meses da linha do tempo. Cenários e exportação CSV.
+- **Planejado × realizado:** plano preservado, registros editáveis, origens e revisão pelo fechamento.
+- **App do motorista:** análise “Vale a corrida?”, metas/custos, jornada, carteira, loja, manutenção, vistoria, documentos e suporte.
 
-Há apenas **dados fictícios**. A janela nov/2026–jan/2027 é ilustrativa e prospectiva, não uma operação existente. Não há autenticação, banco, Pix, assinatura, documentos/fotos reais nem integração com Uber/99. Persistência local de demonstração não é segurança operacional.
+A análise de corrida calcula líquido por km e por hora usando oferta informada manualmente, trajeto até o passageiro, viagem, reposicionamento, espera, combustível, outros custos, pedágio não reembolsado e aluguel rateado. Compara com os mínimos pessoais e com a meta diária convertida por tempo e distância. Registrar aceitar/recusar só preserva a escolha do motorista; não executa ações em Uber/99.
 
-O Centro de Estratégia reúne Central de decisão, Planejamento mestre, Alocação de capital, Expansão & renovação e Políticas da empresa. Inclui cenários próprios, missão/visão, marcos, ranking de retorno, Price/SAC, reciclagem de capital e comparação de momentos de venda. Operação exclusivamente brasileira em BRL, sem seletor “Minha operação / Brasil”.
+## Abrir localmente
 
-Veja o [mapa completo da integração e diferenças dos modelos](docs/CENTRO-DE-ESTRATEGIA.md).
-
-## Abrir e verificar
-
-Node 22, sem dependências a instalar:
+Node 22, sem instalação de dependências:
 
 ```sh
 npm run check
 npm run dev
 ```
 
-Abra `http://127.0.0.1:4173` ou o arquivo `index.html`. As verificações cobrem crescimento, caixa, patrimônio, dívida, reserva, revisão, plano preservado, lançamentos e estoque. A interface é conferida no navegador integrado. O servidor também oferece molduras locais de QA em `/_responsive/320`, `/390`, `/736` e `/1024`.
+Prévia: `http://127.0.0.1:4173/`. Os fontes geram `index.html` e `prototype/preview.html`. Não editar gerados manualmente.
 
-## Explorar os fluxos
+A implementação é um **protótipo funcional local**, com pessoas, valores e registros fictícios. O exemplo financeiro usa nov/2026 a jan/2027. Não há banco remoto, login real, Pix, documentos privados, assinatura, telemetria ou leitura automática da tela de aplicativos. Não usar como sistema de produção nem inserir documentos pessoais. A chave de armazenamento `rodavolt-v3` inicia uma sessão nova, sem importar ou apagar os dados locais antigos. Há exportação JSON da sessão e CSV do simulador.
 
-1. Na visão executiva, abrir a origem do caixa ou do patrimônio.
-2. No plano, ver crescimento e fluxo anual; editar premissas e recalcular o rascunho; preservar outra versão.
-3. Incluir uma despesa no financeiro e comparar; registrar uma aquisição de exemplo na frota; gerar revisão a partir do fechamento.
-4. No app, registrar jornada pessoal, venda e comprovante; abrir solicitação/vistoria/suporte.
-5. Na gestão, conferir recebimento, entregar reposição e fechar acerto da loja; verificar as mudanças e os eventos.
+## Documentação atual
 
-## Documentação
-
-- [PRD v2](docs/PRD.md)
-- [Modelo do simulador, crescimento e revisão](docs/SIMULADOR.md)
-- [Mapeamento do legado](docs/AUDITORIA-LEGADO.md)
-- [Plano de execução](docs/PLANO-DE-EXECUCAO.md)
-- [Arquitetura proposta](docs/ARQUITETURA.md)
+- [PRD e critérios de aceite](docs/PRD.md)
 - [Desenho e navegação](docs/DESIGN.md)
-- [Decisões e hipóteses](docs/DECISOES.md)
+- [Modelo e fluxo do simulador](docs/SIMULADOR.md)
+- [Referência antiga e o que foi recuperado](docs/CENTRO-DE-ESTRATEGIA.md)
+- [Pesquisa na internet e no GitHub](docs/REFERENCIAS.md)
+- [Plano de implementação operacional](docs/PLANO-DE-EXECUCAO.md)
+- [Arquitetura e limites](docs/ARQUITETURA.md)
+- [Decisões](docs/DECISOES.md)
 - [Validação](docs/VALIDACAO.md)
-- [Referências externas pesquisadas](docs/REFERENCIAS.md)
 
-Fontes: `src/growth.js`, `src/control.js`, `src/strategy.js`, `src/legacy/expansion.js`, `prototype/strategy.js`, `prototype/shell.html`, `prototype/style.css`, `prototype/app.js`. `npm run build` gera `index.html` e `prototype/preview.html`. Não editar gerados manualmente. A v1 está preservada no histórico Git; não é a proposta corrente.
-
-Repositório [carlaobh20/RODAVOLT](https://github.com/carlaobh20/RODAVOLT). Edição local e desenvolvimento em `dev`; sincronização após validação. Deploy operacional e infraestrutura são etapas posteriores. Planejamento datado de **17/10/2026**.
+Edição direta nesta pasta, branch `dev`, commit/push após verificações. Repositório [carlaobh20/RODAVOLT](https://github.com/carlaobh20/RODAVOLT). Publicação e migração de banco não fazem parte desta reconstrução local.

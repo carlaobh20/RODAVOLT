@@ -1,32 +1,22 @@
-# Decisões de produto · v2
+# Decisões v3 · 18/10/2026
 
-## Confirmado
+## Confirmado pelo proprietário
 
-Brasil/BRL, locação semanal para motorista de aplicativo, edição local na pasta RODAVOLT, GitHub `carlaobh20/RODAVOLT`, gestão completa, loja no carro, app do motorista, simulação antes da compra e intenção de aquisição em novembro de 2026.
+Reconstruir interface e organização do zero. Simulador muito próximo do antigo e com todo o fluxo visível. Kanban para fluxo dos motoristas. Loja de perfumes, carregadores e acessórios. App do motorista mais completo, inclusive avaliação de corrida por km e objetivos. Pesquisa na internet e GitHub. Brasil/BRL e aluguel semanal permanecem fixos. Trabalho nesta pasta, branch dev, commit/push autorizados; sem autorização implícita para deploy ou banco antigo.
 
-Na revisão de 17/10/2026, o proprietário pediu reconstrução integral: mais controle e transparência, app mais completo, recuperação do fluxo de crescimento/projeções do simulador antigo e comparação entre planejado e realizado conforme a operação for registrada. A simplificação em sete áreas e o adiamento do crescimento da v1 foram superados por essa direção.
+## Escolhas desta reconstrução
 
-## Decisões de desenho desta versão
+- Nova interface e controlador. Versão anterior recuperável no histórico Git; armazenamento v3 separado, sem apagar dados de outros aplicativos.
+- Reusar matemática financeira já verificada, com manutenção mensal e novos relatórios completos; descartar a experiência fragmentada de abas.
+- Sete entradas na gestão, separando ação diária de planejamento.
+- Kanban com gates explícitos e verificação de veículo disponível, sem score automático de pessoas.
+- Tratar comprovação/recebimento, venda/acerto e abertura/conclusão de serviço como eventos diferentes, idempotentes onde necessário.
+- Perfume 30ml, carregador USB-C e cabo são exemplos do novo catálogo. Preço/custo/comissão de 20% são demonstrativos, ainda a validar comercialmente.
+- Análise de corrida manual no protótipo. O fluxo calcula e registra a escolha; leitura automática da tela de outra plataforma é uma implementação nativa separada, não uma capacidade desta página.
+- Ganhos e metas do motorista separados das telas administrativas e das receitas da empresa.
 
-- Três camadas: plano versionado, livro de registros e revisão prospectiva; nenhuma sobrescreve a outra.
-- Controle por origem, período, natureza e estado, com composição clicável.
-- Crescimento por veículo e dívida, reserva fixa/por carro, aportes, retiradas e prioridade de capital.
-- Visão mensal e anual; novas aquisições operam no mês seguinte.
-- Aplicativo com Início, Jornada, Carteira, Loja e Mais; carro, manutenção, vistoria, documentos e suporte aprofundados.
-- Jornada pessoal não é faturamento da locadora nem dado administrativo por padrão.
-- Ações da loja distinguem recebimento pelo motorista e pela empresa, comissão e repasse.
-- Versão antiga preservada pelo histórico Git; código, interface e documentação correntes reconstruídos.
+## Pendências comerciais
 
-## Hipóteses comerciais a confirmar
+Cidade/estado, veículo e financiamento efetivos, capital/reserva, seguro/franquia, limites de km, caução, regras de atraso/devolução, responsabilidade por manutenção/combustível, fornecedores de perfumes/acessórios, nota fiscal/garantia, comissão e custódia do kit, regime tributário e minuta jurídica.
 
-Consignação versus venda do kit; comissão e sua base; produtos/preços; responsáveis por seguro/revisão/pneus/combustível; política de atraso, caução, franquia e km; cidade/estado; capital, reserva e financiamento; modelo/ano do carro; regime da empresa e minuta jurídica.
-
-Padrões do simulador são ilustrativos. O kit demonstrativo usa 20% de comissão e dados fictícios; não é condição comercial aprovada. A janela nov/2026–jan/2027 é um exemplo prospectivo, não registros reais.
-
-## Infraestrutura
-
-A aplicação operacional proposta continua React/TypeScript e banco relacional com autorização e arquivos privados. O protótipo atual é estático e não fornece autenticação real. Desenvolvimento em `dev`, commit e push após verificações autorizados. Publicação e integrações operacionais são etapas posteriores.
-
-## Integração do Centro de Estratégia
-
-O proprietário confirmou operação somente no Brasil. O cartão “Minha operação / Brasil” foi removido; país e BRL são fixos, sem seleção de operação. A integração das cinco áreas e das análises de expansão/renovação está detalhada em [CENTRO-DE-ESTRATEGIA.md](CENTRO-DE-ESTRATEGIA.md), incluindo correções matemáticas e limites de origem dos dados.
+Não preencher essas decisões como fatos por meio dos dados ilustrativos. O protótipo deve servir para revisar as escolhas antes da compra inicial.

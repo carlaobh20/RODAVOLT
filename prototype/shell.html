@@ -1,41 +1,27 @@
-<div id="rodavolt-v2" aria-label="RODAVOLT · Gestão e crescimento">
-  <aside class="r-sidebar">
-    <div class="r-mobile-brand-row">
-    <div class="r-logo"><span>R<span>↗</span></span><div>RODAVOLT<small>GESTÃO & CRESCIMENTO</small></div></div>
-    <button type="button" class="r-mobile-menu" data-action="menu" aria-expanded="false">Menu de gestão</button>
-    </div>
-    <nav aria-label="Navegação da gestão">
-      <small>ESTRATÉGIA</small>
-      <button type="button" data-page="overview"><span>◎</span>Visão executiva</button>
-      <button type="button" data-page="growth"><span>↗</span>Centro de Estratégia</button>
-      <div class="r-strategy-nav" aria-label="Áreas do Centro de Estratégia">
-        <button type="button" data-strategy-destination="decision">Simulador empresarial</button>
-        <button type="button" data-strategy-destination="master">Planejamento mestre</button>
-        <button type="button" data-strategy-destination="allocation">Alocação de capital</button>
-        <button type="button" data-strategy-destination="expansion">Expansão da frota</button>
-        <button type="button" data-strategy-destination="renewal">Renovação de veículos</button>
-        <button type="button" data-strategy-destination="policies">Políticas da empresa</button>
-      </div>
-      <button type="button" data-page="compare"><span>≋</span>Projetado × realizado</button>
-      <small>OPERAÇÃO</small>
-      <button type="button" data-page="fleet"><span>▤</span>Frota & manutenção</button>
-      <button type="button" data-page="drivers"><span>◉</span>Motoristas</button>
-      <button type="button" data-page="contracts"><span>▧</span>Contratos & vistorias</button>
-      <small>CONTROLADORIA</small>
-      <button type="button" data-page="finance"><span>＄</span>Financeiro</button>
-      <button type="button" data-page="store"><span>▦</span>Lojinha & acertos</button>
-      <button type="button" data-page="work"><span>◷</span>Central de pendências</button>
-      <button type="button" data-page="audit"><span>≡</span>Auditoria & dados</button>
+<div id="rodavolt" aria-label="RODAVOLT · Gestão de locação">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">r<span>↗</span></span><div>rodavolt<span>GESTÃO DE LOCAÇÃO</span></div><button type="button" class="mobile-menu" data-action="menu" aria-expanded="false">Menu</button></div>
+    <nav aria-label="Menu principal">
+      <span class="nav-label">SEU DIA A DIA</span>
+      <button type="button" data-page="today"><span aria-hidden="true">◫</span>Visão do dia</button>
+      <button type="button" data-page="drivers"><span aria-hidden="true">▥</span>Motoristas <small>Kanban</small></button>
+      <button type="button" data-page="fleet"><span aria-hidden="true">▱</span>Frota e cuidados</button>
+      <button type="button" data-page="finance"><span aria-hidden="true">＄</span>Financeiro</button>
+      <button type="button" data-page="shop"><span aria-hidden="true">▦</span>Loja no carro</button>
+      <span class="nav-label">PRÓXIMOS PASSOS</span>
+      <button type="button" data-page="simulator"><span aria-hidden="true">↗</span>Simulador de crescimento</button>
+      <button type="button" data-page="compare"><span aria-hidden="true">≋</span>Planejado × realizado</button>
     </nav>
-    <div class="r-sidebar-bottom"><span class="r-live-dot"></span> Demonstração interativa<small>Sem conexão com operação real</small><button type="button" data-action="product-plan">Consultar plano do produto ↗</button></div>
-    <div class="r-user"><span class="r-avatar">CF</span><div>Proprietário<small>Visão completa do negócio</small></div></div>
+    <div class="sidebar-plan"><span class="small-label">DECIDIR ANTES DE INVESTIR</span><strong>Seu próximo carro<br>começa com um plano.</strong><button type="button" data-page="simulator">Abrir simulador <span aria-hidden="true">↗</span></button></div>
+    <button type="button" class="sidebar-records" data-action="history">Histórico e dados <span aria-hidden="true">↗</span></button>
+    <div class="owner"><span class="avatar">CF</span><div>Proprietário<small>RODAVOLT</small></div><span class="owner-dot"></span></div>
   </aside>
-  <div class="r-body">
-    <header class="r-topbar"><div class="r-breadcrumb">RODAVOLT <span>/</span> <strong id="r-breadcrumb">Visão executiva</strong></div><div class="r-view-switch"><button type="button" data-area="admin" aria-pressed="true">Gestão</button><button type="button" data-area="driver" aria-pressed="false">App do motorista ↗</button></div></header>
-    <div class="r-demo-strip"><span class="r-live-dot"></span><span>Dados ilustrativos · nov/2026 a jan/2027 · lançamentos editáveis para explorar o produto</span><button type="button" data-page="audit">Ver origem dos dados</button></div>
-    <main id="r-content"></main>
-    <footer class="r-footer"><span>RODAVOLT 2.0 · cada número tem uma origem.</span><span>Protótipo de produto · dados locais de demonstração</span></footer>
+  <div class="workspace">
+    <header class="topbar"><div><span class="breadcrumb">RODAVOLT <span>/</span></span> <strong id="page-name">Visão do dia</strong></div><div class="top-actions"><button type="button" class="search-button" data-action="search">Buscar motorista, carro, contrato <kbd>⌕</kbd></button><button type="button" class="driver-switch" data-mode="driver">App do motorista <span aria-hidden="true">↗</span></button><button type="button" class="admin-switch" data-mode="admin">Voltar para a gestão</button></div></header>
+    <div class="demo-banner"><span class="demo-dot"></span><span>Ambiente de demonstração <b>·</b> valores e pessoas fictícios <b>·</b> dados salvos neste navegador</span><button type="button" data-action="about">Entender os dados</button></div>
+    <main id="content"></main>
+    <footer><span>rodavolt <b>·</b> Clareza para operar. Visão para crescer.</span><button type="button" data-action="export-data">Exportar meus dados locais</button></footer>
   </div>
-  <section id="r-drawer" class="r-drawer" aria-label="Detalhe e memória de cálculo" hidden></section>
-  <div id="r-toast" class="r-toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-head"><div><span class="small-label">RODAVOLT</span><h2 id="detail-title"></h2></div><button type="button" class="icon-button" data-action="close" aria-label="Fechar painel">×</button></div><div id="detail-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
 </div>

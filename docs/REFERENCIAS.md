@@ -1,20 +1,15 @@
-# Referências pesquisadas
+# Pesquisa aplicada · 18/10/2026
 
-Consulta em **17/10/2026**. Fontes oficiais de fornecedores foram usadas como referências de capacidade e padrão de fluxo. Não houve avaliação contratada, acesso a contas pagas, ranking independente ou certificação de que são os “melhores” para toda operação. A recomendação é uma síntese para a necessidade da RODAVOLT.
+Consulta a fontes oficiais e repositórios, usada como referência de produto. Não copiamos interfaces, instalamos os sistemas nem importamos bases de terceiros. Nenhuma comparação de “melhor do mercado” foi assumida sem avaliação.
 
-| Fonte | Capacidade observada | Adaptação proposta |
+| Fonte | Observação verificada | Aplicação nesta proposta |
 |---|---|---|
-| [Fleetio · manutenção](https://www.fleetio.com/solutions/fleet-maintenance-software) | Planos preventivos, inspeção, ordens e histórico de custos | Unir ocorrência, serviço, km e custo na ficha do carro |
-| [Fleetio · custo total de propriedade](https://www.fleetio.com/blog/calculating-total-cost-of-ownership-for-fleet) | Custo do veículo considera aquisição, depreciação, manutenção e paradas | Separar custo econômico e caixa no simulador |
-| [HQ Rental Software](https://hqrentalsoftware.com/) | Gestão de locação com contratos digitais, pagamentos e disponibilidade | Conectar contrato, carro e recebíveis sem múltiplos cadastros |
-| [Localiza Zarp · perguntas frequentes](https://zarp.localiza.com/faq) | Oferta para motorista de aplicativo com condições, km, manutenção e proteções | Explicitar responsabilidades, limites e custos do aluguel semanal |
-| [Samsara · Driver App](https://kb.samsara.com/hc/en-us/articles/4423183155341-Get-Started-with-the-Samsara-Driver-App/) | Inspeções e comunicação pelo aplicativo do motorista | Relato de manutenção com evidência no celular |
-| [Zoho Inventory · transferências](https://www.zoho.com/us/inventory/help/warehouses/transfer-orders.html) | Origem, destino e acompanhamento da movimentação de mercadoria | Central → kit/veículo com rastreabilidade e confirmação |
+| [Fleetio · inspeções](https://www.fleetio.com/features/vehicle-inspections) | Checklists e falhas de inspeção conectados ao fluxo de manutenção | Pedido do motorista, vistoria, ordem, custo e disponibilidade ligados ao carro |
+| [Fleetbase no GitHub](https://github.com/fleetbase/fleetbase) | Plataforma modular de operações de logística e frota, com aplicações operacionais | Separar rotina do proprietário e experiência do motorista, conservando registros compartilhados quando apropriado |
+| [Kanboard no GitHub](https://github.com/kanboard/kanboard) | Software de gestão pelo método kanban | Etapas visuais, cartões com próxima ação e alternativa ao arraste por formulário. Implementação própria, sem dependência PHP |
+| [Driversnote · registro de trajetos](https://www.driversnote.com/tracking) | Organização/classificação de trajetos e histórico de deslocamentos | Jornada pessoal separada do financeiro da locadora e registros de km por finalidade |
+| [GigU · Brasil](https://gigu.app/br) | Análise de corridas com custos pessoais e ganho líquido | Metas, custo de rodar e oferta mínima. O protótipo RODAVOLT usa entrada manual e não afirma possuir leitura automática |
+| [GigU · lucro líquido](https://gigu.app/br/blog/lucro-liquido-saiba-quanto-voce-realmente-ganha-em-cada-corrida) | Custos configurados e lucro líquido por hora na avaliação da oferta | Evitar confundir receita da corrida com lucro; incluir aluguel, combustível e custos pagos pelo motorista |
+| [StopClub · cálculo de ganhos](https://site.stopclub.com.br/app-km) | Exibição de R$/km e R$/hora quando uma oferta aparece | Referência para o futuro recurso nativo. Nesta entrega, calculadora e decisão são manuais e explicitamente identificadas |
 
-Os fornecedores têm escopos diferentes: manutenção de frota, locadora, portal do motorista e estoque. A RODAVOLT reúne somente os fluxos úteis ao negócio inicial. Não presume copiar suas interfaces, integrar APIs, adotar seus preços ou oferecer suas coberturas.
-
-Para crédito, o [material de educação financeira do Banco Central](https://liftchallenge.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Cuidando_do_seu_dinheiro_Gestao_de_Financas_Pessoais/caderno_cidadania_financeira.pdf) explica que o CET incorpora juros e outros encargos. Por isso o simulador não apresenta juros informados como CET calculado.
-
-Para arquitetura, a [documentação de RLS](https://supabase.com/docs/guides/database/postgres/row-level-security) e de [Storage](https://supabase.com/docs/guides/storage/security/access-control) orienta a separação por acesso. A implementação concreta exigirá consulta atualizada e testes no ambiente escolhido.
-
-Preços anunciados por locadoras variam por cidade, grupo, km e condições promocionais. Nenhum preço promocional de concorrente foi usado como evidência do preço que a RODAVOLT conseguirá cobrar. As premissas do desenho são explicitamente fictícias.
+A referência determinante do simulador é o código antigo fornecido pelo proprietário. Sua sequência de leitura e colunas foram auditadas, preservando as correções matemáticas descritas em SIMULADOR.md.

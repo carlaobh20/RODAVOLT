@@ -1,36 +1,15 @@
-# Desenho v2 · controle, profundidade e transparência
+# Desenho v3
 
-A interface foi reconstruída com navegação por estratégia, operação e controladoria. Azul profundo e cobalto distinguem a nova identidade; tema claro/escuro; tabelas, gráficos e fontes de registro recebem prioridade. O objetivo é tornar uma operação complexa legível sem retirar os controles necessários.
+A direção visual anterior foi descartada. Nova base clara com verde profundo, tipografia legível, respiro, linhas discretas e ações explícitas. Menu curto por tarefa do proprietário; sete destinos em vez de um índice de módulos estratégicos.
 
-## Composição
+Visão do dia é o ponto de entrada: indicadores rastreáveis e fila acionável, com carro e loja ao lado. Nenhum seletor de país/operação: Brasil e BRL são fixos.
 
-Visão executiva mostra caixa, frota, recebimento e patrimônio do período, comparação e fila de decisões. Cada indicador abre memória e registros. O patrimônio tem rótulo de estimativa; caixa tem origem em lançamentos.
+Motoristas: cinco colunas de kanban com nomes de etapas reais, cartões compactos, responsável/próxima ação/data, arraste e formulário acessível. A lista é alternativa para busca/teclado e telas menores. Gate de entrega explica o bloqueio dentro do painel, sem perder o preenchimento.
 
-Centro de Estratégia reúne decisão, planejamento mestre, alocação de capital, expansão/renovação e políticas. A central de decisão separa segurança/retorno, projeção, premissas completas, fluxo detalhado, ano a ano e estratégias. Três gráficos mostram a evolução da frota, liquidez/dívida e construção patrimonial. Marcos explicam quando cada carro entra, caixa restante e reserva. O mês selecionado abre sua identidade de caixa.
+Simulador: página contínua inspirada na referência enviada. Premissas na largura toda em seis grupos, sem botão Simular; tabela antes de gráficos; resultados com bases claras. Detalhes avançados agrupam apenas variáveis opcionais. Linha do tempo mostra todos os meses. Não existe uma coleção de abas para esconder fluxos.
 
-Projetado × realizado coloca referência e observação lado a lado. Desvios têm R$/%, fontes e interpretação. Revisão começa no fechamento escolhido; o plano original não desaparece. A legenda distingue plano, demonstração observada e previsão revisada.
+Motorista: navegação própria, ações grandes, aproximação/viagem e metas pessoais; cálculo detalhado e registro de decisão. A apresentação de gestão tem prévia do app e atalhos de jornadas. Em tela pequena, o app ocupa a largura disponível.
 
-## Motorista
+Formulários em painéis nativos de diálogo, rótulos explícitos, foco visível, erro no formulário e status de gravação. Tabelas largas rolam horizontalmente dentro do seu próprio contêiner. Kanban possui rolagem horizontal em telas estreitas; o restante deve refluír desde 320px. Navegação lateral e cabeçalho permanecem disponíveis no desktop; menu abre no celular.
 
-Cinco destinos no celular: Início, Jornada, Carteira, Loja e Mais. Jornada permite registrar ganhos, km, combustível e despesas pessoais. Carteira separa aluguel, caução, comissão e repasse. Loja vende por SKU/quantidade e identifica quem recebeu. Mais dá acesso a carro, manutenção, vistoria, documentos e suporte.
-
-O mockup inclui telas de tarefa, confirmações e retorno à gestão. Não se limita a um painel de saldos. O menu ao lado do celular facilita explorar todas as jornadas durante a revisão do produto; não será um segundo menu obrigatório no aplicativo real.
-
-## Estados e honestidade
-
-A janela nov/2026 a jan/2027 está rotulada como demonstração. Comprovante fica pendente até conferência. Venda baixa o kit; acerto leva os valores ao livro financeiro. Transferência não vira receita. Compra real de exemplo cria ativo/dívida, enquanto compra simulada só muda o plano. Ganho pessoal não entra no resultado da locadora.
-
-O protótipo ainda não oferece arquivos verdadeiros, assinatura, fotos, Pix ou autenticação. As telas mostram como esses elementos serão ligados aos registros e não anunciam uma integração concluída.
-
-## Exploração sugerida
-
-1. Abrir caixa/patrimônio na visão executiva e rastrear as origens.
-2. Ver crescimento, dívida e marcos; mudar aporte, reserva ou reinvestimento nas premissas e recalcular o rascunho.
-3. Preservar uma versão e consultar o histórico na auditoria.
-4. Incluir uma despesa no realizado e ver a diferença; registrar uma aquisição ilustrativa e gerar revisão pelo fechamento.
-5. No app, registrar jornada, comprovante, ocorrência e venda; voltar à gestão para conferir e acertar.
-6. Preencher checklist de vistoria e abrir documentos/contrato e suporte.
-
-A composição reordena colunas em larguras menores e oferece foco/rótulos/teclado. Validação em dispositivos reais, acessibilidade integral e desempenho de backend pertencem à etapa operacional.
-
-Operação exclusivamente brasileira: não há cartão ou seletor “Minha operação / Brasil”. Cinco abas mantêm a profundidade do centro antigo dentro da mesma navegação. Frentes futuras se limitam ao contexto brasileiro.
+Não usar indicadores sem origem nem “pago” antes da conferência. O aviso de demonstração é persistente, mas a rotina usa linguagem do negócio, sem detalhes de implementação desnecessários.

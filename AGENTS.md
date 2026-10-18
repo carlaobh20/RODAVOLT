@@ -2,12 +2,13 @@
 
 - Esta é a nova plataforma: `https://github.com/carlaobh20/RODAVOLT.git`. Não confundir com `RodaVolt-System` nem editar a referência em Downloads.
 - O usuário autorizou edição local, commits e sincronização ao GitHub. Trabalhar em `dev`, preservar mudanças existentes, conferir remoto e diff antes de push. Nunca usar force push ou reset destrutivo. Não inferir autorização para deploy ou promoção de produção.
-- Entrega atual: planejamento e protótipo. Ler `README.md`, `docs/DECISOES.md` e o PRD v2 antes de ampliar escopo. Distinguir requisitos confirmados de sugestões e dados demonstrativos.
+- Entrega atual: planejamento e protótipo. Ler `README.md`, `docs/DECISOES.md` e o PRD atual antes de ampliar escopo. Distinguir requisitos confirmados de sugestões e dados demonstrativos.
 - Node 22. Não há dependências nesta fase. `npm run check` antes de commit. Editar fontes; regenerar `index.html` e `prototype/preview.html` com `npm run build`.
 - Fórmulas empresariais vivem em `src/growth.js`, estratégia/adaptadores em `src/strategy.js`, motores especializados em `src/legacy/expansion.js`; realizados e eventos em `src/control.js`; telas não duplicam o motor. Testar diferenças entre caixa, resultado e patrimônio.
 - Dados do protótipo são fictícios. Não apresentar estoque, cobranças ou contratos como produção. Não guardar documentos pessoais em localStorage.
 - A implementação operacional futura terá permissões no banco e separação por motorista. Não conectar ao banco antigo nem aplicar migrations remotas como parte do protótipo.
 - Não versionar chaves, `.env`, documentos pessoais, dependências ou capturas temporárias de teste.
 
-- Centro de Estratégia integrado: ler `docs/CENTRO-DE-ESTRATEGIA.md` para escopos e diferenças entre o motor empresarial e expansão/renovação. Brasil/BRL são fixos; não reintroduzir seletor de operação/país.
-- `prototype/strategy.js` é inserido pelo build no controlador de `prototype/app.js`. Verificar também a sintaxe do script completo gerado.
+- V3: interface reconstruída em 18/10/2026. Sete entradas por rotina; simulador contínuo, kanban, loja de perfumes/acessórios e app com análise manual de corrida. Ler `docs/CENTRO-DE-ESTRATEGIA.md` para a referência visual do simulador antigo. Brasil/BRL são fixos.
+- `prototype/simulator.js` e `prototype/driver.js` são inseridos no controlador de `prototype/app.js` pelo build. `prototype/strategy.js` da v2 foi removido. Verificar a sintaxe do script completo gerado.
+- Regras operacionais em `src/operations.js`, relatório em `src/planning.js`, análise pessoal em `src/driver.js`. Não misturar ganhos do motorista com receita da locadora. Estado local v3 separado do anterior.

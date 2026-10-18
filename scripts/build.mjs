@@ -3,10 +3,10 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-const sources=['prototype/shell.html','prototype/style.css','src/growth.js','src/control.js','src/legacy/expansion.js','src/strategy.js','src/planning.js','src/driver.js','src/operations.js','src/finance.js','src/coordination.js','src/live.js','src/inspection.js','src/program.js','prototype/simulator.js','prototype/driver.js','prototype/finance.js','prototype/coordination.js','prototype/live.js','prototype/inspection.js','prototype/program.js','prototype/app.js','prototype/finance.css','prototype/coordination.css','prototype/live.css','prototype/program.css'];
+const sources=['prototype/shell.html','prototype/style.css','src/growth.js','src/control.js','src/legacy/expansion.js','src/strategy.js','src/planning.js','src/driver.js','src/operations.js','src/finance.js','src/coordination.js','src/live.js','src/inspection.js','src/program.js','prototype/simulator.js','prototype/driver.js','prototype/finance.js','prototype/coordination.js','prototype/live.js','prototype/inspection.js','prototype/program.js','prototype/app.js','prototype/finance.css','prototype/coordination.css','prototype/live.css','prototype/program.css','prototype/driver-simple.css','prototype/inspection-mobile.css'];
 const [shell,baseCss,...rest]=await Promise.all(sources.map(p=>readFile(resolve(root,p),'utf8')));
-const [engine,control,legacy,strategy,planning,driver,operations,finance,coordination,live,inspection,program,simulatorUI,driverUI,financeUI,coordinationUI,liveUI,inspectionUI,programUI,app,financeCss,coordinationCss,liveCss,programCss]=rest;
-const css=[baseCss,financeCss,coordinationCss,liveCss,programCss].join('\n');
+const [engine,control,legacy,strategy,planning,driver,operations,finance,coordination,live,inspection,program,simulatorUI,driverUI,financeUI,coordinationUI,liveUI,inspectionUI,programUI,app,financeCss,coordinationCss,liveCss,programCss,driverCss,inspectionCss]=rest;
+const css=[baseCss,financeCss,coordinationCss,liveCss,programCss,driverCss,inspectionCss].join('\n');
 const views={'SIMULATOR':simulatorUI,'DRIVER':driverUI,'FINANCE':financeUI,'COORDINATION':coordinationUI,'LIVE':liveUI,'INSPECTION':inspectionUI,'PROGRAM':programUI};
 let controller=app;for(const [name,view]of Object.entries(views)){const marker='/* '+name+' VIEW */';if(!controller.includes(marker))throw new Error('Marcador ausente: '+marker);controller=controller.replace(marker,()=>view);}
 const code=[engine,control,legacy,strategy,planning,driver,operations,finance,coordination,live,inspection,program,controller].join('\n');

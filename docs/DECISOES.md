@@ -11,13 +11,13 @@ Reconstruir interface e organização do zero. Simulador muito próximo do antig
 - Sete entradas na gestão, separando ação diária de planejamento.
 - Kanban com gates explícitos e verificação de veículo disponível, sem score automático de pessoas.
 - Tratar comprovação/recebimento, venda/acerto e abertura/conclusão de serviço como eventos diferentes, idempotentes onde necessário.
-- Perfume 30ml, carregador USB-C e cabo são exemplos do novo catálogo. Preço/custo/comissão de 20% são demonstrativos, ainda a validar comercialmente.
+- Perfume 30ml, carregador USB-C e cabo são exemplos do novo catálogo. Preço e custo são demonstrativos, ainda a validar comercialmente. A regra atual do piloto é margem integral para o motorista, conforme decisão posterior registrada abaixo.
 - Análise de corrida manual no protótipo. O fluxo calcula e registra a escolha; leitura automática da tela de outra plataforma é uma implementação nativa separada, não uma capacidade desta página.
 - Ganhos e metas do motorista separados das telas administrativas e das receitas da empresa.
 
 ## Pendências comerciais
 
-Cidade/estado, veículo e financiamento efetivos, capital/reserva, seguro/franquia, limites de km, caução, regras de atraso/devolução, responsabilidade por manutenção/combustível, fornecedores de perfumes/acessórios, nota fiscal/garantia, comissão e custódia do kit, regime tributário e minuta jurídica.
+Cidade/estado, veículo e financiamento efetivos, capital/reserva, seguro/franquia, limites de km, caução, regras de atraso/devolução, responsabilidade por manutenção/combustível, fornecedores de perfumes/acessórios, nota fiscal/garantia, forma de acerto e custódia do kit, regime tributário e minuta jurídica.
 
 Não preencher essas decisões como fatos por meio dos dados ilustrativos. O protótipo deve servir para revisar as escolhas antes da compra inicial.
 
@@ -38,3 +38,15 @@ Caução é requisito de acesso, registrada e conciliável, sem ser receita nem 
 Benefícios previstos: renda da loja, app de finanças pessoais e novos aplicativos. Acesso aos outros aplicativos ainda não foi provisionado. Parcerias ficam para etapa posterior. O programa busca retenção por previsibilidade, transparência e valor ao motorista; não promete ausência de rotatividade ou conflitos.
 
 O rascunho do simulador inicia agora com um carro, reinvestimento desativado e margem integral do motorista; a cópia anterior é preservada, assim como o plano de referência. Crescimento continua simulável por ação explícita. Cauções/créditos pendentes são obrigações protegidas no fechamento, não capital livre para novas compras.
+
+## App do motorista simples · 18/10/2026
+
+O proprietário aprovou a direção desta versão e pediu que o app do motorista fosse o mais simples possível para pessoas com pouca familiaridade com tecnologia. A simplificação preserva os controles: muda a linguagem, a ordem das ações e a quantidade de informação mostrada de cada vez.
+
+Quatro abas fixas: Início, Aluguel, Lojinha e Mais. O início do motorista ativo prioriza saldo do aluguel e quatro ações — venda, análise de corrida, vistoria e ajuda. A contratação aparece como caminho principal para candidatos e permanece disponível enquanto houver pendência. Metas, registro do dia, compromissos, contratos, manutenção, históricos e benefícios ficam acessíveis em Mais ou no contexto da tarefa; nenhum segundo menu compete com a navegação.
+
+Texto principal de 16px, botões grandes, formulários em uma coluna e palavras do cotidiano. A vistoria passa a ter quatro passos, com rascunho, revisão antes de enviar e fotos temporárias. Confirmações deixam claro o que foi registrado e o próximo passo.
+
+O crédito da lojinha usa uma confirmação com prévia do saldo, desconto e restante do aluguel. O acerto continua distinguindo dinheiro recebido, custo do estoque e lucro do motorista; receber em dinheiro e usar desconto não duplicam benefício. Comprovante depende de conferência e assinatura continua sendo teste. A interface simples permanece um protótipo local, sem criar integrações ou permissões de produção.
+
+O proprietário pediu o design do projeto Finanças Pessoais no app do motorista. Consultar o checkout oficial da Mesa apenas como referência visual; nenhuma alteração ou integração nesse projeto faz parte desta entrega. Adotar branco/cinza/preto, cards de 24px sem sombra, pílulas, títulos arredondados, ícones de linha e barra inferior; manter tamanho de leitura e simplicidade das quatro abas. Claro/escuro são preferências visuais locais, sem conexão com a conta do Finanças Pessoais.

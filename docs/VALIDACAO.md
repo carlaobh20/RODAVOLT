@@ -45,3 +45,22 @@ Banco, assinatura e rastreador não foram escolhidos pelo proprietário. Nada fo
 No navegador QA: venda de um perfume gera R$57 de crédito após o acerto; o perfil Marcos aplica esse crédito; a carteira mostra aluguel original R$1.050, abatido R$57 e restante R$993. Benefícios planejados aparecem sem alegar acesso provisionado. As inspeções móveis anteriores em 390px e 320px são verificações visuais do protótipo, não homologação de app nativo/fotos persistentes.
 
 Resultados da seção v3 e da primeira revisão v4 são históricos. A regra vigente da loja passou de comissão percentual para margem integral do motorista. Integrações, revisão jurídica efetiva, notificações externas e segurança de produção seguem pendentes.
+
+## App simples com visual do Finanças Pessoais · 18/10/2026
+
+**172 testes aprovados em `npm run check`**, com build dos dois HTMLs, sintaxe das fontes e do controlador integral gerado. Os seis novos testes de `applyAvailableCredit` cobrem vários créditos em uma confirmação, limite da cobrança e sobra para outra semana, titularidade, reenvio idempotente, cobrança já paga, prévia em cópia e centavos. O uso do crédito conserva o caixa e reduz a obrigação, sem criar recebimento bancário.
+
+Referência visual consultada diretamente no checkout oficial do Finanças Pessoais na Mesa: CSS, tokens Tailwind, AppShell e Dashboard móvel. Nenhum arquivo desse projeto foi alterado. A adaptação conserva as quatro abas e tamanhos maiores de leitura/toque; não conecta contas ou dados entre aplicativos.
+
+Conferido em navegador, com transações de teste em sessões `?qa=1` isoladas:
+
+- Home, venda por produto, confirmação e estoque: perfume de R$89 mostra lucro de R$57 a conferir. A gestão confere o acerto, o motorista vê prévia R$1.050 − R$57 = R$993, confirma e o início passa a mostrar R$993. O comprovante mantém o saldo em aberto e mostra que aguarda conferência.
+- Vistoria móvel em quatro passos, preenchimento dos oito itens, erro claro por falta de fotos, cinco ilustrações marcadas como exemplo, resumo com km/combustível preservados e envio aguardando conferência. O motor continua exigindo aprovação humana. Teste isolado do controlador também preservou campos e fotos ao ir/voltar entre etapas.
+- Corrida de R$32 abaixo da meta e R$45 atingindo a meta; a decisão produz confirmação legível e fica no histórico pessoal.
+- Perfil ativo e candidato têm caminhos distintos. Contratos/documento correto continuam acessíveis por Mais; o texto e assinatura são demonstrativos.
+- Visual claro/escuro em desktop e tela de 320px, além do fluxo móvel em 390px. A barra inferior permanece fixa, títulos/campos se reorganizam, ícones têm rótulos e não foi observado corte horizontal nas telas examinadas.
+- Trocar tema durante a corrida preservou a oferta digitada de R$45 e seu resultado. A alteração não remonta os formulários. O tema é separado do painel administrativo.
+
+Revisão independente conferiu as páginas para os cinco perfis, navegação, valores após crédito e preservação das funções. O histórico pago agora identifica o valor como aluguel quitado, evitando confusão com saldo devedor.
+
+Persistem os limites do protótipo: dados fictícios, fotos temporárias, sem integrações ou segurança multiusuário. Não houve teste de usabilidade com motoristas reais; o piloto deve confirmar entendimento dos textos, facilidade de toque e tempo para concluir cada tarefa. Não houve publicação em produção.

@@ -87,3 +87,17 @@ Acerto distingue duas opções: bruto conferido na empresa gera obrigação/cré
 Motoristas → Piloto e benefícios concentra parecer humano, caução e créditos. No app, Benefícios RODAVOLT mostra ganho da loja, extrato do crédito, uso opcional e próximos benefícios. Critérios de entrada: expectativas/entrevista, regras, segurança, orçamento da atividade, disponibilidade/comunicação e treinamento do kit. Cada conferência exige registro objetivo; documentação e aprovação não são automatizadas.
 
 Acesso ao app de finanças pessoais é um benefício definido para implementação, sem provisionamento nesta prévia. Novos apps são planejados; parcerias somente depois do piloto. Contratos precisam de regras claras, versões, obrigações, caução e encerramento revisados por profissional. Não prometer blindagem absoluta ou que o motorista nunca sairá.
+
+## App do motorista simples · design do Finanças Pessoais
+
+Orientação confirmada: pessoas com pouca familiaridade com tecnologia precisam encontrar uma tarefa e concluí-la com poucos passos. O proprietário pediu o design do projeto Finanças Pessoais. A referência é o checkout oficial da Mesa, lido sem alterações: `src/index.css`, `tailwind.config.js`, `src/components/AppShell.tsx` e o Dashboard móvel. Reaproveitar a linguagem visual; os dados, contas e integrações dos dois produtos permanecem independentes.
+
+Quatro abas: Início, Aluguel, Lojinha e Mais. No início ativo, mostrar saldo a pagar depois dos créditos, vencimento e quatro ações: Vendi um produto, Conferir uma corrida, Fazer vistoria e Pedir ajuda. Cadastro em andamento mostra o próximo passo para receber o carro. Textos principais de 16px ou maiores, botões de 48px ou maiores, ícones acompanhados de nomes e formulários em uma coluna. Configurações, cálculos, caução e históricos ficam disponíveis por escolha do motorista, sem menu lateral duplicado.
+
+Aparência: branco, cartões cinza com cantos de 24px e sem sombra, títulos arredondados, ações pretas em pílula, ícones de linha e navegação inferior fixa com indicador discreto. Tema claro/escuro segue a paleta do Finanças Pessoais; trocar tema não descarta formulário em preenchimento. Manter controles legíveis em vez dos rótulos pequenos da referência.
+
+Vistoria em quatro passos: painel, itens, fotos e resumo/envio. Guardar campos válidos entre etapas e permitir sair sem prender o usuário em um campo inválido; orientar que o último rascunho válido foi preservado. O envio continua aguardando conferência. Fotos são temporárias no protótipo.
+
+Uma ação para usar os créditos disponíveis, com prévia do desconto e do saldo antes de confirmar. Reutilizar o motor contábil: respeitar titularidade, centavos, limite da cobrança, sobra para outra semana e reenvio idempotente. Explicar em linguagem simples venda bruta, custo e lucro; venda pendente não é desconto liberado, e lucro já pago não pode ser usado de novo.
+
+Aceite: contratos/assinatura de teste, compromissos, manutenção, ajuda/respostas, produtos/reposição, benefícios, metas, análise de corrida e registro do dia continuam acessíveis. A gestão, simulador e plano preservado não são redesenhados nesta etapa. Validar no navegador e nos testes; a facilidade para motoristas reais ainda depende de teste com usuários do piloto.

@@ -8,7 +8,7 @@ O layout e o controlador anteriores foram substituídos. A versão 2 permanece n
 
 - **Painel ativo:** mapa geográfico, veículo/motorista selecionado, telemetria e percurso fictícios, idade do dado, alertas e histórico; provedor ainda não conectado.
 - **Agenda e compromissos:** semana/mês, responsável, lembretes locais e pendências derivadas de cobranças, contas, cadastro, contratos, serviços e vistorias.
-- **Meu advogado:** cinco modelos versionados, minutas, revisão, fila e registro demonstrativo por signatário; documentos por perfil.
+- **Meu advogado:** cinco minutas completas para conferência profissional, modelos versionados, download em texto, revisão, fila e registro demonstrativo por signatário; documentos por perfil.
 - **Visão do dia:** cobranças, caixa, fila de atenção, carro e próximos cuidados.
 - **Motoristas:** kanban, seleção manual por critérios, caução, contrato/vistoria e veículo disponível; Piloto e benefícios concentra a entrada.
 - **Frota e cuidados:** aquisições demonstrativas, dívida por carro, manutenção, vistorias, multas/sinistros/avarias e devolução guiada de carro, chaves e kit.
@@ -59,6 +59,7 @@ Cobrança vencida — pagamento da semana já utilizada — foi confirmada pelo 
 - [Devolução e encerramento](docs/DEVOLUCAO.md)
 - [Multas, sinistros e avarias](docs/OCORRENCIAS.md)
 - [Módulos da operação e fronteiras das integrações](docs/OPERACAO.md)
+- [Pacote contratual e checklist do advogado](docs/PACOTE-CONTRATUAL.md)
 - [PRD e critérios de aceite](docs/PRD.md)
 - [Desenho e navegação](docs/DESIGN.md)
 - [Modelo e fluxo do simulador](docs/SIMULADOR.md)

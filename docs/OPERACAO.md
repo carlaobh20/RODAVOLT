@@ -35,7 +35,7 @@ Nenhum fornecedor foi escolhido pelo proprietário. Não pedir chave ou credenci
 
 ## Contratos e modelos
 
-Locação semanal, entrega/devolução, custódia de perfumes/acessórios, aditivo e distrato. Texto é uma minuta demonstrativa com pontos a decidir. O nome “Meu advogado” identifica a área de organização; não significa atendimento de um profissional ou análise jurídica automática. Documento revisado congela rótulos do perfil/veículo e modelo/versão usados.
+Locação semanal, entrega/devolução, custódia de perfumes/acessórios, aditivo e distrato. Os cinco modelos receberam textos extensos para conferência do advogado e podem ser baixados na biblioteca; cópias estáticas estão em `docs/contratos/`. Os modelos curtos anteriores e documentos já gerados preservam suas versões. Ainda faltam qualificação privada, escolhas comerciais reais, análise jurídica e assinatura efetiva. O nome “Meu advogado” identifica a área de organização; não significa atendimento de um profissional ou análise jurídica automática. Documento revisado congela rótulos do perfil/veículo e modelo/versão usados. Ver [pacote contratual](PACOTE-CONTRATUAL.md).
 
 ## Integrações futuras e pesquisa primária
 

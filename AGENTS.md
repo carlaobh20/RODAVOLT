@@ -14,6 +14,7 @@
 - Regras operacionais em `src/operations.js`, relatório em `src/planning.js`, análise pessoal em `src/driver.js`. Não misturar ganhos do motorista com receita da locadora. Estado local v3 separado do anterior.
 
 - V4: novas telas Painel ativo, Agenda e Meu advogado; financeiro ampliado. Motores em `src/finance.js`, `src/coordination.js`, `src/inspection.js`, `src/live.js`. Respectivos trechos `prototype/*.js` e CSS são inseridos pelo build. Não duplicar caixa ou conciliar para criar receita novamente.
+- Pacote jurídico: `src/legal-pack.js` mantém cinco minutas de revisão profissional; `npm run contracts:export` gera `docs/contratos/*.md`. `src/coordination.js` instala novas versões sem alterar documentos anteriores. Os textos não são aprovação jurídica nem assinatura; dados pessoais de qualificação ficam fora da prévia. Consulte `docs/PACOTE-CONTRATUAL.md`.
 - Banco/rastreador/assinatura sem fornecedor escolhido; usuário pediu pensar no sistema antes de integrar. Posições sempre demonstrativas, dado antigo explícito. Fotos na prévia são temporárias em memória; no serviço ficam privadas em `.local/rodavolt/files`, nunca no localStorage/Git. Leia `docs/OPERACAO.md`.
 
 - Piloto: 100% da margem da loja para o motorista, caução obrigatória e avaliação humana. `src/program.js` controla critérios/caução/créditos; `prototype/program.js/css` é inserido pelo build. Não voltar à hipótese antiga de 20% de comissão. Abatimento e lucro pago não podem duplicar benefício. Caução e crédito pendente são passivos, nunca receita/capital livre.

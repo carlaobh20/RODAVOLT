@@ -6,7 +6,7 @@ import {resolve} from 'node:path';
 // filesystem is exposed to their VM and no code supplied by a request is executed.
 export async function loadDomain(root){
  const context=createContext({structuredClone,Intl,Date,Math,JSON,Map,Set,console});
- for(const name of ['growth','control','legacy/expansion','strategy','planning','driver','operations','finance','coordination','live','inspection','program','shop','rental','closure','incidents','maintenance']){
+ for(const name of ['growth','control','legacy/expansion','strategy','planning','driver','operations','finance','legal-pack','coordination','live','inspection','program','shop','rental','closure','incidents','maintenance']){
   try{new Script(await readFile(resolve(root,'src',name+'.js'),'utf8'),{filename:name}).runInContext(context);}catch(error){if(error.code!=='ENOENT'||!['rental','closure','incidents','maintenance'].includes(name))throw error;}
  }
  const keys={S:'Simulator',C:'Control',P:'Planning',M:'Operations',D:'Driver',F:'Finance',K:'Coordination',I:'Inspection',R:'Program',H:'Shop',B:'Rental',Z:'Closure',N:'Incidents',W:'Maintenance'};

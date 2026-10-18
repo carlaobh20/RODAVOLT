@@ -13,3 +13,7 @@
 | 7 · Crescer com evidência | Comparar plano com fechamentos e revisar expansão | Compra adicional sustentada por caixa, reserva e resultado observados |
 
 Não realizar deploy, migração do banco antigo ou contratação de serviços por consequência implícita desta reconstrução. Continuar edição local e sincronização da branch dev após validação.
+
+## Ampliação v4 já disponível para avaliação local
+
+Financeiro com pagar/receber e conciliação, agenda derivada da operação, Meu advogado, contratação por perfil, vistoria revisável e painel geográfico demonstrativo. Isso amplia a etapa 1; não antecipa banco, autenticação, assinatura nem GPS reais das etapas seguintes. O proprietário decidiu escolher fornecedores somente depois de validar o sistema.

@@ -39,3 +39,9 @@ Determinístico e normalizado. Não modela regime fiscal completo, vencimento di
 ## Estoque inicial e reposição
 
 As premissas incluem kit por carro e estoque central. Ambos consomem capital no início e entram no patrimônio como estoque, sem reduzir lucro nessa compra inicial. No cenário demonstrativo, o kit custa R$ 292 e a central R$ 1.374. A projeção considera reposição mensal das mercadorias vendidas para manter o giro; o acerto no realizado baixa o CMV sem descontar o custo duas vezes do caixa. Valores são hipóteses editáveis, não cotações.
+
+## Piloto e obrigações
+
+Novo rascunho: um carro, sem reinvestimento automático e 100% da margem da loja ao motorista. A base antiga de comissão bruta continua disponível somente como comparação de cenário. Na projeção, a margem considera mercadoria, taxas, perdas e tributo de faturamento da loja antes do benefício; isso evita projetar a margem como lucro da locadora.
+
+Ao reestimar pelo fechamento, cauções e créditos do motorista permanecem no passivo. Não aumentam patrimônio, capital próprio ou dinheiro disponível para compra/amortização/retirada. A identidade é patrimônio + retiradas − capital = resultado acumulado. Rendimento do caixa usa apenas a parcela sem essas obrigações. O período de avaliação real e os critérios comerciais para expandir serão definidos com os dados do primeiro carro.

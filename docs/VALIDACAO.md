@@ -29,3 +29,19 @@ Sessão `?qa=1` isolada para movimentos demonstrativos, sem gravar os testes ope
 Valores, datas, nomes, carros e lançamentos são fictícios. Persistência no navegador e exportação local; sem segurança multiusuário. Não homologados autenticação, banco, permissões por motorista, anexos reais, assinatura, Pix/conciliação bancária, emissão fiscal, telemetria, operação offline ou desempenho sob carga. A análise de corrida é manual: não lê nem aceita/recusa ofertas no Uber/99. Produção depende dessas etapas e de validação das regras e custos reais.
 
 O PRD, o plano de execução e a matriz do legado descrevem o que existe e o que continua proposto. Nenhuma conexão ao banco antigo, migration remota ou publicação de produção foi feita nesta entrega.
+
+## Ampliação v4 · 18/10/2026
+
+`npm run check`: **142 testes aprovados** após financeiro, jurídico/agenda, telemetria e vistoria. Build e sintaxe integral aprovados. Inclui baixa/estorno de conciliação sem duplicar caixa, equivalente a título aberto, saldo negativo, corte por data, principal limitado à dívida, versões jurídicas imutáveis, assinatura parcial, compromisso derivado sem baixa, posição inválida/antiga/fora de ordem, vistoria incompleta, segurança, correção, entrega por carro e novo ciclo após encerramento.
+
+Conferido em sessão isolada de navegador: Painel ativo carrega tiles e marcador com contexto; perda de sinal mostra posição desatualizada e avanço renova a amostra. Financeiro vincula extrato mantendo caixa R$57.352,32; criar conta de R$250 mantém caixa, liquidar reduz a R$57.102,32. Agenda registra compromisso de entrega para Camila. Minuta JUR-2 passa por revisão e fila; registro pelo perfil Camila fica parcialmente assinado enquanto falta locadora. Vistoria de entrega enviada pelo perfil aparece na gestão e recebe parecer. Nenhum erro de console nessa jornada.
+
+Banco, assinatura e rastreador não foram escolhidos pelo proprietário. Nada foi conectado; o mapa usa coordenadas fictícias e relógio de exemplo. Fotos reais persistentes, assinatura efetiva, banco remoto, notificações externas e segurança individual continuam não homologados. Prévia local de arquivo expira ao recarregar; arquivo/foto não é salvo no estado local.
+
+## Modelo do piloto · resultado final desta entrega
+
+**166 testes aprovados** em `npm run check`, incluindo o novo motor `src/program.js`. Conferidos: 100% da margem para o motorista; acerto bruto com obrigação, repasse líquido sem crédito, abatimento parcial e sobra, saldo por motorista, caução idempotente sem receita, reforecast com passivos protegidos e todos os gates de uma entrega completa.
+
+No navegador QA: venda de um perfume gera R$57 de crédito após o acerto; o perfil Marcos aplica esse crédito; a carteira mostra aluguel original R$1.050, abatido R$57 e restante R$993. Benefícios planejados aparecem sem alegar acesso provisionado. As inspeções móveis anteriores em 390px e 320px são verificações visuais do protótipo, não homologação de app nativo/fotos persistentes.
+
+Resultados da seção v3 e da primeira revisão v4 são históricos. A regra vigente da loja passou de comissão percentual para margem integral do motorista. Integrações, revisão jurídica efetiva, notificações externas e segurança de produção seguem pendentes.

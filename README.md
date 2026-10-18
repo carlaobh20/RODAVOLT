@@ -1,21 +1,26 @@
 # RODAVOLT · Sua operação em ordem
 
-**Versão 3 · reconstrução de 18/10/2026.** Uma nova experiência para administrar locação semanal de carros no Brasil, organizar motoristas e simular o crescimento antes de investir.
+**Versão 4 · ampliação operacional de 18/10/2026.** Uma nova experiência para administrar locação semanal de carros no Brasil, organizar motoristas e simular o crescimento antes de investir.
 
 O layout e o controlador anteriores foram substituídos. A versão 2 permanece no histórico Git. A matemática financeira validada foi preservada e ampliada com relatórios novos; não foi feita cópia da interface rejeitada.
 
 ## O que explorar
 
+- **Painel ativo:** mapa geográfico, veículo/motorista selecionado, telemetria e percurso fictícios, idade do dado, alertas e histórico; provedor ainda não conectado.
+- **Agenda e compromissos:** semana/mês, responsável, lembretes locais e pendências derivadas de cobranças, contas, cadastro, contratos, serviços e vistorias.
+- **Meu advogado:** cinco modelos versionados, minutas, revisão, fila e registro demonstrativo por signatário; documentos por perfil.
 - **Visão do dia:** cobranças, caixa, fila de atenção, carro e próximos cuidados.
-- **Motoristas:** kanban arrastável e lista, cadastro, busca, próxima ação, conferências de entrega e bloqueio de vínculo sobreposto.
+- **Motoristas:** kanban, seleção manual por critérios, caução, contrato/vistoria e veículo disponível; Piloto e benefícios concentra a entrada.
 - **Frota e cuidados:** aquisições demonstrativas, dívida por carro, manutenção, custo do serviço e vistorias.
-- **Financeiro:** cobranças semanais, comprovantes em conferência, confirmação idempotente e livro por origem.
-- **Loja no carro:** perfumes, carregadores veiculares e cabos; central/kit, venda, comissão, recebimento e acerto.
+- **Financeiro:** contas a pagar/receber, vencimentos, baixas por conta e centro, livro de caixa e conciliação manual 1:1 com extrato fictício, sem duplicar dinheiro.
+- **Loja no carro:** perfumes/carregadores/cabos com estoque financiado pela RODAVOLT e 100% da margem do piloto para o motorista; acerto, repasse ou crédito no aluguel, sem duplicar ganho.
 - **Simulador:** página contínua próxima ao sistema antigo, premissas com recálculo automático, linha Hoje, fluxo anual/mensal antes dos gráficos, juros/principal/extra, dinheiro do bolso, patrimônio, compra agora/3/6 meses e todos os meses da linha do tempo. Cenários e exportação CSV.
 - **Planejado × realizado:** plano preservado, registros editáveis, origens e revisão pelo fechamento.
-- **App do motorista:** análise “Vale a corrida?”, metas/custos, jornada, carteira, loja, manutenção, vistoria, documentos e suporte.
+- **App do motorista:** análise “Vale a corrida?”, metas/custos, jornada, carteira, loja, manutenção, vistoria com checklist/avarias/cinco vistas, documentos, contratação e compromissos por perfil, além de suporte e benefícios por estágio.
 
 A análise de corrida calcula líquido por km e por hora usando oferta informada manualmente, trajeto até o passageiro, viagem, reposicionamento, espera, combustível, outros custos, pedágio não reembolsado e aluguel rateado. Compara com os mínimos pessoais e com a meta diária convertida por tempo e distância. Registrar aceitar/recusar só preserva a escolha do motorista; não executa ações em Uber/99.
+
+O piloto começa com um carro e sem reinvestimento automático no rascunho; cenários anteriores e plano preservado continuam disponíveis. Caução é obrigação, separada de receita e lucro. App de finanças pessoais e novos apps são benefícios previstos, sem acesso ativado; parcerias ficam para depois.
 
 ## Abrir localmente
 
@@ -28,10 +33,11 @@ npm run dev
 
 Prévia: `http://127.0.0.1:4173/`. Os fontes geram `index.html` e `prototype/preview.html`. Não editar gerados manualmente.
 
-A implementação é um **protótipo funcional local**, com pessoas, valores e registros fictícios. O exemplo financeiro usa nov/2026 a jan/2027. Não há banco remoto, login real, Pix, documentos privados, assinatura, telemetria ou leitura automática da tela de aplicativos. Não usar como sistema de produção nem inserir documentos pessoais. A chave de armazenamento `rodavolt-v3` inicia uma sessão nova, sem importar ou apagar os dados locais antigos. Há exportação JSON da sessão e CSV do simulador.
+A implementação é um **protótipo funcional local**, com pessoas, valores e registros fictícios. O exemplo financeiro usa nov/2026 a jan/2027. Não há banco remoto, login real, Pix, documentos privados, assinatura, telemetria real ou leitura automática da tela de aplicativos. Não usar como sistema de produção nem inserir documentos pessoais. A chave de armazenamento `rodavolt-v3` inicia uma sessão nova, sem importar ou apagar os dados locais antigos. Há exportação JSON da sessão e CSV do simulador.
 
 ## Documentação atual
 
+- [Módulos da operação e fronteiras das integrações](docs/OPERACAO.md)
 - [PRD e critérios de aceite](docs/PRD.md)
 - [Desenho e navegação](docs/DESIGN.md)
 - [Modelo e fluxo do simulador](docs/SIMULADOR.md)

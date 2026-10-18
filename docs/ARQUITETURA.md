@@ -1,4 +1,4 @@
-# Arquitetura v3
+# Arquitetura v4
 
 ## Entrega local
 
@@ -32,3 +32,19 @@ O capital inicial financia o kit por carro e o estoque central, que permanecem c
 A projeção mantém estoque de giro constante: o custo mensal das vendas representa reposição de mercadoria. O realizado baixa o custo das unidades vendidas no acerto; compras futuras, notas, impostos por regime e conciliação completa exigem movimentos transacionais na implementação operacional. Não tratar o demonstrador como DRE fiscal ou extrato bancário.
 
 Reconhecimento contábil, regras tributárias e contratos dependem de validação profissional antes do uso real. Não foi conectado o banco do sistema antigo nem executada migration remota.
+
+## Módulos operacionais v4
+
+- `src/finance.js`: títulos, baixa, contas demonstrativas, extrato, correspondências e origem dos saldos; deriva caixa de `control.js`.
+- `src/coordination.js`: modelos/documentos versionados, partes, fila e agenda com pendências derivadas.
+- `src/inspection.js`: inspeção por perfil/veículo/ciclo, evidências tipadas, envio, correção e aprovação.
+- `src/live.js`: posições fictícias e relógio de reprodução, validação/ordenação de pontos, idade do dado e projeção cartográfica.
+- `prototype/finance.js`, `coordination.js`, `inspection.js`, `live.js`: trechos inseridos pelo build no mesmo controlador. Estilos próprios são concatenados.
+
+Inicializadores idempotentes ampliam a sessão v3 já existente; formato externo e chave local permanecem para preservar plano e dados ilustrativos. `driverProfiles` mantém jornadas/metas de cada perfil de exemplo. As telas filtram documentos, cobranças e chamados; isso não substitui permissões no servidor.
+
+Arquivos de foto ficam em `Map` e object URLs somente durante a sessão da página; estado persistido contém slots/origem, sem conteúdo, nome de arquivo ou object URL. Ao recarregar, a prévia temporária expira. Uma vistoria com arquivos temporários expirados precisa selecionar novamente antes do envio. Imagens de exemplo são SVGs ilustrativos explicitamente marcados. O protótipo não é repositório de evidências.
+
+Mapa carrega somente tiles visíveis via HTTPS em tile.openstreetmap.org, com atribuição; sem chave nem dados pessoais. Sem fornecedor de GPS conectado. Eventos de demonstração não alteram hodômetro operacional nem financeiro. API futura deve guardar fixTime/serverTime/validade/precisão e não reinterpretar posição antiga como atual. Provedor de banco/assinatura/GPS será escolhido depois, com credenciais no servidor, webhooks autenticados, idempotência e acesso por vínculo.
+
+`src/program.js` controla seleção manual, caução e crédito da margem. O livro distingue rentalReceived de rentalRevenue, storeGross de storeReceived e liabilities de dívida dos carros. Abatimento reconhece aluguel sem criar banco; shopSettlement registra repasse líquido sem repetir receita. Novo passivo acompanha snapshot e reduz patrimônio/caixa disponível no reforecast. Dados anteriores não são reescritos.

@@ -13,3 +13,7 @@ Consulta a fontes oficiais e repositórios, usada como referência de produto. N
 | [StopClub · cálculo de ganhos](https://site.stopclub.com.br/app-km) | Exibição de R$/km e R$/hora quando uma oferta aparece | Referência para o futuro recurso nativo. Nesta entrega, calculadora e decisão são manuais e explicitamente identificadas |
 
 A referência determinante do simulador é o código antigo fornecido pelo proprietário. Sua sequência de leitura e colunas foram auditadas, preservando as correções matemáticas descritas em SIMULADOR.md.
+
+## Ampliação operacional v4
+
+Fontes de banco, assinatura, rastreamento e mapa pesquisadas em documentação primária estão em [OPERACAO.md](OPERACAO.md). Nenhum fornecedor foi selecionado pelo proprietário. As referências orientam estrutura e fronteiras, sem conectar contas ou serviços.

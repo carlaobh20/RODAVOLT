@@ -3,9 +3,12 @@
     <div class="brand"><span class="brand-mark" aria-hidden="true">r<span>↗</span></span><div>rodavolt<span>GESTÃO DE LOCAÇÃO</span></div><button type="button" class="mobile-menu" data-action="menu" aria-expanded="false">Menu</button></div>
     <nav aria-label="Menu principal">
       <span class="nav-label">SEU DIA A DIA</span>
+      <button type="button" data-page="live"><span aria-hidden="true">◉</span>Painel ativo <small>Mapa</small></button>
       <button type="button" data-page="today"><span aria-hidden="true">◫</span>Visão do dia</button>
       <button type="button" data-page="drivers"><span aria-hidden="true">▥</span>Motoristas <small>Kanban</small></button>
       <button type="button" data-page="fleet"><span aria-hidden="true">▱</span>Frota e cuidados</button>
+      <button type="button" data-page="agenda"><span aria-hidden="true">◷</span>Agenda e compromissos</button>
+      <button type="button" data-page="lawyer"><span aria-hidden="true">§</span>Meu advogado</button>
       <button type="button" data-page="finance"><span aria-hidden="true">＄</span>Financeiro</button>
       <button type="button" data-page="shop"><span aria-hidden="true">▦</span>Loja no carro</button>
       <span class="nav-label">PRÓXIMOS PASSOS</span>
@@ -17,7 +20,7 @@
     <div class="owner"><span class="avatar">CF</span><div>Proprietário<small>RODAVOLT</small></div><span class="owner-dot"></span></div>
   </aside>
   <div class="workspace">
-    <header class="topbar"><div><span class="breadcrumb">RODAVOLT <span>/</span></span> <strong id="page-name">Visão do dia</strong></div><div class="top-actions"><button type="button" class="search-button" data-action="search">Buscar motorista, carro, contrato <kbd>⌕</kbd></button><button type="button" class="driver-switch" data-mode="driver">App do motorista <span aria-hidden="true">↗</span></button><button type="button" class="admin-switch" data-mode="admin">Voltar para a gestão</button></div></header>
+    <header class="topbar"><div><span class="breadcrumb">RODAVOLT <span>/</span></span> <strong id="page-name">Visão do dia</strong></div><div class="top-actions"><button type="button" class="agenda-badge" data-action="agenda-notices">Compromissos <span id="agenda-count">0</span></button><button type="button" class="search-button" data-action="search">Buscar motorista, carro, contrato <kbd>⌕</kbd></button><button type="button" class="driver-switch" data-mode="driver">App do motorista <span aria-hidden="true">↗</span></button><button type="button" class="admin-switch" data-mode="admin">Voltar para a gestão</button></div></header>
     <div class="demo-banner"><span class="demo-dot"></span><span>Ambiente de demonstração <b>·</b> valores e pessoas fictícios <b>·</b> dados salvos neste navegador</span><button type="button" data-action="about">Entender os dados</button></div>
     <main id="content"></main>
     <footer><span>rodavolt <b>·</b> Clareza para operar. Visão para crescer.</span><button type="button" data-action="export-data">Exportar meus dados locais</button></footer>

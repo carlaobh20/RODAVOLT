@@ -1,4 +1,4 @@
-# RODAVOLT · PRD v3
+# RODAVOLT · PRD v4
 
 18/10/2026. Substitui o desenho v2. Direção do proprietário: começar novamente, reduzir confusão, recuperar a experiência completa do simulador antigo, incluir kanban, ajustar a loja para perfumes/acessórios e ampliar o app do motorista com decisão de corrida por objetivos.
 
@@ -6,7 +6,7 @@
 
 Brasil e BRL fixos, locação semanal a motoristas de aplicativo. Uma operação pequena deve conseguir controlar o primeiro carro sem navegar numa estrutura de empresa grande. A mesma informação precisa suportar crescimento posterior.
 
-Sete entradas na gestão: Visão do dia; Motoristas; Frota e cuidados; Financeiro; Loja no carro; Simulador de crescimento; Planejado × realizado. Histórico e exportação são utilitários. O app do motorista tem sua própria experiência, sem revelar o caixa da locadora.
+Dez entradas na gestão: Painel ativo; Agenda e compromissos; Meu advogado; Visão do dia; Motoristas; Frota e cuidados; Financeiro; Loja no carro; Simulador de crescimento; Planejado × realizado. Histórico e exportação são utilitários. O app do motorista tem sua própria experiência, sem revelar o caixa da locadora.
 
 A interface deve facilitar estas perguntas: o que conferir hoje? Quem está aguardando qual etapa? Qual carro pode ser entregue? O aluguel entrou? Quem ficou com o dinheiro da venda? Quanto sobra ao comprar outro carro? Quanto o motorista realmente ganha nesta corrida?
 
@@ -61,3 +61,29 @@ Jornada pessoal não é receita da locadora. Salvar a mesma data corrige o dia; 
 ## Limite desta entrega
 
 Protótipo funcional, estático, persistência no navegador e dados fictícios. Banco, autenticação/autorização, arquivos privados, cobrança/Pix, assinatura, conciliação real e app nativo automático serão implementações próprias, com homologação. O seletor Gestão/Motorista é demonstração de interface, não barreira de segurança.
+
+## Ampliação confirmada pelo proprietário · v4
+
+Financeiro com entradas, saídas e conciliação bancária. Agenda e compromissos. Aba Meu advogado com todos os modelos, elaboração/versionamento, fila, partes e assinatura. Fluxo do interessado à entrega e devolução. Vistoria no app do motorista. Painel ativo com todos os carros registrados no mapa e clique para contexto do veículo/motorista. Banco e rastreador ainda não escolhidos: validar primeiro o sistema, integrar depois.
+
+Financeiro: compromisso não altera caixa; baixa cria um lançamento idempotente; extrato é evidência separada. Vínculo de conciliação exige conta, sentido e centavos equivalentes, um movimento por registro. Desfazer preserva extrato/livro. Extrato de título ainda aberto precisa dar baixa nesse título, sem receita solta duplicada. Cadastro de carro continua responsável por criar ativo e dívida; principal não pode superar a dívida. Saldo negativo e divergência de abertura continuam visíveis.
+
+Meu advogado: locação semanal, entrega/devolução, custódia do kit, aditivo e distrato. Modelos/textos e documentos têm versões preservadas. Campos pendentes impedem revisão; revisão manual antecede fila e envio simulado. Cada parte tem registro separado. Contrato concluído só libera o gate do motorista/carro corretos, durante vigência; assinar não entrega o carro. Nome/modelo/placa da versão ficam preservados. Não são minutas prontas para uso jurídico.
+
+Vistoria: rascunho → enviada → correção/aprovada. Tipo entrega/periódica/devolução, carro/vínculo, km, combustível, oito itens, avarias e cinco vistas. Foto local temporária não é enviada nem salva em localStorage; imagem demonstrativa é marcada como ilustração. Conferência humana é distinta de envio. Segurança pendente impede aprovação. Encerrar vínculo ou aprovar devolução invalida a entrega anterior.
+
+Painel ativo: mapa geográfico, posições e percurso fictícios, idade do dado e sem conexão/desatualizado claramente identificados; clique abre contexto, documentos, vistorias, financeiro e histórico. Não animar demonstração como telemetria real. Telemetria depende do rastreador e do serviço contratados; não rastrear a pessoa fora do veículo por inferência.
+
+Agenda: compromisso manual tem data/hora, responsável, vínculo, observações, lembrete e estado. Pendência derivada não se conclui apenas no calendário; o atalho leva à origem. Contas liquidadas deixam de aparecer como pendência. Motorista consulta apenas os compromissos/documentos do perfil selecionado na demonstração. Alertas funcionam dentro do app aberto; notificações externas são futuras.
+
+Aceites adicionais: conciliar não altera caixa; pagamento reduz caixa uma vez; só assinatura de ambas as partes muda contrato para concluído; vistoria enviada não libera entrega; outro motorista/carro não reaproveita contrato/vistoria; posição antiga permanece desatualizada; encerramento exige nova vistoria de entrega.
+
+## Programa do primeiro carro · orientação confirmada
+
+O proprietário financiará o estoque inicial e reposições propostas. A loja deve elevar renda do motorista e poderá reduzir sua semana de aluguel. Toda margem disponível após os custos diretos definidos pertence ao motorista. No exemplo da venda, preço R$89, custo R$32 e margem R$57, sem taxa/tributo adicional de venda. Taxas, tributação, avarias, devoluções e responsabilização precisam de condições comerciais/profissionais definidas antes do uso real.
+
+Acerto distingue duas opções: bruto conferido na empresa gera obrigação/crédito de R$57; retenção do lucro pelo motorista gera somente repasse líquido de R$32 e nenhum crédito adicional. Aplicar R$57 numa cobrança de R$1.050 deixa R$993 a receber em dinheiro; o crédito não aparece como entrada bancária. Margem não usada permanece obrigação. Caução tem saldo próprio por motorista, referência idempotente e devolução limitada ao saldo; nunca é receita, desconto automático ou crédito de compras.
+
+Motoristas → Piloto e benefícios concentra parecer humano, caução e créditos. No app, Benefícios RODAVOLT mostra ganho da loja, extrato do crédito, uso opcional e próximos benefícios. Critérios de entrada: expectativas/entrevista, regras, segurança, orçamento da atividade, disponibilidade/comunicação e treinamento do kit. Cada conferência exige registro objetivo; documentação e aprovação não são automatizadas.
+
+Acesso ao app de finanças pessoais é um benefício definido para implementação, sem provisionamento nesta prévia. Novos apps são planejados; parcerias somente depois do piloto. Contratos precisam de regras claras, versões, obrigações, caução e encerramento revisados por profissional. Não prometer blindagem absoluta ou que o motorista nunca sairá.

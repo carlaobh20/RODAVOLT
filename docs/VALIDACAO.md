@@ -4,7 +4,7 @@
 
 ## Automatizado
 
-`npm run check`: **31 testes aprovados**, geração dos arquivos e verificação de sintaxe. A suíte cobre calendário/mês zero; início da operação; identidades de caixa e patrimônio; reserva e compra bloqueada; reinvestimento; Price e quitação; amortização e juros; aportes/retiradas; equipe por escala; plano preservado; dados ausentes/base zero; revisão por snapshot; taxa contratada preservada; visão anual; realizado e aquisição; avaliação independente; estoque e comissão. `git diff --check` sem erro.
+`npm run check`: **56 testes aprovados**, geração dos arquivos e verificação de sintaxe. A suíte cobre calendário/mês zero; início da operação; identidades de caixa e patrimônio; reserva e compra bloqueada; reinvestimento; Price e quitação; amortização e juros; aportes/retiradas; equipe por escala; plano preservado; dados ausentes/base zero; revisão por snapshot; taxa contratada preservada; visão anual; realizado e aquisição; avaliação independente; estoque e comissão. `git diff --check` sem erro.
 
 ## Jornadas verificadas no navegador
 
@@ -25,3 +25,9 @@ Testes de interação em uma sessão QA isolada, sem alterar o estado salvo da p
 ## Limites da verificação
 
 O protótipo usa dados fictícios e persistência local. Não foram homologados banco, autenticação/autorização, arquivo/foto, assinatura, Pix, emissão fiscal, telemetria, acessibilidade integral, operação offline ou desempenho sob carga. Não é uma auditoria completa do legado. A matemática normalizada não substitui cotações, contrato, seguro e orientação contábil reais.
+
+## Centro de Estratégia integrado
+
+Cinco áreas conferidas no navegador: decisão, mestre, alocação, expansão/renovação e políticas. Foram exercitados missão/visão, criação de marco por frota, salvamento de política, recálculo SAC com frota do fechamento, preservação/carregamento de cenário de expansão, candidato a venda e cenário empresarial nomeado. As alterações de teste usaram sessão isolada `?qa=1`, sem gravar esses exemplos na sessão do proprietário. A navegação e o layout também foram inspecionados em moldura de 320 px. Nenhum erro no console da sessão de teste final.
+
+O build valida o script completo montado, além da sintaxe das fontes. Novos testes verificam SAC/DSCR, patrimônio e caixa dos cenários compostos, ausência de receita no mês zero, venda deficitária, cronograma contratado, reciclagem potencial, políticas sem base e limites de execução. Fontes e diferenças dos modelos em [CENTRO-DE-ESTRATEGIA.md](CENTRO-DE-ESTRATEGIA.md).

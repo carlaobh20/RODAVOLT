@@ -26,3 +26,7 @@ Padrões do simulador são ilustrativos. O kit demonstrativo usa 20% de comissã
 ## Infraestrutura
 
 A aplicação operacional proposta continua React/TypeScript e banco relacional com autorização e arquivos privados. O protótipo atual é estático e não fornece autenticação real. Desenvolvimento em `dev`, commit e push após verificações autorizados. Publicação e integrações operacionais são etapas posteriores.
+
+## Integração do Centro de Estratégia
+
+O proprietário confirmou operação somente no Brasil. O cartão “Minha operação / Brasil” foi removido; país e BRL são fixos, sem seleção de operação. A integração das cinco áreas e das análises de expansão/renovação está detalhada em [CENTRO-DE-ESTRATEGIA.md](CENTRO-DE-ESTRATEGIA.md), incluindo correções matemáticas e limites de origem dos dados.

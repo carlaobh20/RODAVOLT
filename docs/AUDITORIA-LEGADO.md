@@ -30,3 +30,7 @@ A versão original do plano é uma referência independente do rascunho. O reali
 ## O que ainda não é migração
 
 Não foram copiados bancos, credenciais, dados pessoais, arquivos, permissões ou processos em produção. Funções e conceitos foram estudados e reimplementados. Uma migração operacional futura exigirá inventário de dados, mapeamento, ensaio, reconciliação e autorização do ambiente de destino.
+
+## Integração posterior das cinco áreas
+
+O pedido seguinte incluiu todo o Centro de Estratégia. A paridade por componente, as correções e as diferenças entre os motores estão em [CENTRO-DE-ESTRATEGIA.md](CENTRO-DE-ESTRATEGIA.md). A preservação dos conceitos não implica migração do banco antigo: os registros disponíveis continuam demonstrativos.

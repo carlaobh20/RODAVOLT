@@ -4,11 +4,15 @@ Plataforma de locação semanal a motoristas de aplicativo com operação, finan
 
 ## Esta versão
 
-**v2 · planejamento e protótipo reconstruídos.** O simulador recupera os conceitos de crescimento do sistema anterior: capital, aquisições por veículo, reinvestimento, reserva, aportes, amortização, caixa, dívida e patrimônio. Acrescenta versões preservadas do plano, livro demonstrativo, desvios com origens e revisão a partir de fechamento observado.
+**v2 · planejamento e protótipo reconstruídos, com o Centro de Estratégia integrado.** O simulador recupera os conceitos de crescimento do sistema anterior: capital, aquisições por veículo, reinvestimento, reserva, aportes, amortização, caixa, dívida e patrimônio. Acrescenta versões preservadas do plano, livro demonstrativo, desvios com origens e revisão a partir de fechamento observado.
 
 O app do motorista possui Início, Jornada, Carteira, Loja e Mais, com carro, manutenção, checklist de vistoria, documentos e suporte. Vendas, reposição, comprovante, atendimento e acerto percorrem os respectivos fluxos da gestão.
 
 Há apenas **dados fictícios**. A janela nov/2026–jan/2027 é ilustrativa e prospectiva, não uma operação existente. Não há autenticação, banco, Pix, assinatura, documentos/fotos reais nem integração com Uber/99. Persistência local de demonstração não é segurança operacional.
+
+O Centro de Estratégia reúne Central de decisão, Planejamento mestre, Alocação de capital, Expansão & renovação e Políticas da empresa. Inclui cenários próprios, missão/visão, marcos, ranking de retorno, Price/SAC, reciclagem de capital e comparação de momentos de venda. Operação exclusivamente brasileira em BRL, sem seletor “Minha operação / Brasil”.
+
+Veja o [mapa completo da integração e diferenças dos modelos](docs/CENTRO-DE-ESTRATEGIA.md).
 
 ## Abrir e verificar
 
@@ -41,6 +45,6 @@ Abra `http://127.0.0.1:4173` ou o arquivo `index.html`. As verificações cobrem
 - [Validação](docs/VALIDACAO.md)
 - [Referências externas pesquisadas](docs/REFERENCIAS.md)
 
-Fontes: `src/growth.js`, `src/control.js`, `prototype/shell.html`, `prototype/style.css`, `prototype/app.js`. `npm run build` gera `index.html` e `prototype/preview.html`. Não editar gerados manualmente. A v1 está preservada no histórico Git; não é a proposta corrente.
+Fontes: `src/growth.js`, `src/control.js`, `src/strategy.js`, `src/legacy/expansion.js`, `prototype/strategy.js`, `prototype/shell.html`, `prototype/style.css`, `prototype/app.js`. `npm run build` gera `index.html` e `prototype/preview.html`. Não editar gerados manualmente. A v1 está preservada no histórico Git; não é a proposta corrente.
 
 Repositório [carlaobh20/RODAVOLT](https://github.com/carlaobh20/RODAVOLT). Edição local e desenvolvimento em `dev`; sincronização após validação. Deploy operacional e infraestrutura são etapas posteriores. Planejamento datado de **17/10/2026**.

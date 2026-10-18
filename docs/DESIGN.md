@@ -6,7 +6,7 @@ A interface foi reconstruída com navegação por estratégia, operação e cont
 
 Visão executiva mostra caixa, frota, recebimento e patrimônio do período, comparação e fila de decisões. Cada indicador abre memória e registros. O patrimônio tem rótulo de estimativa; caixa tem origem em lançamentos.
 
-Plano de crescimento separa projeção, premissas completas, fluxo detalhado, ano a ano e estratégias. Três gráficos mostram a evolução da frota, liquidez/dívida e construção patrimonial. Marcos explicam quando cada carro entra, caixa restante e reserva. O mês selecionado abre sua identidade de caixa.
+Centro de Estratégia reúne decisão, planejamento mestre, alocação de capital, expansão/renovação e políticas. A central de decisão separa segurança/retorno, projeção, premissas completas, fluxo detalhado, ano a ano e estratégias. Três gráficos mostram a evolução da frota, liquidez/dívida e construção patrimonial. Marcos explicam quando cada carro entra, caixa restante e reserva. O mês selecionado abre sua identidade de caixa.
 
 Projetado × realizado coloca referência e observação lado a lado. Desvios têm R$/%, fontes e interpretação. Revisão começa no fechamento escolhido; o plano original não desaparece. A legenda distingue plano, demonstração observada e previsão revisada.
 
@@ -32,3 +32,5 @@ O protótipo ainda não oferece arquivos verdadeiros, assinatura, fotos, Pix ou 
 6. Preencher checklist de vistoria e abrir documentos/contrato e suporte.
 
 A composição reordena colunas em larguras menores e oferece foco/rótulos/teclado. Validação em dispositivos reais, acessibilidade integral e desempenho de backend pertencem à etapa operacional.
+
+Operação exclusivamente brasileira: não há cartão ou seletor “Minha operação / Brasil”. Cinco abas mantêm a profundidade do centro antigo dentro da mesma navegação. Frentes futuras se limitam ao contexto brasileiro.

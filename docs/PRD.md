@@ -36,7 +36,7 @@ Métricas: caixa livre e comprometido, inadimplência por vencimento, receita fa
 | Área | Telas e aprofundamentos |
 |---|---|
 | Visão executiva | Caixa, frota, receita, patrimônio, plano × registros e decisões pendentes |
-| Plano de crescimento | Premissas, projeção, marcos de aquisição, dívida/amortização, fluxo mensal, ano a ano, estratégias e versões |
+| Centro de Estratégia | Central de decisão; planejamento mestre, missão/visão e roadmap; alocação por veículo; expansão/renovação Price/SAC; políticas. Premissas, projeção, marcos, fluxo mensal/anual, cenários e versões |
 | Projetado × realizado | Comparação por período/indicador/carro, desvio R$/%, fontes, causas e projeção revisada |
 | Frota & manutenção | Aquisição, centro de resultado, financiamento, documentos, km, disponibilidade, plano preventivo, serviços e histórico |
 | Motoristas | Cadastro, conferência, documentos, vínculo, pendências e relacionamento |
@@ -143,3 +143,7 @@ Meta de experiência: responsivo a partir de 320px, foco/teclado e leitores de t
 **Ainda não implementado:** identidade e autorização reais, banco, anexos reais, assinatura, Pix, integração bancária, fechamento contábil/fiscal, telemetria e validação jurídica. Privacidade e auditoria do protótipo são demonstrações de produto, não garantias de segurança de uma aplicação estática. Eventos e ações da loja em aberto não entram no período financeiro até o acerto demonstrativo.
 
 **Critério de lançamento:** implementar os fluxos acima com persistência, autorização e integridade, homologar com um carro e um motorista e conferir os saldos/evidências de uma semana completa e de uma devolução. A primeira compra e a ativação da locação são decisões separadas.
+
+## Revisão: integração completa do Centro de Estratégia
+
+Operação exclusivamente brasileira, BRL fixo, sem seletor de país/operação. As cinco áreas do centro anterior passam a integrar o aplicativo. Requisitos, fontes, correções e critérios de paridade constam em [CENTRO-DE-ESTRATEGIA.md](CENTRO-DE-ESTRATEGIA.md). Persistência local do protótipo não substitui a futura implantação com autorização no servidor.

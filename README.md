@@ -13,7 +13,7 @@ O layout e o controlador anteriores foram substituídos. A versão 2 permanece n
 - **Motoristas:** kanban, seleção manual por critérios, caução, contrato/vistoria e veículo disponível; Piloto e benefícios concentra a entrada.
 - **Frota e cuidados:** aquisições demonstrativas, dívida por carro, manutenção, custo do serviço e vistorias.
 - **Financeiro:** contas a pagar/receber, vencimentos, baixas por conta e centro, livro de caixa e conciliação manual 1:1 com extrato fictício, sem duplicar dinheiro.
-- **Loja no carro:** perfumes/carregadores/cabos com estoque financiado pela RODAVOLT e 100% da margem do piloto para o motorista; acerto, repasse ou crédito no aluguel, sem duplicar ganho.
+- **Loja no carro:** combo com vários produtos por motorista, envio/conferência/divergência, estoque disponível e reservado, pedido/Pix demonstrativo/entrega; 100% da margem do piloto para o motorista, sem duplicar crédito ou recebimento.
 - **Simulador:** página contínua próxima ao sistema antigo, premissas com recálculo automático, linha Hoje, fluxo anual/mensal antes dos gráficos, juros/principal/extra, dinheiro do bolso, patrimônio, compra agora/3/6 meses e todos os meses da linha do tempo. Cenários e exportação CSV.
 - **Planejado × realizado:** plano preservado, registros editáveis, origens e revisão pelo fechamento.
 - **App do motorista:** visual do Finanças Pessoais (branco/cinza/preto, cartões suaves, pílulas e tema claro/escuro), quatro abas — **Início, Aluguel, Lojinha e Mais** — com palavras simples, letras maiores e botões grandes. O início do motorista ativo oferece quatro ações: registrar venda, conferir corrida, fazer vistoria e pedir ajuda. Contratos, compromissos, manutenção, histórico, metas e registros do dia continuam disponíveis, sem um segundo menu.
@@ -38,6 +38,8 @@ Prévia: `http://127.0.0.1:4173/`. Os fontes geram `index.html` e `prototype/pre
 A implementação é um **protótipo funcional local**, com pessoas, valores e registros fictícios. O exemplo financeiro usa nov/2026 a jan/2027. Não há banco remoto, login real, Pix, documentos privados, assinatura, telemetria real ou leitura automática da tela de aplicativos. Não usar como sistema de produção nem inserir documentos pessoais. A chave de armazenamento `rodavolt-v3` inicia uma sessão nova, sem importar ou apagar os dados locais antigos. Há exportação JSON da sessão e CSV do simulador.
 
 ## Documentação atual
+
+- [Auditoria de todos os fluxos e pendências para o piloto](docs/AUDITORIA-DE-FLUXOS.md)
 
 - [Módulos da operação e fronteiras das integrações](docs/OPERACAO.md)
 - [PRD e critérios de aceite](docs/PRD.md)

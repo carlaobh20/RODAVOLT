@@ -101,3 +101,15 @@ Vistoria em quatro passos: painel, itens, fotos e resumo/envio. Guardar campos v
 Uma ação para usar os créditos disponíveis, com prévia do desconto e do saldo antes de confirmar. Reutilizar o motor contábil: respeitar titularidade, centavos, limite da cobrança, sobra para outra semana e reenvio idempotente. Explicar em linguagem simples venda bruta, custo e lucro; venda pendente não é desconto liberado, e lucro já pago não pode ser usado de novo.
 
 Aceite: contratos/assinatura de teste, compromissos, manutenção, ajuda/respostas, produtos/reposição, benefícios, metas, análise de corrida e registro do dia continuam acessíveis. A gestão, simulador e plano preservado não são redesenhados nesta etapa. Validar no navegador e nos testes; a facilidade para motoristas reais ainda depende de teste com usuários do piloto.
+
+## Combo e compra simples no carro
+
+Confirmado: o proprietário envia um combo com vários produtos e quantidades; o motorista precisa enxergar seu estoque item por item e vendê-lo até consumir as unidades. Reposição é outro combo. A conferência oferece “Recebi tudo” ou relato das quantidades boas recebidas e da diferença. Envio tira da central para trânsito; recebido entra na custódia do motorista; diferença continua rastreada e não é perda automática nem dívida do motorista.
+
+Fluxo de pagamento proposto: venda assistida pelo motorista, Pix específico por pedido e recebimento na conta da RODAVOLT. Cliente paga pelo app do banco, sem cadastro na loja. QR impresso para abrir catálogo é opcional futuro. Banco/provedor ainda não escolhido; nenhum QR pagável é gerado no protótipo.
+
+Pedido reserva estoque; cancelar antes de pagar libera a reserva. Pagamento fictício conferido pela gestão registra caixa, CMV e crédito de margem apenas das vendas daquele pedido, sem acertar vendas manuais pendentes. Entrega é outra confirmação, que não movimenta dinheiro ou estoque outra vez. Preço/custo e motorista/carro da venda são preservados. O lucro registrado não significa que ainda está disponível se já foi usado no aluguel.
+
+Venda paga não pode ser apagada ou cancelada por botão: devolução física/reembolso/estorno do crédito ainda precisam de jornada própria. Expiração e pagamento tardio serão homologados com o fornecedor. Custódia por motorista e filtros locais não substituem transações nem permissões no servidor.
+
+A auditoria completa e os próximos critérios de aceite estão em [AUDITORIA-DE-FLUXOS.md](AUDITORIA-DE-FLUXOS.md).

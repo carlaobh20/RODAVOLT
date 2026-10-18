@@ -17,3 +17,7 @@
 - Banco/rastreador/assinatura sem fornecedor escolhido; usuário pediu pensar no sistema antes de integrar. Posições sempre demonstrativas, dado antigo explícito. Fotos só temporárias em memória, nunca no localStorage/Git. Leia `docs/OPERACAO.md`.
 
 - Piloto: 100% da margem da loja para o motorista, caução obrigatória e avaliação humana. `src/program.js` controla critérios/caução/créditos; `prototype/program.js/css` é inserido pelo build. Não voltar à hipótese antiga de 20% de comissão. Abatimento e lucro pago não podem duplicar benefício. Caução e crédito pendente são passivos, nunca receita/capital livre.
+
+- Combos/lojinha: `src/shop.js` controla custódia por motorista, trânsito, conferência, reserva, pedido e entrega; `prototype/shop.js/css` entram no build. Novas vendas/transferências da UI passam pelo motor da loja, preservando titularidade e snapshots; não usar kit agregado como estoque individual.
+- Pix continua fictício. Confirmação na gestão acerta apenas as saleIds do pedido em cópia transacional; comprovante não é confirmação. Entrega não baixa estoque/caixa novamente. Cobrança recorrente e encerramento completo ainda pendentes: ler `docs/AUDITORIA-DE-FLUXOS.md`.
+- Calendários de plano/livro/seed devem ser compatíveis; usar `S.assertCalendar` antes de referência/reforecast. Caução e devolução respeitam competência e cronologia. Não usar valor recebido no futuro para liberar carro no passado.

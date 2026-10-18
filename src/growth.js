@@ -24,6 +24,7 @@
   const round=x=>Math.round((x+Number.EPSILON)*100)/100;
   const payment=(principal,rate,term)=>principal===0?0:rate===0?principal/term:principal*rate/(1-Math.pow(1+rate,-term));
   function label(p,month){const d=new Date(Date.UTC(p.startYear,p.startMonth-1+month-1,1));return `${String(d.getUTCMonth()+1).padStart(2,'0')}/${d.getUTCFullYear()}`;}
+  function assertCalendar(params,calendar){if(!calendar||!Number.isInteger(calendar.startYear)||(!Number.isInteger(calendar.startMonth)||calendar.startMonth<1||calendar.startMonth>12))throw new RangeError('Fechamento sem calendário: gere novamente a posição do livro antes de reestimar.');if(params.startYear!==calendar.startYear||params.startMonth!==calendar.startMonth)throw new RangeError('Calendários diferentes. Alinhe o mês e o ano inicial do cenário ao livro da operação ('+label(calendar,1)+') antes de comparar ou reestimar.');return true;}
   function simulate(input={},seed=null){
     const p=validate(input),cars=[],events=[],rows=[];
     const rate=p.monthlyRate/100,principal=p.financed?p.price*(1-p.downPct/100):0;
@@ -32,11 +33,12 @@
     let cash=p.initialCapital-p.companySetup-p.centralStockCapital,capital=p.initialCapital,distributed=0,profitTotal=-p.companySetup,start=1,carSequence=0;
     const buy=month=>{const id=`RV-${String(++carSequence).padStart(3,'0')}`;cars.push({id,bought:month,age:0,value:p.price,debt:principal,rate,installment:payment(principal,rate,p.term)});cash-=purchaseCash;if(month===0)profitTotal-=p.setup+(principal>0?p.financingFees:0);events.push({month,type:'purchase',id,amount:purchaseCash,reason:'Compra simulada; operação no próximo mês.'});return purchaseCash;};
     if(seed){
+      assertCalendar(p,seed.calendar);
       if(!Number.isInteger(seed.month)||seed.month<0||seed.month>=p.horizon||!Number.isFinite(seed.cash)||!Array.isArray(seed.cars)||!Number.isFinite(seed.capital)||!Number.isFinite(seed.distributed||0)||!Number.isFinite(seed.profitTotal||0))throw new RangeError('Fechamento incompleto para reestimar.');
       for(const c of seed.cars)for(const k of ['age','value','debt','installment'])if(!Number.isFinite(c[k])||c[k]<0)throw new RangeError('Ativo do fechamento inválido.');
       cars.push(...structuredClone(seed.cars));carSequence=Math.max(cars.length,...cars.map(c=>Number(String(c.id).replace(/\D/g,''))||0));cash=seed.cash;capital=seed.capital;distributed=seed.distributed||0;profitTotal=seed.profitTotal||0;start=seed.month+1;liabilities=seed.liabilities||0;if(!Number.isFinite(liabilities)||liabilities<0)throw new RangeError('Obrigações do fechamento inválidas.');if(Number.isFinite(seed.inventory))inventoryAdjustment=seed.inventory-cars.length*p.stockCapital-p.centralStockCapital;
     }else for(let i=0;i<p.initialFleet;i++){if(cash-purchaseCash<floor(cars.length+1)-1e-7){events.push({month:0,type:'blocked',reason:'Capital insuficiente para compra inicial preservando reserva.',amount:Math.max(0,purchaseCash+floor(cars.length+1)-cash)});break;}buy(0);}
-    const snapshot=month=>({month,cash,cars:structuredClone(cars),capital,distributed,profitTotal,liabilities,inventory:cars.length*p.stockCapital+p.centralStockCapital+inventoryAdjustment}),initial=snapshot(start-1);
+    const snapshot=month=>({month,calendar:{startYear:p.startYear,startMonth:p.startMonth},cash,cars:structuredClone(cars),capital,distributed,profitTotal,liabilities,inventory:cars.length*p.stockCapital+p.centralStockCapital+inventoryAdjustment}),initial=snapshot(start-1);
     let targetMonth=cars.length>=p.targetFleet?start-1:null,totalExtra=0;const milestones=[];
     for(let month=start;month<=p.horizon;month++){
       const openingCash=cash,operatingFleet=cars.length,d=new Date(Date.UTC(p.startYear,p.startMonth-1+month-1,1));
@@ -77,7 +79,7 @@
     return {p,initial,months:rows,final,events,milestones,targetMonth,totalExtra,purchaseCash,installment:payment(principal,rate,p.term),minCash,warnings};
   }
   function freezePlan(params,id='PLANO-001',createdAt=new Date().toISOString()){const copy=structuredClone(validate(params));return {id,version:2,createdAt,params:copy,projection:structuredClone(simulate(copy)),status:'frozen'};}
-  function compare(plan,actual,month){const projected=plan.projection.months.find(m=>m.month===month),observed=actual.find(m=>m.month===month);return ['rentalReceived','storeGross','opex','debtService','capex','cash','fleet','debt','equity'].map(key=>{const base=projected?.[key]??null,value=observed?.[key]??null;return {key,projected:base,actual:value,delta:base===null||value===null?null:value-base,percent:base===null||value===null||base===0?null:(value-base)/Math.abs(base)*100};});}
+  function compare(plan,actual,month){const projected=plan.projection.months.find(m=>m.month===month),observed=actual.find(m=>m.month===month),identified=observed||actual.find(row=>row.calendar||row.snapshot?.calendar),calendar=identified?.calendar||identified?.snapshot?.calendar;if(calendar)assertCalendar(plan.params,calendar);else if(observed?.label&&observed.label!==label(plan.params,month))throw new RangeError('Calendários diferentes. Alinhe a referência ao calendário do livro antes de comparar.');return ['rentalReceived','storeGross','opex','debtService','capex','cash','fleet','debt','equity'].map(key=>{const base=projected?.[key]??null,value=observed?.hasRecords===false?null:observed?.[key]??null;return {key,projected:base,actual:value,delta:base===null||value===null?null:value-base,percent:base===null||value===null||base===0?null:(value-base)/Math.abs(base)*100};});}
   function aggregateYears(result){const flow=['rentalReceived','storeGross','storeMargin','opex','revenueTax','profitTax','debtService','interest','scheduledPrincipal','extra','capex','contribution','withdrawal','result','purchases'];const groups=new Map();for(const m of result.months){const year=m.label.split('/')[1];if(!groups.has(year))groups.set(year,{year,...Object.fromEntries(flow.map(k=>[k,0]))});const g=groups.get(year);for(const k of flow)g[k]+=m[k];for(const k of ['cash','debt','equity','fleet'])g[k]=m[k];}return [...groups.values()];}
-  scope.RodavoltSimulator={aggregateYears,defaults,limits,validate,round,payment,label,simulate,freezePlan,compare};
+  scope.RodavoltSimulator={aggregateYears,defaults,limits,validate,round,payment,label,assertCalendar,simulate,freezePlan,compare};
 })(globalThis);

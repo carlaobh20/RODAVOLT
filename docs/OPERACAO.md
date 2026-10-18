@@ -53,3 +53,13 @@ Caução recebida é passivo, com devolução e conciliação próprias. Não co
 Benefícios de outros apps e parcerias possuem estágio visível, sem ativação fictícia. Lealdade será avaliada pela rotina, comunicação, cuidado, transparência e benefício; não existe garantia de permanência ou de ausência de problemas. Minutas separam regras e proteção contratual de promessas de blindagem.
 
 `src/program.js` concentra critérios, caução e créditos. O histórico preserva versões e escolhas anteriores. Dados de pessoas e transações continuam fictícios nesta entrega.
+
+## Lojinha por combo
+
+A gestão monta um envio com várias SKUs e um motorista/carro ativo. As unidades ficam em trânsito até a conferência. “Recebi tudo” libera o combo; uma diferença libera somente as quantidades confirmadas e mantém o restante pendente. Envio ainda não recebido pode ser cancelado, retornando à central; a gestão confere entregas restantes ou retornos com motivo.
+
+A lojinha mostra cada produto e suas unidades disponíveis. Uma venda cria pedido e reserva; Pix fictício conferido pela gestão baixa as unidades, registra o bruto, CMV e obrigação/crédito do motorista juntos. Apenas esse pedido é acertado, sem puxar vendas manuais ou de outro perfil. “Entreguei o produto” encerra a entrega sem nova baixa. Cancelar pedido sem pagamento libera a reserva; venda paga exige futura jornada de devolução.
+
+O fluxo recomendado de produção é Pix por pedido na conta da RODAVOLT, com confirmação autenticada do banco/PSP. Cliente usa seu banco, sem conta de loja obrigatória. A prévia não emite QR real, não cobra nem recebe avisos bancários. QR/link do catálogo é etapa opcional posterior. O acerto manual anterior continua disponível para dinheiro recebido pelo motorista, com destino do lucro explícito.
+
+A [auditoria de todos os fluxos](AUDITORIA-DE-FLUXOS.md) distingue funcionamento local de integração e homologação pendentes.

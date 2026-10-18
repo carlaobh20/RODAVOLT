@@ -64,3 +64,15 @@ Conferido em navegador, com transações de teste em sessões `?qa=1` isoladas:
 Revisão independente conferiu as páginas para os cinco perfis, navegação, valores após crédito e preservação das funções. O histórico pago agora identifica o valor como aluguel quitado, evitando confusão com saldo devedor.
 
 Persistem os limites do protótipo: dados fictícios, fotos temporárias, sem integrações ou segurança multiusuário. Não houve teste de usabilidade com motoristas reais; o piloto deve confirmar entendimento dos textos, facilidade de toque e tempo para concluir cada tarefa. Não houve publicação em produção.
+
+## Auditoria geral e combos · 18/10/2026
+
+**223 testes aprovados em `npm run check`**, build e sintaxe integral. Foram adicionados 28 testes da loja, seis do acerto por pedido, dez de cronologia/contabilidade/calendário e sete de vínculos/agenda/vistoria. O [relatório completo](AUDITORIA-DE-FLUXOS.md) registra achados corrigidos, limites e os fluxos ainda incompletos.
+
+Navegador isolado: enviar 2 perfumes, 2 carregadores e 2 cabos mantém estoque vendável de abertura em 4/5/6; confirmar recebimento muda para 6/7/8; pedido de um perfume reserva uma unidade; conferência de pagamento fictício gera R$57 de crédito, estoque 5/7/8 e nenhuma venda manual pendente indevidamente acertada. Marcar entrega não baixa outra unidade. Prévia do passageiro informa Pix não conectado, sem cadastro ou cobrança real.
+
+O uso explícito dos R$57 no aluguel de R$1.050 resultou em R$993 tanto no app quanto no painel ativo; crédito disponível zerado. Os movimentos de teste não foram gravados na sessão principal.
+
+Regressões provam que caução futura não libera entrega anterior; devolução não usa recebimento posterior ou obrigação já reservada; meses vazios preservam lucro/depreciação; calendários incompatíveis são rejeitados; cuidados do carro atual entram na agenda correta; ex-motorista não vistoria carro de outro; parecer antigo não muda km/liberação do novo ciclo. Painel ativo usa aluguel líquido e rótulo de contrato cancelado foi corrigido.
+
+Lembretes locais passaram a ter consumidor periódico com filtro por perfil e deduplicação por sessão; isso não homologa avisos em segundo plano ou no celular. Não foram homologados banco, Pix, assinatura, GPS, autenticação, concorrência entre dispositivos ou recuperação. A auditoria não encerra as pendências de emissão recorrente de aluguel, devolução final ou reembolso de venda paga.

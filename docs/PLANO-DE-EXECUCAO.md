@@ -17,3 +17,16 @@ Não realizar deploy, migração do banco antigo ou contratação de serviços p
 ## Ampliação v4 já disponível para avaliação local
 
 Financeiro com pagar/receber e conciliação, agenda derivada da operação, Meu advogado, contratação por perfil, vistoria revisável e painel geográfico demonstrativo. Isso amplia a etapa 1; não antecipa banco, autenticação, assinatura nem GPS reais das etapas seguintes. O proprietário decidiu escolher fornecedores somente depois de validar o sistema.
+
+## Ordem revista após auditoria de fluxos
+
+A [auditoria de 18/10](AUDITORIA-DE-FLUXOS.md) é a referência de pendências e evidências desta etapa. Não considerar a operação completa apenas pela quantidade de telas.
+
+1. Aprovar a rotina simples do motorista e o combo com estoque individual, já demonstráveis.
+2. Definir e implementar a geração de aluguel semanal por contrato, incluindo primeira/última semana e reenvio idempotente.
+3. Conduzir devolução física do carro/kit e acerto final, separando disponibilidade de dívida e caução.
+4. Construir base persistente com acessos individuais, transações, arquivos e recuperação. Não reutilizar o banco antigo por inferência.
+5. Selecionar banco/Pix, assinatura e rastreador; homologar recebimento, conciliação, reembolso, rede indisponível e eventos repetidos.
+6. Validar uma semana com o primeiro carro e motorista; medir entendimento e tempo de cada tarefa antes de automatizar crescimento ou ampliar a frota.
+
+O fluxo principal de venda usa seleção no app do motorista e Pix por pedido na conta da RODAVOLT. Catálogo por QR impresso é uma evolução opcional. O pagamento demonstrativo atual não está conectado a um banco.

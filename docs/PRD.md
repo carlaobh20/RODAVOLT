@@ -1,139 +1,145 @@
-# RODAVOLT · PRD v1
+# RODAVOLT · PRD v2
 
-**Data:** 17/10/2026 · **Estado:** proposta para validação de produto · **Mercado inicial confirmado:** Brasil, BRL, aluguel semanal para motoristas de aplicativo. **Primeira aquisição desejada:** novembro de 2026, sem dia definido.
+**17/10/2026 · proposta reconstruída após revisão do proprietário.** Substitui o desenho v1. Mercado confirmado: Brasil, reais, aluguel semanal para motoristas de aplicativo. Compra inicial pretendida em novembro de 2026. Esta entrega é planejamento e protótipo; produção depende das etapas de implementação.
 
-## 1. Problema e proposta
+## 1. Direção do produto
 
-O proprietário precisa saber quanto custa comprar, manter e alugar cada carro; cobrar o motorista; preservar contratos e evidências; acompanhar manutenção e controlar mercadoria dentro dos veículos. O motorista precisa consultar seus compromissos e resolver tarefas pelo celular.
+A RODAVOLT é uma plataforma de gestão e crescimento de uma operação de locação. Ela precisa explicar o negócio em quatro perspectivas conectadas:
 
-A RODAVOLT conecta **simulação → compra → motorista → contrato → entrega → cobrança → manutenção → devolução**, com uma segunda cadeia para a lojinha: **compra de produto → central → kit no carro → venda → comissão → acerto**.
+1. **Plano:** capital, aquisição, financiamento, reserva, custos, reinvestimento e crescimento no tempo.
+2. **Operação:** carro, motorista, contrato, vistoria, manutenção e mercadoria em custódia.
+3. **Controladoria:** faturamento, recebimento, despesa, competência, dívida, caixa e patrimônio com origem verificável.
+4. **Experiência do motorista:** cumprir compromissos, administrar a jornada, consultar documentos, cuidar do carro e operar a loja pelo celular.
 
-A primeira versão deve atender um único carro com rigor financeiro e expandir sem refazer o domínio. A simplicidade vem de reduzir telas e ações duplicadas. As regras de dinheiro, estoque e contrato continuam completas.
+A simplificação anterior foi excessiva para a intenção do proprietário. A nova proposta mantém profundidade nos registros e nas análises, organiza os detalhes por assunto e torna os números rastreáveis.
 
-## 2. Resultados esperados
+## 2. Princípio central: origem, natureza e estado
 
-1. Antes da compra, comparar veículos e condições com custos e riscos explícitos.
-2. Identificar caixa e resultado por carro, por contrato e pela empresa.
-3. Rastrear toda cobrança até o pagamento e todo serviço até sua despesa.
-4. Saber onde está a mercadoria e quem deve repassar cada valor.
-5. Dar ao motorista autonomia para consultar e informar sem expor os dados da empresa ou de terceiros.
+Todo valor relevante precisa informar **período, origem, natureza e estado**. Exemplos: aluguel faturado não é aluguel recebido; valor estimado do carro não é cotação de venda; compra simulada não é carro adquirido; comprovante recebido não é pagamento conferido; mercadoria no carro não é venda.
 
-Métricas do negócio: receita faturada e recebida; atraso por vencimento; dias alugados/dias civis; dias indisponíveis/dias civis; custo de manutenção por km; resultado por carro; caixa livre da empresa; margem da lojinha após comissão; diferença de inventário; tempo de resolução de ocorrências.
+Um indicador abre a composição e a composição abre os registros. A trilha inclui identificador, centro de resultado, contrato/veículo/motorista, competência, vencimento, confirmação, documento, autor, revisões e eventuais estornos. Dados ausentes permanecem ausentes, sem preenchimento com zero.
 
-Metas de produto a validar no piloto: consultar uma cobrança em até 3 toques; registrar uma venda simples em até 20 segundos; nenhum lançamento de serviço digitado duas vezes; 100% dos movimentos de estoque com origem, destino ou motivo; 100% das baixas de cobrança com evidência. Não são resultados já medidos.
+## 3. Resultados esperados
 
-## 3. Pessoas, acesso e dados
+- Simular uma estratégia completa de crescimento e entender o caixa necessário a cada etapa.
+- Salvar um plano sem que alterações futuras apaguem a referência original.
+- Comparar plano e realizado com a mesma definição de indicador e o mesmo período.
+- Reestimar o futuro usando o último fechamento confiável, mantendo a comparação anterior.
+- Saber o resultado de cada carro e a posição consolidada da empresa.
+- Dar autonomia ao motorista sem compartilhar os dados pessoais de sua jornada com a gestão financeira da locadora.
+- Controlar a loja desde a compra até o repasse, com estoque e comissão reproduzíveis.
 
-| Perfil | Pode fazer | Limite |
-|---|---|---|
-| Proprietário | Premissas, compras, custos, banco, contratos, estoque, equipe | Todo o negócio da própria empresa |
-| Operação | Motoristas, entrega, vistoria, manutenção, estoque | Sem alterar condições financeiras sensíveis sem permissão |
-| Financeiro | Contas, pagamentos, conciliação, comissão, relatórios | Sem administrar usuários/permissões |
-| Motorista | Próprio carro, cobranças, contrato, documentos, vendas e suporte | Apenas vínculo próprio, inclusive quando acessa URL direta |
-| Contador, futuro | Exportação ou leitura financeira autorizada | Sem credencial compartilhada nem administração |
+Métricas: caixa livre e comprometido, inadimplência por vencimento, receita faturada/recebida, dias disponíveis/alugados/parados, custo por km, manutenção por carro, dívida e juros, patrimônio estimado, crescimento realizado, erro de projeção, margem e perdas da loja, tempo de solução de ocorrências e integridade dos fechamentos.
 
-Para o primeiro carro, proprietário e motorista bastam. Outros perfis entram quando houver pessoas reais para utilizá-los. Permissões no banco, nos arquivos e nas operações; esconder um botão não é autorização.
+## 4. Arquitetura de informação
 
-## 4. Navegação
-
-Gestão: **Visão geral · Simulador · Frota & manutenção · Motoristas · Contratos · Financeiro · Lojinha**. Configurações ficam em uma área secundária na aplicação operacional.
-
-O carro reúne detalhes, documentos, resultado, serviços e vistorias. O financeiro reúne contas, caixa, conciliação e resultado. O contrato reúne condições comerciais, documento, assinatura e aditivos. Pendências dessas áreas alimentam uma única visão geral.
-
-Motorista: **Início · Carro · Pagar · Loja · Docs**. Suporte contextual no carro ou na cobrança; contatos e perfil em uma área secundária. O portal será instalável como PWA; aplicativo nativo fica condicionado à necessidade real de recursos do dispositivo.
-
-## 5. Escopo por módulo
-
-### 5.1 Visão geral
-
-Antes de operar, exibir preparação e pendências reais, sem métricas inventadas. Depois, mostrar saldo disponível com caução separada, vencimentos de 7/30 dias, cobranças vencidas, revisões próximas, carros indisponíveis, contratos/documentos a vencer e reposições necessárias. Cada pendência abre o registro original e tem responsável.
-
-**Aceite:** uma cobrança atrasada aparece uma vez, abre a cobrança correta e some quando liquidada. Ausência de dado aparece como ausência, sem virar zero ou estimativa.
-
-### 5.2 Simulador — prioridade inicial
-
-Compra à vista/financiada, custos iniciais e recorrentes, custo por km, ociosidade, paradas, perda de receita, tributos parametrizados, estoque inicial, giro, comissão, reserva, horizonte e revenda. Comparação entre cotações de carros e entre condições de operação. Salvar versões, origem e data das premissas; realizar estresses; mostrar valor de equilíbrio e necessidade de caixa.
-
-**Saídas:** caixa mês a mês, resultado após depreciação e juros, dívida, patrimônio, capital próprio, VPL, payback sem/com saída identificado, custo por km e sensibilidades. Nunca confundir principal com despesa ou caução com receita.
-
-**Aceite:** o usuário troca aluguel ou custo e todos os resultados mudam pelo mesmo motor; compara cenários mantendo o que não foi alterado; identifica qual cotação falta. Simular não cria carro, dívida, cobrança ou compra. Ver [modelo financeiro](SIMULADOR.md).
-
-### 5.3 Frota e manutenção
-
-Cadastro: identificação, placa/chassi, modelo/ano, combustível, km, compra, preparação, financiamento, documentos, seguro, localização de guarda e status. Disponível, reservado, alugado, manutenção, indisponível e vendido são estados operacionais, não calculados apenas pela existência de contrato.
-
-Planos preventivos por km **ou data, o que ocorrer primeiro**, óleo/filtros, pneus, garantia, orçamento e fornecedor. Ocorrências corretivas, aprovações, prazo, custo, comprovantes e dias de parada. Hodômetro auditável, com correção por evento justificado; nunca reduzir silenciosamente.
-
-**Aceite:** finalizar um serviço cria a despesa vinculada uma única vez; o financeiro recebe o custo correto; alerta de revisão se recalcula; km contraditório é sinalizado. Carro em serviço crítico não pode ser entregue sem liberação.
-
-### 5.4 Motoristas
-
-Cadastro, contatos, contato de emergência se necessário, CNH/EAR e validade, documentos mínimos, conferência, histórico de vínculo, condições comerciais, pendências, comunicação registrada e convite para acesso próprio. Funil inicial simples: cadastro → análise → aprovado → contratado → encerrado. Não criar pontuação subjetiva de crédito/risco na primeira fase.
-
-**Aceite:** verificar documentos e registrar decisão com autor/data. Encerrar contrato retira acesso ao carro e estoque atual, preservando o histórico permitido de cobranças e documentos do próprio motorista.
-
-### 5.5 Contratos completos
-
-Dados das partes, veículo, vigência, preço semanal, vencimento e período, regras de proporcionalidade, reajuste, km/franquia/excedente, caução, responsabilidades por combustível/recarga, seguro e franquia, manutenção, multas, avarias, indisponibilidade, rescisão, atraso, devolução e solução de divergências. Condições dependem de validação jurídica, sem valores legais presumidos.
-
-Documento gerado a partir de modelo versionado, aditivos, signatários, evidências de assinatura e vistorias anexadas. Termo da lojinha com custódia, precificação, perdas, comissão e acertos. Assinatura será integrada a fornecedor após escolha e homologação; o protótipo não assina.
-
-Estados: rascunho → em revisão → aguardando assinatura → assinado → vigente → em encerramento → encerrado, com cancelamento auditado quando cabível. Contratos futuros podem reservar intervalo; impedir sobreposição do mesmo carro. Alteração após assinatura exige aditivo/novo documento, sem substituir evidência anterior.
-
-**Aceite:** ativação exige documento válido, vínculo consistente e vistoria/entrega conforme política. Gerar cobranças respeita calendário e nunca duplica períodos. Encerramento calcula saldo, analisa caução, kit e avarias e preserva trilha.
-
-### 5.6 Financeiro completo para a operação
-
-Contas a receber/pagar, parcelas, recorrências, recebimento parcial, desconto autorizado, juros/multa contratados, reembolso, cancelamento, estorno, bancos/caixa, transferências, conciliação manual inicial, extrato por motorista, categorias e centro por veículo/empresa/loja. Anexos, datas de competência, vencimento, pagamento e registro distintas.
-
-Caixa projetado 13 semanas, realizado por período, resultado gerencial por competência, reserva de manutenção, financiamento com principal/juros, aquisição como investimento, caução como obrigação, comissão como despesa/passivo, retiradas/aportes do proprietário separados. Não prometer escrituração fiscal/contábil oficial.
-
-Pix com identificador, integração bancária/OFX e automações só depois do fluxo manual confiável. Comprovante enviado pelo motorista vira **em conferência**, nunca pago automaticamente. Comissão e aluguel têm saldos separados; compensação exige regra explícita, aprovação e registro dos dois lados.
-
-**Aceite:** uma cobrança de R$ 750 recebida em R$ 500 + R$ 250 tem saldo 250 e depois zero; estorno de 250 reabre saldo; webhook repetido não duplica baixa. Transferência entre contas não vira receita/despesa. Caução de R$ 1.500 não aumenta faturamento. Período fechado só muda por ajuste rastreável.
-
-### 5.7 Lojinha e estoque
-
-**Proposta de negócio, a confirmar:** consignação; a RODAVOLT mantém a propriedade, o motorista guarda e vende ao passageiro e recebe comissão. O dinheiro pode entrar na conta da empresa ou ser recebido pelo motorista; os acertos devem refletir cada modalidade.
-
-Produtos/SKU, categoria, unidade, custo por compra, preço vigente, mínimo, lotes e validade para perecíveis. Localizações: central, em trânsito, kit/veículo e quarentena quando necessário. Movimentos: compra, transferência enviada/recebida, venda, devolução, perda, ajuste e estorno. Nenhuma alteração direta de saldo.
-
-Custódia tem motorista, carro, período e aceite. A troca de motorista exige contagem e transferência de responsabilidade. Venda armazena preço e custo vigentes; mudança de preço não reescreve o passado. Comissão preserva a regra da venda.
-
-**Aceite:** transferir 12 águas da central ao carro mantém o total; vender 2 baixa somente o kit e registra receita, custo, comissão, recebimento/valor a repassar. Pagamento direto à empresa não cria dívida de repasse do motorista; dinheiro em mãos cria. Perda não vira venda. Pedido de reposição não baixa estoque até a confirmação apropriada. Dois registros concorrentes não vendem a última unidade duas vezes. Ajuste de inventário exige motivo e autor.
-
-## 6. Jornadas principais
-
-**Primeiro carro:** preencher cenário → anexar cotações → comparar estresse → decidir manualmente → cadastrar compra real → revisar seguro/documentos → cadastrar e conferir motorista → preparar e assinar contrato → registrar caução → vistoriar → entregar carro e kit → gerar agenda de cobranças.
-
-**Semana normal:** cobrança vence → recebimento conferido/conciliado → motorista registra vendas e km → sistema identifica revisão/reposição → fechar acerto de loja → conferir resultado e caixa. O acerto preserva períodos e pode ser reaberto por correção autorizada.
-
-**Problema no carro:** relato com fotos → classificar e, se crítico, marcar indisponível → aprovar orçamento → executar serviço → confirmar comprovante → registrar despesa e km → liberar carro → recalcular manutenção.
-
-**Devolução:** agendar → vistoria comparativa → conferir km/multas → contar kit → fechar vendas/comissão/repasse → calcular cobranças finais → tratar caução → emitir termo final → encerrar acessos do vínculo.
-
-## 7. Qualidade e segurança
-
-Responsivo a partir de 320px; rotulagem de campos, foco e teclado, contraste compatível com WCAG AA como meta de validação. Português brasileiro, moeda BRL; datas operacionais com fuso da operação brasileira a definir. Cálculo financeiro sem depender do fuso do computador. Não presumir que o fuso do proprietário é o da operação.
-
-Salvar dinheiro em centavos ou decimal exato no banco; arredondar e distribuir resíduos de parcelas de modo documentado. Chaves de idempotência para pagamentos, serviço→despesa e venda→estoque. Transações e bloqueios protegem estoque, contratos e acertos. Auditoria de alterações sensíveis, arquivos privados, recuperação de senha, acesso revogado no servidor e exportação/backup restaurável.
-
-Meta de percepção: tarefas usuais em até 2 segundos em conexão móvel razoável; medir no piloto. Não certificar performance pelo protótipo estático. Sem dado pessoal em cache offline na primeira entrega; qualquer rascunho offline futuro tem estado “pendente de envio” e política explícita.
-
-## 8. Prioridade e limites
-
-| Fase | Resultado obrigatório |
+| Área | Telas e aprofundamentos |
 |---|---|
-| P0 · antes da compra | Simulação com cotações, regra de negócio, contrato e seguro encaminhados |
-| P1 · primeiro aluguel | Acesso, carro, motorista, contrato, entrega, cobrança, despesas, caução, manutenção mínima e portal de consulta |
-| P1-L · antes de vender no carro | Produtos, kit, venda, custo/comissão, recebimento, repasse, inventário e termo |
-| P2 · depois do piloto | Provedor Pix/assinatura, conciliação importada, alertas, planejado × realizado, relatórios e reposição |
-| P3 · com evidência de necessidade | Aplicativo nativo, telemetria, integrações externas, expansão e inteligência avançada |
+| Visão executiva | Caixa, frota, receita, patrimônio, plano × registros e decisões pendentes |
+| Plano de crescimento | Premissas, projeção, marcos de aquisição, dívida/amortização, fluxo mensal, ano a ano, estratégias e versões |
+| Projetado × realizado | Comparação por período/indicador/carro, desvio R$/%, fontes, causas e projeção revisada |
+| Frota & manutenção | Aquisição, centro de resultado, financiamento, documentos, km, disponibilidade, plano preventivo, serviços e histórico |
+| Motoristas | Cadastro, conferência, documentos, vínculo, pendências e relacionamento |
+| Contratos & vistorias | Condições, documento/versionamento, assinatura, aditivos, entrega/devolução e acerto final |
+| Financeiro | Contas, cobranças, pagamentos, conciliação, caixa/resultado, dívida, caução, reservas, aportes, retiradas e fechamento |
+| Lojinha & acertos | SKU/lote, compra, central, trânsito, kit, custódia, venda, comissão, repasse, inventário e acerto |
+| Central de pendências | Solicitações, serviços, reposições, comprovantes, documentos e responsáveis |
+| Auditoria & dados | Origem de indicadores, eventos, versões, consistência, exportação e governança |
 
-Fora do lançamento: marketplace de locações, motor próprio de assinatura, integração presumida com Uber/99, mapa de demanda sem fonte, pontuação de motorista, agentes autônomos que compram carros, oficina própria completa, data lake, multiempresa comercial como SaaS e ERP fiscal completo. Cadastro mínimo de empresa prepara o isolamento; não cria produto SaaS agora.
+No celular do motorista, cinco destinos principais: **Início, Jornada, Carteira, Loja e Mais**. Carro, manutenção, vistorias, documentos e suporte têm telas próprias acessíveis por ações contextuais e pelo menu Mais.
 
-## 9. Estado desta entrega
+## 5. Planejamento e crescimento
 
-Disponível: desenho navegável dos dois lados; motor demonstrativo de cenários; salvar/restaurar premissas localmente; comparação base/estresse/otimista; venda e transferência fictícias na sessão; testes do motor; documentação.
+### Requisitos
 
-Planejado: toda persistência operacional, autenticação, permissões reais, documentos, assinatura, cobrança, integração, backup e publicação. Não há migração do banco antigo. O piloto só pode usar dados reais após implementação e validação desses requisitos.
+Capital inicial; custo de abertura; aquisição à vista ou financiada; entrada; taxa e prazo; preparação e estoque inicial; frota inicial e meta; horizonte; ocupação, paradas, aluguel, km e perdas; custos por carro e empresa; contratação adicional por escala; reserva fixa e por veículo; aportes mensais/pontuais; retenção ou retirada de caixa livre; rendimento; reajustes; depreciação; loja; tributação parametrizada; amortização extraordinária e prioridade entre crescer e amortizar.
+
+O motor acompanha cada veículo e seu financiamento. Compras simuladas dependem de capital e reserva, com limite de aquisições por mês. Crescimento não ocorre apenas multiplicando a receita do primeiro carro por uma meta. Veículo adquirido no fim de um mês só opera no seguinte. O mês zero é a aquisição e a posição inicial, sem uma mensalidade operacional extra.
+
+### Entregas visuais
+
+Frota ao longo do tempo; caixa e dívida; patrimônio e capital aportado; marcos de compra; fluxo mensal detalhado; fechamento anual; inspeção da identidade de caixa em um mês; comparação entre manter frota, reinvestir, priorizar dívida e estressar a operação. Meta não alcançada aparece como não alcançada.
+
+### Critérios de aceite
+
+- Caixa de fechamento fecha com abertura + fluxos; parcela fecha com juros + principal.
+- Toda forma de amortização e compra respeita a reserva, salvo que a própria operação deficitária pode consumi-la; o desvio é sinalizado.
+- Nenhum capital externo é inventado. Aporte e retirada são escolhas explícitas e separadas do resultado.
+- Projeção negativa não desaparece ao desligar reinvestimento.
+- O valor dos ativos e a tributação estimada mostram premissas e limitações.
+- Cenários e simulações não executam compras, pagamentos ou solicitações reais de crédito.
+
+## 6. Projetado × realizado e revisão
+
+Um plano publicado guarda versão, data, autor, premissas/fontes e resultados do motor. O proprietário pode criar outra versão e escolher a referência da comparação. Alterar o rascunho ou incluir lançamentos não modifica um plano preservado.
+
+Comparar valores compatíveis por mês, carro ou grupo: aluguel recebido, vendas, custos operacionais, parcelas, investimento em aquisições, caixa, frota, dívida e patrimônio. Exibir desvio absoluto, percentual quando a base permitir e fonte. Gastos maiores não são automaticamente classificados como ruins; caixa maior pode resultar de uma compra adiada.
+
+A revisão usa um fechamento com caixa reconciliado, ativos e idade, dívida por contrato, estoque e demais saldos necessários. Somente o período futuro recebe novas premissas. Dados históricos e plano original permanecem. A aplicação operacional deve incluir recebíveis, pagamentos futuros e obrigações que o protótipo normalizado ainda não modela.
+
+**Aceite:** incluir despesa de R$ 250 reduz o caixa demonstrativo em R$ 250; o desvio muda e o plano fica idêntico. Registrar um carro altera frota, caixa e dívida. A revisão começa no mês seguinte com os saldos observados. Indicador sem registro retorna “sem dado”; plano igual a zero não produz percentual infinito. Saldos anuais são o último fechamento, nunca a soma de saldos mensais.
+
+## 7. Financeiro e fechamento
+
+Cadastros de contas, categorias e centros; contas a pagar/receber; cobrança semanal com identificação de período; recorrência; competência e regime de caixa; baixas parciais; juros/multa conforme contrato; descontos autorizados; estorno; reembolso; conciliação manual e importada; transferências bancárias; dívida com principal e juros; investimentos em carros; reservas; caução; aportes e retiradas.
+
+Caução é obrigação, sem reconhecimento de receita. Reserva pertence ao caixa próprio, sem duplicação como despesa. Compra do carro é investimento, entrada não é custo operacional e principal da parcela não reduz lucro. Comissão tem obrigação e pagamento rastreáveis. Compensar comissão com aluguel exige regra explícita e registros dos dois lados.
+
+Fechamento operacional: pendências → conferência → conciliação → validação de saldos → fechamento com autor e data. Correção após fechamento gera ajuste autorizado e histórico, não edição silenciosa. O painel deve identificar extrato faltante, documento ausente e movimento ainda não conciliado.
+
+**Aceite operacional:** cobrança de R$ 750 com baixas de R$ 500 e R$ 250 tem saldo correto; estorno reabre o saldo correspondente; webhook repetido não duplica baixa. Transferência entre contas não infla receita/despesa. A consulta de um saldo leva à sua composição e aos documentos.
+
+## 8. Carros, motoristas e contratos
+
+Carro: aquisição e sua origem, placa/chassi, modelo/ano, combustível, km, custo, documentos, apólice, financiamentos, status, vínculo, estoque e resultado. O cadastro de um carro não prova disponibilidade; contrato, vistoria e manutenção também influenciam a liberação.
+
+Motorista: cadastro, contato, CNH/EAR e validade, conferência documental, histórico de vínculos, condições, convite para acesso individual e pendências. Decisão de aceitação tem autor/motivo; não há score subjetivo automático.
+
+Contrato: partes, veículo, vigência, valor e calendário, proporcionalidade, reajuste, franquia/km excedente, caução, seguro/franquia, responsabilidades por revisões/combustível/recarga, limpeza, multas, avarias, indisponibilidade, rescisão e devolução. Documento versionado, aditivos, signatários e evidências. Termo da loja específico. A minuta e as regras dependem de revisão jurídica.
+
+Vistoria: entrega, periódica, ocorrência e devolução; fotos padronizadas, avarias, km, combustível, acessórios, estoque e concordância das partes. Comparação preserva evidência anterior. Sobreposição de contratos do mesmo carro é impedida no servidor/banco.
+
+Manutenção: preventiva por km ou data, o que vencer primeiro; corretiva por relato; prioridade, indisponibilidade, orçamento, aprovação, fornecedor, serviço, comprovante, custo, garantia e liberação. Fechar serviço gera despesa uma vez. Corrigir km exige evento justificado.
+
+## 9. App do motorista completo
+
+| Tela | O que o motorista controla | Relação com a gestão |
+|---|---|---|
+| Início | Próximo aluguel, pendências, revisão, atalhos e comissão | Mostra apenas seu vínculo |
+| Jornada | Ganhos manuais, km, combustível, despesas e resultado pessoal; evolução e metas futuras | Dados pessoais separados; sem receita presumida da locadora |
+| Carteira | Cobranças, período, vencimento, comprovante, histórico, caução, comissão e repasse | Comprovante em análise até conferência |
+| Carro | Dados, documentos, hodômetro, revisão e histórico | Atualização operacional validada |
+| Manutenção | Relato, prioridade, fotos e acompanhamento | Solicitação com responsável e andamento |
+| Vistorias | Checklist, km, fotos, combustível e aceite | Evidência ligada ao contrato |
+| Loja | Kit, produto/preço, venda, quantidade, recebimento, comissão, reposição e acerto | Baixa de estoque e obrigações correspondentes |
+| Documentos | Contrato, termos, versões, aditivos e próprios documentos | Acesso privado por vínculo |
+| Suporte | Assunto, relato, anexos, protocolo e resposta | Atendimento com contexto e histórico |
+| Conta | Dados de contato, preferências e privacidade | Identidade própria, sem credencial compartilhada |
+
+**Aceite:** ações de exemplo percorrem as áreas correspondentes da gestão; comprovante não vira pago por envio; ganho pessoal não entra em aluguel; venda informa quem recebeu e quanto repassar; motorista não vê dados de outro motorista nem o financeiro consolidado em produção.
+
+## 10. Loja, custódia e acerto
+
+Proposta de consignação ainda sujeita a confirmação comercial. Cada SKU tem custo, preço, unidade, lote/validade quando aplicável e mínimo. Localizações: central, trânsito e kit por veículo/motorista/período. Transferir preserva a quantidade total e só muda localização/custódia.
+
+Venda preserva custo, preço, comissão e base vigentes naquele instante. Recebimento pelo motorista gera repasse; recebimento pela empresa pode gerar comissão a pagar. Acerto identifica período, vendas, perdas, devoluções, comissão, valores recebidos por cada parte e comprovante de repasse. Sem desconto silencioso no aluguel.
+
+Reposição: pedido → separação → trânsito → recebimento conferido. Inventário físico explica ajustes por motivo/autor. Troca de motorista exige termo e contagem. Perda não vira venda. Venda concorrente não deixa o kit negativo.
+
+O kit do protótipo usa comissão de 20% como regra demonstrativa, independente da premissa de outro cenário. Alterar a comissão hipotética do simulador não reescreve vendas operacionais. Na versão real, regras do contrato do kit serão parametrizadas e versionadas.
+
+## 11. Segurança, qualidade e integridade
+
+Perfis proprietário, operação, financeiro e motorista; isolamento por empresa e vínculo no banco e nos arquivos. A UI não é a barreira de segurança. Contratos, fotos e documentos em armazenamento privado. Revogação de acesso verificada no servidor. Trilhas sem credenciais ou dados pessoais excessivos.
+
+Transações e idempotência para venda/estoque, pagamento, aquisição, manutenção→despesa e acerto. Dinheiro em centavos ou decimal exato no banco; política de arredondamento; restrições de integridade e concorrência. Datas operacionais com fuso brasileiro a definir, preservando timestamps UTC. Backup com restauração ensaiada e exportação do proprietário.
+
+Meta de experiência: responsivo a partir de 320px, foco/teclado e leitores de tela, contraste AA, estados de erro/carregamento/conferência claros. Nenhum estado “salvo” antes de confirmação na versão operacional. PWA não implica GPS de fundo ou funcionamento offline completo.
+
+## 12. O que esta reconstrução entrega
+
+**Funcional localmente:** motor novo de crescimento; fluxo mensal/anual; reserva, aportes, retiradas, equipe por escala, amortização e estratégias; plano salvo por versão; livro demonstrativo editável; compra operacional ilustrativa; comparação e revisão; memória de cálculo; app com jornada, comprovante, solicitação, vistoria, venda, reposição, documentos e suporte; gestão com conferência/acerto; eventos locais.
+
+**Ainda não implementado:** identidade e autorização reais, banco, anexos reais, assinatura, Pix, integração bancária, fechamento contábil/fiscal, telemetria e validação jurídica. Privacidade e auditoria do protótipo são demonstrações de produto, não garantias de segurança de uma aplicação estática. Eventos e ações da loja em aberto não entram no período financeiro até o acerto demonstrativo.
+
+**Critério de lançamento:** implementar os fluxos acima com persistência, autorização e integridade, homologar com um carro e um motorista e conferir os saldos/evidências de uma semana completa e de uma devolução. A primeira compra e a ativação da locação são decisões separadas.

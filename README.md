@@ -1,43 +1,46 @@
-# RODAVOLT
+# RODAVOLT · Gestão & Crescimento
 
-Plataforma para locação de veículos a motoristas de aplicativo, com financeiro por carro, contratos, manutenção, portal do motorista e lojinha no veículo.
+Plataforma de locação semanal a motoristas de aplicativo com operação, financeiro rastreável, plano de crescimento, comparação projetado × realizado e app completo do motorista.
 
-Esta primeira entrega é **planejamento + protótipo navegável**. O simulador calcula cenários e salva premissas neste navegador/ambiente. Os demais módulos demonstram os fluxos com dados fictícios. Não há autenticação, banco, cobrança, assinatura ou emissão fiscal conectados.
+## Esta versão
 
-## Abrir o desenho
+**v2 · planejamento e protótipo reconstruídos.** O simulador recupera os conceitos de crescimento do sistema anterior: capital, aquisições por veículo, reinvestimento, reserva, aportes, amortização, caixa, dívida e patrimônio. Acrescenta versões preservadas do plano, livro demonstrativo, desvios com origens e revisão a partir de fechamento observado.
 
-Abra `index.html` no navegador ou, com Node 22:
+O app do motorista possui Início, Jornada, Carteira, Loja e Mais, com carro, manutenção, checklist de vistoria, documentos e suporte. Vendas, reposição, comprovante, atendimento e acerto percorrem os respectivos fluxos da gestão.
 
-```sh
-npm run build
-npm run dev
-```
+Há apenas **dados fictícios**. A janela nov/2026–jan/2027 é ilustrativa e prospectiva, não uma operação existente. Não há autenticação, banco, Pix, assinatura, documentos/fotos reais nem integração com Uber/99. Persistência local de demonstração não é segurança operacional.
 
-Acesse `http://127.0.0.1:4173`. Não é necessário instalar dependências. O protótipo possui gestão, simulador, ficha do carro, manutenção, motorista, contrato, financeiro, lojinha e prévia mobile. Na lojinha, registre uma venda no app e confira a mudança do estoque na gestão; os movimentos fictícios duram apenas a sessão aberta.
+## Abrir e verificar
 
-## Ler o plano
-
-- [PRD: produto e critérios de aceite](docs/PRD.md)
-- [Simulador e regras financeiras](docs/SIMULADOR.md)
-- [O que aproveitar do sistema antigo](docs/AUDITORIA-LEGADO.md)
-- [Plano de execução e lançamento](docs/PLANO-DE-EXECUCAO.md)
-- [Arquitetura proposta](docs/ARQUITETURA.md)
-- [Desenho de navegação e interface](docs/DESIGN.md)
-- [Referências pesquisadas](docs/REFERENCIAS.md)
-- [Decisões e perguntas em aberto](docs/DECISOES.md)
-
-## Validar
+Node 22, sem dependências a instalar:
 
 ```sh
 npm run check
+npm run dev
 ```
 
-Testes determinísticos do motor cobrem calendário, dívida, caixa, depreciação, estoque econômico, tributos simplificados, equilíbrio e limites de entrada. O pipeline também verifica que os arquivos gerados estão atualizados. Os testes não certificam viabilidade de um investimento real.
+Abra `http://127.0.0.1:4173` ou o arquivo `index.html`. As verificações cobrem crescimento, caixa, patrimônio, dívida, reserva, revisão, plano preservado, lançamentos e estoque. A interface é conferida no navegador integrado. O servidor também oferece molduras locais de QA em `/_responsive/320`, `/390`, `/736` e `/1024`.
 
-## Fonte e sincronização
+## Explorar os fluxos
 
-Edição local nesta pasta. Repositório: [carlaobh20/RODAVOLT](https://github.com/carlaobh20/RODAVOLT). Desenvolvimento em `dev`; referência inicial em `main`. Commit e push após validação fazem parte do fluxo autorizado. Publicação da aplicação será uma etapa posterior.
+1. Na visão executiva, abrir a origem do caixa ou do patrimônio.
+2. No plano, ver crescimento e fluxo anual; editar premissas e recalcular o rascunho; preservar outra versão.
+3. Incluir uma despesa no financeiro e comparar; registrar uma aquisição de exemplo na frota; gerar revisão a partir do fechamento.
+4. No app, registrar jornada pessoal, venda e comprovante; abrir solicitação/vistoria/suporte.
+5. Na gestão, conferir recebimento, entregar reposição e fechar acerto da loja; verificar as mudanças e os eventos.
 
-Fontes do protótipo em `prototype/shell.html`, `prototype/style.css`, `prototype/app.js` e `src/simulator.js`. `npm run build` gera `index.html` e `prototype/preview.html`; não editar os gerados à mão.
+## Documentação
 
-Referência legada fornecida: `Downloads/RodaVolt-System-main`. Inspeção de planejamento e amostras de código, sem migração de dados ou alterações no sistema antigo. Data do planejamento: **17/10/2026**, calendário do usuário.
+- [PRD v2](docs/PRD.md)
+- [Modelo do simulador, crescimento e revisão](docs/SIMULADOR.md)
+- [Mapeamento do legado](docs/AUDITORIA-LEGADO.md)
+- [Plano de execução](docs/PLANO-DE-EXECUCAO.md)
+- [Arquitetura proposta](docs/ARQUITETURA.md)
+- [Desenho e navegação](docs/DESIGN.md)
+- [Decisões e hipóteses](docs/DECISOES.md)
+- [Validação](docs/VALIDACAO.md)
+- [Referências externas pesquisadas](docs/REFERENCIAS.md)
+
+Fontes: `src/growth.js`, `src/control.js`, `prototype/shell.html`, `prototype/style.css`, `prototype/app.js`. `npm run build` gera `index.html` e `prototype/preview.html`. Não editar gerados manualmente. A v1 está preservada no histórico Git; não é a proposta corrente.
+
+Repositório [carlaobh20/RODAVOLT](https://github.com/carlaobh20/RODAVOLT). Edição local e desenvolvimento em `dev`; sincronização após validação. Deploy operacional e infraestrutura são etapas posteriores. Planejamento datado de **17/10/2026**.

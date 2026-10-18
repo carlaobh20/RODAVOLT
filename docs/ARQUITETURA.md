@@ -1,4 +1,4 @@
-# Arquitetura proposta
+# Arquitetura proposta · v2
 
 **Estado:** desenho para implementação futura. A entrega atual é HTML/CSS/JavaScript local, sem backend e sem instalação de dependências. Não existem tabelas criadas ou integrações conectadas neste novo repositório.
 
@@ -54,7 +54,7 @@ RLS nas tabelas expostas, privilégios mínimos por operação, políticas de le
 
 CNH, contratos, fotos e evidências em buckets privados, com caminhos vinculados ao domínio e política de acesso por registro. URLs de acesso temporário quando necessário; não tornar o bucket público para resolver erro de autorização. Ver [controle de acesso do Storage](https://supabase.com/docs/guides/storage/security/access-control).
 
-Retenção, consentimentos, acesso após encerramento e política de privacidade serão definidos conforme documentos e atividade com assessoria apropriada. O produto não precisa registrar ganhos pessoais completos do motorista ou localização contínua para gerir uma locação semanal.
+Retenção, consentimentos, acesso após encerramento e política de privacidade serão definidos conforme documentos e atividade com assessoria apropriada. Os ganhos e despesas da jornada pessoal do motorista exigem um domínio privado, separado das receitas da locadora. A localização contínua não é requisito para a locação semanal.
 
 ## 5. Experiência e conexão móvel
 
@@ -67,3 +67,10 @@ Financeiro e simulador compartilham definições de métricas, mas mantêm bases
 Desenvolvimento, homologação e produção separados; migrations revisadas e testadas localmente; sem aplicar SQL remoto como parte do setup do frontend. Backups com restauração ensaiada, logs sem documentos ou credenciais, trilha de auditoria para mudanças financeiras, exportação do proprietário e monitoramento de falhas.
 
 CI executa verificações do código e testes de domínio/permissão conforme surgirem. Deploy e contas dos fornecedores só entram quando o ambiente e o escopo estiverem definidos. Não conectar este planejamento ao projeto Supabase antigo por conveniência.
+
+
+## 7. Plano, observado e revisão
+
+O domínio de planejamento passa a guardar versões do plano e suas premissas/fontes/resultados. A versão publicada é independente do rascunho. O domínio financeiro e as aquisições alimentam fechamentos observados, com fontes, confirmações e conciliação. A comparação alinha as definições e períodos. A revisão prospectiva parte de um snapshot validado, preservando tanto o histórico quanto o plano anterior.
+
+O protótipo usa `src/growth.js` para a projeção e `src/control.js` para registros demonstrativos. O estado local não representa um mecanismo seguro de autorização ou auditoria imutável. Na aplicação real, versão, evento, fechamento e permissão são impostos pelo servidor/banco; os dados da jornada pessoal não passam a ser acessíveis à empresa apenas por compartilharem o mesmo usuário ou contrato.

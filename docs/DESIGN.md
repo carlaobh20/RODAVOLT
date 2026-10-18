@@ -1,41 +1,34 @@
-# Desenho do produto
+# Desenho v2 · controle, profundidade e transparência
 
-## Direção
+A interface foi reconstruída com navegação por estratégia, operação e controladoria. Azul profundo e cobalto distinguem a nova identidade; tema claro/escuro; tabelas, gráficos e fontes de registro recebem prioridade. O objetivo é tornar uma operação complexa legível sem retirar os controles necessários.
 
-Identidade RODAVOLT: verde profundo, acento lima, superfícies discretas, tipografia legível e números alinhados. Compatível com tema claro e escuro. O produto deve passar clareza sobre dinheiro, documentos e tarefas, sem exigir interpretação de “inteligências” ou dezenas de indicadores.
+## Composição
 
-Protótipo: abra `index.html`. As áreas de gestão e motorista são selecionadas no cabeçalho. Sete destinos principais organizam o negócio; manutenção permanece no carro. O simulador abre como ponto inicial desta fase; na operação real a visão geral assume a entrada.
+Visão executiva mostra caixa, frota, recebimento e patrimônio do período, comparação e fila de decisões. Cada indicador abre memória e registros. O patrimônio tem rótulo de estimativa; caixa tem origem em lançamentos.
 
-## Mapa de telas e estados
+Plano de crescimento separa projeção, premissas completas, fluxo detalhado, ano a ano e estratégias. Três gráficos mostram a evolução da frota, liquidez/dívida e construção patrimonial. Marcos explicam quando cada carro entra, caixa restante e reserva. O mês selecionado abre sua identidade de caixa.
 
-| Tela | Conteúdo principal | Ação prioritária |
-|---|---|---|
-| Visão geral antes de operar | Preparação, cotações e pendências | Simular |
-| Visão geral em operação, futura | Cobranças, carro parado, revisão e saldo | Resolver pendência no registro original |
-| Simulador | Compra/aluguel e custos progressivos; caixa e resultado | Editar, comparar e salvar cenário |
-| Ficha do carro | Aquisição, contrato atual, custos, km, manutenção e vistoria | Registrar serviço/ocorrência |
-| Motorista | Cadastro, documentos, etapa e vínculo | Conferir e contratar |
-| Contrato | Condições comerciais, documento, versões e encerramento | Revisar, assinar e acompanhar |
-| Financeiro | Contas/caixa/resultado e caução separada | Conferir recebimento e pagar despesa |
-| Lojinha | Central, kit, vendas, comissão e repasse | Repor e conferir acerto |
-| Motorista/Início | Próxima cobrança e pendência principal | Consultar e agir |
-| Motorista/Carro | Km, revisão, documentos e vistoria | Solicitar manutenção |
-| Motorista/Pagar | Período, vencimento, forma e histórico | Pagar ou informar comprovante |
-| Motorista/Loja | Kit disponível e comissão | Registrar venda |
-| Motorista/Docs | Contrato, aditivos e documentos próprios | Consultar e baixar |
+Projetado × realizado coloca referência e observação lado a lado. Desvios têm R$/%, fontes e interpretação. Revisão começa no fechamento escolhido; o plano original não desaparece. A legenda distingue plano, demonstração observada e previsão revisada.
 
-O protótipo demonstra a direção, não implementa todos os formulários dessa tabela. Consulta de documentos e pagamentos é ilustrativa; não há PDF ou Pix real. Os únicos registros alterados são exemplos em memória e premissas de cenário salvas no ambiente.
+## Motorista
 
-## Princípios de interação
+Cinco destinos no celular: Início, Jornada, Carteira, Loja e Mais. Jornada permite registrar ganhos, km, combustível e despesas pessoais. Carteira separa aluguel, caução, comissão e repasse. Loja vende por SKU/quantidade e identifica quem recebeu. Mais dá acesso a carro, manutenção, vistoria, documentos e suporte.
 
-O básico fica visível; custos e configurações avançados abrem por grupo. Valores mostram unidade e período: semanal, mensal, anual e por km. Campos anuais não se misturam com mensais sem rótulo. Indicadores de caixa e resultado não compartilham o mesmo nome.
+O mockup inclui telas de tarefa, confirmações e retorno à gestão. Não se limita a um painel de saldos. O menu ao lado do celular facilita explorar todas as jornadas durante a revisão do produto; não será um segundo menu obrigatório no aplicativo real.
 
-Uma tarefa começa no objeto correspondente: manutenção no carro, assinatura no contrato, baixa no recebível, contagem no kit. A visão geral apenas reúne e direciona. O motorista recebe ações curtas, em vez do mesmo dashboard do proprietário.
+## Estados e honestidade
 
-Estados operacionais futuros: sem dados, carregando, erro, pendente de sincronização, salvo, em conferência e confirmado. O exemplo de comprovante termina em “em conferência”; o exemplo de transferência altera localização sem registrar receita.
+A janela nov/2026 a jan/2027 está rotulada como demonstração. Comprovante fica pendente até conferência. Venda baixa o kit; acerto leva os valores ao livro financeiro. Transferência não vira receita. Compra real de exemplo cria ativo/dívida, enquanto compra simulada só muda o plano. Ganho pessoal não entra no resultado da locadora.
 
-No celular, colunas empilham; navegação não depende de hover; campos numéricos permanecem legíveis. Alvos de toque, foco, rótulos, contraste e leitores de tela serão validados no piloto. Cores são acompanhadas por texto de estado.
+O protótipo ainda não oferece arquivos verdadeiros, assinatura, fotos, Pix ou autenticação. As telas mostram como esses elementos serão ligados aos registros e não anunciam uma integração concluída.
 
-## Validação com o proprietário
+## Exploração sugerida
 
-Percorrer: alterar preço/aluguel → comparar estresse → abrir carro e manutenção → examinar contrato → abrir app do motorista → simular venda → conferir estoque na gestão → conferir cobrança em análise. A ordem permite avaliar a proposta com tarefas, sem transformar preferência estética em aprovação de regras financeiras.
+1. Abrir caixa/patrimônio na visão executiva e rastrear as origens.
+2. Ver crescimento, dívida e marcos; mudar aporte, reserva ou reinvestimento nas premissas e recalcular o rascunho.
+3. Preservar uma versão e consultar o histórico na auditoria.
+4. Incluir uma despesa no realizado e ver a diferença; registrar uma aquisição ilustrativa e gerar revisão pelo fechamento.
+5. No app, registrar jornada, comprovante, ocorrência e venda; voltar à gestão para conferir e acertar.
+6. Preencher checklist de vistoria e abrir documentos/contrato e suporte.
+
+A composição reordena colunas em larguras menores e oferece foco/rótulos/teclado. Validação em dispositivos reais, acessibilidade integral e desempenho de backend pertencem à etapa operacional.

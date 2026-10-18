@@ -1,36 +1,28 @@
-# Decisões e pontos em aberto
+# Decisões de produto · v2
 
-## Confirmado pelo usuário
+## Confirmado
 
-- Nova pasta local RODAVOLT e repositório `carlaobh20/RODAVOLT`.
-- Editar localmente e sincronizar o trabalho validado ao GitHub.
-- Brasil, BRL, aluguel semanal para motorista de aplicativo.
-- Gestão de veículos, motoristas, manutenção, contratos, financeiro e lojinha/estoque.
-- Portal/app para o motorista consultar contrato e controlar sua operação.
-- Simular custos e modelo antes de executar decisões reais.
-- Compra desejada em novembro de 2026.
-- Sistema antigo serve como referência; simplificar o excesso de funcionalidades.
+Brasil/BRL, locação semanal para motorista de aplicativo, edição local na pasta RODAVOLT, GitHub `carlaobh20/RODAVOLT`, gestão completa, loja no carro, app do motorista, simulação antes da compra e intenção de aquisição em novembro de 2026.
 
-## Proposto nesta entrega
+Na revisão de 17/10/2026, o proprietário pediu reconstrução integral: mais controle e transparência, app mais completo, recuperação do fluxo de crescimento/projeções do simulador antigo e comparação entre planejado e realizado conforme a operação for registrada. A simplificação em sete áreas e o adiamento do crescimento da v1 foram superados por essa direção.
 
-- Sete áreas principais, manutenção na ficha do carro e documentos jurídicos no contrato.
-- Simulador como primeira entrega; operação com um carro antes de expandir.
-- PWA para o motorista antes de aplicativo nativo.
-- Loja consignada: RODAVOLT fornece, motorista vende ao passageiro, comissão por regra explícita.
-- Combustível/recarga pagos pelo motorista na hipótese demonstrativa.
-- React/TypeScript/Vite e Supabase/Postgres como arquitetura inicial, ainda sem infraestrutura criada.
-- `dev` para trabalho; `main` como referência inicial. Publicação operacional posterior.
+## Decisões de desenho desta versão
 
-Essas propostas não são regras comerciais aprovadas apenas por estarem no desenho.
+- Três camadas: plano versionado, livro de registros e revisão prospectiva; nenhuma sobrescreve a outra.
+- Controle por origem, período, natureza e estado, com composição clicável.
+- Crescimento por veículo e dívida, reserva fixa/por carro, aportes, retiradas e prioridade de capital.
+- Visão mensal e anual; novas aquisições operam no mês seguinte.
+- Aplicativo com Início, Jornada, Carteira, Loja e Mais; carro, manutenção, vistoria, documentos e suporte aprofundados.
+- Jornada pessoal não é faturamento da locadora nem dado administrativo por padrão.
+- Ações da loja distinguem recebimento pelo motorista e pela empresa, comissão e repasse.
+- Versão antiga preservada pelo histórico Git; código, interface e documentação correntes reconstruídos.
 
-## Informações que melhoram a próxima etapa
+## Hipóteses comerciais a confirmar
 
-1. Cidade/estado, data pretendida de compra e fuso da operação.
-2. Capital disponível, reserva desejada e preferência à vista/financiado.
-3. Modelos/ano/km em avaliação e cotações reais; elétrico, híbrido ou flex ainda não confirmado.
-4. Aluguel pretendido, km incluídos e responsáveis por seguro, revisão, pneus, limpeza e energia/combustível.
-5. Situação da empresa, contador e responsável pela minuta contratual.
-6. Consignação ou venda de kit ao motorista; SKUs e regras de comissão, perdas e repasse.
-7. Forma de cobrança inicial e futuros provedores de Pix e assinatura.
+Consignação versus venda do kit; comissão e sua base; produtos/preços; responsáveis por seguro/revisão/pneus/combustível; política de atraso, caução, franquia e km; cidade/estado; capital, reserva e financiamento; modelo/ano do carro; regime da empresa e minuta jurídica.
 
-Não é necessário resolver todos esses pontos para navegar no protótipo. São entradas para validar o modelo real e liberar a implementação operacional com escopo preciso.
+Padrões do simulador são ilustrativos. O kit demonstrativo usa 20% de comissão e dados fictícios; não é condição comercial aprovada. A janela nov/2026–jan/2027 é um exemplo prospectivo, não registros reais.
+
+## Infraestrutura
+
+A aplicação operacional proposta continua React/TypeScript e banco relacional com autorização e arquivos privados. O protótipo atual é estático e não fornece autenticação real. Desenvolvimento em `dev`, commit e push após verificações autorizados. Publicação e integrações operacionais são etapas posteriores.

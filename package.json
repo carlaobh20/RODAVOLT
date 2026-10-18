@@ -1,13 +1,13 @@
 {
   "name": "rodavolt-planning",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "node scripts/serve.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "npm test && npm run build && node --check prototype/app.js && node --check src/simulator.js"
+    "check": "npm test && npm run build && node --check prototype/app.js && node --check src/growth.js && node --check src/control.js"
   },
   "engines": { "node": ">=22" }
 }

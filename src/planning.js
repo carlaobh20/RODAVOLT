@@ -26,7 +26,21 @@
   return Math.ceil(high*100)/100;
  }
  function bridge(m){return [['Caixa de abertura',m.openingCash],['Aluguel recebido',m.rentalReceived],['Vendas brutas da loja',m.storeGross],['Mercadoria, comissão, taxas e perdas',-(m.storeCogs+m.commission+m.storeFees+m.storeLoss)],['Despesas operacionais',-m.opex],['Tributos sobre faturamento',-m.revenueTax],['IR sobre resultado positivo',-m.profitTax],['Parcela (juros + principal)',-m.debtService],['Rendimento do caixa',m.cashYield],['Aportes',m.contribution],['Compras e preparação',-m.capex],['Amortização extra',-m.extra],['Retiradas',-m.withdrawal],['Caixa de fechamento',m.cash]];}
+ function monthlyExplanation(params,m){
+  const p=S.validate(params),cars=m.operatingFleet,factor=Math.pow(1+p.annualCostInflation/100,Math.floor((m.month-1)/12));
+  const items=[
+   ['Aluguel previsto antes das perdas',m.rentalBilled],['Aluguel não recebido',-m.rentalLoss],['Vendas brutas da loja',m.storeGross],
+   ['Mercadoria da loja',-m.storeCogs],['Lucro destinado ao motorista',-m.commission],['Taxas de pagamento da loja',-m.storeFees],['Perdas da loja',-m.storeLoss],
+   ['Seguro',-cars*p.insurance*factor],['IPVA mensalizado',-cars*p.annualTax/12*factor],['Licenciamento mensalizado',-cars*p.annualLicense/12*factor],
+   ['Rastreador',-cars*p.tracker*factor],['Limpeza',-cars*p.washing*factor],['Outros custos do carro',-cars*p.other*factor],
+   ['Administração e contador',-p.admin*factor],['Equipe adicional',-(cars>=p.staffThreshold?p.staffCost*factor:0)],
+   ['Reserva mensal de manutenção',-cars*p.maintenanceMonthly*factor],['Manutenção por km',-m.km*p.maintenanceKm*factor],['Pneus por km',-m.tires],
+   ['Recarga paga pela locadora',-m.chargingCompany],['Tributos sobre faturamento',-m.revenueTax],['IR estimado',-m.profitTax],
+   ['Juros da parcela',-m.interest],['Principal da parcela',-m.scheduledPrincipal],['Rendimento do caixa',m.cashYield]
+  ];
+  return {items,net:m.cashAfterDebt,gap:Math.max(0,-m.cashAfterDebt),rentableDays:m.rentableDays,activeItems:items.filter(([,value])=>Math.abs(value)>0.000001)};
+ }
  function csvCell(v){let s=String(v??'');if(typeof v==='string'&&/^[=+@-]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"';}
  function csv(rows){const currency=new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});return '\ufeff'+[columns.map(([,label])=>csvCell(label)).join(';'),...rows.map(r=>columns.map(([key])=>csvCell(typeof r[key]==='number'?['fleet','purchases'].includes(key)?String(r[key]):currency.format(r[key]):r[key])).join(';'))].join('\r\n');}
- scope.RodavoltPlanning={defaults,columns,row,initial,annual,report,decisionStress,breakEvenWeekly,bridge,csv};
+ scope.RodavoltPlanning={defaults,columns,row,initial,annual,report,decisionStress,breakEvenWeekly,bridge,monthlyExplanation,csv};
 })(globalThis);

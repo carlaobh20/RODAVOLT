@@ -23,3 +23,18 @@
 #rodavolt .lane-tools button:disabled{opacity:.35;cursor:default}
 #rodavolt .lane-role{font-size:9px;color:var(--muted);line-height:1.4;margin:0 0 11px}
 #rodavolt .driver-card .card-stage{font-size:9px;color:var(--muted);margin:7px 0 5px}
+/* Simulador: primeiro a conta do mês, depois as projeções opcionais. */
+#rodavolt .sim-rent-entry{display:grid;grid-template-columns:minmax(140px,.75fr) minmax(180px,1.25fr);gap:10px;grid-column:1/-1}
+#rodavolt .sim-add-box{border:1px dashed #bad0c2;background:#f5faf6;border-radius:9px;padding:15px 18px;margin-top:15px;color:var(--ink)}
+#rodavolt .sim-add-box strong{font-size:13px}#rodavolt .sim-add-box p{font-size:11px;color:var(--muted);margin:6px 0 12px;line-height:1.6}
+#rodavolt .sim-clarity{margin:20px 0;border-color:#bfd9c7;background:#fcfffc}#rodavolt .sim-clarity-negative{border-color:#e8c9bf;background:#fffdfb}
+#rodavolt .sim-clarity .panel-head h2{font-size:20px}#rodavolt .sim-clarity .panel-head p{font-size:11px}
+#rodavolt .sim-balance{border-radius:9px;background:#e9f5ed;padding:18px 20px;margin:12px 0 16px}#rodavolt .sim-clarity-negative .sim-balance{background:#fff0e9}
+#rodavolt .sim-balance span{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}#rodavolt .sim-balance strong{display:block;font-size:30px;margin:4px 0}#rodavolt .sim-balance p{font-size:12px;line-height:1.6}
+#rodavolt .sim-rent-note,#rodavolt .sim-price-hint{font-size:12px;line-height:1.7;margin:14px 0;color:var(--ink)}#rodavolt .sim-price-hint{background:#f0f5f2;border-left:3px solid #408765;padding:10px 13px}
+#rodavolt .sim-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}#rodavolt .sim-totals .row{display:block;border:1px solid var(--line);border-radius:7px;padding:12px;background:white}#rodavolt .sim-totals .row strong{display:block;font-size:17px;margin-top:6px}
+#rodavolt .sim-cost-list,#rodavolt .sim-startup,#rodavolt .sim-projection{margin-top:16px;border-top:1px solid var(--line);padding-top:15px}#rodavolt .sim-cost-list>summary,#rodavolt .sim-startup>summary,#rodavolt .sim-projection>summary{font-size:13px;font-weight:700;color:var(--ink);padding:4px 0}
+#rodavolt .sim-break-group{margin-top:16px}#rodavolt .sim-break-group h3{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#52705d;margin:0 0 7px}#rodavolt .sim-break-group .row{padding:7px 0;font-size:11px}
+#rodavolt .sim-projection{background:#fff;border:1px solid var(--line);border-radius:9px;padding:17px 20px;margin-top:18px}#rodavolt .sim-projection>.panel{margin-top:18px}
+@media(max-width:600px){#rodavolt .sim-rent-entry,#rodavolt .sim-totals{grid-template-columns:1fr}#rodavolt .sim-balance strong{font-size:25px}}
+#rodavolt .sim-form-more{grid-column:1/-1;margin-top:0;border:1px solid var(--line);border-radius:9px;padding:13px 16px;background:#fff}#rodavolt .sim-form-more>summary{font-size:12px;color:var(--ink);font-weight:700}#rodavolt .sim-form-more>.grid2{margin-top:15px;align-items:start}#rodavolt .sim-form-more .form-card{height:100%}

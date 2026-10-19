@@ -2,6 +2,14 @@
 
 O desenho recupera a ordem de leitura da referência antiga. `src/growth.js` mantém o motor por carro; `src/planning.js` prepara relatórios e agregações, sem fórmulas duplicadas nas telas. `prototype/simulator.js` apresenta os dados em uma página.
 
+## Leitura simples do primeiro mês
+
+O aluguel pode ser informado por semana ou por mês. O motor permanece semanal, conforme o contrato: um valor mensal informado é convertido por `12/52`, e a tela mostra a equivalência antes de projetar. O mês efetivo ainda considera seus dias, paradas, ocupação e perda de recebimento. Assim, R$ 1.500,00 por mês não é tratado como R$ 1.500,00 por semana.
+
+Antes dos gráficos, a tela mostra quanto entrou, quanto foi perdido ou pago, a parcela, o saldo do primeiro mês e o aluguel aproximado que equilibraria a operação sob as mesmas hipóteses. Cada custo ativo aparece com seu valor, incluindo loja e benefício do motorista, seguro, tributos, manutenção, pneus, administração e juros/principal. Compra inicial, preparação, estoque e reserva aparecem separados: reserva não é despesa, e entrada não é custo mensal recorrente. O detalhamento usa `P.monthlyExplanation`, que reconcilia os itens ao `cashAfterDebt` do mesmo motor.
+
+A grade antiga de dezenas de premissas avançadas saiu da página. Um comando permite ajustar uma premissa adicional de cada vez, inclusive zerar custos opcionais. Valores já salvos não são apagados nem desligados silenciosamente: continuam na conta e no detalhamento. Fluxos, gráficos, sensibilidade e estudos especializados ficam na seção expansível “Ver fluxo completo, gráficos e projeções”.
+
 Para Maringá/PR, a tela apresenta referências datadas para frota 100% elétrica. Um comando explícito aplica somente a média das revisões programadas do BYD Dolphin Mini ao rascunho; preço do carro, IPVA, consumo, recarga e demais premissas seguem como hipóteses até cotação. O motorista paga as recargas no piloto, e o simulador separa seu custo do caixa da locadora. A [ficha de calibração](CALIBRACAO-MARINGA.md) reúne fontes, limites e dados necessários para decidir. O quadro de sensibilidade recalcula cinco cenários com o mesmo motor e busca o aluguel semanal que zera o fluxo do primeiro mês após custos e parcela; esse ponto de equilíbrio não representa payback nem preço de mercado.
 
 ## Cálculo

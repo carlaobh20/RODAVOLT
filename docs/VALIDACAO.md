@@ -1,5 +1,11 @@
 # Validação da reconstrução v3
 
+## Calibração Maringá/PR · 18/10/2026
+
+`npm run check` passou com **373 testes**, build dos dois HTMLs e sintaxe completa. Dois testes adicionais verificam os cenários de sensibilidade contra `S.simulate`, a erosão de caixa no primeiro mês e o ponto de equilíbrio semanal. O fluxo interno pré-existente de acesso, cobrança, estoque, vistoria, fechamento, backup e concorrência continua coberto pelos testes HTTP locais; nenhum teste chama banco, Pix, assinatura ou rastreador reais.
+
+A pesquisa pública está em [CALIBRACAO-MARINGA.md](CALIBRACAO-MARINGA.md). O cenário opcional altera só preço do HB20 de comparação e IPVA aproximado; seguro, financiamento, aluguel e custos de operação não foram cotados. A checagem visual no navegador desta rodada foi recusada pela autorização de acesso à origem local, portanto a nova seção do simulador não foi homologada visualmente nesta rodada. Build e testes não substituem essa inspeção.
+
 18/10/2026 · planejamento e protótipo local. Interface v2 substituída; histórico preservado no Git.
 
 ## Automatizado

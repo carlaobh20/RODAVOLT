@@ -2,6 +2,8 @@
 
 O desenho recupera a ordem de leitura da referência antiga. `src/growth.js` mantém o motor por carro; `src/planning.js` prepara relatórios e agregações, sem fórmulas duplicadas nas telas. `prototype/simulator.js` apresenta os dados em uma página.
 
+Para Maringá/PR, a tela apresenta referências públicas datadas do preço de um HB20 de comparação e da alíquota de IPVA 2026. Só um comando explícito aplica esses dois números ao rascunho; as outras premissas continuam hipóteses até obter cotações. A [ficha de calibração](CALIBRACAO-MARINGA.md) reúne fontes, limites e dados necessários para decidir. O quadro de sensibilidade recalcula cinco cenários com o mesmo motor e busca o aluguel semanal que zera o fluxo do primeiro mês após custos e parcela; esse ponto de equilíbrio não representa payback nem preço de mercado.
+
 ## Cálculo
 
 Mês zero: capital menos abertura, compra/preparação/kit. Não há receita ou parcela operacional nesse mês. Capital insuficiente bloqueia a aquisição, respeitando reserva fixa e por carro.

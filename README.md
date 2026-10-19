@@ -63,6 +63,7 @@ Cobrança vencida — pagamento da semana já utilizada — foi confirmada pelo 
 - [PRD e critérios de aceite](docs/PRD.md)
 - [Desenho e navegação](docs/DESIGN.md)
 - [Modelo e fluxo do simulador](docs/SIMULADOR.md)
+- [Calibração do primeiro carro em Maringá/PR e teste de ponta a ponta](docs/CALIBRACAO-MARINGA.md)
 - [Referência antiga e o que foi recuperado](docs/CENTRO-DE-ESTRATEGIA.md)
 - [Pesquisa na internet e no GitHub](docs/REFERENCIAS.md)
 - [Plano de implementação operacional](docs/PLANO-DE-EXECUCAO.md)

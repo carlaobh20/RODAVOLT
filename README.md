@@ -66,6 +66,7 @@ Cobrança vencida — pagamento da semana já utilizada — foi confirmada pelo 
 - [Referência antiga e o que foi recuperado](docs/CENTRO-DE-ESTRATEGIA.md)
 - [Pesquisa na internet e no GitHub](docs/REFERENCIAS.md)
 - [Plano de implementação operacional](docs/PLANO-DE-EXECUCAO.md)
+- [Prontidão para iniciar com o primeiro carro](docs/PRONTIDAO-OPERACIONAL.md)
 - [Arquitetura e limites](docs/ARQUITETURA.md)
 - [Decisões](docs/DECISOES.md)
 - [Validação](docs/VALIDACAO.md)

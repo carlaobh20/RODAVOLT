@@ -14,3 +14,12 @@
 @media(min-width:601px){#rodavolt .sidebar{position:sticky;top:0;height:100vh;overflow-y:auto;align-self:start}#rodavolt .topbar{position:sticky;top:0;z-index:4}}
 
 #rodavolt #sim-capacity{margin-bottom:18px}
+/* Editable driver board. The operational stage remains a separate field. */
+#rodavolt .board{grid-template-columns:repeat(var(--board-columns,5),minmax(235px,1fr));width:max-content;min-width:100%}
+#rodavolt .lane-head{gap:8px;align-items:flex-start}
+#rodavolt .lane-head strong{font-size:11px;line-height:1.35;overflow-wrap:anywhere}
+#rodavolt .lane-tools{display:flex;gap:4px;flex-wrap:wrap;margin:-3px 0 8px}
+#rodavolt .lane-tools button{border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--ink);padding:5px 7px;font-size:10px;cursor:pointer}
+#rodavolt .lane-tools button:disabled{opacity:.35;cursor:default}
+#rodavolt .lane-role{font-size:9px;color:var(--muted);line-height:1.4;margin:0 0 11px}
+#rodavolt .driver-card .card-stage{font-size:9px;color:var(--muted);margin:7px 0 5px}

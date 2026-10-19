@@ -79,3 +79,7 @@ O serviço em HTTP/127.0.0.1 não está publicado para celular ou internet. Fixt
 ## Decisão sobre frota elétrica · 18/10/2026
 
 Confirmado: comprar somente carros 100% elétricos e operar em Maringá/PR. No piloto, o motorista paga as recargas; a locadora não registra esse gasto como despesa ou receita própria. Consumo em kWh/100 km, preço efetivo em R$/kWh, perdas e eventual participação futura da empresa são parâmetros explícitos. Modelo, carregador, tarifa, seguro e proposta de compra permanecem abertos. Vistorias passam a registrar carga da bateria (%), cabo/porta e alertas; não converter percentual antigo de combustível em carga. Revisões seguem manual e prazo do veículo escolhido.
+
+## Kanban editável · 18/10/2026
+
+O proprietário pediu liberdade para criar e apagar colunas. O quadro inicia com as cinco etapas conhecidas, mas seus nomes, ordem e existência são editáveis. Exclusão exige destino para os cartões, sem apagar motorista, contrato ou histórico. Coluna personalizada não altera a situação operacional; as transições para rodando e encerrado continuam sujeitas aos gates de contrato, vistoria, carro e devolução.

@@ -23,6 +23,7 @@ export function validateWorkspace(workspace,d){
  const o=workspace.ops,ids=list=>new Set(list.map(e=>e.id)).size===list.length;
  for(const list of [o.drivers,o.charges,o.book?.entries,o.book?.products])if(!Array.isArray(list)||!ids(list))throw new RangeError('Registros ausentes ou identificadores repetidos.');
  if(o.drivers.length>10000||o.book.entries.length>100000)throw new RangeError('Limite da homologação local excedido.');
+ d.M.validateKanban(o);
  const occupied=new Set();for(const driver of o.drivers){if(!d.M.stages.some(([stage])=>stage===driver.stage))throw new RangeError('Etapa inválida.');if(driver.stage==='active'){if(!driver.vehicleId||occupied.has(driver.vehicleId))throw new RangeError('Há conflito de vínculo de veículo.');occupied.add(driver.vehicleId);}}
  for(const e of o.book.entries){if(!Number.isFinite(e.amount)||!Number.isInteger(e.month)||e.month<1||e.month>120)throw new RangeError('Lançamento inválido.');if(e.amount<0&&!o.book.entries.some(original=>original.id===e.reversalOf&&original.amount>0))throw new RangeError('Valor negativo exige origem de estorno.');}
  for(const p of o.book.products)for(const key of ['central','kit'])if(!Number.isInteger(p[key])||p[key]<0)throw new RangeError('Estoque inválido.');

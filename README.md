@@ -10,7 +10,7 @@ O layout e o controlador anteriores foram substituídos. A versão 2 permanece n
 - **Agenda e compromissos:** semana/mês, responsável, lembretes locais e pendências derivadas de cobranças, contas, cadastro, contratos, serviços e vistorias.
 - **Meu advogado:** cinco minutas completas para conferência profissional, modelos versionados, download em texto, revisão, fila e registro demonstrativo por signatário; documentos por perfil.
 - **Visão do dia:** cobranças, caixa, fila de atenção, carro e próximos cuidados.
-- **Motoristas:** kanban, seleção manual por critérios, caução, contrato/vistoria e veículo disponível; Piloto e benefícios concentra a entrada.
+- **Motoristas:** kanban com colunas criáveis, renomeáveis, reordenáveis e removíveis (cartões realocados antes da exclusão), seleção manual por critérios, caução, contrato/vistoria e veículo disponível; Piloto e benefícios concentra a entrada.
 - **Frota e cuidados:** aquisições demonstrativas, dívida por carro, manutenção, vistorias, multas/sinistros/avarias e devolução guiada de carro, chaves e kit.
 - **Financeiro:** agenda semanal por contrato, contas a pagar/receber, baixas por conta e centro, estorno com origem, crédito/repasse da lojinha, devolução de aluguel e conciliação manual 1:1, sem duplicar dinheiro.
 - **Loja no carro:** combo com vários produtos por motorista, envio/conferência/divergência, estoque disponível e reservado, pedido/Pix demonstrativo/entrega, expiração, reembolso e quarentena; 100% da margem do piloto para o motorista, sem duplicar crédito ou recebimento.

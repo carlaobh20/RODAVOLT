@@ -27,6 +27,6 @@
  }
  function bridge(m){return [['Caixa de abertura',m.openingCash],['Aluguel recebido',m.rentalReceived],['Vendas brutas da loja',m.storeGross],['Mercadoria, comissão, taxas e perdas',-(m.storeCogs+m.commission+m.storeFees+m.storeLoss)],['Despesas operacionais',-m.opex],['Tributos sobre faturamento',-m.revenueTax],['IR sobre resultado positivo',-m.profitTax],['Parcela (juros + principal)',-m.debtService],['Rendimento do caixa',m.cashYield],['Aportes',m.contribution],['Compras e preparação',-m.capex],['Amortização extra',-m.extra],['Retiradas',-m.withdrawal],['Caixa de fechamento',m.cash]];}
  function csvCell(v){let s=String(v??'');if(typeof v==='string'&&/^[=+@-]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"';}
- function csv(rows){return '\ufeff'+[columns.map(([,label])=>csvCell(label)).join(';'),...rows.map(r=>columns.map(([key])=>csvCell(typeof r[key]==='number'?r[key].toFixed(2).replace('.',','):r[key])).join(';'))].join('\r\n');}
+ function csv(rows){const currency=new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});return '\ufeff'+[columns.map(([,label])=>csvCell(label)).join(';'),...rows.map(r=>columns.map(([key])=>csvCell(typeof r[key]==='number'?['fleet','purchases'].includes(key)?String(r[key]):currency.format(r[key]):r[key])).join(';'))].join('\r\n');}
  scope.RodavoltPlanning={defaults,columns,row,initial,annual,report,decisionStress,breakEvenWeekly,bridge,csv};
 })(globalThis);

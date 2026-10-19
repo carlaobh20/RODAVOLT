@@ -6,7 +6,7 @@
 2. A gestão confere documentação e define o carro previsto, respeitando disponibilidade.
 3. Em Meu advogado, escolhe modelo, preenche a minuta, confere versão e registra revisão. A fila de envio é distinta da assinatura.
 4. No app, o motorista acompanha a contratação e lê somente seus documentos. As duas partes precisam registrar a simulação para concluir o contrato do exemplo.
-5. O motorista realiza vistoria de entrega: hodômetro, combustível, itens, avarias e vistas. Envio cria pendência para a gestão. Correção devolve ao perfil; aprovação libera só o gate da vistoria.
+5. O motorista realiza vistoria de entrega: hodômetro, carga da bateria (%), itens, avarias e vistas. Envio cria pendência para a gestão. Correção devolve ao perfil; aprovação libera só o gate da vistoria.
 6. A gestão configura e confere a agenda de aluguel da versão assinada. O pagamento é pela semana já utilizada, conforme escolha do proprietário; vencimento e regras parciais ficam explícitos. O kanban só entrega se documentos, caução, contrato, agenda, vistoria nova e disponibilidade estiverem conferidos. Outro motorista não ocupa o mesmo veículo.
 7. Cobrança, comprovante, baixa e conciliação são etapas separadas. Solicitações, revisões, contas e contratos geram agenda.
 8. Painel ativo reúne posição demonstrativa, idade do dado, carro, motorista, aluguel, dívida, documentos e vistoria. Histórico mantém horário da amostra.
@@ -21,7 +21,7 @@
 | Agenda | Semana/mês, compromisso com responsável e lembrete, editar/concluir manual, pendências derivadas com atalho à origem |
 | Meu advogado | Cinco modelos, nova versão de modelo/documento, prévia completa, placeholders, revisão, fila, envio e partes simulados, recusa/cancelamento, vigência e histórico |
 | Motorista | Contratação, documentos, agenda, registros/metas/corrida pessoais, aluguel, comprovante, ajuda, vistoria, combo/estoque e vendas do próprio vínculo |
-| Vistoria | Rascunho, oito itens, avarias, combustível/km, cinco vistas, envio e parecer; imagens temporárias na prévia e arquivos privados no serviço local |
+| Vistoria | Rascunho, oito itens, avarias, carga da bateria (%)/km, cinco vistas, envio e parecer; imagens temporárias na prévia e arquivos privados no serviço local |
 | Devolução | Agenda, vistoria de retorno, carro/chaves, kit bom/avariado, acerto final e caução separados |
 | Ocorrências | Multa, sinistro e avaria, prazo, manifestação do motorista, análise e título somente após decisão humana |
 | Loja | Combo, divergência, reserva/expiração, conferência, entrega, pagamento tardio e devolução/reembolso com origem |

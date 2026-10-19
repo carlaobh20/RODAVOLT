@@ -75,3 +75,7 @@ Foi criada uma base de homologação local em Node 22 sem dependências: `npm ru
 A área pessoal do motorista é separada por conta, sem leitura nem backup pela gestão. O backup operacional inclui arquivos, exclui senhas/personal e restauração revoga os acessos de motorista. O proprietário entra novamente e recria os vínculos após conferir os cadastros; arquivos originais são preservados.
 
 O serviço em HTTP/127.0.0.1 não está publicado para celular ou internet. Fixtures e datas operacionais continuam demonstrativas. Banco/Pix, assinatura, telemetria e push permanecem sem fornecedores escolhidos; uso com o primeiro carro, revisão jurídica/contábil, recuperação externa e facilidade para motoristas reais ainda dependem de homologação.
+
+## Decisão sobre frota elétrica · 18/10/2026
+
+Confirmado: comprar somente carros 100% elétricos e operar em Maringá/PR. No piloto, o motorista paga as recargas; a locadora não registra esse gasto como despesa ou receita própria. Consumo em kWh/100 km, preço efetivo em R$/kWh, perdas e eventual participação futura da empresa são parâmetros explícitos. Modelo, carregador, tarifa, seguro e proposta de compra permanecem abertos. Vistorias passam a registrar carga da bateria (%), cabo/porta e alertas; não converter percentual antigo de combustível em carga. Revisões seguem manual e prazo do veículo escolhido.

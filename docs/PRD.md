@@ -44,7 +44,7 @@ Cenários nomeados são cópias; carregar altera só o rascunho. Plano de refer�
 
 Início com aluguel, revisão, meta e atalhos. Metas/custos pessoais, análise de corrida, jornada diária, carteira/comprovante, kit/venda/reposição, manutenção, vistoria, condições/documentos e suporte com protocolos/resposta.
 
-“Vale a corrida?” recebe oferta líquida ao motorista, km/min de aproximação e viagem, espera, reposicionamento e pedágio não reembolsado. Calcula combustível, custo variável e aluguel proporcional ao tempo planejado. Mostra sobra, líquido/km, líquido/hora, oferta mínima e diferença para a meta. A oferta mínima satisfaz o maior requisito entre mínimos de km/hora e meta diária convertida pelos km/horas planejados. Quem decide aceitar é o motorista. O registro pessoal não executa aceitação em outra plataforma.
+“Vale a corrida?” recebe oferta líquida ao motorista, km/min de aproximação e viagem, espera, reposicionamento e pedágio não reembolsado. Calcula recarga (consumo kWh/100 km, perdas e R$/kWh), custo variável e aluguel proporcional ao tempo planejado. Mostra sobra, líquido/km, líquido/hora, oferta mínima e diferença para a meta. A oferta mínima satisfaz o maior requisito entre mínimos de km/hora e meta diária convertida pelos km/horas planejados. Quem decide aceitar é o motorista. O registro pessoal não executa aceitação em outra plataforma.
 
 Jornada pessoal não é receita da locadora. Salvar a mesma data corrige o dia; aluguel rateado não é multiplicado pelo número de corridas. Os ganhos e decisões pessoais não aparecem nas telas administrativas.
 
@@ -70,7 +70,7 @@ Financeiro: compromisso não altera caixa; baixa cria um lançamento idempotente
 
 Meu advogado: locação semanal, entrega/devolução, custódia do kit, aditivo e distrato. Cinco textos completos para revisão profissional estão disponíveis na biblioteca, com download de modelo e rascunho preenchido; a versão curta antiga é preservada. Modelos/textos e documentos têm versões preservadas. Campos pendentes impedem revisão; revisão manual antecede fila e envio simulado. Cada parte tem registro separado. Contrato concluído só libera o gate do motorista/carro corretos, durante vigência; assinar não entrega o carro. Nome/modelo/placa da versão ficam preservados. Antes do uso real, o pacote exige escolhas comerciais, dados de qualificação em ambiente privado, revisão por advogado e assinatura válida. Ver `docs/PACOTE-CONTRATUAL.md`.
 
-Vistoria: rascunho → enviada → correção/aprovada. Tipo entrega/periódica/devolução, carro/vínculo, km, combustível, oito itens, avarias e cinco vistas. Foto local temporária não é enviada nem salva em localStorage; imagem demonstrativa é marcada como ilustração. Conferência humana é distinta de envio. Segurança pendente impede aprovação. Encerrar vínculo ou aprovar devolução invalida a entrega anterior.
+Vistoria: rascunho → enviada → correção/aprovada. Tipo entrega/periódica/devolução, carro/vínculo, km, carga da bateria (%), oito itens, avarias e cinco vistas. Foto local temporária não é enviada nem salva em localStorage; imagem demonstrativa é marcada como ilustração. Conferência humana é distinta de envio. Segurança pendente impede aprovação. Encerrar vínculo ou aprovar devolução invalida a entrega anterior.
 
 Painel ativo: mapa geográfico, posições e percurso fictícios, idade do dado e sem conexão/desatualizado claramente identificados; clique abre contexto, documentos, vistorias, financeiro e histórico. Não animar demonstração como telemetria real. Telemetria depende do rastreador e do serviço contratados; não rastrear a pessoa fora do veículo por inferência.
 
@@ -121,7 +121,7 @@ Escolha confirmada pelo proprietário: o motorista paga a semana já utilizada (
 
 A entrega exige agenda válida da mesma versão, carro e ciclo. Emissão até uma data é idempotente e não recebe dinheiro. Preço é preservado; calendário incompatível e contrato alterado impedem emissão incoerente. As quatro cobranças de abertura não são duplicadas: continuidade exige cobertura histórica conferida e primeiro vencimento posterior.
 
-Devolução segue agendamento → vistoria de retorno aprovada → recebimento físico de carro/chaves/km/combustível → retorno do kit bom/avariado → demonstrativo → encerramento. O kanban não contorna esses passos. Devolução não quita dívidas, não compensa caução/crédito e não encerra manutenção. Um carro recebido pode continuar indisponível por manutenção.
+Devolução segue agendamento → vistoria de retorno aprovada → recebimento físico de carro/chaves/km/carga da bateria (%) → retorno do kit bom/avariado → demonstrativo → encerramento. O kanban não contorna esses passos. Devolução não quita dívidas, não compensa caução/crédito e não encerra manutenção. Um carro recebido pode continuar indisponível por manutenção.
 
 A última cobrança é ajustada conforme a regra conferida. Cobranças originais e pagamentos permanecem no histórico. Valor recebido a maior vira obrigação separada; sua devolução baixa caixa e passivo sem nova despesa. O pagamento da última parcial mantém o dia semanal combinado. Reajuste, multa, juros e cobrança após vigência não são inventados pelo sistema.
 

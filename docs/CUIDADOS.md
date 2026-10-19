@@ -4,7 +4,7 @@ O módulo `src/maintenance.js` organiza planos explícitos por carro. Não cria 
 
 ## Configurar o plano
 
-Informe o serviço, intervalo em km, intervalo em dias ou ambos, data e km do último cuidado, antecedência do aviso em km e origem das condições. O custo estimado é opcional. Os valores são escolhidos pela gestão conforme o veículo e a orientação profissional, sem inventar indicação mecânica. Havendo dois critérios, o que chegar primeiro demanda atenção. Vários planos podem coexistir no mesmo carro; óleo, pneus e outros cuidados mantêm seus próprios intervalos.
+Informe o serviço, intervalo em km, intervalo em dias ou ambos, data e km do último cuidado, antecedência do aviso em km e origem das condições. O custo estimado é opcional. Os valores são escolhidos pela gestão conforme o veículo e a orientação profissional, sem inventar indicação mecânica. Havendo dois critérios, o que chegar primeiro demanda atenção. Vários planos podem coexistir no mesmo carro; porta de recarga, bateria, pneus e outros cuidados mantêm seus próprios intervalos.
 
 A próxima data usa dias corridos desde o último cuidado confirmado. O próximo km usa o hodômetro daquele cuidado. Um prazo vencido ou km atingido permanece pendente até existir serviço concluído. Um aviso de proximidade por km aparece como planejamento, sem prometer que o carro alcançará a quilometragem numa data determinada.
 

@@ -4,7 +4,7 @@
 
 `npm run check` passou com **373 testes**, build dos dois HTMLs e sintaxe completa. Dois testes adicionais verificam os cenários de sensibilidade contra `S.simulate`, a erosão de caixa no primeiro mês e o ponto de equilíbrio semanal. O fluxo interno pré-existente de acesso, cobrança, estoque, vistoria, fechamento, backup e concorrência continua coberto pelos testes HTTP locais; nenhum teste chama banco, Pix, assinatura ou rastreador reais.
 
-A pesquisa pública está em [CALIBRACAO-MARINGA.md](CALIBRACAO-MARINGA.md). O cenário opcional altera só preço do HB20 de comparação e IPVA aproximado; seguro, financiamento, aluguel e custos de operação não foram cotados. A checagem visual no navegador desta rodada foi recusada pela autorização de acesso à origem local, portanto a nova seção do simulador não foi homologada visualmente nesta rodada. Build e testes não substituem essa inspeção.
+A pesquisa pública está em [CALIBRACAO-MARINGA.md](CALIBRACAO-MARINGA.md). O cenário opcional altera apenas a revisão programada por km de referência; seguro, financiamento, aluguel e custos de operação não foram cotados. A checagem visual no navegador desta rodada foi recusada pela autorização de acesso à origem local, portanto a nova seção do simulador não foi homologada visualmente nesta rodada. Build e testes não substituem essa inspeção.
 
 18/10/2026 · planejamento e protótipo local. Interface v2 substituída; histórico preservado no Git.
 
@@ -61,7 +61,7 @@ Referência visual consultada diretamente no checkout oficial do Finanças Pesso
 Conferido em navegador, com transações de teste em sessões `?qa=1` isoladas:
 
 - Home, venda por produto, confirmação e estoque: perfume de R$89 mostra lucro de R$57 a conferir. A gestão confere o acerto, o motorista vê prévia R$1.050 − R$57 = R$993, confirma e o início passa a mostrar R$993. O comprovante mantém o saldo em aberto e mostra que aguarda conferência.
-- Vistoria móvel em quatro passos, preenchimento dos oito itens, erro claro por falta de fotos, cinco ilustrações marcadas como exemplo, resumo com km/combustível preservados e envio aguardando conferência. O motor continua exigindo aprovação humana. Teste isolado do controlador também preservou campos e fotos ao ir/voltar entre etapas.
+- Vistoria móvel em quatro passos, preenchimento dos oito itens, erro claro por falta de fotos, cinco ilustrações marcadas como exemplo, resumo com km/carga da bateria preservados e envio aguardando conferência. O motor continua exigindo aprovação humana. Teste isolado do controlador também preservou campos e fotos ao ir/voltar entre etapas.
 - Corrida de R$32 abaixo da meta e R$45 atingindo a meta; a decisão produz confirmação legível e fica no histórico pessoal.
 - Perfil ativo e candidato têm caminhos distintos. Contratos/documento correto continuam acessíveis por Mais; o texto e assinatura são demonstrativos.
 - Visual claro/escuro em desktop e tela de 320px, além do fluxo móvel em 390px. A barra inferior permanece fixa, títulos/campos se reorganizam, ícones têm rótulos e não foi observado corte horizontal nas telas examinadas.

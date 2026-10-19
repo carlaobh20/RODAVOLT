@@ -20,7 +20,7 @@ O layout e o controlador anteriores foram substituídos. A versão 2 permanece n
 
 Na prévia de design, a vistoria do motorista é guiada em quatro passos: painel do carro, itens, fotos e conferência antes de enviar. O aluguel mostra o saldo após os descontos; usar o lucro da lojinha pede confirmação com o valor antes, o desconto e quanto ainda falta pagar. As explicações do acerto e o histórico ficam acessíveis sem ocupar a tela inicial. Candidatos acompanham as etapas para receber o carro, enquanto motoristas ativos veem as tarefas da operação.
 
-A análise de corrida calcula líquido por km e por hora usando oferta informada manualmente, trajeto até o passageiro, viagem, reposicionamento, espera, combustível, outros custos, pedágio não reembolsado e aluguel rateado. Compara com os mínimos pessoais e com a meta diária convertida por tempo e distância. Registrar aceitar/recusar só preserva a escolha do motorista; não executa ações em Uber/99.
+A análise de corrida calcula líquido por km e por hora usando oferta informada manualmente, trajeto até o passageiro, viagem, reposicionamento, espera, recarga elétrica (kWh e R$/kWh), outros custos, pedágio não reembolsado e aluguel rateado. Compara com os mínimos pessoais e com a meta diária convertida por tempo e distância. Registrar aceitar/recusar só preserva a escolha do motorista; não executa ações em Uber/99.
 
 O piloto começa com um carro e sem reinvestimento automático no rascunho; cenários anteriores e plano preservado continuam disponíveis. Caução é obrigação, separada de receita e lucro. App de finanças pessoais e novos apps são benefícios previstos, sem acesso ativado; parcerias ficam para depois.
 

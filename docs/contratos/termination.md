@@ -7,7 +7,7 @@ MINUTA PARA REVISÃO PROFISSIONAL · DISTRATO E TERMO DE ENCERRAMENTO
 RODAVOLT e {{MOTORISTA}}; VEÍCULO {{CARRO}} · placa {{PLACA}}; CONTRATO ORIGINAL [ID, DATA, VERSÃO]; DATA EFETIVA {{INICIO}}.
 
 1. CAUSA E AVISO. Registrar iniciativa, motivo declarado, aviso e eventual acordo de encerramento. O prazo efetivo é conferido com o contrato e a devolução física; não presumir penalidade não pactuada.
-2. ENTREGA FÍSICA. Anexar vistoria final, km, combustível, fotos, chaves, documentos, acessórios, kit e recibo de recebimento. Apontar ordem de serviço necessária; isso não converte automaticamente achado em dívida do motorista.
+2. ENTREGA FÍSICA. Anexar vistoria final, km, carga da bateria (%), fotos, chaves, documentos, acessórios, kit e recibo de recebimento. Apontar ordem de serviço necessária; isso não converte automaticamente achado em dívida do motorista.
 3. ALUGUEL FINAL. Discriminar todas as semanas já utilizadas, última parcial conforme regra contratada, vencimentos, recebimentos e comprovantes pendentes. Se houve pagamento acima do devido, registrar obrigação e forma/prazo de restituição.
 4. LOJINHA E CRÉDITOS. Conferir combos, reservas, pedidos pagos não entregues, vendas manuais, retornos e quarentena. Demonstrar margem pertencente ao motorista, crédito disponível/aplicado, repasse pago e valores em apuração, sem dupla contagem.
 5. CAUÇÃO. Mostrar valor recebido, eventuais restituições, saldo e cada retenção proposta com fundamento, documento e oportunidade de manifestação. Restituição depende de instrução financeira específica; assinar distrato não transforma caução em receita nem autoriza retenção automática.

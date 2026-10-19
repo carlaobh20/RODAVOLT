@@ -10,7 +10,7 @@ import '../src/inspection.js';
 const S=globalThis.RodavoltSimulator,M=globalThis.RodavoltOperations,K=globalThis.RodavoltCoordination,I=globalThis.RodavoltInspection;
 const make=()=>{const ops=M.create(S.freezePlan(S.defaults));K.ensure(ops);I.ensure(ops);return ops;};
 const proposedContract=(ops,driverId='DRV-2')=>K.createContract(ops,{modelId:'rental',driverId,vehicleId:'RV-001',startDate:'2027-01-25',endDate:'2028-01-24',weekly:1050,deposit:1500,kmLimit:1500,conditions:'Exemplo para auditoria local.'});
-const submitComplete=(ops,r)=>{I.save(ops,r.id,{km:ops.vehicle.km+10,fuel:50,note:'Conferência de teste.',items:Object.fromEntries(I.items.map(([key])=>[key,'ok'])),evidence:I.slots.map(([slot])=>({slot,source:'illustrative'}))});I.submit(ops,r.id);};
+const submitComplete=(ops,r)=>{I.save(ops,r.id,{km:ops.vehicle.km+10,chargePct:50,note:'Conferência de teste.',items:Object.fromEntries(I.items.map(([key])=>[key,'ok'])),evidence:I.slots.map(([slot])=>({slot,source:'illustrative'}))});I.submit(ops,r.id);};
 
 test('periodic and return inspections require the current active driver and cannot reuse a former contract',()=>{
  const ops=make();M.move(ops,'DRV-1','closed');

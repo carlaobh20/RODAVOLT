@@ -7,7 +7,7 @@ Preparado em 18/10/2026 para a locação semanal de um carro a motorista de apli
 | Modelo | Conteúdo | Evidências que devem acompanhar a via final |
 |---|---|---|
 | Locação semanal | objeto, entrega, aluguel vencido, caução, uso, km, manutenção, seguro, sinistro, multas, mora, rastreador, loja, devolução, acerto e conflitos | quadro comercial, apólice, política de privacidade, vistoria, comprovantes |
-| Entrega e devolução | estado, fotos, hodômetro, combustível, chaves, ressalvas, reparos e recibo físico | checklist, cinco vistas, arquivos originais, aceite/ressalvas |
+| Entrega e devolução | estado, fotos, hodômetro, carga da bateria, chaves, ressalvas, reparos e recibo físico | checklist, cinco vistas, arquivos originais, aceite/ressalvas |
 | Custódia do kit | contagem por SKU, pagamento, margem integral do motorista, crédito opcional, perdas, devoluções e acerto | inventário, preço/custo, recibos de combo, vendas e repasses |
 | Aditivo | contrato original, cláusula antiga/nova, efeitos financeiros e data de corte | comparação de versões, nova vistoria se carro mudar |
 | Distrato | devolução, aluguel final, loja, créditos, caução, ocorrências e quitação limitada | demonstrativo final e comprovantes de restituição |
@@ -19,7 +19,7 @@ Preparado em 18/10/2026 para a locação semanal de um carro a motorista de apli
 3. **Carro:** placa, RENAVAM, chassi, ano/modelo, proprietário, acessórios, documentação, condições de uso e local de retirada/devolução.
 4. **Preço e calendário:** valor semanal real, dia de corte/vencimento, cobrança vencida, primeiro/último período parcial, feriado, prazo de cobrança e meios de pagamento. O protótipo não fixa multa, juros ou reajuste.
 5. **Caução:** valor, recibo, guarda, hipóteses fundamentadas de uso, prazo e forma de restituição, contestação e prestação de contas. Não é receita e não é compensada automaticamente.
-6. **Risco e operação:** apólice, cobertura para transporte por aplicativo, exclusões, franquia, assistência, sinistro, matriz de manutenção, combustível, pneus, km excedente, condutor adicional, área de circulação, prazo de aviso e encerramento.
+6. **Risco e operação:** apólice, cobertura para transporte por aplicativo, exclusões, franquia, assistência, sinistro, matriz de manutenção, recarga paga pelo motorista no piloto, pneus, km excedente, condutor adicional, área de circulação, prazo de aviso e encerramento.
 7. **Loja:** tabela de SKU, lote/validade, quantidades, preço/custo, taxas/tributos, emissor da nota, canal de pagamento, repasse e reembolso. A regra confirmada é 100% da margem comercial conferida para o motorista; custo do estoque volta à locadora. A incidência fiscal ainda exige contador.
 8. **Rastreador e dados:** fornecedor, base legal apropriada, finalidades, acesso, retenção, direitos e aviso específico. Evitar rastrear a pessoa fora do carro. Não há fornecedor ou rastreamento real hoje.
 9. **Assinatura:** escolher plataforma, grau de identificação, trilha de auditoria, integridade da versão e entrega de cópia a ambas as partes. Os botões atuais registram apenas simulação.

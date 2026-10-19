@@ -41,7 +41,7 @@ export function driverView(state,user,d){
   charges:own(o.charges).map(c=>({...c,balance:d.R.currentChargeBalance(o,c)})),credits:d.R.driverCredits(o,id),deposit:d.R.depositSummary(o,id),
   inventory,contracts:d.K.driverDocuments(o,id),agenda:d.K.driverAgendaItems(o,id),inspections:d.I.forDriver(o,id),requests:structuredClone(own(o.requests)),
   closures:structuredClone(own(o.closures?.records)),incidents:d.N?.forDriver(o,id)||[],
-  personal:structuredClone(state.personal[user.id]||{settings:{...d.D.defaults},journeys:[],offers:[]}),maintenance:d.W?.driverView(o,id)||[],timeZone:o.agenda?.timeZone||'America/Sao_Paulo'};
+  personal:(()=>{const personal=structuredClone(state.personal[user.id]||{settings:{...d.D.defaults},journeys:[],offers:[]});personal.settings=d.D.validate(personal.settings);return personal;})(),maintenance:d.W?.driverView(o,id)||[],timeZone:o.agenda?.timeZone||'America/Sao_Paulo'};
 }
 export function applyDriverCommand(state,user,command,input,d){
  const o=state.workspace.ops,id=user.driverId,driver=d.M.driver(o,id),own=(list,key)=>{const item=list.find(x=>x.id===key);if(!item||item.driverId!==id)throw new RangeError('Este registro não pertence ao seu acesso.');return item;};

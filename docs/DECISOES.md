@@ -83,3 +83,7 @@ Confirmado: comprar somente carros 100% elétricos e operar em Maringá/PR. No p
 ## Kanban editável · 18/10/2026
 
 O proprietário pediu liberdade para criar e apagar colunas. O quadro inicia com as cinco etapas conhecidas, mas seus nomes, ordem e existência são editáveis. Exclusão exige destino para os cartões, sem apagar motorista, contrato ou histórico. Coluna personalizada não altera a situação operacional; as transições para rodando e encerrado continuam sujeitas aos gates de contrato, vistoria, carro e devolução.
+
+## Regra opcional de expansão · 19/10/2026
+
+O proprietário pediu simular compras recorrentes de carros quando o caixa atingir um valor X, escolhendo pagamento à vista ou financiado e preenchendo as condições. A regra do rascunho inicial permanece desligada. Para os carros adicionais, a simulação permite repetir as condições do primeiro, pagar à vista ou informar entrada, juros e prazo próprios; preço diferente é opcional. O gatilho de caixa é conferido no fechamento mensal, e a compra só ocorre se também couberem desembolso e reserva após a compra. O carro novo só gera aluguel no mês seguinte. Resultados e eventos demonstrativos deixam visíveis os motivos de compra ou espera. Nenhuma compra ou financiamento é contratado pelo simulador.

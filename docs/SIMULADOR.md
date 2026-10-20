@@ -1,4 +1,4 @@
-# Simulador v3 · fluxo contínuo
+# Simulador · conta mensal e crescimento da frota
 
 O desenho recupera a ordem de leitura da referência antiga. `src/growth.js` mantém o motor por carro; `src/planning.js` prepara relatórios e agregações, sem fórmulas duplicadas nas telas. `prototype/simulator.js` apresenta os dados em uma página.
 
@@ -19,6 +19,14 @@ Mês zero: capital menos abertura, compra/preparação/kit. Não há receita ou 
 Aluguel: dias do calendário menos parada, vezes ocupação, valor semanal / 7; perda esperada reduz recebido. Loja: venda por dia alugado com custo, comissão, taxas e perda parametrizados. Custos por carro incluem manutenção mensal simples, manutenção adicional por km e pneus/km, além de seguro, IPVA/licenciamento provisionados, rastreador, limpeza e outros. Empresa tem administração e equipe adicional por escala.
 
 Financiamento Price por veículo: juros sobre saldo, principal programado e parcela separados; extra respeita caixa e dívida. Compra adicional ocorre no fechamento, faturando no mês seguinte. Aporte é capital externo explícito; retirada é fluxo ao proprietário. Reserva faz parte do caixa e não é despesa. Rendimento usa saldo inicial positivo do mês.
+
+## Comprar outro carro quando o caixa chegar a X
+
+A regra é opcional e fica desligada no rascunho inicial. O usuário define o saldo de caixa que dispara a compra, a meta de frota, o limite de compras por mês e a forma de adquirir os **próximos** carros. Pode repetir as condições do primeiro carro, pagar à vista ou financiar com entrada, juros e prazo próprios. O preço futuro pode ser diferente; zero no campo de preço adicional mantém o preço do primeiro carro. Preparação, tarifas aplicáveis e kit seguem as premissas gerais.
+
+No fechamento de cada mês, após a operação e eventuais retiradas ou amortizações prioritárias, cada compra exige **ambas** as condições: caixa antes da compra maior ou igual ao gatilho escolhido e caixa após desembolso suficiente para a reserva fixa, reserva por carro e obrigações. O teste é repetido para cada carro do mês. Um gatilho de zero significa comprar assim que a entrada ou preço à vista mais a reserva couber; não autoriza gastar caução ou crédito do motorista. A meta de frota e o limite mensal também bloqueiam compras adicionais.
+
+O resultado mostra custo em caixa, entrada ou preço à vista, dívida nova, parcela nova, mês da primeira compra e histórico de compras simuladas. Carro comprado no fechamento só fatura no mês seguinte. Contratos de financiamento dos carros existentes preservam suas condições quando o usuário altera as premissas dos próximos. O modelo **não** executa compra ou crédito real e não promete financiamento aprovado.
 
 Resultado: receita recebida e margem da loja menos operação, juros, depreciação e tributos estimados. Principal não reduz lucro. Preparação/tarifas são reconhecidas como despesas na aquisição e já integram o desembolso; não são pagas duas vezes.
 

@@ -34,6 +34,8 @@ Uma página contínua: margem de segurança → premissas em seis grupos → aqu
 
 Premissas: capital e reserva, frota inicial/meta, preço e entrada em reais, Price e juros/prazo, aluguel e ocupação/perda/paradas, manutenção mensal simples e custo adicional por km, custos por veículo/empresa, tributos estimados, loja, depreciação, renda do caixa, reinvestimento, amortização, aportes/retiradas, inflação, reajuste, horizonte e calendário.
 
+Expansão opcional: definir saldo de caixa X para disparar a compra dos próximos carros no fechamento do mês, com meta e limite de compras. Escolher para os carros adicionais as mesmas condições do primeiro, pagamento à vista ou financiamento com preço opcionalmente diferente, entrada, juros e prazo. O motor só compra se o caixa antes da compra atingir X **e** o desembolso preservar a reserva e as obrigações depois da compra; reaplica as condições para cada carro. A tela explica o gatilho, o mínimo necessário, o mês de compra, entrada/caixa gasto, dívida e parcela geradas. Carro novo só fatura no mês seguinte; empréstimos existentes mantêm seus termos.
+
 Fluxo: Hoje e cada ano/mês; entradas, despesas, parcela, principal programado, extra/total, saldo da dívida, juros da dívida/caixa, IR estimado, lucro, aportes, compras, retiradas, caixa e carros comprados. Cabeçalho legível, indicação de compra/reserva, memória por mês e CSV com todas as colunas. Não somar saldos em visões anuais.
 
 Retorno distingue recuperação econômica pelo lucro e dinheiro efetivamente distribuído. Meta não atingida permanece não atingida. Reservas não são duplicadas como despesas. Sem aportes inventados, sem receita extra no mês zero e sem receita de carro recém-comprado no próprio mês. Venda abaixo da dívida reconhece a diferença negativa.

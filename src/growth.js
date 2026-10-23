@@ -3,12 +3,12 @@
 (function(scope){
   'use strict';
   const defaults=Object.freeze({initialCapital:90000,companySetup:1500,initialFleet:1,targetFleet:10,
-    price:110000,financed:true,downPct:40,monthlyRate:1.4,term:48,financingFees:0,setup:1000,stockCapital:300,centralStockCapital:0,
+    price:109990,financed:true,downPct:40,monthlyRate:1.6,term:60,financingFees:0,setup:1000,stockCapital:300,centralStockCapital:0,
     reserveFixed:10000,reservePerCar:5000,weekly:1050,occupancy:92,stoppedDays:2,lossPct:3,
-    kmPerDay:150,energyPriceKWh:1.2,consumptionKWh100Km:15,chargingLossPct:10,companyChargePct:0,maintenanceKm:.043,maintenanceMonthly:0,tiresKm:.025,insurance:350,annualTax:3000,annualLicense:250,
+    kmPerDay:150,energyPriceKWh:1.2,consumptionKWh100Km:15,chargingLossPct:10,companyChargePct:0,maintenanceKm:.043,maintenanceMonthly:0,tiresKm:.025,insurance:600,annualTax:0,annualLicense:250,
     tracker:80,washing:80,other:0,admin:500,staffThreshold:5,staffCost:2200,
     revenueTaxPct:6,profitTaxPct:0,storeDaily:20,cogsPct:50,commissionPct:20,storeRewardBasis:'gross',driverProfitPct:100,paymentFeePct:2,storeLossPct:2,
-    depreciationPct:.8,cashYieldAnnual:0,monthlyContribution:0,oneOffContribution:0,contributionMonth:12,
+    depreciationPct:1.0,cashYieldAnnual:0,monthlyContribution:0,oneOffContribution:0,contributionMonth:12,
     reinvest:true,purchaseTriggerCash:0,growthPurchaseMode:'same',growthPrice:0,growthDownPct:40,growthMonthlyRate:1.4,growthTerm:48,ownerDrawPct:0,maxPurchasesPerMonth:1,amortStrategy:'off',extraAmort:500,extraMonth:12,
     priority:'growth',annualRentIncrease:0,annualCostInflation:0,horizon:60,startYear:2026,startMonth:11});
   const limits={initialCapital:[0,1e9],companySetup:[0,1e8],initialFleet:[0,1000,1],targetFleet:[1,1000,1],price:[1,1e7],downPct:[0,100],monthlyRate:[0,20],term:[1,360,1],financingFees:[0,1e7],setup:[0,1e7],stockCapital:[0,1e7],centralStockCapital:[0,1e9],reserveFixed:[0,1e9],reservePerCar:[0,1e8],weekly:[0,1e6],occupancy:[0,100],stoppedDays:[0,28],lossPct:[0,100],kmPerDay:[0,2000],energyPriceKWh:[0,100],consumptionKWh100Km:[.1,100],chargingLossPct:[0,50],companyChargePct:[0,100],maintenanceKm:[0,100],maintenanceMonthly:[0,1e6],tiresKm:[0,100],insurance:[0,1e6],annualTax:[0,1e7],annualLicense:[0,1e7],tracker:[0,1e6],washing:[0,1e6],other:[0,1e6],admin:[0,1e7],staffThreshold:[1,1000,1],staffCost:[0,1e7],revenueTaxPct:[0,100],profitTaxPct:[0,100],storeDaily:[0,1e6],cogsPct:[0,100],commissionPct:[0,100],driverProfitPct:[0,100],paymentFeePct:[0,100],storeLossPct:[0,100],depreciationPct:[0,20],cashYieldAnnual:[0,100],monthlyContribution:[0,1e9],oneOffContribution:[0,1e9],contributionMonth:[1,120,1],ownerDrawPct:[0,100],maxPurchasesPerMonth:[1,100,1],purchaseTriggerCash:[0,1e9],growthPrice:[0,1e7],growthDownPct:[0,100],growthMonthlyRate:[0,20],growthTerm:[1,360,1],extraAmort:[0,1e9],extraMonth:[1,120,1],annualRentIncrease:[0,100],annualCostInflation:[0,100],horizon:[1,120,1],startYear:[2020,2100,1],startMonth:[1,12,1]};

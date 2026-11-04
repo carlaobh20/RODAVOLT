@@ -31,3 +31,21 @@
 #rodavolt .co-month .co-day{min-height:150px}
 @media(max-width:1100px){#rodavolt .co-model-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#rodavolt .co-calendar{grid-template-columns:repeat(4,minmax(0,1fr))}#rodavolt .co-calendar.co-month{grid-template-columns:repeat(7,minmax(0,1fr));overflow-x:auto;padding-bottom:8px}#rodavolt .co-month .co-day{min-width:105px}}
 @media(max-width:650px){#rodavolt .co-model-grid,#rodavolt .co-signatures{grid-template-columns:1fr}#rodavolt .co-calendar{grid-template-columns:1fr}#rodavolt .co-day{min-height:80px}#rodavolt .co-calendar.co-month{grid-template-columns:repeat(7,105px)}#rodavolt .co-agenda-controls .btn{font-size:11px;padding:8px 10px}#rodavolt .co-document-header{flex-direction:column}#rodavolt .co-document{padding:15px}#rodavolt .co-filters .btn{flex:1 0 auto}}
+
+/* Numbered counsel handoff, distinct from signed documents and approval gates. */
+#rodavolt .legal-guide-boundary{padding:18px 22px;border:1px solid #d4dfca;background:#edf3e5;border-radius:14px;font-size:15px;line-height:1.6}
+#rodavolt .legal-guide-boundary p{margin:6px 0 0;color:#52634e}
+#rodavolt .legal-guide-counts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}
+#rodavolt .legal-guide-counts>div{display:flex;align-items:center;gap:13px;padding:20px;border:1px solid #dce5d8;background:#fff;border-radius:14px;font-size:14px;line-height:1.5}
+#rodavolt .legal-guide-counts strong{font-size:30px;color:#234e38}#rodavolt .legal-guide-counts small{color:#60705e;font-size:12px}
+#rodavolt .legal-business,#rodavolt .legal-guide-notes{border:1px solid #dce5d8;background:white;border-radius:12px;padding:16px 20px;margin:12px 0;line-height:1.7}
+#rodavolt .legal-guide-filters{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}
+#rodavolt .legal-guide-section{margin:26px 0 12px}#rodavolt .legal-guide-section h2{margin:0 0 6px;font-size:20px}#rodavolt .legal-guide-section p{margin:0;font-size:14px;color:#60705e}
+#rodavolt .legal-guide-items{padding:0;margin:0;list-style:none;border:1px solid #dde5d8;border-radius:16px;background:#fff;overflow:hidden}
+#rodavolt .legal-guide-items>li{display:grid;grid-template-columns:40px minmax(0,1fr) 220px;gap:18px;padding:23px;border-bottom:1px solid #e3eadd}#rodavolt .legal-guide-items>li:last-child{border-bottom:0}
+#rodavolt .legal-guide-number{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#e8f1db;color:#2f5135;font-weight:750}
+#rodavolt .legal-guide-copy h3{font-size:17px;margin:7px 0;line-height:1.4}#rodavolt .legal-guide-copy p{font-size:14px;line-height:1.6;margin:0 0 6px;color:#4e624e}#rodavolt .legal-guide-copy small{font-size:12px;line-height:1.6;color:#52644f}
+#rodavolt .legal-guide-actions{display:flex;flex-direction:column;align-items:flex-start;gap:8px}#rodavolt .legal-guide-actions .tag{white-space:normal;line-height:1.5}#rodavolt .legal-guide-actions .btn{min-height:38px}
+#rodavolt .legal-guide-detail{line-height:1.7}#rodavolt .legal-guide-detail li{margin:8px 0}#rodavolt .legal-guide-detail h3{margin-top:24px}
+@media(max-width:1100px){#rodavolt .legal-guide-counts{grid-template-columns:repeat(2,minmax(0,1fr))}#rodavolt .legal-guide-items>li{grid-template-columns:36px minmax(0,1fr);padding:18px;gap:14px}#rodavolt .legal-guide-actions{grid-column:2;flex-direction:row;flex-wrap:wrap;align-items:center}}
+@media(max-width:600px){#rodavolt .legal-guide-counts{grid-template-columns:1fr 1fr;gap:8px}#rodavolt .legal-guide-counts>div{padding:13px;gap:9px;font-size:12px;align-items:flex-start}#rodavolt .legal-guide-counts strong{font-size:25px}#rodavolt .legal-guide-filters .btn{flex:1 1 45%;font-size:12px}#rodavolt .legal-guide-items>li{grid-template-columns:30px minmax(0,1fr);gap:10px;padding:16px 12px}#rodavolt .legal-guide-number{width:29px;height:29px;font-size:12px}#rodavolt .legal-guide-copy h3{font-size:16px}#rodavolt .legal-guide-actions .tag{flex-basis:100%}}

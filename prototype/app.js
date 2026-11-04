@@ -60,6 +60,7 @@
  /* SIMULATOR VIEW */
  /* DRIVER VIEW */
 /* FINANCE VIEW */
+/* LEGAL GUIDE VIEW */
 /* COORDINATION VIEW */
 /* LIVE VIEW */
 /* INSPECTION VIEW */
@@ -84,7 +85,7 @@
   if(e.dataset.driverLayout){driverLayout=e.dataset.driverLayout;render();return;}
   if(e.dataset.financeTab){financeTab=e.dataset.financeTab;render();return;}
   if(e.dataset.flowMode){flowMode=e.dataset.flowMode;updateSimulatorResults();return;}
-  const action=e.dataset.action;if(!action)return;if(cockpitAction(action,e)||journeyAction(action,e)||maintenanceAction(action,e)||rentalAction(action,e)||closureAction(action,e)||incidentAction(action,e)||settlementAction(action,e)||shopAction(action,e)||simulatorAction(action,e)||driverAction(action,e)||financeAction(action,e)||coordinationAction(action,e)||liveAction(action,e)||inspectionAction(action,e)||programAction(action,e))return;
+  const action=e.dataset.action;if(!action)return;if(legalGuideAction(action,e)||cockpitAction(action,e)||journeyAction(action,e)||maintenanceAction(action,e)||rentalAction(action,e)||closureAction(action,e)||incidentAction(action,e)||settlementAction(action,e)||shopAction(action,e)||simulatorAction(action,e)||driverAction(action,e)||financeAction(action,e)||coordinationAction(action,e)||liveAction(action,e)||inspectionAction(action,e)||programAction(action,e))return;
   if(action==='agenda-notices'){checkAgendaReminders();if(mode==='driver'){driverNavigate('agenda');return;}else page='agenda';close();render();persist();return;}
   if(action==='close'){close();return;}
   if(action==='menu'){const opened=root.classList.toggle('menu-open');e.setAttribute('aria-expanded',String(opened));return;}

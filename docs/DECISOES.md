@@ -99,3 +99,7 @@ O serviço local recebe check-in com km e bateria, PDF privado vinculado à vers
 O PDF devolvido fica aguardando parecer. Arquivo conferido não significa assinatura criptograficamente validada nem libera carro; as conferências de assinatura e entrega continuam explícitas. Não há integração com GOV.BR. Prévia estática não recebe PDF nem coordenadas reais em localStorage: orienta usar acesso individual.
 
 O simulador destaca gráficos e aceita desconto e tentativas de compra a cada N meses, adiando quando caixa/reserva não suportam a compra. A leitura de um carro por 36 meses usa vencimentos e gatilhos; crescimento geral permanece com provisões mensais, diferença identificada. Contratos, preços, seguro, revenda e regime fiscal continuam sujeitos às condições efetivas e revisão profissional.
+
+## Mapa jurídico numerado · 04/11/2026
+
+O proprietário pediu os tipos de contrato e documentos para reduzir lacunas de proteção. Meu advogado ganhou 16 itens por etapa com finalidade, momento, checklist, evidências e fontes oficiais. Cinco são minutas existentes; três são complementos, cinco são roteiros a elaborar e três são grupos de documentos externos. A lista é recomendação para revisão do advogado/contador, sem promessa de blindagem ou nova aprovação de vínculo. Filtros, consulta e exportação não alteram documentos nem gates. Formalização da empresa, seguro, privacidade, prática trabalhista e direitos do cliente da lojinha aparecem expressamente.

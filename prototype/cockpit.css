@@ -1,0 +1,30 @@
+/* Focused visual refresh, system fonts, no external assets. */
+#rodavolt:not(.is-driver){--ink:#172e2b;--green:#126c57;--line:#dce6e1;background:#f3f6f3;color:var(--ink)}
+#rodavolt:not(.is-driver) .sidebar{background:#132f2b;color:#d9e7df;border-right:0}
+#rodavolt:not(.is-driver) .brand,#rodavolt:not(.is-driver) .owner{color:#f4faef}
+#rodavolt:not(.is-driver) .sidebar nav button{color:#c7d5ce;border-radius:10px;margin-bottom:3px}
+#rodavolt:not(.is-driver) .sidebar nav button[aria-current="page"]{background:#d7efb4;color:#16392e;font-weight:750}
+#rodavolt:not(.is-driver) .sidebar nav button:hover{background:#294c40;color:#fff}
+#rodavolt:not(.is-driver) .sidebar-plan{background:#24453b;border:1px solid #36584d;color:#ecf5e6}
+#rodavolt:not(.is-driver) .sidebar-plan button,#rodavolt:not(.is-driver) .sidebar-records{color:#d8ecce}
+#rodavolt:not(.is-driver) .nav-label{color:#8faa9c;letter-spacing:.13em}
+#rodavolt:not(.is-driver) .topbar{background:#fbfcf9;border-bottom:1px solid #e2e8de}
+#rodavolt:not(.is-driver) .panel,#rodavolt:not(.is-driver) .stat{border-radius:18px;border-color:#dde5dc;box-shadow:none}
+#rodavolt:not(.is-driver) .stat.featured{background:#193e31;color:#f1f7e9}
+#rodavolt:not(.is-driver) .stat.featured small,#rodavolt:not(.is-driver) .stat.featured .stat-label{color:#c5d8c3}
+#rodavolt:not(.is-driver) .btn{border-radius:10px;min-height:42px}
+#rodavolt:not(.is-driver) .btn.primary{background:#1a654d;border-color:#1a654d;color:white}
+#rodavolt:not(.is-driver) .heading h1{letter-spacing:-.035em;font-size:clamp(25px,3vw,38px)}
+.cockpit-hero{display:grid;grid-template-columns:1.5fr 1fr;gap:36px;padding:34px;border:1px solid #d4dfca;border-radius:22px;background:linear-gradient(115deg,#edf4de,#fbfcf7)}
+.cockpit-hero h1{font-size:clamp(30px,3.4vw,49px);line-height:1.12;letter-spacing:-.045em;margin:15px 0;color:#163d2f}
+.cockpit-hero p{max-width:600px;font-size:16px;line-height:1.65;color:#536558;margin:0 0 22px}
+.cockpit-pilot{align-self:center;border-radius:17px;background:#193d30;color:#f4f8e8;padding:28px;display:grid;gap:14px;box-shadow:12px 12px 0 #d8e4c5}
+.cockpit-pilot strong{font-size:25px;line-height:1.3}.cockpit-pilot small{color:#c6d9bd}.cockpit-pilot .small-label{color:#c9e9a9}
+.pilot-track{display:flex;gap:7px}.pilot-track i{display:block;flex:1;height:5px;border-radius:6px;background:#b6dc87}
+.cockpit-shortcuts{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:23px 0}
+.cockpit-shortcuts button{background:#fff;border:1px solid #dce4d7;color:#264535;border-radius:15px;padding:16px 10px;display:grid;justify-items:center;gap:9px;font:inherit;font-size:13px;cursor:pointer}
+.cockpit-shortcuts button:hover{border-color:#417355;background:#f0f6e8}.cockpit-shortcuts button span{font-size:24px;line-height:1}
+.launch-steps{padding:0;margin:0;list-style:none}.launch-steps li{display:flex;gap:14px;padding:17px 0;border-bottom:1px solid #e5ebe1}.launch-steps li:last-child{border-bottom:0}.launch-number{display:grid;place-items:center;background:#edf3e5;color:#2d5439;border-radius:50%;width:30px;height:30px;flex-shrink:0;font-weight:700}.launch-steps p{margin:5px 0 10px;font-size:13px;color:#647463}
+.journey-map{min-height:300px;width:100%;background:#e8eee6;border-radius:16px}.journey-map svg{display:block;width:100%;height:auto;max-height:500px}.journey-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.journey-card{padding:20px;background:white;border:1px solid #dce5d8;border-radius:16px}.journey-card h3{margin:10px 0}.journey-card p{line-height:1.5}.journey-card small{display:block;color:#637363;margin-top:8px}.journey-contracts{margin-bottom:24px}
+@media(max-width:1050px){.cockpit-hero{grid-template-columns:1fr;padding:24px}.cockpit-pilot{display:none}.cockpit-shortcuts{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.cockpit-hero{padding:22px}.cockpit-shortcuts{gap:8px}.cockpit-shortcuts button{font-size:12px;padding:13px 6px}.cockpit-hero .actions .btn{width:100%}}

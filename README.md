@@ -73,3 +73,9 @@ Cobrança vencida — pagamento da semana já utilizada — foi confirmada pelo 
 - [Validação](docs/VALIDACAO.md)
 
 Edição direta nesta pasta, branch `dev`, commit/push após verificações. Repositório [carlaobh20/RODAVOLT](https://github.com/carlaobh20/RODAVOLT). Publicação e migração de banco não fazem parte desta reconstrução local.
+
+## Atualização de 04/11/2026
+
+A tela **Minha operação** reúne atalhos e pendências para o primeiro carro. O app do motorista ganhou check-in, apresentação renovada de aluguel/lojinha, envio privado do contrato assinado externamente e compartilhamento voluntário de localização no serviço local. O painel identifica posição antiga e atualiza os registros entre acessos. A prévia de design conserva exemplos; documentos privados e localização precisam do acesso individual.
+
+O simulador inclui desconto negociado, cadência de tentativas de compra, gráficos destacados e análise de caixa por vencimentos do primeiro carro. Consulte os limites e o [roteiro do ensaio](ENSAIO-OPERACIONAL.md).

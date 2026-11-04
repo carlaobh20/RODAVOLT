@@ -6,10 +6,10 @@ import {resolve} from 'node:path';
 // filesystem is exposed to their VM and no code supplied by a request is executed.
 export async function loadDomain(root){
  const context=createContext({structuredClone,Intl,Date,Math,JSON,Map,Set,console});
- for(const name of ['growth','control','legacy/expansion','strategy','planning','driver','operations','finance','legal-pack','coordination','live','inspection','program','shop','rental','closure','incidents','maintenance']){
-  try{new Script(await readFile(resolve(root,'src',name+'.js'),'utf8'),{filename:name}).runInContext(context);}catch(error){if(error.code!=='ENOENT'||!['rental','closure','incidents','maintenance'].includes(name))throw error;}
+ for(const name of ['growth','control','legacy/expansion','strategy','planning','driver','operations','finance','legal-pack','coordination','live','inspection','program','shop','rental','closure','incidents','maintenance','journey']){
+  try{new Script(await readFile(resolve(root,'src',name+'.js'),'utf8'),{filename:name}).runInContext(context);}catch(error){if(error.code!=='ENOENT'||!['rental','closure','incidents','maintenance','journey'].includes(name))throw error;}
  }
- const keys={S:'Simulator',C:'Control',P:'Planning',M:'Operations',D:'Driver',F:'Finance',K:'Coordination',I:'Inspection',R:'Program',H:'Shop',B:'Rental',Z:'Closure',N:'Incidents',W:'Maintenance'};
+ const keys={S:'Simulator',C:'Control',P:'Planning',M:'Operations',D:'Driver',F:'Finance',K:'Coordination',I:'Inspection',R:'Program',H:'Shop',B:'Rental',Z:'Closure',N:'Incidents',W:'Maintenance',J:'Journey'};
  return Object.fromEntries(Object.entries(keys).map(([key,name])=>[key,context['Rodavolt'+name]]));
 }
 export function initialWorkspace(d){
@@ -37,17 +37,21 @@ export function adminWorkspace(state){
 export function driverView(state,user,d){
  const o=state.workspace.ops,id=user.driverId,driver=d.M.driver(o,id),vehicle=d.M.vehicles(o).find(v=>v.id===(driver.vehicleId||driver.nextVehicleId));
  const own=list=>(list||[]).filter(e=>e.driverId===id);
- const inventorySource=structuredClone(o);for(const product of inventorySource.book.products)product.kit=Object.values(inventorySource.shop?.kits||{}).reduce((sum,kit)=>sum+(kit.quantities[product.id]||0),0);const inventory=d.H.inventory(inventorySource,id);inventory.products=inventory.products.map(({id,name,category,price,cost,qty,reserved,available,batch,expiresOn,warranty,expired})=>({id,name,category,price,cost,qty,reserved,available,batch,expiresOn,warranty,expired}));
+ const inventorySource=structuredClone(o);for(const product of inventorySource.book.products)product.kit=Object.values(inventorySource.shop?.kits||{}).reduce((sum,kit)=>sum+(kit.quantities[product.id]||0),0);const inventory=d.H.inventory(inventorySource,id);inventory.products=inventory.products.map(({id:productId,name,category,price,cost,qty,reserved,available,batch,expiresOn,warranty,expired})=>({id:productId,name,category,price,cost,qty,reserved,available,batch,expiresOn,warranty,expired,driverProfit:available>0&&!expired?d.H.quote(inventorySource,id,[{productId,qty:1}]).driverProfit:null}));
  return {profile:structuredClone(driver),vehicle:vehicle?{id:vehicle.id,model:vehicle.model,plate:vehicle.plate,km:vehicle.km,nextKm:vehicle.nextKm,status:vehicle.status}:null,
   charges:own(o.charges).map(c=>({...c,balance:d.R.currentChargeBalance(o,c)})),credits:d.R.driverCredits(o,id),deposit:d.R.depositSummary(o,id),
   inventory,contracts:d.K.driverDocuments(o,id),agenda:d.K.driverAgendaItems(o,id),inspections:d.I.forDriver(o,id),requests:structuredClone(own(o.requests)),
   closures:structuredClone(own(o.closures?.records)),incidents:d.N?.forDriver(o,id)||[],
-  personal:(()=>{const personal=structuredClone(state.personal[user.id]||{settings:{...d.D.defaults},journeys:[],offers:[]});personal.settings=d.D.validate(personal.settings);return personal;})(),maintenance:d.W?.driverView(o,id)||[],timeZone:o.agenda?.timeZone||'America/Sao_Paulo'};
+  personal:(()=>{const personal=structuredClone(state.personal[user.id]||{settings:{...d.D.defaults},journeys:[],offers:[]});personal.settings=d.D.validate(personal.settings);return personal;})(),journey:d.J.forDriver(o,id),maintenance:d.W?.driverView(o,id)||[],timeZone:o.agenda?.timeZone||'America/Sao_Paulo'};
 }
 export function applyDriverCommand(state,user,command,input,d){
  const o=state.workspace.ops,id=user.driverId,driver=d.M.driver(o,id),own=(list,key)=>{const item=list.find(x=>x.id===key);if(!item||item.driverId!==id)throw new RangeError('Este registro não pertence ao seu acesso.');return item;};
  const personal=state.personal[user.id]||=({settings:{...d.D.defaults},journeys:[],offers:[]});
  switch(command){
+  case 'checkin':return d.J.checkin(o,id,input);
+  case 'location.share':return d.J.shareLocation(o,id,input);
+  case 'location.stop':return d.J.stopLocation(o,id);
+  case 'contract.return':{const file=state.files.find(f=>f.id===input.fileId&&f.driverId===id&&f.contractId===input.contractId&&f.mime==='application/pdf');if(!file)throw new RangeError('O PDF precisa pertencer a este contrato e a este acesso.');const contract=d.K.contracts(o,id).find(c=>c.id===input.contractId);if(!contract||file.contractVersion!==contract.version)throw new RangeError('A versão do contrato mudou após o upload. Confira e envie o PDF novamente.');return d.J.returnContract(o,id,{contractId:input.contractId,fileId:file.id,fileName:file.name});}
   case 'proof':own(o.charges,input.chargeId);return d.M.proof(o,input.chargeId,String(input.note||'Comprovante de teste enviado pelo acesso individual'));
   case 'credit':own(o.charges,input.chargeId);return d.R.applyAvailableCredit(o,id,input.chargeId);
   case 'request':return d.M.request(o,{type:input.type,driverId:id,vehicleId:driver.vehicleId,priority:input.priority,productId:input.productId,qty:input.qty,note:input.note});

@@ -153,3 +153,13 @@ Jornadas, metas e decisões pessoais no serviço pertencem à conta `user.id`; a
 - Dois logins concorrentes não sobrescrevem revisão antiga; reenvio idempotente não repete efeito.
 - Backup/restauração é verificado sem senhas/personal e exige recriar acessos de motorista; a restauração não apaga arquivos originais.
 - Testes locais, build e sintaxe passam; evidências e contagem final constam em `VALIDACAO.md`. Aprovação local não declara produção, integrações ou piloto real homologados.
+
+## Ensaio operacional v6 · 04/11/2026
+
+- Minha operação apresenta os próximos atos e o roteiro compra → cadastro → seleção → contrato → vistoria → rotina.
+- App redesenhado com check-in, aluguel, venda, vistoria e contrato acessíveis com linguagem direta; mesma direção visual na prévia e no acesso individual.
+- Check-in deve atualizar o hodômetro sem retroceder. Venda/reserva deve atualizar estoque do titular e painel administrativo; estoque até duas unidades gera alerta derivado.
+- Localização requer escolha do motorista, permissão do navegador, vínculo ativo e sessão. A gestão indica idade/precisão e não confunde dados do aparelho com telemetria demonstrativa.
+- PDF retornado exige arquivo privado do mesmo motorista e contrato/versão. Gestão registra parecer; motorista recebe o estado. Isso não substitui validação da assinatura externa ou revisão jurídica.
+- Atualização entre acessos preserva revisão e não sobrescreve formulário aberto. Conflito de gravação exige conferência, sem perda silenciosa.
+- Simulador: desconto negociado, compras periódicas condicionadas ao caixa, gráficos visíveis, vencimentos no cenário isolado, três propostas comparáveis. Padrões continuam hipóteses.

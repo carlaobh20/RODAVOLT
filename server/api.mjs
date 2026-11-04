@@ -57,17 +57,23 @@ export async function createOperationalServer({root,dataDir,port=4174}={}){
     const input=await body(req,4096);passwordCheck(input.password);if(!verify(input.currentPassword||'',user.password))fail(401,'Confira a senha atual.');await store.transact(state=>{state.users.find(u=>u.id===user.id).password=hash(input.password);audit(state,user,'password_changed');});for(const [token,session]of sessions)if(session.userId===user.id)sessions.delete(token);const issued=issue(res,user);return json(res,200,{ok:true,csrf:issued.csrf});
    }
    if((req.method==='PUT'&&path==='/api/workspace')||(req.method==='POST'&&path==='/api/command')){
-    const input=await body(req),id=String(req.headers['idempotency-key']||'');if(!/^[a-zA-Z0-9_-]{8,100}$/.test(id))fail(422,'Identificador de reenvio ausente.');const key=user.id+':'+id,fingerprint=digest({path,input}),expectedRevision=Number(req.headers['if-match']);
+    const input=await body(req),id=String(req.headers['idempotency-key']||'');if(!/^[a-zA-Z0-9_-]{8,100}$/.test(id))fail(422,'Identificador de reenvio ausente.');const key=user.id+':'+id,fingerprint=digest({path,input}),expectedRevision=Number(req.headers['if-match']),locationCommand=path==='/api/command'&&['location.share','location.stop'].includes(input.command);
     await store.transact(state=>{
-     const previous=state.idempotency[key];if(previous){if(previous!==fingerprint)fail(409,'Este identificador já foi usado por outra ação.');return NO_COMMIT;}
-     if(!Number.isInteger(expectedRevision)||expectedRevision!==state.revision)fail(409,'Outra sessão atualizou a operação. Atualize antes de continuar.');
+     const receipts=locationCommand?(state.locationIdempotency||={}):state.idempotency,previous=receipts[key];if(previous){if(previous!==fingerprint)fail(409,'Este identificador já foi usado por outra ação.');return NO_COMMIT;}
+     if(!locationCommand&&(!Number.isInteger(expectedRevision)||expectedRevision!==state.revision))fail(409,'Outra sessão atualizou a operação. Atualize antes de continuar.');
      if(path==='/api/workspace'){
       if(user.role!=='admin')fail(403,'Motorista não pode substituir a operação.');validateWorkspace(input,d);
       // Driver personal finances never travel in the management payload.
-      input.ops.personal={settings:{...d.D.defaults},journeys:[],offers:[]};input.ops.driverProfiles={};state.workspace=input;
+      input.ops.personal={settings:{...d.D.defaults},journeys:[],offers:[]};input.ops.driverProfiles={};
+      // Positions are session-owned telemetry, independent of the business revision.
+      // A manager's older form must never overwrite a new sample or revive stopped sharing.
+      d.J.ensure(input.ops).locations=structuredClone(d.J.ensure(state.workspace.ops).locations);state.workspace=input;
      }else{if(user.role!=='driver')fail(403,'Esta rota é exclusiva das tarefas do motorista.');applyDriverCommand(state,user,input.command,input.input||{},d);}
-     state.idempotency[key]=fingerprint;audit(state,user,path==='/api/workspace'?'workspace_saved':input.command,digest(state.workspace.ops));
-    });return json(res,200,view(store.get(),user));
+     receipts[key]=fingerprint;
+     // High-frequency positions keep a bounded retry window, without growing the business audit.
+     if(locationCommand){const own=Object.keys(receipts).filter(k=>k.startsWith(user.id+':'));for(const old of own.slice(0,Math.max(0,own.length-128)))delete receipts[old];if(input.command==='location.stop')audit(state,user,'location_sharing_stopped');}
+     else audit(state,user,path==='/api/workspace'?'workspace_saved':input.command,digest(state.workspace.ops));
+    },{bumpRevision:!locationCommand});return json(res,200,view(store.get(),user));
    }
    if(req.method==='GET'&&path==='/api/audit'){if(user.role!=='admin')fail(403,'Acesso da gestão necessário.');return json(res,200,{events:store.get().audit.slice(-500)});}
    if(req.method==='GET'&&path==='/api/providers')return json(res,200,{providers:store.get().providers});
@@ -76,7 +82,9 @@ export async function createOperationalServer({root,dataDir,port=4174}={}){
     const content=Buffer.from(String(input.content||''),'base64'),mime=String(input.mime||''),magic=content.subarray(0,8),valid=mime==='application/pdf'&&magic.subarray(0,5).toString()==='%PDF-'||mime==='image/png'&&magic.equals(Buffer.from([137,80,78,71,13,10,26,10]))||mime==='image/jpeg'&&magic[0]===255&&magic[1]===216&&magic[2]===255;
     if(!valid||content.length>5*1024*1024||content.length<8)fail(422,'Use PDF, PNG ou JPEG válido com até 5 MB.');
     if(input.inspectionId){if(!['image/png','image/jpeg'].includes(mime))fail(422,'A vistoria precisa de foto PNG ou JPEG.');const inspection=d.I.lookup(store.get().workspace.ops,input.inspectionId);if(inspection.driverId!==driverId||!d.I.slots.some(([slot])=>slot===input.slot))fail(422,'Vínculo ou vista da foto inválidos.');}
-    const id=randomUUID(),metadata={id,driverId,inspectionId:input.inspectionId||null,slot:input.slot||null,name:String(input.name||'Arquivo de homologação').replace(/[\x00-\x1f/\\]/g,'').slice(0,150),mime,size:content.length,sha256:digest(content.toString('base64')),createdAt:new Date().toISOString(),by:user.id};
+    const uploadedContract=input.contractId?d.K.contracts(store.get().workspace.ops,driverId).find(c=>c.id===input.contractId):null;
+    if(input.contractId&&(!uploadedContract||mime!=='application/pdf'))fail(422,'Envie um PDF vinculado a um contrato deste motorista.');
+    const id=randomUUID(),metadata={id,driverId,contractId:input.contractId||null,contractVersion:uploadedContract?.version||null,inspectionId:input.inspectionId||null,slot:input.slot||null,name:String(input.name||'Arquivo de homologação').replace(/[\x00-\x1f/\\]/g,'').slice(0,150),mime,size:content.length,sha256:digest(content.toString('base64')),createdAt:new Date().toISOString(),by:user.id};
     await writeFile(resolve(dataDir,'files',id),content,{flag:'wx',mode:0o600});await store.transact(state=>{state.files.push(metadata);audit(state,user,'private_file_added',id);});return json(res,201,{file:metadata});
    }
    if(req.method==='GET'&&path==='/api/files')return json(res,200,{files:store.get().files.filter(f=>user.role==='admin'||f.driverId===user.driverId)});
@@ -89,7 +97,9 @@ export async function createOperationalServer({root,dataDir,port=4174}={}){
     if(user.role!=='admin')fail(403,'Acesso da gestão necessário.');const input=await body(req,50*1024*1024);if(input.format!=='rodavolt-local-backup-v1'||input.sha256!==digest(input.payload))fail(422,'Backup inválido ou alterado.');validateWorkspace(input.payload.workspace,d);
     const newFiles=[],fileIds=new Map();for(const f of input.payload.files||[]){if(!/^[0-9a-f-]{36}$/.test(f.id)||f.sha256!==digest(f.content)||fileIds.has(f.id)||!input.payload.workspace.ops.drivers.some(driver=>driver.id===f.driverId))fail(422,'Arquivo do backup inválido.');const content=Buffer.from(f.content,'base64');if(content.length!==f.size||content.length>5*1024*1024)fail(422,'Tamanho de arquivo inválido.');const id=randomUUID();await writeFile(resolve(dataDir,'files',id),content,{flag:'wx',mode:0o600});const {content:unused,...metadata}=f;newFiles.push({...metadata,id});fileIds.set(f.id,id);}
     const restored=structuredClone(input.payload.workspace);for(const inspection of restored.ops.inspections?.records||[])for(const evidence of inspection.evidence||[])if(evidence.source==='private'){if(!fileIds.has(evidence.fileId))fail(422,'O backup não contém uma das fotos referenciadas pela vistoria.');evidence.fileId=fileIds.get(evidence.fileId);}
-    await store.transact(state=>{if(Number(req.headers['if-match'])!==state.revision)fail(409,'A operação mudou. Atualize antes de restaurar.');state.workspace=restored;state.files=newFiles;state.idempotency={};for(const account of state.users)if(account.role==='driver')account.disabled=true;audit(state,user,'backup_restored',input.sha256+' · acessos de motorista revogados; revincular conscientemente.');});sessions.clear();return json(res,200,{ok:true,reauthenticate:true});
+    for(const returned of restored.ops.journey?.contractReturns||[]){if(!fileIds.has(returned.fileId))fail(422,'O backup não contém um PDF de contrato referenciado.');returned.fileId=fileIds.get(returned.fileId);}
+    if(restored.ops.journey)restored.ops.journey.locations={};
+    await store.transact(state=>{if(Number(req.headers['if-match'])!==state.revision)fail(409,'A operação mudou. Atualize antes de restaurar.');state.workspace=restored;state.files=newFiles;state.idempotency={};state.locationIdempotency={};for(const account of state.users)if(account.role==='driver')account.disabled=true;audit(state,user,'backup_restored',input.sha256+' · acessos de motorista revogados; revincular conscientemente.');});sessions.clear();return json(res,200,{ok:true,reauthenticate:true});
    }
    if(req.method==='GET'&&path==='/api/personal/export'){if(user.role!=='driver')fail(403,'Acesso do próprio motorista necessário.');return json(res,200,{personal:store.get().personal[user.id]||null});}
    if(path.startsWith('/api/'))fail(404,'Rota não encontrada.');

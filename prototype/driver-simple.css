@@ -142,3 +142,63 @@
 @media(max-width:600px){#rodavolt.is-driver main{padding:20px 16px 110px}#rodavolt.is-driver .topbar{padding:6px 16px}#rodavolt.is-driver .mobile-app{padding:0}#rodavolt.is-driver .driver-home-actions button{padding:18px;min-height:140px}#rodavolt.is-driver .driver-app-head{margin-bottom:22px}}
 @media(max-width:360px){#rodavolt.is-driver main{padding:18px 12px 105px}#rodavolt.is-driver .mobile-app{padding:0}#rodavolt.is-driver .driver-title-row{gap:10px}#rodavolt.is-driver .driver-header-tools{gap:6px}#rodavolt.is-driver .driver-home-actions{gap:10px}#rodavolt.is-driver .driver-home-actions button{padding:16px;min-height:140px}#rodavolt.is-driver .driver-home-actions strong{font-size:17px}#rodavolt.is-driver .driver-rent-card{padding:22px}#rodavolt.is-driver .driver-rent-card>strong{font-size:32px}#rodavolt.is-driver .panel,#rodavolt.is-driver .mobile-app .panel{padding:20px}#rodavolt.is-driver .ride-metrics{grid-template-columns:1fr}#rodavolt.is-driver .driver-tabs{padding-left:6px;padding-right:6px}}
 @media(prefers-reduced-motion:reduce){#rodavolt.is-driver *,#rodavolt.is-driver *::before,#rodavolt.is-driver *::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Driver workspace: one clear task at a time, spacious touch targets. */
+#rodavolt.is-driver{--driver-canvas:#f5f7f5;--driver-surface:#fff;--driver-soft:#e9efeb;--driver-ink:#173c32;--driver-muted:#65766e;--driver-line:#e1e9e4;--driver-positive:#127653}
+#rodavolt.is-driver.driver-dark{--driver-canvas:#101e19;--driver-surface:#1b2d25;--driver-soft:#294036;--driver-ink:#f0f8f3;--driver-muted:#b0c4b8;--driver-line:#31483b;--driver-on-ink:#10271c}
+#rodavolt.is-driver .driver-layout{max-width:680px}
+#rodavolt.is-driver .driver-greeting{font-size:13px;letter-spacing:.04em}
+#rodavolt.is-driver h1{font-size:34px;font-weight:700}
+#rodavolt.is-driver .driver-app-head{padding:6px 2px}
+#rodavolt.is-driver .driver-profile-button{background:#c5ecd2;color:#214e3a}
+#rodavolt.is-driver .driver-tabs{width:min(100%,680px);padding-top:8px;background:var(--driver-surface);border-radius:24px 24px 0 0;border:1px solid var(--driver-line);border-bottom:0;box-shadow:0 -6px 25px #0a281909}
+#rodavolt.is-driver .driver-tabs button[aria-current=page]{color:var(--driver-ink);background:var(--driver-soft);border-radius:18px}
+#rodavolt.is-driver .driver-tabs button[aria-current=page]::after{display:none}
+#rodavolt.is-driver .driver-tabs button{min-height:64px;padding:8px 3px;font-size:14px}
+#rodavolt.is-driver .driver-tabs button>span{font-size:14px}
+#rodavolt.is-driver .driver-car-strip{display:flex;align-items:center;gap:12px;margin:0 0 18px;padding:16px 18px;background:var(--driver-surface);border-radius:20px;border:1px solid var(--driver-line)}
+#rodavolt.is-driver .driver-car-icon{display:grid;place-items:center;width:44px;height:44px;background:var(--driver-soft);border-radius:14px}
+#rodavolt.is-driver .driver-car-strip>div{flex:1;min-width:0}
+#rodavolt.is-driver .driver-car-strip strong{display:block;font-size:16px}
+#rodavolt.is-driver .driver-car-strip small{display:block;color:var(--driver-muted);font-size:13px}
+#rodavolt.is-driver .driver-car-strip>button{border:0;background:var(--driver-soft);color:var(--driver-ink);border-radius:50%;width:44px;height:44px;font-size:22px;cursor:pointer}
+#rodavolt.is-driver .driver-start{display:flex;align-items:center;gap:18px;justify-content:space-between;margin:0 0 20px;padding:22px 24px;border-radius:24px;background:#dcefe0;color:#173c32}
+#rodavolt.is-driver .driver-eyebrow{font-size:11px;letter-spacing:.1em;font-weight:750;display:block;margin:0 0 9px}
+#rodavolt.is-driver .driver-start h2{font-size:22px;margin:0 0 6px}
+#rodavolt.is-driver .driver-start p{font-size:14px;line-height:1.5;margin:0;max-width:260px;color:#43644e}
+#rodavolt.is-driver .driver-start .btn{background:#173c32;color:white;flex-shrink:0;min-width:150px}
+#rodavolt.is-driver .driver-rent-card{background:#173c32;color:#fff;position:relative;overflow:hidden;padding:24px}
+#rodavolt.is-driver .driver-rent-card>p{color:#c9ddd2;font-size:15px}
+#rodavolt.is-driver .driver-rent-card>strong{font-size:38px;font-weight:650}
+#rodavolt.is-driver .driver-rent-card>.btn{background:#d7f2df;color:#173c32}
+#rodavolt.is-driver .driver-rent-card .driver-rent-status{color:#e2f1e7;border-color:#476458}
+#rodavolt.is-driver .driver-section-label{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:26px 2px 0}
+#rodavolt.is-driver .driver-section-label h2{font-size:19px;margin:0}
+#rodavolt.is-driver .driver-section-label>span{font-size:12px;color:var(--driver-muted)}
+#rodavolt.is-driver .driver-home-actions{margin-top:14px}
+#rodavolt.is-driver .driver-home-actions button{position:relative;min-height:156px;border:1px solid var(--driver-line);padding:20px;border-radius:22px;transition:transform .15s,border-color .15s}
+#rodavolt.is-driver .driver-home-actions button:hover{transform:translateY(-2px);border-color:#a8c9b6}
+#rodavolt.is-driver .driver-home-actions button:first-child .driver-action-icon{background:#f9eccb;color:#7b5c1b}
+#rodavolt.is-driver .driver-home-actions strong{font-size:18px}
+#rodavolt.is-driver .driver-home-actions small{font-size:14px}
+#rodavolt.is-driver .driver-action-icon{border-radius:14px;width:42px;height:42px;background:var(--driver-soft)}
+#rodavolt.is-driver .driver-action-arrow{position:absolute;right:18px;top:20px;color:var(--driver-muted);font-size:20px}
+#rodavolt.is-driver .driver-location-card{display:flex;align-items:center;gap:14px;padding:20px;background:var(--driver-surface);border:1px solid var(--driver-line);border-radius:22px}
+#rodavolt.is-driver .driver-location-card>div{flex:1;min-width:0}
+#rodavolt.is-driver .driver-location-card p{font-size:13px;margin:4px 0 0;color:var(--driver-muted)}
+#rodavolt.is-driver .driver-location-card .btn{min-height:44px;padding:10px 15px;font-size:14px}
+#rodavolt.is-driver .driver-help-bar{display:flex;align-items:center;gap:12px;width:100%;background:transparent;border:0;color:var(--driver-ink);text-align:left;padding:24px 4px;font-size:15px;cursor:pointer}
+#rodavolt.is-driver .driver-help-bar>span:first-of-type{flex:1}
+#rodavolt.is-driver .driver-credit-teaser{background:#eef3df;color:#385129;border:1px solid #e0e9cb;font-size:15px}
+#rodavolt.is-driver .driver-process{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}
+#rodavolt.is-driver .driver-process>span{background:var(--driver-soft);font-size:12px;padding:8px 11px;border-radius:10px;font-weight:600}
+#rodavolt.is-driver .driver-document-icon{display:grid;place-items:center;background:var(--driver-soft);width:44px;height:44px;border-radius:13px;margin-bottom:12px}
+#rodavolt.is-driver .driver-document .actions{display:grid;grid-template-columns:1fr;gap:10px}
+#rodavolt.is-driver .driver-empty{text-align:center;padding:16px 4px}
+#rodavolt.is-driver .driver-empty>span{display:block;margin-bottom:14px}
+#rodavolt.is-driver .driver-shop-intro{border-radius:24px;background:#f5eacc;padding:24px;margin-bottom:22px;color:#58451f}
+#rodavolt.is-driver .driver-shop-intro h2{font-size:29px;line-height:1.18;color:#48371a}
+#rodavolt.is-driver .driver-shop-intro p{font-size:15px;margin-bottom:0;color:#6a5934}
+#rodavolt.is-driver .driver-connection-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+#rodavolt.is-driver .driver-next{border:1px solid var(--driver-line)}
+@media(max-width:480px){#rodavolt.is-driver .driver-start{display:block;padding:22px}#rodavolt.is-driver .driver-start .btn{width:100%;margin-top:18px}#rodavolt.is-driver .driver-start p{max-width:none}#rodavolt.is-driver .driver-section-label>span{display:none}#rodavolt.is-driver .driver-location-card{flex-wrap:wrap}#rodavolt.is-driver .driver-location-card .btn{width:100%}#rodavolt.is-driver .driver-home-actions button{padding:17px;min-height:155px}}

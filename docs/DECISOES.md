@@ -87,3 +87,15 @@ O proprietário pediu liberdade para criar e apagar colunas. O quadro inicia com
 ## Regra opcional de expansão · 19/10/2026
 
 O proprietário pediu simular compras recorrentes de carros quando o caixa atingir um valor X, escolhendo pagamento à vista ou financiado e preenchendo as condições. A regra do rascunho inicial permanece desligada. Para os carros adicionais, a simulação permite repetir as condições do primeiro, pagar à vista ou informar entrada, juros e prazo próprios; preço diferente é opcional. O gatilho de caixa é conferido no fechamento mensal, e a compra só ocorre se também couberem desembolso e reserva após a compra. O carro novo só gera aluguel no mês seguinte. Resultados e eventos demonstrativos deixam visíveis os motivos de compra ou espera. Nenhuma compra ou financiamento é contratado pelo simulador.
+
+## Evolução operacional · 04/11/2026
+
+Direção confirmada: simplificar administração e app do motorista, simular desconto/financiamento/amortização/cadência de compras, acompanhar estoque automaticamente, receber contratos assinados externamente e localização compartilhada pelo motorista.
+
+A gestão começa em Minha operação, com receita, despesa, compromisso, contrato, reposição e acompanhamento. Alertas de estoque derivam da disponibilidade por motorista (até duas unidades), sem enviar produtos automaticamente. O roteiro de ensaio abre as fontes dos registros; não marca etapas como aprovadas.
+
+O serviço local recebe check-in com km e bateria, PDF privado vinculado à versão contratual e localização voluntária do navegador. A gestão atualiza a cada dez segundos quando não há edição em andamento. Fotos de vistoria continuam no armazenamento privado já existente. A localização depende de autorização, app aberto e conexão; fica antiga após dois minutos. Não é rastreador do veículo nem localização de fundo garantida. Parar compartilhamento apaga as coordenadas atuais do estado. Restaurar backup interrompe compartilhamentos.
+
+O PDF devolvido fica aguardando parecer. Arquivo conferido não significa assinatura criptograficamente validada nem libera carro; as conferências de assinatura e entrega continuam explícitas. Não há integração com GOV.BR. Prévia estática não recebe PDF nem coordenadas reais em localStorage: orienta usar acesso individual.
+
+O simulador destaca gráficos e aceita desconto e tentativas de compra a cada N meses, adiando quando caixa/reserva não suportam a compra. A leitura de um carro por 36 meses usa vencimentos e gatilhos; crescimento geral permanece com provisões mensais, diferença identificada. Contratos, preços, seguro, revenda e regime fiscal continuam sujeitos às condições efetivas e revisão profissional.

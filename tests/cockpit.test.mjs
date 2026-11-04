@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {runInThisContext} from 'node:vm';
+import {loadDomain,initialWorkspace} from '../server/domain.mjs';
+const d=await loadDomain(process.cwd());
+for(const [name,key] of [['Operations','M'],['Finance','F'],['Shop','H'],['Coordination','K'],['Inspection','I']])globalThis['Rodavolt'+name]=d[key];
+runInThisContext(await readFile('src/cockpit.js','utf8'));
+test('cockpit derives low inventory from reservations and does not fabricate shipments',()=>{const w=initialWorkspace(d),o=w.ops,p=d.H.inventory(o,'DRV-1').products.find(p=>p.available>2),before=d.H.ensure(o).combos.length;d.H.createOrder(o,{driverId:'DRV-1',vehicleId:'RV-001',lines:[{productId:p.id,qty:p.available-2}]});const view=RodavoltCockpit.overview(o,d.S.freezePlan(w.params));assert.ok(view.lowStock.some(row=>row.driverId==='DRV-1'&&row.productId===p.id&&row.available===2));assert.equal(d.H.ensure(o).combos.length,before);assert.equal(view.freeCash+view.liabilities,view.finance.cash);});
+test('changing catalog price preserves quote already reserved for the customer',()=>{const o=initialWorkspace(d).ops,p=d.H.inventory(o,'DRV-1').products[0],order=d.H.createOrder(o,{driverId:'DRV-1',vehicleId:'RV-001',lines:[{productId:p.id,qty:1}]}),before=JSON.stringify(order.lines);d.H.updatePrice(o,p.id,{price:p.price+10,cost:p.cost+2});assert.equal(JSON.stringify(order.lines),before);assert.equal(d.H.quote(o,'DRV-1',[{productId:p.id,qty:1}]).gross,p.price+10);});

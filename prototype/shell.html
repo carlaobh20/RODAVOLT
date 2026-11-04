@@ -2,16 +2,16 @@
   <aside class="sidebar">
     <div class="brand"><span class="brand-mark" aria-hidden="true">r<span>↗</span></span><div>rodavolt<span>GESTÃO DE LOCAÇÃO</span></div><button type="button" class="mobile-menu" data-action="menu" aria-expanded="false">Menu</button></div>
     <nav aria-label="Menu principal">
-      <span class="nav-label">SEU DIA A DIA</span>
+      <span class="nav-label">OPERAÇÃO</span>
+      <button type="button" data-page="today"><span aria-hidden="true">◫</span>Minha operação</button>
       <button type="button" data-page="live"><span aria-hidden="true">◉</span>Painel ativo <small>Mapa</small></button>
-      <button type="button" data-page="today"><span aria-hidden="true">◫</span>Visão do dia</button>
       <button type="button" data-page="drivers"><span aria-hidden="true">▥</span>Motoristas <small>Kanban</small></button>
       <button type="button" data-page="fleet"><span aria-hidden="true">▱</span>Frota e cuidados</button>
       <button type="button" data-page="agenda"><span aria-hidden="true">◷</span>Agenda e compromissos</button>
       <button type="button" data-page="lawyer"><span aria-hidden="true">§</span>Meu advogado</button>
       <button type="button" data-page="finance"><span aria-hidden="true">＄</span>Financeiro</button>
       <button type="button" data-page="shop"><span aria-hidden="true">▦</span>Loja no carro</button>
-      <span class="nav-label">PRÓXIMOS PASSOS</span>
+      <span class="nav-label">PLANEJAR E CRESCER</span>
       <button type="button" data-page="simulator"><span aria-hidden="true">↗</span>Simulador de crescimento</button>
       <button type="button" data-page="compare"><span aria-hidden="true">≋</span>Planejado × realizado</button>
     </nav>
@@ -21,10 +21,10 @@
     <div class="owner"><span class="avatar">CF</span><div>Proprietário<small>RODAVOLT</small></div><span class="owner-dot"></span></div>
   </aside>
   <div class="workspace">
-    <header class="topbar"><div><span class="breadcrumb">RODAVOLT <span>/</span></span> <strong id="page-name">Visão do dia</strong></div><div class="top-actions"><button type="button" class="agenda-badge" data-action="agenda-notices">Compromissos <span id="agenda-count">0</span></button><button type="button" class="search-button" data-action="search">Buscar motorista, carro, contrato <kbd>⌕</kbd></button><button type="button" class="driver-switch" data-mode="driver">App do motorista <span aria-hidden="true">↗</span></button><button type="button" class="admin-switch" data-mode="admin">Voltar para a gestão</button></div></header>
+    <header class="topbar"><div><span class="breadcrumb">RODAVOLT <span>/</span></span> <strong id="page-name">Minha operação</strong></div><div class="top-actions"><button type="button" class="agenda-badge" data-action="agenda-notices">Compromissos <span id="agenda-count">0</span></button><button type="button" class="search-button" data-action="search">Buscar motorista, carro, contrato <kbd>⌕</kbd></button><button type="button" class="driver-switch" data-mode="driver">App do motorista <span aria-hidden="true">↗</span></button><button type="button" class="admin-switch" data-mode="admin">Voltar para a gestão</button></div></header>
     <div class="demo-banner"><span class="demo-dot"></span><span class="common-demo-text">Ambiente de demonstração <b>·</b> valores e pessoas fictícios <b>·</b> dados salvos neste navegador</span><span class="driver-demo-text">Demonstração · dados de exemplo</span><button type="button" data-action="about">Entender os dados</button></div>
     <main id="content"></main>
-    <footer><span>rodavolt <b>·</b> Clareza para operar. Visão para crescer.</span><button type="button" data-action="export-data">Exportar meus dados locais</button></footer>
+    <footer><span>rodavolt <b>·</b> Clareza para operar. Visão para crescer.</span><button type="button" data-action="export-data">Exportar meus dados locais</button><button type="button" data-action="import-data">Importar JSON</button></footer>
   </div>
   <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-head"><div><span class="small-label">RODAVOLT</span><h2 id="detail-title"></h2></div><button type="button" class="icon-button" data-action="close" aria-label="Fechar painel">×</button></div><div id="detail-content"></div></dialog>
   <div id="toast" role="status" aria-live="polite" hidden></div>

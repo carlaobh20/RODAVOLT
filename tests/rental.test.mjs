@@ -17,6 +17,19 @@ function active(ops,c,extra={}){const s=config(ops,c,extra),d=M.driver(ops,c.dri
 const own=(ops,id='DRV-2')=>ops.charges.filter(q=>q.driverId===id);
 const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-7,`${a} != ${b}`);
 
+test('first future rent is visible as a forecast without a charge, cash entry or state mutation',()=>{
+ const {ops}=make(),c=signed(ops);active(ops,c);const before=JSON.stringify(ops),next=B.nextPlannedCharge(ops,c.driverId);
+ assert.equal(next.forecast,true);assert.equal(next.start,'2027-01-25');assert.equal(next.end,'2027-01-31');assert.equal(next.due,'2027-02-01');assert.equal(next.amount,1050);
+ assert.equal(JSON.stringify(ops),before);assert.equal(own(ops).length,0);
+ B.generateThrough(ops,'2027-02-01');assert.equal(B.nextPlannedCharge(ops,c.driverId).due,'2027-02-08');
+});
+test('rent forecast never borrows another profile or an obsolete signed version',()=>{
+ const {ops}=make(),c=signed(ops);active(ops,c);
+ assert.equal(B.nextPlannedCharge(ops,'DRV-3'),null);
+ c.version++;assert.equal(B.nextPlannedCharge(ops,c.driverId),null);c.version--;
+ M.driver(ops,c.driverId).stage='closed';assert.equal(B.nextPlannedCharge(ops,c.driverId),null);
+});
+
 test('weekly arrears creates two used weeks for two drivers without issuing another receipt',()=>{const {ops}=make(),c=signed(ops);ops.book.initial.cars.push({...ops.book.initial.cars[0],id:'RV-002'});ops.vehicleDetails.push({id:'RV-002',model:'Carro de exemplo 2',plate:'DEMO002',km:0,nextKm:10000});const other=signed(ops,{driverId:'DRV-3',vehicleId:'RV-002',weekly:980});active(ops,c);active(ops,other);const entries=ops.book.entries.length,created=B.generateThrough(ops,'2027-02-08');assert.equal(created.length,4);assert.deepEqual(own(ops).map(q=>[q.periodStart,q.periodEnd,q.date,q.amount]),[['2027-01-25','2027-01-31','2027-02-01',1050],['2027-02-01','2027-02-07','2027-02-08',1050]]);assert.deepEqual(own(ops,'DRV-3').map(q=>q.amount),[980,980]);assert.equal(B.generateThrough(ops,'2027-02-08').length,0);assert.equal(ops.book.entries.length,entries);F.ensure(ops);assert.equal(ops.finance.titles.filter(t=>t.driverId==='DRV-2').length,2);assert.equal(new Set(ops.charges.map(q=>q.id)).size,ops.charges.length);});
 test('the signed weekly price is required and copied into each charge',()=>{const {ops}=make(),c=signed(ops,{weekly:1099.99});assert.throws(()=>config(ops,c,{weeklyAmount:1050}),/preço/);const s=active(ops,c);B.generateThrough(ops,'2027-02-01');assert.equal(own(ops)[0].amount,1099.99);assert.equal(own(ops)[0].contractVersion,1);c.weekly=1200;assert.throws(()=>B.generateThrough(ops,'2027-02-08'),/versão assinada/);assert.equal(s.weeklyAmount,1099.99);assert.equal(own(ops).length,1);});
 test('all commercial rules must be chosen explicitly before a schedule exists',()=>{for(const missing of ['paymentTiming','dueWeekday','firstWeek','lastWeek','confirmedConditions']){const {ops}=make(),c=signed(ops),before=JSON.stringify(ops);assert.throws(()=>config(ops,c,{[missing]:''}));assert.equal(JSON.stringify(ops),before,missing);}});

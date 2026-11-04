@@ -128,3 +128,16 @@ Conferência visual local: Minha operação em desktop, simulador com gráficos 
 - Casos adicionais: cobertura dos 16 tipos; campos ausentes; BRL e datas; entrada inválida; HTML escapado; exportação atual; base reutilizável sem motorista/evento/terceiro/assinatura; contratos, caixa e gates anteriores inalterados.
 - Conferência na prévia 4175 com dados sintéticos: biblioteca, locação incompleta, locação preenchida, download HTML, exportação/importação da base, troca de motorista e limpeza. Backup operacional exportado pela UI não contém os dados temporários do preparador.
 - Os textos são minutas para revisão profissional; testes de software não homologam conteúdo jurídico, fatos, assinatura, seguro ou crédito. Os documentos gerados não são automaticamente vinculados/aprovados no fluxo de assinaturas.
+
+## Entrada completa pela prévia · 04/11/2026
+
+Por escolha do usuário, o ensaio ocorreu somente na prévia 4175, sem criar contas no serviço. Backups antes/depois foram baixados pela interface e guardados fora do Git em `.local/ensaios/fluxo-001/`.
+
+- Rafael Lima · TESTE (DRV-6) e BYD Dolphin Mini · TESTE-EV-001 (RV-002), compra hipotética de R$ 110.000,00 à vista. Registros anteriores, parâmetros e plano de referência preservados. A aquisição é apenas um lançamento do ensaio, não uma avaliação de viabilidade ou compra real.
+- JUR-2 v2: oito documentos preenchidos e vinculados, exibidos individualmente no app; conferências e assinaturas de ambas as partes simuladas explicitamente. Datas alinhadas ao calendário demonstrativo: 25/01/2027 a 23/01/2028.
+- Caução de R$ 1.500,00 conferida no exemplo, registrada como obrigação restituível, sem receita. Vistoria VIS-2: 120 km, bateria 90%, oito itens e cinco ilustrações identificadas. Itens faltantes impediram envio; vistoria não aprovada impediu ativação do motorista. Após conferência humana simulada, vínculo passou a Rodando.
+- Agenda de aluguel vencido de R$ 1.050,00/semana: primeiro período 25–31/01, previsão de vencimento 01/02/2027. Nenhuma cobrança antecipada foi criada. O app passou a mostrar essa previsão, em vez de informar incorretamente que o aluguel não começou.
+- Combo de 5 perfumes, 3 carregadores e 5 cabos: trânsito sem disponibilidade de venda, recebimento confirmado no app e 13 unidades disponíveis. Uma venda de perfume gerou R$ 89,00 de recebimento fictício, R$ 32,00 de custo e R$ 57,00 de crédito do motorista. Entrega não repetiu baixa; saldo final 4/3/5. O crédito segue disponível, sem desconto automático em aluguel futuro.
+- `npm run check`: 427 testes aprovados, build de `index.html` e `prototype/preview.html` e sintaxe completa. Novas regressões cobrem pacote congelado por titular/versão, rejeição sem mutação, idempotência, preservação histórica e previsão de aluguel sem criar cobrança/caixa. A prévia manteve o ensaio após recarga.
+
+Esta rodada não homologou acesso individual em dois aparelhos, PDF assinado externamente, fotos reais, banco, Pix ou telemetria. As cinco imagens da vistoria são ilustrativas. O serviço autenticado e as integrações reais exigem ensaio próprio; a revisão jurídica não foi realizada.

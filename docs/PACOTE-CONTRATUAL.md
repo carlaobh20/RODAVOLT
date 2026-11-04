@@ -15,6 +15,8 @@ Atualizado em 04/11/2026. A biblioteca atual fica em **Meu advogado → Preparar
 
 O preparador usa **somente memória da aba**: não grava dados de qualificação em localStorage, widgetState, backup operacional, financeiro ou serviço. Atualizar/fechar a página perde o preenchimento. Arquivos baixados podem conter dados privados; sua guarda é uma ação explícita do usuário. A base importada valida tipo/versão/campos e não pode carregar identidade de motorista. Nenhum arquivo vai automaticamente ao GOV.BR, ITI ou terceiros.
 
+**Exceção exclusiva para ensaio fictício na prévia:** depois de preencher os oito modelos de entrada, **Vincular exemplo à operação** permite guardá-los em uma nova versão da minuta de locação. Exige motorista identificado como TESTE, carro com placa TESTE-, correspondência de identificação/datas/valores e confirmação de que não há dados pessoais reais. A cópia passa a integrar o estado local e seu backup, aparecendo como oito documentos no app do perfil correspondente. Revisão e assinaturas continuam simuladas e separadas da caução, vistoria e entrega. Editar as condições retira o pacote da versão atual, preservando a anterior no histórico. O vínculo não está disponível no serviço autenticado; não usar esse mecanismo para contratos reais.
+
 ## Biblioteca atual
 
 | Tipo | Textos preenchíveis |

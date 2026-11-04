@@ -120,3 +120,11 @@ Limites: armazenamento local em arquivo transacional serializado, um processo po
 Verificados testes de caixa por vencimento/km, sinistro, atraso recuperável, cotações, desconto, frequência de compras, reserva antes de amortização e compra inviável. Percurso pela API: check-in → gestão; PDF privado → devolução → parecer; pedido → reserva → pagamento conferido → baixa/crédito → entrega sem duplicação. Titularidade, versão do contrato e backup com arquivo remapeado cobertos. GPS usa canal separado da revisão financeira; salvar formulário antigo não apaga leitura nem reativa compartilhamento interrompido.
 
 Conferência visual local: Minha operação em desktop, simulador com gráficos e ações; motorista em 390 px, formulário e confirmação de check-in. Roteiro manual em ENSAIO-OPERACIONAL.md. GPS real no aparelho, assinatura externa e publicação multiusuário não foram homologados; banco/Pix automático permanece desconectado.
+
+## Biblioteca preenchível · 04/11/2026
+
+- `npm run contracts:export`: acervo anterior preservado; 22 modelos/formulários preenchíveis, pacote TXT/HTML e roteiro gerados.
+- `npm run check`: 422 testes aprovados, build e sintaxe completos.
+- Casos adicionais: cobertura dos 16 tipos; campos ausentes; BRL e datas; entrada inválida; HTML escapado; exportação atual; base reutilizável sem motorista/evento/terceiro/assinatura; contratos, caixa e gates anteriores inalterados.
+- Conferência na prévia 4175 com dados sintéticos: biblioteca, locação incompleta, locação preenchida, download HTML, exportação/importação da base, troca de motorista e limpeza. Backup operacional exportado pela UI não contém os dados temporários do preparador.
+- Os textos são minutas para revisão profissional; testes de software não homologam conteúdo jurídico, fatos, assinatura, seguro ou crédito. Os documentos gerados não são automaticamente vinculados/aprovados no fluxo de assinaturas.

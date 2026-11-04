@@ -163,3 +163,10 @@ Jornadas, metas e decisões pessoais no serviço pertencem à conta `user.id`; a
 - PDF retornado exige arquivo privado do mesmo motorista e contrato/versão. Gestão registra parecer; motorista recebe o estado. Isso não substitui validação da assinatura externa ou revisão jurídica.
 - Atualização entre acessos preserva revisão e não sobrescreve formulário aberto. Conflito de gravação exige conferência, sem perda silenciosa.
 - Simulador: desconto negociado, compras periódicas condicionadas ao caixa, gráficos visíveis, vencimentos no cenário isolado, três propostas comparáveis. Padrões continuam hipóteses.
+
+
+## Preparação documental completa · 04/11/2026
+
+Meu advogado oferece 22 modelos/formulários para os 16 tipos, com leitura integral, geração de pacote inicial de 8 documentos, preenchimento por grupos e exportação TXT/HTML imprimível. Campos pendentes permanecem visíveis. Empresa, carro, condições comerciais, privacidade e loja podem ser reutilizados por JSON privado explícito; motorista, evento, terceiros e assinatura ficam fora dessa base. O preparador não salva qualificação em localStorage/widgetState/servidor nem modifica documentos e gates do fluxo anterior. Seguro e crédito exigem documentos dos fornecedores; preenchimento não certifica revisão jurídica nem assinatura.
+
+Aceites: todas as categorias têm textos acessíveis; dados pessoais não migram ao próximo motorista; reais e datas são formatados corretamente; HTML baixado escapa os dados; importação rejeita campos estranhos e dados individuais; acervo e estados de assinatura/financeiro são preservados; exportações refletem as fontes.

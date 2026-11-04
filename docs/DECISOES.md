@@ -103,3 +103,10 @@ O simulador destaca gráficos e aceita desconto e tentativas de compra a cada N 
 ## Mapa jurídico numerado · 04/11/2026
 
 O proprietário pediu os tipos de contrato e documentos para reduzir lacunas de proteção. Meu advogado ganhou 16 itens por etapa com finalidade, momento, checklist, evidências e fontes oficiais. Cinco são minutas existentes; três são complementos, cinco são roteiros a elaborar e três são grupos de documentos externos. A lista é recomendação para revisão do advogado/contador, sem promessa de blindagem ou nova aprovação de vínculo. Filtros, consulta e exportação não alteram documentos nem gates. Formalização da empresa, seguro, privacidade, prática trabalhista e direitos do cliente da lojinha aparecem expressamente.
+
+
+## Biblioteca preenchível completa · 04/11/2026
+
+O proprietário pediu redigir todos os documentos para depois preencher os dados do motorista. Foram preparados 22 modelos/formulários para os 16 tipos, incluindo anexos, recibos, avisos, notificações e contratos com terceiros. Não é possível reduzir documentos de sinistro, acerto ou compra somente à identidade do motorista: os campos de empresa, carro, condições e fato real permanecem explícitos. Apólice e contrato bancário são documentos externos; há solicitação/conferência, sem emissão fictícia.
+
+A biblioteca em `src/legal-documents.js` gera textos e HTML imprimível, sem dependências. Os campos do preparador não entram no estado operacional nem no navegador persistente; base reutilizável é arquivo privado exportado/importado conscientemente. Trocar motorista limpa identidade, evento, terceiro e assinatura, preservando somente a base. Textos e regras comerciais continuam sujeitos à revisão profissional. Os cinco modelos do acervo operacional e documentos anteriores não foram reescritos nem aprovados automaticamente.

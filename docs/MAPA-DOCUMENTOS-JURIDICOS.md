@@ -6,7 +6,7 @@ Referências conferidas em 2026-11-04
 
 Roteiro recomendado para advogado e contador. Não é certificação, parecer ou lista universal de exigências legais. Anexos podem integrar o contrato principal; documentos por evento só são usados quando necessários.
 
-Há cinco minutas no aplicativo, sujeitas a revisão. Os demais itens abaixo são complementos, roteiros ou documentos de terceiros, não contratos finalizados.
+Há 22 modelos e formulários preenchíveis para os 16 tipos, sujeitos a revisão. Seguro e crédito incluem instrumentos preparatórios: apólice e contrato de financiamento precisam vir dos fornecedores. Documentos anteriores dos vínculos permanecem preservados.
 
 ANTES DA OPERAÇÃO: definir quem contrata, constituição/registro da empresa, CNPJ, poderes, atividades, tributação, emissão fiscal e exigências locais com advogado/contador. Site e nome comercial não substituem isso.
 
@@ -18,7 +18,7 @@ Prepare antes da entrega; privacidade deve ser informada antes de coletar os dad
 
 1. Locação semanal + quadro comercial
 Tipo: Contrato principal
-Situação no sistema: Minuta disponível · revisar
+Situação no sistema: Texto disponível · revisar
 Quando: Antes de entregar o carro, com assinatura das duas partes.
 Finalidade: Fixar o preço, o vínculo e as responsabilidades sem depender de conversas soltas.
 Conferir:
@@ -34,7 +34,7 @@ Referências: Código Civil · locação, boa-fé e consignação — https://ww
 
 2. Uso e cuidados do carro elétrico
 Tipo: Anexo da locação
-Situação no sistema: Complemento a detalhar
+Situação no sistema: Texto disponível · revisar
 Quando: Junto do contrato e sempre que a matriz de responsabilidades mudar.
 Finalidade: Deixar claro quem cuida, quem paga e o que fazer quando houver problema.
 Conferir:
@@ -50,7 +50,7 @@ Referências: Código Civil · locação, boa-fé e consignação — https://ww
 
 3. Caução: recebimento, uso e devolução
 Tipo: Termo e recibos
-Situação no sistema: Complemento a detalhar
+Situação no sistema: Texto disponível · revisar
 Quando: No recebimento e em cada movimentação; prestação de contas ao encerrar.
 Finalidade: Comprovar a garantia e evitar discussão sobre retenção ou saldo a devolver.
 Conferir:
@@ -60,13 +60,13 @@ Conferir:
 Guardar:
 - Recibo e comprovante bancário
 - Extrato da garantia e comprovante da restituição
-Atenção: A cláusula está na minuta; o recibo e os prazos reais precisam ser completados. Não aplicar automaticamente regras de caução de imóveis à locação do carro.
+Atenção: Os termos de recebimento e restituição estão disponíveis; complete os prazos e fatos reais. Não aplicar automaticamente regras de caução de imóveis à locação do carro.
 Referências: Código Civil · locação, boa-fé e consignação — https://www2.camara.leg.br/legin/fed/lei/2002/lei-10406-10-janeiro-2002-432893-normaatualizada-pl.html; Código de Defesa do Consumidor — https://www2.camara.leg.br/legin/fed/lei/1990/lei-8078-11-setembro-1990-365086-normaatualizada-pl.html
 
 
 4. Vistoria e entrega/devolução do veículo
 Tipo: Termo e laudo
-Situação no sistema: Minuta disponível · revisar
+Situação no sistema: Texto disponível · revisar
 Quando: Em cada entrega e devolução; inspeções periódicas durante o vínculo.
 Finalidade: Documentar posse, estado do carro e diferenças apuradas ao longo do uso.
 Conferir:
@@ -82,7 +82,7 @@ Referências: Código Civil · locação, boa-fé e consignação — https://ww
 
 5. Privacidade e compartilhamento de localização
 Tipo: Aviso e registros de ciência/permissão
-Situação no sistema: Documento a preparar
+Situação no sistema: Texto disponível · revisar
 Quando: Antes de cadastrar dados, receber fotos ou compartilhar posição.
 Finalidade: Explicar o tratamento de dados e limitar o acesso ao necessário.
 Conferir:
@@ -98,7 +98,7 @@ Referências: LGPD · finalidades, bases legais e direitos — https://www2.cama
 
 6. Uso do aplicativo e benefícios RODAVOLT
 Tipo: Termos de uso
-Situação no sistema: Documento a preparar
+Situação no sistema: Texto disponível · revisar
 Quando: Antes de ativar o acesso e ao alterar condições relevantes.
 Finalidade: Definir acesso, suporte e benefícios efetivamente oferecidos.
 Conferir:
@@ -119,7 +119,7 @@ Prepare antes de entregar o combo e iniciar as vendas.
 
 7. Custódia e venda do kit de produtos
 Tipo: Contrato/termo comercial
-Situação no sistema: Minuta disponível · revisar
+Situação no sistema: Texto disponível · revisar
 Quando: Antes do primeiro combo; recibo próprio a cada reposição.
 Finalidade: Definir estoque, vendas e ganho do motorista sem confundir com o aluguel.
 Conferir:
@@ -135,7 +135,7 @@ Referências: Código Civil · locação, boa-fé e consignação — https://ww
 
 8. Acerto da lojinha e crédito no aluguel
 Tipo: Demonstrativo e autorização específica
-Situação no sistema: Complemento a detalhar
+Situação no sistema: Texto disponível · revisar
 Quando: Em cada acerto e quando o motorista escolher usar seu lucro no aluguel.
 Finalidade: Provar quanto vendeu, quanto ganha e quanto deve repassar.
 Conferir:
@@ -145,13 +145,13 @@ Conferir:
 Guardar:
 - Demonstrativo aceito e comprovantes dos repasses
 - Autorização do abatimento com valor e cobrança
-Atenção: Os controles já existem no sistema, mas o documento de prestação de contas precisa acompanhar os registros; não usar autorização genérica para desconto de qualquer valor.
+Atenção: O demonstrativo preenchível acompanha os controles do sistema; não usar autorização genérica para desconto de qualquer valor.
 Referências: Código Civil · locação, boa-fé e consignação — https://www2.camara.leg.br/legin/fed/lei/2002/lei-10406-10-janeiro-2002-432893-normaatualizada-pl.html; Código de Defesa do Consumidor — https://www2.camara.leg.br/legin/fed/lei/1990/lei-8078-11-setembro-1990-365086-normaatualizada-pl.html
 
 
 9. Compra, entrega, trocas e garantia da loja
 Tipo: Condições de venda ao consumidor
-Situação no sistema: Documento a preparar
+Situação no sistema: Texto disponível · revisar
 Quando: Antes de ofertar produtos, inclusive por site ou QR de compra.
 Finalidade: Informar o passageiro/cliente e organizar reclamações e reembolsos.
 Conferir:
@@ -172,7 +172,7 @@ Obtenha antes da compra, do início da cobertura ou do serviço correspondente.
 
 10. Seguro: apólice, condições e endossos
 Tipo: Contrato com seguradora
-Situação no sistema: Obter de terceiro
+Situação no sistema: Modelo de apoio + documento externo
 Quando: Antes de o carro rodar e a cada alteração/renovação da cobertura.
 Finalidade: Tratar riscos que o contrato com o motorista não elimina.
 Conferir:
@@ -188,7 +188,7 @@ Referências: STF · Súmula 492 · responsabilidade da locadora — https://por
 
 11. Compra do elétrico e financiamento
 Tipo: Compra e eventual crédito
-Situação no sistema: Obter de terceiro
+Situação no sistema: Modelo de apoio + documento externo
 Quando: Antes de assinar a compra, contratar crédito ou dar sinal.
 Finalidade: Documentar aquisição, dívida e uso permitido do bem.
 Conferir:
@@ -204,7 +204,7 @@ Referências: Código Civil · locação, boa-fé e consignação — https://ww
 
 12. Fornecimento de produtos e prestação de serviços
 Tipo: Contratos com terceiros
-Situação no sistema: Obter de terceiro
+Situação no sistema: Modelo de apoio + documento externo
 Quando: Ao contratar fornecedor, oficina, tecnologia, rastreador ou outro prestador.
 Finalidade: Definir qualidade, prazo, responsabilidade e tratamento de dados fora da empresa.
 Conferir:
@@ -225,7 +225,7 @@ Use somente quando o evento acontecer, preservando a versão anterior e as prova
 
 13. Alteração de contrato ou troca de veículo
 Tipo: Aditivo
-Situação no sistema: Minuta disponível · revisar
+Situação no sistema: Texto disponível · revisar
 Quando: Se mudar preço, prazo, carro, caução ou outra condição relevante.
 Finalidade: Preservar o combinado anterior e a data em que a nova regra passa a valer.
 Conferir:
@@ -241,7 +241,7 @@ Referências: Código Civil · locação, boa-fé e consignação — https://ww
 
 14. Multa, sinistro ou avaria: comunicação e apuração
 Tipo: Notificações e registros
-Situação no sistema: Documento a preparar
+Situação no sistema: Texto disponível · revisar
 Quando: Ao receber autuação ou ocorrer acidente/dano, respeitando cada prazo.
 Finalidade: Provar o ocorrido, permitir manifestação e separar proposta de dívida exigível.
 Conferir:
@@ -257,7 +257,7 @@ Referências: Identificação do condutor · alteração do CTB pela Lei 14.071/
 
 15. Acordo de pagamento de dívida apurada
 Tipo: Acordo eventual
-Situação no sistema: Documento a preparar
+Situação no sistema: Texto disponível · revisar
 Quando: Somente se houver saldo identificado e negociação efetiva.
 Finalidade: Organizar uma regularização com origem, valor e prazo verificáveis.
 Conferir:
@@ -273,7 +273,7 @@ Referências: Código Civil · locação, boa-fé e consignação — https://ww
 
 16. Encerramento, acerto final e restituição
 Tipo: Distrato/termo final
-Situação no sistema: Minuta disponível · revisar
+Situação no sistema: Texto disponível · revisar
 Quando: Ao terminar a locação, com ou sem pendências financeiras.
 Finalidade: Fechar a posse do carro e individualizar o que foi pago ou ainda precisa ser apurado.
 Conferir:
@@ -309,5 +309,7 @@ Identificação do condutor · alteração do CTB pela Lei 14.071/2020 — https
 CLT · relação de trabalho conforme os fatos — https://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-5452-1-maio-1943-415500-normaatualizada-pe.html
 
 Governo Digital · assinatura eletrônica e conferência — https://www.gov.br/governodigital/pt-br/identidade/assinatura-eletronica
+
+Código de Processo Civil · art. 784 e requisitos de execução — https://normas.leg.br/?urn=urn%3Alex%3Abr%3Afederal%3Alei%3A2015-03-16%3B13105%21art784
 
 ITI · VALIDAR · autoria e integridade — https://validar.iti.gov.br/

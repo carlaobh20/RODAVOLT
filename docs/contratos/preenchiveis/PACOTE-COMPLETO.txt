@@ -1,0 +1,497 @@
+MINUTA PARA REVISÃO PROFISSIONAL · CONTRATO DE LOCAÇÃO SEMANAL DE VEÍCULO ELÉTRICO
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+VIGÊNCIA: [PREENCHER: Início da vigência] a [PREENCHER: Fim da vigência]. ALUGUEL SEMANAL: R$ [PREENCHER: Aluguel semanal · R$], pago pela semana vencida. CAUÇÃO: R$ [PREENCHER: Caução contratada · R$].
+QUADRO COMERCIAL INTEGRANTE: ciclo e vencimentos: [PREENCHER: Corte, vencimento e primeira/última semana]; pagamento: [PREENCHER: Meio de pagamento e identificação do beneficiário]; quilometragem: [PREENCHER: Franquia de km e eventual excedente]; área e condutores: [PREENCHER: Área de circulação e condutores permitidos]; caução: [PREENCHER: Prazos e procedimento da caução]; aviso e encerramento: [PREENCHER: Aviso prévio e encerramento antecipado]; atraso: [PREENCHER: Tratamento de atraso e encargos acordados]; indisponibilidade: [PREENCHER: Tratamento do aluguel durante indisponibilidade].
+
+1. OBJETO E DESTINAÇÃO. A locadora cede temporariamente o uso do veículo elétrico para transporte lícito de passageiros por aplicativo pelo locatário habilitado. Não há compra do bem, transferência de propriedade ou garantia de faturamento. Integram esta contratação o quadro acima, o anexo de cuidados, a vistoria, o resumo da apólice efetiva, o aviso de privacidade e, se contratado, o termo da lojinha, nas versões identificadas e entregues às partes.
+
+2. ENTREGA. A disponibilização depende de documentação e habilitação conferidas, contrato assinado pelas partes, caução recebida, cobertura adequada vigente, vistoria aprovada e veículo apto. A entrega física é registrada com data/hora, km, bateria, chaves, cabo e acessórios. O locatário pode registrar ressalvas antes de receber. Vício oculto, recall ou falha de segurança não é presumido como responsabilidade do motorista. A locadora deve entregar e manter o bem apto ao uso contratado, observadas as responsabilidades legalmente admitidas.
+
+3. PREÇO E COBRANÇA. O aluguel remunera o período de utilização já transcorrido, conforme o ciclo expresso. Primeira/última semana e feriados seguem o quadro, sem criação automática de semanas integrais. A cobrança identifica período, vencimento, créditos e saldo. Pagamento parcial reduz apenas a obrigação identificada. Comprovante é submetido à confirmação; valores efetivamente recebidos devem ser reconhecidos. Reajuste ou mudança de preço exige condição expressamente acordada e versão válida para o período; não retroage sobre pagamentos encerrados por simples edição de cadastro.
+
+4. CAUÇÃO. A garantia é obrigação restituível da locadora, separada de receita, lucro e aluguel. O recebimento gera recibo e extrato individual. Uso para obrigação exigível depende de origem, valor, fundamento, prova, oportunidade de manifestação e demonstrativo de compensação; não há confisco por desistência, perda integral automática ou desconto por valor apenas estimado. O saldo incontroverso é restituído no prazo acordado, sem retenção indefinida por possíveis multas futuras. Pendências são individualizadas com prazo de apuração e cobrança regular, preservados direitos legais.
+
+5. CONDUÇÃO E AUTONOMIA. O locatário mantém habilitação e autorizações válidas, respeita leis, capacidade, carga e especificações do carro, não dirige sob influência de substâncias e não cede a direção fora do quadro autorizado. Viagem ou uso diverso exige ajuste escrito e cobertura compatível. A locadora não escolhe corridas, não impõe jornada ou faturamento e não exige exclusividade de plataforma. Esta redação não altera a natureza jurídica que resultar da prática efetiva da relação.
+
+6. ELÉTRICO E MANUTENÇÃO. As recargas e taxas do ponto de recarga são pagas pelo motorista no piloto. Energia é medida em kWh, sem confundir seu custo com receita da locadora. Aplicam-se [PREENCHER: Orientações de recarga e acessórios] e o plano [PREENCHER: Plano e responsabilidades de manutenção]. É vedada intervenção não autorizada em alta tensão, software de segurança ou hodômetro. Defeito ou alerta é comunicado sem demora; risco exige parar em segurança e acionar assistência. Desgaste ordinário não é avaria indenizável. Reparos extraordinários dependem de orçamento/autorização, ressalvada emergência comprovada que não permita aguardar. Períodos de indisponibilidade recebem o tratamento do quadro, conforme causa, prova e direitos aplicáveis.
+
+7. SEGURO E RESPONSABILIDADE. A cobertura informada é [PREENCHER: Apólice, vigência, cobertura e franquias]. A apólice deve admitir o uso real de locação e aplicativo; este contrato não amplia seguro nem substitui suas condições. Evento é comunicado à locadora e seguradora, com preservação de pessoas e provas. Atribuição de franquia, dano ou prejuízo exige apuração, cobertura, nexo, responsabilidade e valor comprovado; não é automática por o motorista estar na posse. A distribuição interna de responsabilidades não exclui direitos de terceiros. A locadora não repassa prejuízo decorrente exclusivamente de sua própria omissão sem fundamento legal.
+
+8. TRÂNSITO. Autuações são encaminhadas com antecedência útil para indicação do condutor e defesa. O locatário coopera com dados e documentos verdadeiros. Responsabilidades e prazos seguem a notificação e o procedimento do órgão competente; a assinatura deste instrumento não transfere pontos nem vale como indicação genérica. Reembolso depende do fato, condutor, período e valor apurados, sem taxa administrativa implícita.
+
+9. ATRASO E RESOLUÇÃO. Aplicam-se apenas as condições convencionadas no quadro, sujeitas aos limites legais. A comunicação indica saldo, pagamentos, canal de contestação e regularização. Não se admite exposição do motorista, retenção de documentos pessoais ou recuperação do carro por meio ilícito. Qualquer dispositivo de segurança observa procedimento que não coloque pessoas em risco. O encerramento antecipado e eventual compensação seguem o ajuste expresso e a proporcionalidade legal, sem multa inventada pelo sistema.
+
+10. LOJA E DADOS. A adesão à lojinha é separada da locação e exige inventário e termo próprios. No piloto, 100% da margem comercial apurada pertence ao motorista. Pagamento desse ganho e abatimento de aluguel são alternativas documentadas, sem duplicidade. O aviso de privacidade informa finalidades, bases legais, retenção e contato; compartilhar localização voluntária depende de escolha própria e não autoriza vigiar vida privada ou acessar finanças pessoais. Benefícios não disponibilizados não são prometidos como existentes.
+
+11. DEVOLUÇÃO E ACERTO. O término exige agendamento, entrega física, vistoria comparativa, chaves, documentos, acessórios e inventário do kit. O recibo físico registra o fim da posse; valores eventualmente devidos são tratados em demonstrativo separado. Não se prolonga artificialmente aluguel apenas porque há dívida. A quitação limita-se a itens efetivamente conferidos e pagos, preservando pendências identificadas, contestação e restituições. O contrato não impede medidas legais por recusa de devolução.
+
+12. COMUNICAÇÕES E SOLUÇÃO. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · ANEXO DE USO, RECARGA E MANUTENÇÃO DO ELÉTRICO
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+1. INTEGRAÇÃO. Este anexo distribui cuidados do bem e integra o contrato indicado, sem transferir genericamente toda despesa ou risco ao motorista.
+2. REGRAS DO VEÍCULO. Orientações efetivas do fabricante e condições de entrega/devolução: [PREENCHER: Orientações de recarga e acessórios]. Área/condutores: [PREENCHER: Área de circulação e condutores permitidos]. Limite e eventual excedente: [PREENCHER: Franquia de km e eventual excedente]. Consumo, kWh, preço do ponto e recarga são despesas do motorista no piloto, salvo ajuste posterior expresso. Não se converte automaticamente nível de bateria em dívida.
+3. PLANO DE CUIDADOS. [PREENCHER: Plano e responsabilidades de manutenção]. Km e prazo valem conjuntamente conforme o manual; atingir primeiro um gatilho exige programação. A gestão registra e comunica a revisão. Cabe ao motorista informar km/alertas verdadeiros, disponibilizar o carro e zelar pela conservação; à locadora, cumprir as responsabilidades que lhe couberem e fornecer carro seguro. Desgaste de pneus, envelhecimento normal e degradação usual da bateria não presumem mau uso.
+4. SEGURANÇA E ASSISTÊNCIA. É proibido abrir bateria, intervir em alta tensão, adulterar hodômetro ou utilizar equipamento incompatível. Em risco, parar em local seguro, priorizar pessoas e acionar assistência/autoridades quando necessário. Não improvisar reboque ou reparo que contrarie o fabricante. Comunicar pelo canal [PREENCHER: Contato para avisos e suporte] e preservar fotos e protocolos sem exposição pública de dados.
+5. AUTORIZAÇÃO E PARADA. Reparos seguem orçamento e autorização documentada, ressalvadas emergências comprovadas. O tratamento de indisponibilidade é [PREENCHER: Tratamento do aluguel durante indisponibilidade]. Apólice/assistência: [PREENCHER: Apólice, vigência, cobertura e franquias]. Eventual ressarcimento é apurado com provas e manifestação, separando orçamento de dívida. Serviço concluído requer nota/recibo, km e data.
+6. REGISTROS E ALTERAÇÕES. Checklists e vistorias documentam estado, sem afastar defeitos ocultos ou direitos legais. Mudança de plano, acessório ou regra de recarga é comunicada e, se afetar preço ou obrigação, formalizada por aditivo. Evidências de entrega das orientações: [PREENCHER: Anexos e provas identificados].
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · TERMO DE CAUÇÃO E RECIBO DE RECEBIMENTO
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+1. GARANTIA. O valor pactuado de R$ [PREENCHER: Caução contratada · R$] garante obrigações efetivamente identificadas do contrato, não constituindo receita, multa antecipada ou aluguel. Não equivale a fiador, aval ou autorização geral para movimentar conta do motorista.
+2. RECEBIMENTO. A locadora declara exclusivamente o recebimento confirmado descrito a seguir: [PREENCHER: Recebimento confirmado da caução]. O recibo limita-se a essa transação. Diferença entre valor pactuado e recebido permanece explicitada; comprovante ainda não confirmado não permite emitir recibo de dinheiro recebido.
+3. GUARDA E EXTRATO. A gestão mantém saldo individual e prova das movimentações. Caução não é capital livre da operação. Eventual atualização ou remuneração deve decorrer da regra legal/contratual aplicável, sem promessa de rendimento financeiro inexistente.
+4. USO. A locadora apresenta obrigação, vencimento, prova e memória antes de propor compensação. O motorista dispõe do procedimento de manifestação acordado. Orçamento, perda de estoque não apurada ou multa ainda sem atribuição não se transformam em desconto automático. Nenhuma assinatura em branco autoriza retenção ilimitada.
+5. DEVOLUÇÃO. Procedimentos e prazos expressos: [PREENCHER: Prazos e procedimento da caução]. O saldo incontroverso será devolvido nos termos acordados; pendências específicas são comunicadas e apuradas, sem retenção indefinida de toda a garantia. Quitação depende da efetiva restituição/compensação demonstrada, nunca apenas do encerramento do cadastro.
+6. PROVA E CONTATO. Anexos: [PREENCHER: Anexos e provas identificados]. Cópia do recibo e do extrato é entregue ao motorista pelo canal registrado. Correção preserva a transação original e a justificativa.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+LIMITE DE USO: Emitir recibo somente depois de confirmar o recebimento.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · PRESTAÇÃO DE CONTAS E RESTITUIÇÃO DA CAUÇÃO
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+1. DEMONSTRATIVO. A movimentação da garantia até a data deste documento é: [PREENCHER: Demonstrativo da caução]. Cada débito ou crédito identifica origem e comprovante, distinguindo valor incontroverso, contestado e pendente de apuração.
+2. ANÁLISE E MANIFESTAÇÃO. Ressalvas e providências: [PREENCHER: Ressalvas e providências]. Prazo e canal: [PREENCHER: Prazo e canal para manifestação]. O recebimento deste demonstrativo não é reconhecimento automático de dívida nem renúncia à contestação. Desconto exige fundamento aplicável e prestação de contas; orçamento não se torna valor devido pelo simples lançamento.
+3. RESTITUIÇÃO. [PREENCHER: Restituição: valor, destinatário, prazo e comprovante]. A declaração de quitação restringe-se ao valor efetivamente pago e confirmado ao destinatário, no comprovante identificado. Agendamento de transferência é promessa de pagamento, não recibo. O saldo incontroverso não ficará retido por pendência genérica.
+4. PENDÊNCIAS. O que permanecer em discussão terá origem, valor ou critério e prazo de análise identificados, sem afetar a prova da devolução física do carro nem repetir cobrança já quitada. Aplicam-se os prazos acordados: [PREENCHER: Prazos e procedimento da caução].
+5. PROVAS. Integram o demonstrativo: [PREENCHER: Anexos e provas identificados]. A empresa fornece cópia e preserva pagamentos anteriores. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · TERMO DE VISTORIA, ENTREGA E DEVOLUÇÃO DO VEÍCULO
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+TIPO: [PREENCHER: Tipo de vistoria]. REGISTRO FÍSICO: [PREENCHER: Vistoria e recibo físico].
+1. ESTADO CONFERIDO. As partes registram exterior, interior, vidros, luzes, pneus, itens de segurança, chaves, documentos, cabo/porta de recarga, bateria no painel e alertas. As fotos e checklist identificados em [PREENCHER: Anexos e provas identificados] integram o termo; devem permitir comparar as vistas do mesmo veículo, sem confundir ilustração com prova.
+2. RESSALVAS. [PREENCHER: Ressalvas e providências]. A conferência considera desgaste normal e danos anteriores. Silêncio sobre ponto não visível não exclui vício oculto nem prova posterior. Divergência é documentada, com manifestação de quem entrega e recebe; nenhuma foto isolada presume culpa.
+3. POSSE E SEGURANÇA. Na entrega, o recebimento físico depende dos requisitos do contrato e de aptidão de segurança. Na devolução, o recebedor registra momento, itens faltantes e providências, ainda que haja dívida ou necessidade de reparo. Não se recusa injustificadamente registrar o retorno físico para prolongar aluguel.
+4. OBJETOS E KIT. Objetos pessoais identificados são devolvidos ou guardados conforme orientação registrada. Produtos da lojinha seguem inventário próprio, inclusive kit vazio, itens em trânsito e pedidos pendentes. Chaves, cabo e acessórios são conferidos individualmente.
+5. EFEITOS. O termo prova a conferência descrita; não quita aluguel, caução, loja ou danos não apurados. Reparo depende de apuração, orçamento e procedimento contratual; falha de segurança impede nova entrega. A gestão fornece cópia e permite correção documentada de informação inexata.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · AVISO DE PRIVACIDADE E ESCOLHA DE LOCALIZAÇÃO
+VERSÃO DO MODELO: 2026-11-04.1
+
+RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+TITULAR: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência]. CANAL DE DIREITOS: [PREENCHER: Canal para direitos e privacidade].
+1. TRANSPARÊNCIA. Este aviso descreve o tratamento efetivo na locação, na loja e no aplicativo. Identificação e habilitação, contato, vínculo, pagamentos, documentos, fotos/vistoria e registros técnicos são tratados apenas na extensão necessária. Não são solicitadas senhas de bancos, plataformas de corrida ou contas GOV.BR.
+2. FINALIDADES E BASES. A matriz aplicável é [PREENCHER: Finalidades e bases legais efetivas]. A execução do contrato, obrigações legais, exercício de direitos, eventual interesse legítimo avaliado e consentimento específico não são bases intercambiáveis. O controlador explicará consequências da falta de informação indispensável. Não haverá autorização genérica para qualquer uso futuro, nem uso de imagem em publicidade por este aviso.
+3. LOCALIZAÇÃO DO APP. A função voluntária compartilha a posição do aparelho, com indicação de data e precisão, enquanto o motorista a ativa e as condições técnicas permitem. Serve ao acompanhamento/assistência informado, não a controlar jornada nem vida fora da operação. Depende de permissão do navegador, conexão e app aberto; não é telemetria contínua do carro. É possível parar no app; a recusa desta função voluntária não autoriza punição nem compartilhamento oculto. Um rastreador instalado no veículo terá aviso, fornecedor e base legal próprios antes de sua ativação.
+4. ESCOLHA ESPECÍFICA. Declaração do titular: [PREENCHER: Escolha sobre localização voluntária]. Se autorizar, poderá retirar essa escolha a qualquer momento no app ou no canal acima, sem tornar ilícito o tratamento anterior válido. A ciência deste aviso não equivale a consentimento para as demais finalidades, nem ativa permissões técnicas por si só.
+5. DESTINATÁRIOS E RETENÇÃO. Compartilhamentos e transferências efetivos: [PREENCHER: Fornecedores, compartilhamentos e transferências]. Prazos/critério de guarda: [PREENCHER: Prazos de guarda e descarte]. Acesso é restrito às funções necessárias; fornecedores atuam conforme papéis e obrigações próprios. Dados não serão vendidos por este instrumento. Encerramento de acesso não elimina arquivos que devam ser legalmente preservados; finda a necessidade, serão eliminados ou anonimizados conforme a lei.
+6. DIREITOS E SEGURANÇA. O titular pode pedir confirmação, acesso, correção, informações sobre compartilhamento, revisão de decisões automatizadas quando aplicável e demais direitos previstos na LGPD, inclusive oposição, eliminação e revogação nos casos cabíveis. A empresa verifica identidade proporcionalmente, responde pelo canal e explica eventual limite legal. Aplicam-se medidas de acesso, integridade, cópias e resposta a incidentes; nenhuma promessa de segurança absoluta é feita.
+7. FINANÇAS PESSOAIS E ALTERAÇÕES. A área pessoal do motorista é separada da visão da locadora. A condição de locatário não autoriza o empresário a consultar seus ganhos particulares. Mudança material será informada antes de novo uso; nova finalidade incompatível não se apoia em consentimento antigo. Ciência e escolha são registradas com versão e data, sem renúncia a direitos.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · TERMOS DE USO DO APLICATIVO E BENEFÍCIOS
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+VIGÊNCIA DO ACESSO: [PREENCHER: Início da vigência] a [PREENCHER: Fim da vigência], observadas as obrigações de disponibilizar documentos após o encerramento. BENEFÍCIOS ATIVOS: [PREENCHER: Benefícios e regras já disponíveis].
+1. SERVIÇO. O app permite consultar documentos, aluguel e créditos, registrar vistoria/check-in, vendas e pedidos de estoque, solicitar ajuda e, por escolha própria, compartilhar localização. As funções disponíveis no ambiente utilizado prevalecem sobre demonstrações e anúncios de funções futuras. Não há oferta automática de crédito, renda garantida, emprego ou contratação de seguro pelo uso do app.
+2. CONTA. O acesso é pessoal; senhas devem ser mantidas em sigilo e incidentes comunicados a [PREENCHER: Contato para avisos e suporte]. A empresa limita acesso aos dados do vínculo correto. O titular não pode falsificar evidência, usar identidade alheia ou interferir em registros de terceiros. Suspeita de comprometimento pode justificar suspensão proporcional para segurança, com canal alternativo para documentos, pagamento e defesa.
+3. REGISTROS. Check-in não cria controle de jornada. Enviar foto não aprova vistoria; comprovante não confirma recebimento; upload de PDF não valida assinatura; pedido reservado não equivale a venda paga. Correções preservam origem e histórico. As partes podem contestar inconsistência e apresentar prova por canal alternativo em indisponibilidade técnica.
+4. FINANÇAS E CORRIDAS. A análise manual de oferta é estimativa baseada nas entradas do próprio motorista, sem integração de aceite com plataforma de corrida ou promessa de lucro. Decidir trabalhar e aceitar uma viagem é responsabilidade do motorista. Dados de finanças pessoais ficam restritos ao titular; não integram a prestação de contas de aluguel.
+5. BENEFÍCIOS. Somente o quadro acima integra a oferta. A empresa não promete parcerias ou novos apps ainda não disponibilizados. Benefícios acordados seguem duração e critérios informados, com aviso de mudança e preservação de direitos já adquiridos. Lucro da loja depende de vendas apuradas e termo específico, nunca de meta obrigatória de vendas.
+6. DISPONIBILIDADE E RESPONSABILIDADE. O app pode sofrer interrupções; suporte e contingência são informados. Falha técnica não é prova de inadimplemento do motorista nem autoriza cobrança duplicada. Cada parte responde conforme sua conduta e a lei, sem exclusão geral de responsabilidade por falha do serviço. Não se deve usar o celular ao conduzir.
+7. PRIVACIDADE E TÉRMINO. O aviso de privacidade é entregue separadamente. Acesso pode encerrar com o vínculo ou por motivo justificado, preservando cópia de documentos, créditos, contestação e obrigações pendentes. Desativação não apaga dívida nem confisca caução. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · CONTRATO DE CUSTÓDIA E VENDA ASSISTIDA DE PRODUTOS
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+VIGÊNCIA: [PREENCHER: Início da vigência] a [PREENCHER: Fim da vigência]. OPERAÇÃO FISCAL: [PREENCHER: Vendedor, emissão fiscal e atendimento]. ACERTO: [PREENCHER: Rotina de venda, recebimento e acerto]. CUSTOS COMERCIAIS: [PREENCHER: Custos, tributos e taxas da lojinha].
+1. OBJETO E ADESÃO. A RODAVOLT disponibiliza estoque de perfumes e acessórios identificado no inventário, para venda assistida facultativa pelo motorista. Este modelo adota custódia e intermediação, com propriedade do estoque da empresa; não impõe ao motorista compra antecipada, dívida pelo valor do combo ou pagamento incondicional de mercadoria não vendida. Se a operação efetiva for contrato estimatório/consignação com obrigação de preço, sua natureza e riscos exigem instrumento próprio revisado, sem mera troca do título.
+2. INVENTÁRIO. [PREENCHER: Inventário de produtos]. Cada combo é conferido por SKU, lote/validade quando aplicável, quantidade, estado, custo e preço. Produto em trânsito não é recebido; diferença fica identificada para análise. O motorista recebe orientações de conservação e não deve oferecer produto vencido, adulterado, incompatível ou inseguro. A empresa fornece mercadoria regular, com origem e documentação.
+3. VENDA E DINHEIRO. O registro identifica produto, quantidade, preço vigente, comprador somente na extensão necessária, forma de pagamento e quem recebeu. Reserva não confirma venda; comprovante é conferido. Entrega registra saída física, sem segunda baixa de estoque ou receita. O motorista não oferece garantia, crédito, desconto ou condição em nome da empresa além do previamente autorizado. Pagamentos em espécie ou recebidos por ele são demonstrados e repassados no prazo acordado.
+4. MARGEM DO MOTORISTA. No piloto, 100% da margem comercial apurada nas vendas confirmadas pertence ao motorista. A margem considera receita efetivamente recebida menos custo da mercadoria e apenas os tributos/taxas/descontos expressamente discriminados no quadro aceito. O custo recompõe o capital do estoque da locadora. Valores, responsáveis e critérios ficam disponíveis antes da venda, sem reduzir a margem por despesa criada unilateralmente depois. Não há ganho garantido por apenas carregar o kit.
+5. ACERTO E ALUGUEL. O demonstrativo separa bruto, custo, despesas aprovadas, margem, dinheiro em cada parte e repasses. A margem pode ser paga ou, por autorização específica do motorista, usada em cobrança de aluguel identificada. Valor já retido/pago não gera segundo crédito. Saldo de lucro não aplicado continua obrigação a pagar, não receita livre da empresa. A falta de repasse é tratada por apuração e cobrança regular, sem confiscar caução.
+6. CUSTÓDIA E DIVERGÊNCIAS. O motorista usa diligência compatível com o produto e comunica perda, furto ou avaria com provas disponíveis. A posse não presume culpa nem converte todo extravio em dívida. A empresa confronta inventário, eventos e manifestação; eventual ressarcimento exige fundamento e valor apurados. Desgaste/defeito de origem e riscos próprios da fornecedora não são genericamente transferidos.
+7. CONSUMIDOR E RETORNO. Atendimento, notas e reembolso seguem o responsável indicado, sem retirar direitos do cliente. Devolução distingue produto apto, quarentena e descarte autorizado. Restituição ao cliente e ajuste da margem já paga/crédito usado são conciliados pela origem, sem débito duplicado. Pagamento tardio de pedido vencido exige solução específica, não venda automática.
+8. TÉRMINO. Cada reposição tem recibo; ao sair, o motorista devolve estoque e presta contas de vendas, reservas, trânsito e numerário. A empresa recebe o retorno e individualiza pendências, sem exigir venda de todo o kit nem quitação geral prévia. A atividade não impõe jornada, exclusividade ou meta de venda; a realidade da relação deve corresponder a estas regras. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · RECIBO DE COMBO E INVENTÁRIO DE PRODUTOS
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+1. MOVIMENTAÇÃO EFETIVA. [PREENCHER: Movimento e responsáveis do combo]. Este recibo registra somente o evento identificado; preparação ou envio não é recebimento pelo motorista. O contrato comercial indicado permanece a fonte das regras.
+2. ITENS. [PREENCHER: Inventário de produtos]. A tabela deve distinguir esperado, efetivamente entregue/recebido, avariado e faltante, com lote/validade quando aplicável, preço/custo e estado. A assinatura não transfere automaticamente propriedade nem cria dívida no valor do estoque.
+3. CONFERÊNCIA. Fotos/checklist e provas: [PREENCHER: Anexos e provas identificados]. Ressalvas: [PREENCHER: Ressalvas e providências]. Divergência mantém rastreabilidade entre origem, trânsito e destino; a parte pode registrar ressalva ou pedir reconferência sem reconhecimento presumido de culpa.
+4. CUSTÓDIA. Itens recebidos aptos ficam disponíveis conforme o termo. Avarias/defeitos vão para análise e quarentena; produto inseguro ou vencido não é vendido. Em reposição, novo recibo não altera retroativamente custos e margens de vendas anteriores.
+5. RETORNO. No encerramento, contagem deve incluir itens bons, avariados, vazios, reservas e trânsito. O recebimento físico não quita vendas ou repasses; essas obrigações constam de demonstrativo próprio. Cada parte recebe uma cópia, e correções indicam a versão e a razão.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · ACERTO DA LOJA E AUTORIZAÇÃO ESPECÍFICA DE CRÉDITO
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+1. PERÍODO E VENDAS. [PREENCHER: Demonstrativo do acerto da loja]. Integram a conferência os documentos [PREENCHER: Anexos e provas identificados]. As vendas são individualizadas, sem incluir pedido apenas reservado ou comprovante não confirmado como recebimento.
+2. APURAÇÃO. A regra do piloto destina 100% da margem comercial conferida ao motorista, conforme custos previamente aceitos em [PREENCHER: Custos, tributos e taxas da lojinha]. O demonstrativo distingue custo de reposição, margem, tributos/taxas e quem detém o dinheiro. Despesa extraordinária contestada fica destacada, sem abatimento unilateral.
+3. ESCOLHA E REPASSE. A escolha específica é [PREENCHER: Escolha de destino do lucro]. Só o valor e a cobrança expressamente identificados podem receber abatimento. Se o ganho já foi pago ou retido, não há outro crédito. Se a empresa recebeu o bruto, deve restituir/pagar o ganho ou registrar o crédito escolhido, mantendo eventual sobra disponível.
+4. CORREÇÕES. Devolução ou reembolso posterior identifica a venda e o benefício original. Crédito usado, margem paga ou numerário repassado não são ignorados nem ajustados duas vezes. Diferenças serão explicadas e poderão ser contestadas antes de solução documentada. A autorização não alcança caução, outras cobranças ou perdas não apuradas.
+5. QUITAÇÃO LIMITADA. A assinatura confirma apenas conferência/escolha descritas; dinheiro ainda não pago permanece devido. Recibos identificam cada pagamento efetivo. Ressalvas: [PREENCHER: Ressalvas e providências]. A continuidade do aluguel não depende de renúncia a lucro legítimo.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · CONDIÇÕES DE COMPRA, ENTREGA, TROCAS E GARANTIA
+VERSÃO DO MODELO: 2026-11-04.1
+
+RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+VERSÃO/INÍCIO DE APLICAÇÃO: [PREENCHER: Data de emissão]. VENDEDOR, EMISSOR FISCAL E RESPONSÁVEL: [PREENCHER: Vendedor, emissão fiscal e atendimento]. CANAIS, PRAZOS E ENTREGA: [PREENCHER: Oferta, entrega e atendimento ao consumidor].
+1. OFERTA E PEDIDO. Antes da confirmação, o cliente terá descrição, quantidade, características, compatibilidade, riscos, validade quando aplicável, preço total e despesas adicionais. Poderá conferir e corrigir o pedido. O motorista auxilia a venda; eventual responsabilidade do vendedor e demais integrantes da cadeia segue a lei, não é afastada por este texto.
+2. PAGAMENTO E ENTREGA. O destinatário do pagamento e a forma aceita serão informados antes da compra. Pedido reservado depende de confirmação do pagamento e disponibilidade; um comprovante isolado exige conferência. A entrega e documento fiscal/recibo serão registrados. Se houver indisponibilidade ou pagamento após expiração, o cliente será consultado para solução regular, inclusive restituição cabível, sem substituição imposta.
+3. ARREPENDIMENTO. Nas contratações fora do estabelecimento comercial abrangidas pelo art. 49 do CDC, inclusive pela internet quando aplicável, o cliente pode desistir em sete dias contados na forma legal. O pedido pode ser feito por canal acessível, inclusive o mesmo meio de contratação eletrônica; terá confirmação e restituição dos valores devidos, sem ônus indevido. Não se exige embalagem inviolada como restrição genérica que elimine esse direito.
+4. VÍCIOS E GARANTIA. A garantia legal não depende de termo ou promessa adicional. Vícios aparentes seguem os prazos legais de trinta dias para produto não durável e noventa para durável, contados da entrega; em vício oculto, o prazo começa quando ele se evidencia. Atendimento e solução observarão as opções e prazos do CDC, inclusive hipóteses de solução imediata. Garantia contratual adicional, se oferecida, será entregue por escrito e não substitui a legal. Troca por preferência fora das hipóteses legais só será prometida se houver política efetiva e informada.
+5. SEGURANÇA E REEMBOLSO. Reclamações de defeito/risco terão registro, orientação segura e encaminhamento adequado, sem exigir do cliente contato exclusivo com fabricante para afastar responsabilidades do vendedor. Retorno, reembolso e eventual recolhimento serão documentados. Dados para pagamento são usados somente na extensão necessária.
+6. PRIVACIDADE E ATENDIMENTO. Canal de direitos: [PREENCHER: Canal para direitos e privacidade]. Aplicam-se o aviso de privacidade e a legislação brasileira. Estas condições não impõem arbitragem, foro impeditivo de defesa ou renúncia a direitos legais. Não se exige assinatura de contrato longo pelo passageiro para compra cotidiana; disponibilizar esta versão antes da confirmação e preservar oferta/pedido e aceite quando cabível.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · SOLICITAÇÃO DE SEGURO PARA LOCAÇÃO E USO POR APLICATIVO
+VERSÃO DO MODELO: 2026-11-04.1
+
+RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+DESTINATÁRIO: [PREENCHER: Outra parte: qualificação e representante]. VEÍCULO E RISCO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. PERÍODO PRETENDIDO: [PREENCHER: Início da vigência] a [PREENCHER: Fim da vigência].
+1. DECLARAÇÃO DE USO. A RODAVOLT pretende alugar o veículo a motorista que transportará passageiros por aplicativo. Trata-se de carro 100% elétrico. Área e condutores previstos: [PREENCHER: Área de circulação e condutores permitidos]. Essas informações devem integrar a análise do risco; seguro para uso particular não será tratado como aceitação desse uso comercial.
+2. PEDIDO DE RESPOSTA DOCUMENTADA. Solicitamos proposta e confirmação expressa da aceitação de locação a terceiros e atividade por aplicativo, condições de condutor, vigência, prêmio total, franquias, limites, exclusões, cancelamento, assistência, recarga/reboque e procedimentos de sinistro. Coberturas requeridas e respostas: [PREENCHER: Coberturas solicitadas e resposta da seguradora].
+3. DOCUMENTOS PARA CONFERÊNCIA. Solicitar condições gerais/especiais, proposta, apólice e endossos correspondentes, identificação da seguradora/corretor, comprovantes e canais de atendimento. Nenhuma condição será presumida por anúncio ou conversa sem referência verificável. Observar a Lei 15.040/2024 e normas aplicáveis, com apoio profissional.
+4. LIMITES. ESTE DOCUMENTO NÃO É APÓLICE, NÃO EMITE SEGURO E NÃO COMPROVA COBERTURA. A definição de risco, formação do contrato, início de vigência e obrigações dependem dos instrumentos e fatos efetivos. A responsabilidade perante terceiros não desaparece por contrato de ressarcimento do motorista.
+5. RESULTADO DA CONFERÊNCIA. Proposta/apólice obtidas e ressalvas: [PREENCHER: Anexos e provas identificados]; [PREENCHER: Ressalvas e providências]. A gestão só deve registrar cobertura efetiva após conferir os documentos pertinentes.
+EMITIDO EM [PREENCHER: Local de emissão], [PREENCHER: Data de emissão]. Responsável pela solicitação: [PREENCHER: Representante e poderes].
+
+LIMITE DE USO: A seguradora emite apólice e endossos. Este formulário prepara a contratação.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · CONTRATO DE COMPRA E VENDA DE VEÍCULO ELÉTRICO
+VERSÃO DO MODELO: 2026-11-04.1
+
+RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+VENDEDOR: [PREENCHER: Outra parte: qualificação e representante]. BEM: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM].
+1. COMPRA E PREÇO. O vendedor vende à RODAVOLT o veículo identificado nas condições: [PREENCHER: Condições de compra do veículo]. Preço, desconto, sinal, saldo, prazo e condição de entrega devem ser discriminados. Pagamento não confirmado não gera recibo. Se houver condição de aprovação de financiamento, seus efeitos sobre sinal, prazo e eventual desfazimento serão expressos, sem perda automática não pactuada.
+2. ESTADO, TITULARIDADE E DOCUMENTOS. O vendedor apresenta documentos e declara ônus, restrições, débitos, sinistros relevantes e histórico de manutenção de que tenha conhecimento, com anexos: [PREENCHER: Anexos e provas identificados]. Qualquer alienação ou pendência exige solução documentada compatível com a transferência; não se presume bem livre apenas por assinatura. Compradora pode realizar vistoria e registrar ressalvas: [PREENCHER: Ressalvas e providências].
+3. ENTREGA E TRANSFERÊNCIA. A entrega terá recibo com data/hora, km, bateria, chaves, cabos, acessórios e estado. Custos e providências de transferência seguem o quadro e prazos legais. Responsabilidades por débitos e fatos anteriores/posteriores serão individualizadas sem prejudicar direitos de terceiros ou deveres perante órgãos públicos.
+4. USO COMERCIAL E GARANTIA. O uso pretendido é locação a terceiros para aplicativo. Garantias efetivamente ofertadas, bateria e manutenção: [PREENCHER: Garantias e condições de uso comercial]. O vendedor informa condições que dependam do fabricante; não garante autorização de financiador ou seguradora que não represente. Nenhuma cláusula afasta garantia legal aplicável ou protege omissão dolosa de defeito.
+5. DESCUMPRIMENTO. A parte comunica divergência e possibilita solução no prazo ajustado ou legal, preservadas medidas urgentes e direitos obrigatórios. Resolução e restituição consideram pagamentos, entrega e responsabilidades comprovadas; retenção de sinal ou multa exige fundamento e proporcionalidade.
+6. INSTRUMENTOS EXTERNOS. Crédito e seguro são contratações próprias e não nascem desta minuta. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · FICHA DE PROPOSTA E CONFERÊNCIA DE FINANCIAMENTO
+VERSÃO DO MODELO: 2026-11-04.1
+
+RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+INSTITUIÇÃO/INTERMEDIÁRIO: [PREENCHER: Outra parte: qualificação e representante]. VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. PROPOSTA: [PREENCHER: Condições propostas de financiamento].
+1. OBJETIVO. Consolidar as condições efetivamente oferecidas para comparação e conferência com o simulador, antes de contratar. Registrar datas, validade da oferta, entrada, valor financiado, taxas mensal/anual, CET quando aplicável, custos, cronograma, total e garantias, sem considerar parcela estimada como aprovação de crédito.
+2. USO E RESTRIÇÕES. Solicitar manifestação escrita sobre locação a terceiros e transporte por aplicativo, eventual alienação e exigência de seguro. Documentar atraso, vencimento antecipado, portabilidade, cessão, tarifas e consequências de restrições; cláusula do aluguel não altera obrigação perante financiador.
+3. AMORTIZAÇÃO E QUITAÇÃO. Obter procedimento, demonstrativo e condições para antecipação parcial/total, efeitos sobre prazo ou parcela e direitos legalmente aplicáveis. Não presumir taxa ou desconto ausente da proposta. Confrontar o instrumento final com a oferta antes de aceitar.
+4. DOCUMENTOS E DECISÃO. Anexos: [PREENCHER: Anexos e provas identificados]. Divergências/pendências: [PREENCHER: Ressalvas e providências]. A análise deve usar a identidade e conta corretas da empresa; não compartilhar senhas ou aceitar documento em branco.
+5. LIMITE. ESTA FICHA NÃO É CONTRATO DE CRÉDITO, CÉDULA BANCÁRIA OU APROVAÇÃO DE FINANCIAMENTO. O instrumento definitivo deve ser emitido/aceito pelas partes competentes, após análise jurídica e financeira. Não há ordem de débito ou constituição de garantia por preencher esta ficha.
+EMITIDA EM [PREENCHER: Local de emissão], [PREENCHER: Data de emissão]. Responsável pela conferência: [PREENCHER: Representante e poderes].
+
+LIMITE DE USO: O contrato de financiamento é obtido da instituição; não será substituído por documento fictício.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · CONTRATO DE FORNECIMENTO DE PRODUTOS
+VERSÃO DO MODELO: 2026-11-04.1
+
+RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+FORNECEDOR: [PREENCHER: Outra parte: qualificação e representante]. CONDIÇÕES DO FORNECIMENTO: [PREENCHER: Objeto, preços e condições de fornecimento]. VIGÊNCIA E PRAZOS: [PREENCHER: Vigência, correção, rescisão e transição].
+1. OBJETO E PEDIDOS. O fornecedor entrega os produtos especificados para revenda pela RODAVOLT. Cada pedido identifica SKU, características, lote/validade quando cabível, quantidades, preço, tributos, frete e prazo. Alteração de produto, quantidade ou preço depende de aceite; não há exclusividade, compra mínima ou renovação tácita onerosa sem previsão expressa.
+2. REGULARIDADE. O fornecedor assegura origem lícita, autenticidade, rotulagem, armazenamento e regularidade sanitária/técnica exigível para os produtos efetivamente fornecidos. Entrega documentos fiscais e, quando aplicáveis, licenças, registros, certificados e instruções. Não se autoriza venda de falsificações ou uso indevido de marcas. A compradora também cumpre suas obrigações próprias de comercialização.
+3. RECEBIMENTO. A conferência verifica quantidade, embalagem, avaria, compatibilidade e prazo de validade. Receber fisicamente não significa renunciar a defeito oculto. Divergências serão comunicadas com prova, e o fornecedor corrigirá, substituirá ou restituirá valores conforme o ajuste e direitos aplicáveis, sem impor mercadoria insegura.
+4. PAGAMENTO. O pagamento segue os marcos acordados e documento fiscal correspondente, com identificação do beneficiário. Nenhuma compensação altera obrigação não identificada. Atraso ou divergência é comunicado e tratado proporcionalmente; encargos precisam de pactuação expressa e limites legais.
+5. DEFEITOS E RECOLHIMENTO. As partes cooperam em reclamações, rastreabilidade, suspensão de venda e recolhimento quando necessário. A alocação interna dos custos acompanha causa/responsabilidade comprovadas e não reduz direitos do consumidor. Descarte ou retorno exige registro; não se reintroduz produto impróprio no estoque.
+6. TÉRMINO E PROVA. Encerramento não elimina pedidos aceitos, garantias, pagamentos e deveres legais pendentes. Documentos e ressalvas: [PREENCHER: Anexos e provas identificados]; [PREENCHER: Ressalvas e providências]. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · CONTRATO DE PRESTAÇÃO DE SERVIÇOS E ORDEM DE EXECUÇÃO
+VERSÃO DO MODELO: 2026-11-04.1
+
+RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+PRESTADOR: [PREENCHER: Outra parte: qualificação e representante]. OBJETO E PREÇO: [PREENCHER: Escopo e condições do serviço]. VIGÊNCIA, CORREÇÕES E SAÍDA: [PREENCHER: Vigência, correção, rescisão e transição].
+1. ESCOPO. A contratação compreende apenas entregas, materiais, condições de execução e marcos descritos. Serviços adicionais exigem orçamento e autorização documentada, ressalvada urgência previamente delimitada. Não há autorização ilimitada para gastos, condução do veículo ou subcontratação.
+2. EXECUÇÃO. O prestador empregará pessoal habilitado, ferramentas e cuidados necessários, cumprindo normas e orientações aplicáveis. Para veículo elétrico, intervenção em alta tensão requer capacitação e procedimentos compatíveis. Guarda do bem, acesso a sistemas, chaves e documentos terão registro e serão limitados ao serviço.
+3. ACEITE E GARANTIA. A conclusão será comprovada por relatório/ordem, peças/serviços executados e documento fiscal. Recebimento é conferido por responsável; falhas e vícios ocultos preservam os direitos aplicáveis. Retrabalho, garantia, prazo e solução seguem o quadro e a lei, sem exclusão genérica de responsabilidade por defeito.
+4. PAGAMENTO E RESPONSABILIDADE. Preço e vencimentos seguem os marcos aceitos. A parte que causar prejuízo responde nos termos legais, mediante prova e apuração. A alocação interna não afasta direitos de terceiros. Trabalhadores/subcontratados permanecem sob gestão e obrigações do responsável efetivo, sem cláusula capaz de contrariar a realidade da relação.
+5. DADOS E SIGILO. Informações da operação são usadas apenas para executar o serviço. Acesso a dados pessoais exige instruções, finalidade, medidas de segurança e instrumento específico quando o prestador atuar como operador. É vedado copiar cadastros para finalidade própria não autorizada. Incidentes serão comunicados sem demora.
+6. ENCERRAMENTO. Ao terminar, devolver bens, chaves, arquivos e acessos, prestar contas e apoiar a transição acordada. Permanecem garantias e obrigações anteriores, sem retenção arbitrária de documentos ou dados para pressionar pagamento. Evidências/ressalvas: [PREENCHER: Anexos e provas identificados]; [PREENCHER: Ressalvas e providências]. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · ANEXO DE TRATAMENTO DE DADOS COM PRESTADOR
+VERSÃO DO MODELO: 2026-11-04.1
+
+RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+PRESTADOR/OPERADOR: [PREENCHER: Outra parte: qualificação e representante]. CONTRATO PRINCIPAL: [PREENCHER: Número e versão do contrato de referência]. INSTRUÇÕES E ESCOPO: [PREENCHER: Instruções ao operador de dados]. SEGURANÇA E INCIDENTES: [PREENCHER: Segurança e comunicação de incidentes].
+1. PAPÉIS. O prestador atua como operador somente nas atividades em que trata dados por conta e sob instruções lícitas da RODAVOLT. Atividades com finalidade própria devem ser identificadas e ter papel/base legal próprios; o contrato não altera a qualificação que resulta dos fatos.
+2. LIMITES. Tratamento limita-se ao objeto, categorias, titulares, duração e finalidades descritos. O operador não venderá dados, usará publicidade, treinará modelos ou criará perfil próprio sem fundamento e instrumento específicos. Instrução que pareça ilícita ou inviável será comunicada antes da execução, quando permitido.
+3. ACESSO E SEGURANÇA. Pessoas autorizadas recebem acesso mínimo necessário e dever de confidencialidade. Aplicam-se as medidas pactuadas de autenticação, segregação, proteção, cópias, registros e eliminação, com evidência de execução. Mudança que reduza proteção exige avaliação e comunicação; não se promete segurança absoluta.
+4. SUBOPERADORES E TRANSFERÊNCIAS. Só poderão ser utilizados nos termos das autorizações e condições identificadas. Obrigações equivalentes serão exigidas; a contratada informa mudanças para análise prévia. Transferências internacionais dependem do mecanismo e garantias aplicáveis, não de autorização genérica deste anexo.
+5. DIREITOS E INCIDENTES. O operador auxilia pedidos de titulares, auditoria proporcional e preservação de evidências. Ao conhecer incidente, informa o controlador sem demora no prazo contratual, com natureza, dados/titulares afetados, riscos, medidas e atualizações, de modo a permitir prazos legais. A comunicação ao titular/autoridade cabe a quem a lei determinar; este anexo não dispensa nenhuma parte de dever próprio.
+6. RETORNO E RETENÇÃO. Ao término, devolver ou eliminar dados conforme instruções e obrigações legais, registrar conclusão e limitar eventual guarda residual. Backups seguem cronograma de retenção informado, sem restauração para finalidade incompatível. Não reter dados como garantia de dívida.
+7. PRESTAÇÃO DE CONTAS. A contratada disponibiliza evidências necessárias sem expor dados de terceiros, corrige desvios e responde conforme a lei. A revisão da RODAVOLT não a libera de obrigações próprias. Vigência/saída: [PREENCHER: Vigência, correção, rescisão e transição]. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · ADITIVO CONTRATUAL E SUBSTITUIÇÃO DE VEÍCULO
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+EFEITOS A PARTIR DE [PREENCHER: Início da vigência], ATÉ [PREENCHER: Fim da vigência], conforme as cláusulas alteradas.
+1. ALTERAÇÕES EXPRESSAS. [PREENCHER: Cláusulas anteriores e nova redação]. Cada mudança identifica o texto anterior e a nova condição. Se houver preço, caução, ciclo, km ou carro diferente, o quadro demonstra os valores e a data de corte. Nenhuma condição não descrita se altera pelo simples cadastro no app.
+2. HISTÓRICO. Cobranças, pagamentos, créditos, versões e evidências anteriores permanecem identificáveis. Eventual ajuste de período passado exige memória e acordo válido, sem apagar recibos nem duplicar valores. As cláusulas não alteradas continuam nos limites legais.
+3. TROCA DE VEÍCULO. Quando aplicável, identificar veículo anterior/novo e data/hora de cada entrega/devolução, com vistorias próprias e cobertura compatível antes do uso. A troca não presume quitação de obrigações nem transfere avarias de um carro para outro. Anexos: [PREENCHER: Anexos e provas identificados].
+4. GARANTIAS E CONCORDÂNCIA. Caução e obrigações só variam nos termos expressos. Aditivo não cria fiança, aval ou garantia de terceiro sem instrumento válido. As partes recebem a íntegra e podem conferir; silêncio, uso do app ou recebimento de mensagem não equivalem a aceite indiscriminado.
+5. RESSALVAS. [PREENCHER: Ressalvas e providências]. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · NOTIFICAÇÃO DE TRÂNSITO E SOLICITAÇÃO DE INDICAÇÃO/MANIFESTAÇÃO
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+1. FATO E PRAZOS. A RODAVOLT comunica a autuação [PREENCHER: Notificação de trânsito e prazos oficiais], conforme documento original anexo em [PREENCHER: Anexos e provas identificados]. Prazo/canal de resposta à locadora: [PREENCHER: Prazo e canal para manifestação]. Esse prazo interno não substitui nem prorroga o prazo oficial; se houver divergência, prevalece o procedimento legal e deve ser providenciada correção imediata.
+2. INDICAÇÃO E DEFESA. Solicita-se conferência dos fatos, identificação verdadeira de quem conduzia e documentos/formulário exigidos pelo órgão. A indicação deve seguir o rito e ser protocolada no prazo cabível. Não assinar formulário em branco ou indicar pessoa que não conduzia. Este aviso e o contrato privado não transferem pontos automaticamente.
+3. VALORES. Qualquer valor relacionado é descrito em [PREENCHER: Valores e situação de cada item], distinguindo proposta, multa aplicada, pagamento e eventual responsabilidade apurada. O motorista poderá apresentar prova e defesa; não há reconhecimento antecipado de culpa nem autorização geral de desconto.
+4. COMUNICAÇÃO E PROTOCOLO. A gestão informa a data em que recebeu a notificação, guarda prova do encaminhamento e dos protocolos e responde por suas próprias omissões conforme a lei. Desconto em caução ou cobrança depende de fundamento específico e prestação de contas. A ciência do aviso confirma recebimento, não concordância com a autuação.
+5. MANIFESTAÇÃO. [PREENCHER: Manifestação e decisão sobre a ocorrência]. Se ainda não apresentada, manter o campo como pendente na via de comunicação; não completar em nome do motorista.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+EMISSOR: [PREENCHER: Representante e poderes]. CIÊNCIA DO DESTINATÁRIO/DATA/MEIO: ______________________.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · REGISTRO E APURAÇÃO DE SINISTRO, AVARIA OU PERDA
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+1. OCORRÊNCIA. [PREENCHER: Identificação e relato da ocorrência]. Evidências e anexos: [PREENCHER: Anexos e provas identificados]. O registro descreve fatos conhecidos e sua origem, sem presumir culpa pela posse do carro ou do kit.
+2. PROVIDÊNCIAS. Pessoas e segurança são prioritárias. Quando cabível, acionar autoridades, assistência e seguradora, preservar provas e cumprir deveres de aviso. Apólice/procedimento aplicável: [PREENCHER: Apólice, vigência, cobertura e franquias]. Não firmar compromisso em nome de terceiro ou seguradora sem poderes, nem negar atendimento urgente por falta de formulário.
+3. ANÁLISE E MANIFESTAÇÃO. Prazo/canal: [PREENCHER: Prazo e canal para manifestação]. Manifestação do motorista, versões divergentes, análise e decisão: [PREENCHER: Manifestação e decisão sobre a ocorrência]. Pendências devem ser identificadas como tais. A comunicação ao motorista permitirá acesso às provas pertinentes, resguardando dados de terceiros.
+4. VALORES. [PREENCHER: Valores e situação de cada item]. Orçamento, franquia indicada, expectativa de cobertura e proposta de acordo não são automaticamente dívida. Eventual ressarcimento distingue dano, causa, responsabilidade, seguro recebido e valor líquido efetivo, evitando enriquecimento ou cobrança duplicada.
+5. CONSEQUÊNCIAS. Reparos e disponibilidade física são controlados separadamente do financeiro. Caução não será retida por simples abertura de ocorrência. Se houver acordo, usar instrumento específico com valor apurado e manifestação livre. O termo não impede defesa, direito de terceiro ou posição da seguradora.
+6. CONCLUSÃO E RESSALVAS. [PREENCHER: Ressalvas e providências]. Concluir a análise não comprova pagamento nem declara carro apto; cada ato exige sua evidência. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · ACORDO DE PAGAMENTO DE SALDO APURADO
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+1. ORIGEM E SALDO. A dívida objeto da negociação é individualizada em [PREENCHER: Memória da dívida e documentos de origem], com documentos [PREENCHER: Anexos e provas identificados]. O saldo aceito neste acordo é R$ [PREENCHER: Saldo objeto do acordo · R$]. Apenas obrigações identificadas e efetivamente reconhecidas integram o ajuste; fatos futuros, orçamentos e valores contestados não são incluídos por referência genérica.
+2. PAGAMENTO. Cronograma: [PREENCHER: Cronograma de pagamento do acordo]. Beneficiário e meio: [PREENCHER: Meio de pagamento e identificação do beneficiário]. Cada pagamento será imputado à parcela/obrigação identificada e receberá comprovante. Pagamento parcial não será desconsiderado. Custos e descontos condicionados só valem se expressos, lícitos e conferidos.
+3. INADIMPLEMENTO. Regra negociada: [PREENCHER: Regra negociada se o acordo atrasar]. Antes de medida, a parte credora informa saldo e pagamentos reconhecidos. Não há autorização de busca ilegal do bem, acesso à conta bancária, retenção de documentos ou exposição pública. Encargos legais e convencionais devem ser distinguidos e revisados, sem percentuais presumidos pelo app.
+4. EFEITOS. O ajuste reorganiza somente o pagamento do saldo especificado, sem cobrança simultânea do mesmo principal pelo contrato de origem e pelo acordo. Não constitui novação ou liberação de garantias por silêncio; qualquer efeito diferente exige disposição expressa válida. Caução/créditos só integram abatimento se individualizados e legitimamente aplicados na memória.
+5. QUITAÇÃO. A quitação de cada parcela depende de recebimento confirmado; a final limita-se aos itens deste acordo integralmente cumpridos. Ressalvas: [PREENCHER: Ressalvas e providências]. Não se exige confissão em branco, renúncia genérica a defesa ou reconhecimento de conduta ilícita.
+6. FORMALIZAÇÃO. Capacidade, poderes, origem, liquidez, exigibilidade, assinatura e eventuais testemunhas serão conferidos conforme a modalidade adotada. Um PDF assinado, por si, não garante execução judicial de todo conteúdo. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.
+
+
+======================================================================
+
+MINUTA PARA REVISÃO PROFISSIONAL · DISTRATO, DEVOLUÇÃO E ACERTO FINAL
+VERSÃO DO MODELO: 2026-11-04.1
+
+LOCADORA/RODAVOLT: [PREENCHER: Razão social e CNPJ], com sede em [PREENCHER: Endereço completo da empresa], representada por [PREENCHER: Representante e poderes]. Contato: [PREENCHER: Contato para avisos e suporte].
+MOTORISTA/LOCATÁRIO: [PREENCHER: Nome completo do motorista], [PREENCHER: Qualificação do motorista].
+VEÍCULO: [PREENCHER: Modelo, ano, placa, chassi e RENAVAM]. REFERÊNCIA: [PREENCHER: Número e versão do contrato de referência].
+1. TÉRMINO. [PREENCHER: Motivo, aviso e data efetiva do encerramento]. As partes encerram o uso do veículo na data efetiva documentada, observadas as regras de aviso e direitos legais. A devolução física é registrada ainda que haja pendência; o fim da posse não é confundido com quitação financeira.
+2. BEM E KIT. Registro de vistoria/recibo: [PREENCHER: Vistoria e recibo físico]. Anexos: [PREENCHER: Anexos e provas identificados]. Contagem da loja: [PREENCHER: Inventário de produtos]. Devem constar chaves, cabo, documentos, objetos e itens bons/em quarentena, bem como reservas/trânsito. Ressalvas não impedem receber o bem; reparos e disponibilidade para novo motorista seguem conferência própria.
+3. ACERTO. [PREENCHER: Demonstrativo final individualizado]. O demonstrativo separa períodos de aluguel, pagamentos, restituições por valor pago a maior, lucro/crédito da loja, caução e ocorrências. Não reescreve período já quitado nem repete despesa. Primeira/última semana segue a regra vigente do contrato.
+4. CAUÇÃO E RESTITUIÇÕES. Extrato: [PREENCHER: Demonstrativo da caução]. Devolução: [PREENCHER: Restituição: valor, destinatário, prazo e comprovante]. Saldo incontroverso tem prazo definido. Pendências específicas seguem apuração e manifestação, sem retenção genérica por prazo indefinido. Agendamento de restituição não equivale a dinheiro recebido.
+5. QUITAÇÃO DELIMITADA. Apenas itens expressamente conferidos e efetivamente pagos recebem quitação. Os demais são descritos com origem, valor/critério, responsável e prazo, preservados direitos e contestação: [PREENCHER: Ressalvas e providências]. A assinatura não declara inexistência de direitos desconhecidos nem reconhecimento automático de dano.
+6. DOCUMENTOS E ACESSO. Entregar cópia final, recibos e acesso adequado aos documentos do vínculo; encerrar permissões e compartilhamentos que deixem de ser necessários. Retenção de dados segue aviso e obrigações legais. Benefícios e loja são encerrados conforme termos, sem apagar lucro devido. As comunicações serão feitas nos contatos identificados, com registro de recebimento e atualização de endereço pelas partes. Tentativa de solução amigável não impede tutela urgente, defesa ou acesso ao Judiciário. Aplica-se a legislação brasileira e o foro competente conforme a lei, sem renúncia a proteção obrigatória nem eleição que dificulte a defesa. Nulidade de uma disposição não amplia a obrigação nem invalida automaticamente as demais.
+LOCAL E DATA: [PREENCHER: Local de emissão], [PREENCHER: Data de emissão].
+FORMA DE ASSINATURA E CONFERÊNCIA: [PREENCHER: Meio de assinatura e conferência].
+As partes recebem cópia integral desta versão e dos anexos identificados. Alterações posteriores dependem de instrumento próprio; preencher ou baixar este documento não constitui assinatura.
+ASSINATURA DA RODAVOLT/REPRESENTANTE: __________________________________
+ASSINATURA DA OUTRA PARTE IDENTIFICADA: _________________________________
+TESTEMUNHAS, SE ADOTADAS NA FORMA REVISADA: nome/documento/assinatura de 1. __________________ e 2. __________________.
+Conferir autoria, integridade, poderes e requisitos do instrumento. A assinatura eletrônica não torna qualquer obrigação automaticamente executável.

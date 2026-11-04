@@ -1,29 +1,48 @@
 # Pacote contratual RODAVOLT · versão para conferência do advogado
 
-Preparado em 18/10/2026 para a locação semanal de um carro a motorista de aplicativo no Brasil. O texto integral dos cinco modelos está em `src/legal-pack.js` e aparece em **Meu advogado → Biblioteca de modelos**. Cada modelo pode ser baixado em `.txt`; um rascunho com nome, carro, datas e valores do vínculo também pode ser baixado na ficha do documento. As versões anteriores e os documentos já criados continuam preservados.
+Atualizado em 04/11/2026. A biblioteca atual fica em **Meu advogado → Preparar um documento** e contém **22 modelos e formulários preenchíveis**, cobrindo os 16 tipos da operação. O texto integral e os campos vivem em `src/legal-documents.js`; os arquivos são exportados para [contratos/preenchiveis](contratos/preenchiveis/README.md).
 
-**Situação:** cinco minutas substanciais prontas para revisão, sem aprovação jurídica, sem qualificação real das partes e sem assinatura. Elas não devem ser enviadas ao primeiro motorista como contrato definitivo antes da conferência profissional. O aplicativo local não recebe CPF, CNH ou documentos pessoais nesta prévia.
+**Situação:** textos redigidos, campos e geração local disponíveis, sujeitos a revisão jurídica/comercial. Preenchimento completo não é aprovação jurídica nem assinatura. Seguro e financiamento têm formulários preparatórios: apólice e contrato de crédito precisam ser obtidos dos fornecedores. A constituição da empresa e as condições reais ainda precisam ser definidas.
 
-| Modelo | Conteúdo | Evidências que devem acompanhar a via final |
-|---|---|---|
-| Locação semanal | objeto, entrega, aluguel vencido, caução, uso, km, manutenção, seguro, sinistro, multas, mora, rastreador, loja, devolução, acerto e conflitos | quadro comercial, apólice, política de privacidade, vistoria, comprovantes |
-| Entrega e devolução | estado, fotos, hodômetro, carga da bateria, chaves, ressalvas, reparos e recibo físico | checklist, cinco vistas, arquivos originais, aceite/ressalvas |
-| Custódia do kit | contagem por SKU, pagamento, margem integral do motorista, crédito opcional, perdas, devoluções e acerto | inventário, preço/custo, recibos de combo, vendas e repasses |
-| Aditivo | contrato original, cláusula antiga/nova, efeitos financeiros e data de corte | comparação de versões, nova vistoria se carro mudar |
-| Distrato | devolução, aluguel final, loja, créditos, caução, ocorrências e quitação limitada | demonstrativo final e comprovantes de restituição |
+## Como preparar e reutilizar
 
-## Mapa numerado da operação · 04/11/2026
+1. Abra um modelo ou **Pacote de entrada · 8 modelos** (locação, cuidados do elétrico, caução, vistoria, privacidade, uso do app, kit e inventário).
+2. Preencha empresa, carro, regras, privacidade e loja. **Salvar base reutilizável** baixa um JSON privado desses grupos. Ele exclui motorista, ocorrência, outra parte e assinatura.
+3. Em cada novo vínculo, use **Trocar motorista / novo caso**. A base fica; identidade, datas, referência e fatos anteriores são retirados. Preencha os dados individuais e condições específicas.
+4. **Conferir e gerar prévia** mostra os campos ausentes. TXT permite edição; HTML independente permite **Imprimir → Salvar como PDF**. Rascunho incompleto mantém os marcadores visíveis.
+5. Revise texto, valores, fatos, anexos e condições com advogado/contador. Recibos dependem de recebimentos efetivos; acordos e ocorrências dependem do caso. A revisão profissional não é substituída por contagem de campos.
+6. Após obter a via final, assine por meio adequado, guarde o original e confira autoria/integridade. O PDF pode retornar pelo acesso individual do motorista. Correlacione contrato, versão e anexos; exportar a minuta não registra assinatura ou libera carro.
 
-**Meu advogado → Quais documentos preciso ter?** organiza 16 tipos por etapa. Cada item informa a finalidade, quando usar, pontos para revisão, evidências e fontes. O mapa é uma recomendação de organização para o piloto; não é lista universal de obrigações legais nem aprovação para iniciar a operação.
+O preparador usa **somente memória da aba**: não grava dados de qualificação em localStorage, widgetState, backup operacional, financeiro ou serviço. Atualizar/fechar a página perde o preenchimento. Arquivos baixados podem conter dados privados; sua guarda é uma ação explícita do usuário. A base importada valida tipo/versão/campos e não pode carregar identidade de motorista. Nenhum arquivo vai automaticamente ao GOV.BR, ITI ou terceiros.
 
-- **Minutas disponíveis (5):** 1 locação/quadro comercial; 4 vistoria/entrega/devolução; 7 custódia e vendas do kit; 13 aditivo; 16 distrato/acerto final.
-- **Complementos a detalhar (3):** 2 matriz de uso/cuidados do elétrico; 3 caução/recibos; 8 acerto da loja e autorização de crédito. Os temas já aparecem nas minutas e nos fluxos, mas precisam de documentos e condições efetivos.
-- **Documentos a preparar (5):** 5 privacidade/localização; 6 termos do app/benefícios; 9 condições de venda ao consumidor; 14 notificações/apuração de ocorrências; 15 acordo de dívida apurada, somente se necessário.
-- **Documentos de terceiros (3 grupos):** 10 seguro/apólice/endossos; 11 compra/financiamento; 12 fornecedores de produtos e serviços, um instrumento para cada relação aplicável.
+## Biblioteca atual
 
-O roteiro completo é gerado de `src/legal-guide.js` em [MAPA-DOCUMENTOS-JURIDICOS.md](MAPA-DOCUMENTOS-JURIDICOS.md), também disponível para download em texto na tela. Seus filtros e consultas não mudam assinatura, cobrança, crédito, caução ou liberação do carro. As minutas e suas versões anteriores permanecem intactas.
+| Tipo | Textos preenchíveis |
+|---|---|
+| 1 | Locação semanal de veículo elétrico e quadro comercial |
+| 2 | Anexo de uso, recarga e manutenção |
+| 3 | Caução/recibo de recebimento; prestação de contas/restituição |
+| 4 | Vistoria, entrega e devolução |
+| 5 | Privacidade e escolha específica de localização |
+| 6 | Termos do aplicativo e benefícios |
+| 7 | Custódia e venda assistida; recibo de combo/inventário |
+| 8 | Acerto da loja e autorização específica de crédito |
+| 9 | Condições de compra, entrega, trocas e garantia |
+| 10 | Solicitação de seguro para o uso real (não emite apólice) |
+| 11 | Compra e venda do elétrico; conferência de financiamento (não emite crédito) |
+| 12 | Fornecimento de produtos; serviços; anexo de tratamento de dados |
+| 13 | Aditivo e substituição do veículo |
+| 14 | Notificação de trânsito; registro/apuração de sinistro, avaria ou perda |
+| 15 | Acordo de pagamento de saldo apurado |
+| 16 | Distrato, devolução e acerto final |
 
-Antes dos instrumentos da operação, definir a pessoa que contrata, constituição/registro, CNPJ, poderes, atividades, tributação, emissão fiscal e exigências locais com advogado e contador. O nome comercial e o site não comprovam formalização.
+O roteiro numerado continua em [MAPA-DOCUMENTOS-JURIDICOS.md](MAPA-DOCUMENTOS-JURIDICOS.md). `npm run contracts:export` gera cada minuta, TXT e HTML do pacote completo, índice e roteiro a partir das fontes. Não editar arquivos gerados.
+
+## Preservação do fluxo e do histórico
+
+Os cinco modelos anteriores em `src/legal-pack.js` e suas versões em `src/coordination.js` continuam vinculados aos documentos demonstrativos já existentes. Estão recolhidos no **acervo dos modelos usados nos vínculos de exemplo**, abaixo do controle operacional. A biblioteca preenchível é um preparador de arquivos separado: não substitui textos já assinados, não instala dados privados no estado e não modifica gates, caução, cobrança ou assinatura. É necessário conferir a coerência entre a versão final do arquivo e os registros do vínculo. Nenhuma nova assinatura, fornecedor, banco ou publicação foi integrada por esta entrega.
+
+Antes dos instrumentos da operação, definir quem contrata, constituição/registro, CNPJ, poderes, atividades, tributação, emissão fiscal e exigências locais com advogado e contador. O nome comercial e o site não comprovam formalização.
 
 ## Pontos de revisão que não podem ficar implícitos
 
